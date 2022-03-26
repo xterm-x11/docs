@@ -41,7 +41,7 @@ The CLI command for installing XTerm from a package on [Ubuntu](https://ubuntu.c
 //* link:https://linuxmint.com/[Linux Mint]: ??? `sudo apt install xterm`
 -->
 
-## Fedora/Rocky Linux/CentOS Linux/CentOS Stream/RHEL
+## Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL
 
 The CLI command for installing XTerm from a package by using [DNF](https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/package-management/DNF/) on [Fedora](https://getfedora.org/), [Rocky Linux](https://rockylinux.org/), [CentOS Linux](https://www.centos.org/centos-linux/), [CentOS Stream](https://www.centos.org/centos-stream/), or [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux):
 
