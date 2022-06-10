@@ -3,7 +3,7 @@
 
 cd xterm-on-invisible-island
 
-#copy information to be published on xter.org from the xterm-related pages on https://invisible-island.net/ that are not expected to be updated:
+#copy information to be published on xterm.org from the xterm-related pages on https://invisible-island.net/ that are not expected to be updated:
 #(This list is for the pages that are to be downloaded only once (or so).)
 wget https://invisible-island.net/xterm/xterm.html
 wget https://invisible-island.net/xterm/xterm.faq.html
@@ -18,7 +18,7 @@ wget https://invisible-island.net/xterm/xtoolkit/intrinsics.pdf
 wget https://invisible-island.net/xterm/xtoolkit/manpage-index.html #include all linked pages after the first link because those are separate pages
 wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
 
-#recurrent downstreaming to fetch updates on https://invisible-island.net/:
+#recurrent downstreaming to fetch updates from https://invisible-island.net/:
 #(This list is for the pages that are to be downloaded regularly to fetch updates.)
 wget https://invisible-island.net/xterm/manpage/xterm.html
 wget https://invisible-island.net/xterm/manpage/uxterm.html
@@ -48,4 +48,3 @@ https://invisible-island.net/datafiles/release/vttest.tar.gz
 https://invisible-island.net/datafiles/release/luit.tar.gz
 #
 https://invisible-mirror.net/archives/xterm/ #?
-
