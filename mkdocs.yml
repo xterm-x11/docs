@@ -1,0 +1,23 @@
+site_name: xterm
+site_url: https://xterm.org
+nav:
+  - Home: 'index.md'
+  - 'About':
+    - 'Story': 'story.md'
+    - 'FAQ': 'faq.md'
+    - 'Terminal Icon': 'icon.md'
+  - 'Download': git-exports.md
+  - 'Manpage':
+    - 'xterm': 'manpage-xterm.md'
+    - 'uxterm': 'manpage-uxterm.md'
+    - 'koi8rxterm': 'manpage-koi8rxterm.md'
+  - 'Control Sequences':
+    -  'Guide': 'ctlseqs-guide.md'
+    -  'List': 'ctlseqs-list.md'
+  - 'Patch Log': 'log.md'
+  - 'Utilities':
+    - 'Vttest':
+      - 'About Vttest': 'vttest.md'
+      - 'Vttest Changes': 'changes.md'
+    - 'Xtoolkit': 'xtoolkit.md'
+    - 'Luit': 'luit.md'

@@ -12,9 +12,9 @@ mv uxterm.html manpage-uxterm.html
 wget https://invisible-island.net/xterm/manpage/koi8rxterm.html
 mv koi8rxterm.html manpage-koi8rxterm.html
 wget https://invisible-island.net/xterm/ctlseqs/ctlseqs-contents.html
-mv ctlseqs-contents.html ctlseqs-listing.html
+mv ctlseqs-contents.html ctlseqs-list.html
 wget https://invisible-island.net/xterm/ctlseqs/ctlseqs.html
-mv ctlseqs-contents.html xterm-control-sequences.html
+mv ctlseqs-contents.html ctlseqs-guide.html
 wget https://invisible-island.net/xterm/xterm.log.html
 #
 wget https://invisible-island.net/vttest/vttest.html
