@@ -54,7 +54,7 @@ The CLI command for installing XTerm from a package by using [DNF](https://docs.
 
 The command for installing XTerm from a package by using [Zypper](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-sw-cl.html#sec-zypper) on a command line on [openSUSE](https://www.opensuse.org/) or [SUSE Linux Enterprise products](https://www.suse.com/products/):
 
-`zypper install xterm`
+`sudo zypper install xterm`
 
 > For the XTerm package info, see https://software.opensuse.org/package/xterm.
 
