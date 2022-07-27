@@ -109,7 +109,7 @@ In addition to the Linux distributions above, an XTerm package is available for 
 [Void Linux](https://voidlinux.org/)
 > For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
 
-# XTerm on UNIX
+# XTerm for UNIX
 
 XTerm packages are available for several UNIX distributions.
 
