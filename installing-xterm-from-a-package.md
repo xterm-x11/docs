@@ -1,8 +1,10 @@
+<!-- 
 // top menu
 // 'Install'
 // _'XTerm package' = this page
 // _'Source xterm.tar.gz'
-
+-->
+ 
 # Installing XTerm on GNU/Linux by using a package manager
 
 A long yet incomplete list of the XTerm packages across various GNU/Linux distributions is available at [pkgs.org](https://pkgs.org/download/xterm).
@@ -27,7 +29,7 @@ The CLI command for installing XTerm from a package by using [APT](https://packa
 
 `sudo apt-get install xterm`
 
-> For the XTerm package info, see [Exact hits: Package xterm](https://packages.debian.org/search?searchon=names&keywords=xterm) > your Debian version > see *Architecture* in the *Download xterm* table.
+> For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
 
 <!-- https://www.debian.org/releases/ -->
 
@@ -62,50 +64,50 @@ The command for installing XTerm from a package by using [Zypper](https://doc.op
 
 > For the XTerm package info, see https://software.opensuse.org/package/xterm.
 
+<!--
 // https://forums.opensuse.org/showthread.php/572947-Docs-related-request-about-installing-XTerm-on-openSUSE-and-SUSE-Linux-Enterprise?p=3144613#post3144613
 // Another page on XTerm: https://en.opensuse.org/Xterm.
 // https://en.opensuse.org/images/1/17/Zypper-cheat-sheet-1.pdf
 // Note to Max re https://en.opensuse.org/Xterm: (invisible-island.net links are broken and man page is off another website) updated in 2015, it's a wiki, so Max can update when he finds time.
 //FYI potential sources of confusion: https://packagehub.suse.com/search/?q=xterm
+-->
 
 # Other Linux distributions
 
 In addition to the Linux distributions above, an XTerm package is available on a number of various other Linux distributions. Below are some of them.
 
-Adélie Linux https://www.adelielinux.org/
+[Adélie Linux](https://www.adelielinux.org/)
 > For the XTerm package info, see https://pkg.adelielinux.org/current/xterm.
 
-AlmaLinux https://almalinux.org/
+[AlmaLinux](https://almalinux.org/)
 
-Alpine Linux https://www.alpinelinux.org/
+[Alpine Linux](https://www.alpinelinux.org/)
 > For the XTerm package info, see https://pkgs.alpinelinux.org/packages?name=xterm&branch=edge.
 
-ALT Linux https://en.altlinux.org/
+[ALT Linux](https://en.altlinux.org/)
 > For the XTerm package info, see https://packages.altlinux.org/en/sisyphus/srpms/xterm/.
 
-Amazon Linux 2 https://aws.amazon.com/amazon-linux-2/
+[Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/)
 
-Gentoo Linux (https://www.gentoo.org/)
+[Gentoo Linux](https://www.gentoo.org/)
 > For the XTerm package info, see https://packages.gentoo.org/packages/x11-terms/xterm.
 
-KaOS https://kaosx.us/
+[KaOS](https://kaosx.us/)
 > For the XTerm package info, see https://kaosx.us/packages/packages.php?sortby=&sortdir=&flagged=&page=&limit=&repo=&exact=&search=xterm.
 
-Mageia https://www.mageia.org/en/
+[Mageia](https://www.mageia.org/en/)
 
-OpenMandriva https://www.openmandriva.org/
+[OpenMandriva](https://www.openmandriva.org/)
 
 [PCLinuxOS](https://www.pclinuxos.com/)
 
-Sabayon/Funtoo Linux https://www.sabayon.org/ and https://www.funtoo.org
+[Sabayon Linux](https://www.sabayon.org/)/[Funtoo Linux](https://www.funtoo.org)
 
-Slackware Linux http://www.slackware.com/
+[Slackware Linux](http://www.slackware.com/)
 > For the XTerm package info, go to http://www.slackware.com/releasenotes/packages14.2.php **>** **Ctrl+F** `PACKAGE NAME:  xterm`
  
-Void Linux https://voidlinux.org/
+[Void Linux](https://voidlinux.org/)
 > For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
-
-# XTerm on UNIX
 
 # XTerm on UNIX
 
