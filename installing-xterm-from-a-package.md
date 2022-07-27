@@ -5,11 +5,11 @@
 // _'Source xterm.tar.gz'
 -->
  
-# Installing XTerm on GNU/Linux by using a package manager
+# XTerm installation commands on some Linux distributions
 
-A long yet incomplete list of the XTerm packages across various GNU/Linux distributions is available at [pkgs.org](https://pkgs.org/download/xterm).
+You can easily and quickly install XTerm on most GNU/Linux distributions by using a package manager.
 
-Here are the XTerm installation commands for some distributions:
+Here are the installation commands for some distributions:
 
 ## Arch Linux
 
