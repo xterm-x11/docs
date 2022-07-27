@@ -72,9 +72,9 @@ The command for installing XTerm from a package by using [Zypper](https://doc.op
 //FYI potential sources of confusion: https://packagehub.suse.com/search/?q=xterm
 -->
 
-# Other Linux distributions
+# XTerm packages for other Linux distributions
 
-In addition to the Linux distributions above, an XTerm package is available on a number of various other Linux distributions. Below are some of them.
+In addition to the Linux distributions above, an XTerm package is available for a number of various other Linux distributions. Below are some of them.
 
 [Adélie Linux](https://www.adelielinux.org/)
 > For the XTerm package info, see https://pkg.adelielinux.org/current/xterm.
