@@ -7,9 +7,9 @@
  
 # XTerm installation commands on some Linux distributions
 
-You can easily and quickly install XTerm on most GNU/Linux distributions by using a package manager.
+You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
-Here are the installation commands for some distributions:
+Here are the command line interface (CLI) commands for installing XTerm on some distributions:
 
 ## Arch Linux
 
