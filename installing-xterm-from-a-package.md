@@ -166,15 +166,13 @@ OpenCSW (pronounced open-cashew /ˈkæʃuː/) is an easy to use open source soft
 OpenCSW Solaris packages are provided in the OS-native SVR4 format.  We publish both binary packages and source package definitions, making it possible for others to build on top of OpenCSW’s work.
 -->
 
-# Sources
-
 The above lists are likely to be incomplete.
 
-## References
+# Not featured?
+
+Does your system have an XTerm package available but not mentioned on this page? If so, please open an issue at [xterm-x11/docs](https://github.com/xterm-x11/docs/issues) and submit the instructions or a demo about how to install XTerm on your distribution!
+
+# Sources
 
 * https://pkgs.org/download/xterm
 * https://web.archive.org/web/20141006204823/http://oswatershed.org/pkg/xterm
-
-## Not featured?
-
-Does your system have an XTerm package available but not mentioned on this page? If so, please open an issue at [xterm-x11/docs](https://github.com/xterm-x11/docs/issues) and submit the instructions or a demo about how to install XTerm on your distribution!
