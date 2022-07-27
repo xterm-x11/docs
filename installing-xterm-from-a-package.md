@@ -5,7 +5,7 @@
 // _'Source xterm.tar.gz'
 -->
  
-# XTerm installation commands on some Linux distributions
+# XTerm installation commands for some Linux distributions
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
@@ -113,10 +113,10 @@ In addition to the Linux distributions above, an XTerm package is available on a
 
 XTerm packages are available for several UNIX distributions.
 
-## [FreeBSD](https://www.freebsd.org/)
+[FreeBSD](https://www.freebsd.org/)
 
-[pkg](https://github.com/freebsd/pkg):
-* [XTerm package details](https://cgit.freebsd.org/ports/tree/x11/xterm)
+* [pkg](https://github.com/freebsd/pkg):
+** [XTerm package details](https://cgit.freebsd.org/ports/tree/x11/xterm)
 <!--
 as of 20220114, the package name is `xterm-370` 'Terminal emulator for the X Window System'
 [XTerm package description](https://cgit.freebsd.org/ports/plain/x11/xterm/pkg-descr?revision=HEAD)
@@ -124,7 +124,7 @@ Maintained by: ehaupt@FreeBSD.org
 "Package names include the version number" source: https://docs.freebsd.org/en/books/handbook/ports/#ports-finding-applications
 -->
 
-## [OpenBSD](https://www.openbsd.org/)
+[OpenBSD](https://www.openbsd.org/)
 <!--
 FAQ - Package Management https://www.openbsd.org/faq/faq15.html
 the xterm package is there because its manpage is published https://man.openbsd.org/xterm
@@ -134,9 +134,9 @@ neither in https://cdn.openbsd.org/pub/OpenBSD/7.0/packages-stable/
 neigher in https://cdn.openbsd.org/pub/OpenBSD/7.0/packages/
 -->
 
-## [NetBSD](https://netbsd.org/)
+[NetBSD](https://netbsd.org/)
 
-[pkgsrc](http://www.pkgsrc.org/)
+* [pkgsrc](http://www.pkgsrc.org/)
 
 <!--
 "WARNING: The website does not contain easily findable info about the xterm package, so I need to check it with them if they have an xterm package (maybe email them)!
@@ -145,13 +145,13 @@ pkgsrc is a framework for managing third-party software on UNIX-like systems, cu
 NetBSD already contains the necessary tools for using pkgsrc; on other platforms you need to bootstrap pkgsrc to get the package management tools installed."
 -->
 
-## [Oracle Solaris](https://www.oracle.com/solaris/)
+[Oracle Solaris](https://www.oracle.com/solaris/)
 
-[UnixPackages](https://unixpackages.com/):
-* [package list](https://unixpackages.com/packages/package-list/) **>** [Ctrl+F] **>** `xterm-`
+* [UnixPackages](https://unixpackages.com/):
+** [package list](https://unixpackages.com/packages/package-list/) **>** [Ctrl+F] **>** `xterm-`
 
-[OpenCSW](https://www.opencsw.org/):
-* [XTerm package details](https://www.opencsw.org/packages/CSWxterm/)
+* [OpenCSW](https://www.opencsw.org/):
+** [XTerm package details](https://www.opencsw.org/packages/CSWxterm/)
 
 <!--
 https://unixpackages.com/[UnixPackages]
