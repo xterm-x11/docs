@@ -25,12 +25,18 @@ openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
 # XTerm package details
 
-Email them to include the missing Linux distros:
+In addition to the package search and details from your package-managing tool that you can view on a command line, pkgs.org provides a dedicated page for each XTerm package with extensive details. See https://pkgs.org/download/xterm for more information.
+
+Email them to include the identified missing Linux distros:
 https://pkgs.org/download/xterm
 
 # List of Linux distributions
 
+Move this up?
+
 XTerm packages are available for various Linux distributions, including:
+
+Turn it into an inline list.
 
 [Adélie Linux](https://www.adelielinux.org/): [XTerm package details](https://pkg.adelielinux.org/current/xterm)
 
@@ -103,6 +109,8 @@ XTerm packages are available for various Linux distributions, including:
 > For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
 
 # XTerm for UNIX
+
+Review system names and package details and merge this into the Linux distro list:
 
 XTerm packages are available for several UNIX distributions.
 
