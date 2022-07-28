@@ -23,6 +23,10 @@ Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.
 
 openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
+# XTerm package details
+
+https://pkgs.org/download/xterm
+
 # List of Linux distributions
 
 XTerm packages are available for various Linux distributions, including:
@@ -96,10 +100,6 @@ XTerm packages are available for various Linux distributions, including:
 
 [Void Linux](https://voidlinux.org/)
 > For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
-
-# XTerm package details
-
-https://pkgs.org/download/xterm
 
 # XTerm for UNIX
 
