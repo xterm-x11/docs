@@ -28,15 +28,20 @@ openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 XTerm packages are available for various Linux distributions, including:
 
 [Adélie Linux](https://www.adelielinux.org/): [XTerm package details](https://pkg.adelielinux.org/current/xterm)
+
 [AlmaLinux](https://almalinux.org/): [XTerm package details]
+
 [Alpine Linux](https://www.alpinelinux.org/): [XTerm package details](https://pkgs.alpinelinux.org/packages?name=xterm&branch=edge)
+
 [ALT Linux](https://en.altlinux.org/): [XTerm package details](https://packages.altlinux.org/en/sisyphus/srpms/xterm/)
+
 [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/): [XTerm package details]
+
 [Arch Linux](https://archlinux.org/): [XTerm package details](https://archlinux.org/packages/extra/x86_64/xterm/)
 
-[CentOS Linux](https://www.centos.org/centos-linux/)
+[CentOS Linux](https://www.centos.org/centos-linux/): [XTerm package details]
 
-[CentOS Stream](https://www.centos.org/centos-stream/)
+[CentOS Stream](https://www.centos.org/centos-stream/): [XTerm package details]
 
 [Debian](https://www.debian.org/)
 > For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
