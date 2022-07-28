@@ -25,6 +25,7 @@ openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
 # XTerm package details
 
+Email them to include the missing Linux distros:
 https://pkgs.org/download/xterm
 
 # List of Linux distributions
