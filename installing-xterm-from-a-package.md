@@ -2,7 +2,7 @@
 // top menu
 // 'Install'
 // _'Package' = this page
-// _'Source file'
+// _'Source files'
 -->
  
 # XTerm installation commands for some Linux distributions
