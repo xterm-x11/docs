@@ -25,7 +25,7 @@ openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
 # Packages for Linux and UNIX systems
 
-XTerm packages are available for various Linux distributions, including:
+XTerm packages are available for various Linux distributions:
 
 [Adélie Linux](https://www.adelielinux.org/), [AlmaLinux](https://almalinux.org/), [Alpine Linux](https://www.alpinelinux.org/), [ALT Linux](https://en.altlinux.org/), [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [Arch Linux](https://archlinux.org/), [CentOS Linux](https://www.centos.org/centos-linux/), [CentOS Stream](https://www.centos.org/centos-stream/), [Debian](https://www.debian.org/), [Fedora](https://getfedora.org/), [FreeBSD](https://www.freebsd.org/), [Funtoo Linux](https://www.funtoo.org), [Gentoo Linux](https://www.gentoo.org/), [KaOS](https://kaosx.us/), [Linux Mint](https://www.linuxmint.com/), [Mageia](https://www.mageia.org/en/), [NetBSD](https://netbsd.org/), [OpenBSD](https://www.openbsd.org/), [OpenMandriva](https://www.openmandriva.org/), [openSUSE](https://www.opensuse.org/), [Oracle Solaris](https://www.oracle.com/solaris/), [PCLinuxOS](https://www.pclinuxos.com/), [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), [Rocky Linux](https://rockylinux.org/), [Sabayon Linux](https://www.sabayon.org/), [Slackware Linux](http://www.slackware.com/), [SUSE Linux Enterprise products](https://www.suse.com/products/), [Ubuntu](https://ubuntu.com/server/docs/package-management/), [Void Linux](https://voidlinux.org/).
 
