@@ -4,14 +4,8 @@
 // _'Package' = this page
 // _'xterm.tar.gz'
 -->
- 
-New headings for this page:
-# Quick install on Linux
-# Packages for Linux and UNIX systems
-# XTerm Package Details
-Review and replace the existing ones.
 
-# XTerm installation commands for some Linux distributions
+# Quick install on Linux
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
@@ -29,6 +23,12 @@ Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.
 
 openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
+# Packages for Linux and UNIX systems
+
+XTerm packages are available for various Linux distributions, including:
+
+[Adélie Linux](https://www.adelielinux.org/), [AlmaLinux](https://almalinux.org/), [Alpine Linux](https://www.alpinelinux.org/), [ALT Linux](https://en.altlinux.org/), [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [Arch Linux](https://archlinux.org/), [CentOS Linux](https://www.centos.org/centos-linux/), [CentOS Stream](https://www.centos.org/centos-stream/), [Debian](https://www.debian.org/), [Fedora](https://getfedora.org/), [Funtoo Linux](https://www.funtoo.org), [Gentoo Linux](https://www.gentoo.org/), [KaOS](https://kaosx.us/), [Linux Mint](https://www.linuxmint.com/), [Mageia](https://www.mageia.org/en/), [OpenMandriva](https://www.openmandriva.org/), [openSUSE](https://www.opensuse.org/), [PCLinuxOS](https://www.pclinuxos.com/), [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), [Rocky Linux](https://rockylinux.org/), [Sabayon Linux](https://www.sabayon.org/), [Slackware Linux](http://www.slackware.com/),[SUSE Linux Enterprise products](https://www.suse.com/products/), [Ubuntu](https://ubuntu.com/server/docs/package-management/), [Void Linux](https://voidlinux.org/),
+
 # XTerm package details
 
 In addition to the package search and details from your package-managing tool that you can view on a command line, pkgs.org provides a dedicated page for each XTerm package with extensive details. See https://pkgs.org/download/xterm for more information.
@@ -36,83 +36,6 @@ In addition to the package search and details from your package-managing tool th
 Email them to include the identified missing Linux distros:
 https://pkgs.org/download/xterm
 
-# List of Linux distributions
-
-Move this up?
-
-XTerm packages are available for various Linux distributions, including:
-
-Turn it into an inline list.
-
-[Adélie Linux](https://www.adelielinux.org/): [XTerm package details](https://pkg.adelielinux.org/current/xterm)
-
-[AlmaLinux](https://almalinux.org/): [XTerm package details]
-
-[Alpine Linux](https://www.alpinelinux.org/): [XTerm package details](https://pkgs.alpinelinux.org/packages?name=xterm&branch=edge)
-
-[ALT Linux](https://en.altlinux.org/): [XTerm package details](https://packages.altlinux.org/en/sisyphus/srpms/xterm/)
-
-[Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/): [XTerm package details]
-
-[Arch Linux](https://archlinux.org/): [XTerm package details](https://archlinux.org/packages/extra/x86_64/xterm/)
-
-[CentOS Linux](https://www.centos.org/centos-linux/): [XTerm package details]
-
-[CentOS Stream](https://www.centos.org/centos-stream/): [XTerm package details]
-
-[Debian](https://www.debian.org/)
-> For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
-
-[Fedora](https://getfedora.org/)
-> For the XTerm package info, see Fedora Package Sources: https://src.fedoraproject.org/rpms/xterm.
-<!-- [DNF](https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/package-management/DNF/) -->
-
-[Gentoo Linux](https://www.gentoo.org/)
-> For the XTerm package info, see https://packages.gentoo.org/packages/x11-terms/xterm.
-
-[KaOS](https://kaosx.us/)
-> For the XTerm package info, see https://kaosx.us/packages/packages.php?sortby=&sortdir=&flagged=&page=&limit=&repo=&exact=&search=xterm.
-
-[Linux Mint](https://www.linuxmint.com/): ???
-
-[Mageia](https://www.mageia.org/en/)
-
-[OpenMandriva](https://www.openmandriva.org/)
-
-[openSUSE](https://www.opensuse.org/)
-> For the XTerm package info, see https://software.opensuse.org/package/xterm.
-<!--
-[Zypper](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-sw-cl.html#sec-zypper)
-// https://forums.opensuse.org/showthread.php/572947-Docs-related-request-about-installing-XTerm-on-openSUSE-and-SUSE-Linux-Enterprise?p=3144613#post3144613
-// Another page on XTerm: https://en.opensuse.org/Xterm.
-// https://en.opensuse.org/images/1/17/Zypper-cheat-sheet-1.pdf
-// Note to Max re https://en.opensuse.org/Xterm: (invisible-island.net links are broken and man page is off another website) updated in 2015, it's a wiki, so Max can update when he finds time.
-//FYI potential sources of confusion: https://packagehub.suse.com/search/?q=xterm
--->
-
-[PCLinuxOS](https://www.pclinuxos.com/)
-
-[RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
-
-[Rocky Linux](https://rockylinux.org/)
-
-[Sabayon Linux](https://www.sabayon.org/)/[Funtoo Linux](https://www.funtoo.org)
-
-[Slackware Linux](http://www.slackware.com/)
-> For the XTerm package info, go to http://www.slackware.com/releasenotes/packages14.2.php **>** **Ctrl+F** `PACKAGE NAME:  xterm`
-
-[SUSE Linux Enterprise products](https://www.suse.com/products/)
-
-[Ubuntu](https://ubuntu.com/server/docs/package-management/)
-> For the XTerm package info, go to your Ubuntu version at [packages.ubuntu.com](https://packages.ubuntu.com/) **>** **X Window System software** **>** **[Ctrl+F]** **>** enter `xterm` **>** see **Architecture** in the **Download xterm** table.
-<!--
-//https://packages.ubuntu.com/search?keywords=xterm
-//https://packages.ubuntu.com/search?arch=i386&keywords=xterm
-//* link:https://linuxmint.com/[Linux Mint]: ??? `sudo apt install xterm`
--->
-
-[Void Linux](https://voidlinux.org/)
-> For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
 
 # XTerm for UNIX
 
