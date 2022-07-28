@@ -19,13 +19,7 @@ Debian: `sudo apt-get install xterm`
 
 Ubuntu: `sudo apt install xterm`
 
-## Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL
-
-The CLI command for installing XTerm from a package by using [DNF](https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/package-management/DNF/) on [Fedora](https://getfedora.org/), [Rocky Linux](https://rockylinux.org/), [CentOS Linux](https://www.centos.org/centos-linux/), [CentOS Stream](https://www.centos.org/centos-stream/), or [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux):
-
-`sudo dnf install xterm.x86_64`
-
-> For the XTerm package info, see Fedora Package Sources: https://src.fedoraproject.org/rpms/xterm.
+Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.x86_64`
 
 ## openSUSE/SUSE Linux Enterprise
 
@@ -63,8 +57,16 @@ In addition to the Linux distributions above, an XTerm package is available for 
 [Arch Linux](https://archlinux.org/)
 > For the XTerm package info, see https://archlinux.org/packages/extra/x86_64/xterm/.
 
+[CentOS Linux](https://www.centos.org/centos-linux/)
+
+[CentOS Stream](https://www.centos.org/centos-stream/)
+
 [Debian](https://www.debian.org/)
 > For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
+
+[Fedora](https://getfedora.org/)
+> For the XTerm package info, see Fedora Package Sources: https://src.fedoraproject.org/rpms/xterm.
+<!-- [DNF](https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/package-management/DNF/) -->
 
 [Gentoo Linux](https://www.gentoo.org/)
 > For the XTerm package info, see https://packages.gentoo.org/packages/x11-terms/xterm.
@@ -77,6 +79,10 @@ In addition to the Linux distributions above, an XTerm package is available for 
 [OpenMandriva](https://www.openmandriva.org/)
 
 [PCLinuxOS](https://www.pclinuxos.com/)
+
+[RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
+
+[Rocky Linux](https://rockylinux.org/)
 
 [Sabayon Linux](https://www.sabayon.org/)/[Funtoo Linux](https://www.funtoo.org)
 
