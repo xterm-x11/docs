@@ -5,6 +5,12 @@
 // _'xterm.tar.gz'
 -->
  
+New headings for this page:
+# Quick install on Linux
+# Packages for Linux and UNIX systems
+# XTerm Package Details
+Review and replace the existing ones.
+
 # XTerm installation commands for some Linux distributions
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
