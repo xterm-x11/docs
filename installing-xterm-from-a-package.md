@@ -21,21 +21,7 @@ Ubuntu: `sudo apt install xterm`
 
 Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.x86_64`
 
-## openSUSE/SUSE Linux Enterprise
-
-The command for installing XTerm from a package by using [Zypper](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-sw-cl.html#sec-zypper) on a command line on [openSUSE](https://www.opensuse.org/) or [SUSE Linux Enterprise products](https://www.suse.com/products/):
-
-`sudo zypper install xterm`
-
-> For the XTerm package info, see https://software.opensuse.org/package/xterm.
-
-<!--
-// https://forums.opensuse.org/showthread.php/572947-Docs-related-request-about-installing-XTerm-on-openSUSE-and-SUSE-Linux-Enterprise?p=3144613#post3144613
-// Another page on XTerm: https://en.opensuse.org/Xterm.
-// https://en.opensuse.org/images/1/17/Zypper-cheat-sheet-1.pdf
-// Note to Max re https://en.opensuse.org/Xterm: (invisible-island.net links are broken and man page is off another website) updated in 2015, it's a wiki, so Max can update when he finds time.
-//FYI potential sources of confusion: https://packagehub.suse.com/search/?q=xterm
--->
+openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
 # XTerm packages for other Linux distributions
 
@@ -78,6 +64,17 @@ In addition to the Linux distributions above, an XTerm package is available for 
 
 [OpenMandriva](https://www.openmandriva.org/)
 
+[openSUSE](https://www.opensuse.org/)
+> For the XTerm package info, see https://software.opensuse.org/package/xterm.
+<!--
+[Zypper](https://doc.opensuse.org/documentation/leap/reference/html/book-reference/cha-sw-cl.html#sec-zypper)
+// https://forums.opensuse.org/showthread.php/572947-Docs-related-request-about-installing-XTerm-on-openSUSE-and-SUSE-Linux-Enterprise?p=3144613#post3144613
+// Another page on XTerm: https://en.opensuse.org/Xterm.
+// https://en.opensuse.org/images/1/17/Zypper-cheat-sheet-1.pdf
+// Note to Max re https://en.opensuse.org/Xterm: (invisible-island.net links are broken and man page is off another website) updated in 2015, it's a wiki, so Max can update when he finds time.
+//FYI potential sources of confusion: https://packagehub.suse.com/search/?q=xterm
+-->
+
 [PCLinuxOS](https://www.pclinuxos.com/)
 
 [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
@@ -88,6 +85,8 @@ In addition to the Linux distributions above, an XTerm package is available for 
 
 [Slackware Linux](http://www.slackware.com/)
 > For the XTerm package info, go to http://www.slackware.com/releasenotes/packages14.2.php **>** **Ctrl+F** `PACKAGE NAME:  xterm`
+
+[SUSE Linux Enterprise products](https://www.suse.com/products/)
 
 [Ubuntu](https://ubuntu.com/server/docs/package-management/)
 > For the XTerm package info, go to your Ubuntu version at [packages.ubuntu.com](https://packages.ubuntu.com/) **>** **X Window System software** **>** **[Ctrl+F]** **>** enter `xterm` **>** see **Architecture** in the **Download xterm** table.
