@@ -60,6 +60,8 @@ In addition to the Linux distributions above, an XTerm package is available for 
 [KaOS](https://kaosx.us/)
 > For the XTerm package info, see https://kaosx.us/packages/packages.php?sortby=&sortdir=&flagged=&page=&limit=&repo=&exact=&search=xterm.
 
+[Linux Mint](https://www.linuxmint.com/): ???
+
 [Mageia](https://www.mageia.org/en/)
 
 [OpenMandriva](https://www.openmandriva.org/)
