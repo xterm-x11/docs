@@ -9,7 +9,7 @@
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
-Here are the command line interface (CLI) commands for installing XTerm on some distributions:
+Here are the command line interface (CLI) commands for installing XTerm from a package on some distributions:
 
 Arch Linux: `pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
@@ -17,20 +17,7 @@ Arch Linux: `pacman -Syu xterm`
 Debian: `sudo apt-get install xterm`
 <!-- https://www.debian.org/releases/ and [APT](https://packages.debian.org/sid/apt) -->
 
-## Ubuntu
-
-The CLI command for installing XTerm from a package on [Ubuntu](https://ubuntu.com/server/docs/package-management/):
-
-`sudo apt install xterm`
-
-> For the XTerm package info, go to your Ubuntu version at [packages.ubuntu.com](https://packages.ubuntu.com/) **>** **X Window System software** **>** **[Ctrl+F]** **>** enter `xterm` **>** see **Architecture** in the **Download xterm** table.
-
-<!--
-//https://packages.ubuntu.com/search?keywords=xterm
-//https://packages.ubuntu.com/search?arch=i386&keywords=xterm
-
-//* link:https://linuxmint.com/[Linux Mint]: ??? `sudo apt install xterm`
--->
+Ubuntu: `sudo apt install xterm`
 
 ## Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL
 
@@ -95,7 +82,15 @@ In addition to the Linux distributions above, an XTerm package is available for 
 
 [Slackware Linux](http://www.slackware.com/)
 > For the XTerm package info, go to http://www.slackware.com/releasenotes/packages14.2.php **>** **Ctrl+F** `PACKAGE NAME:  xterm`
- 
+
+[Ubuntu](https://ubuntu.com/server/docs/package-management/)
+> For the XTerm package info, go to your Ubuntu version at [packages.ubuntu.com](https://packages.ubuntu.com/) **>** **X Window System software** **>** **[Ctrl+F]** **>** enter `xterm` **>** see **Architecture** in the **Download xterm** table.
+<!--
+//https://packages.ubuntu.com/search?keywords=xterm
+//https://packages.ubuntu.com/search?arch=i386&keywords=xterm
+//* link:https://linuxmint.com/[Linux Mint]: ??? `sudo apt install xterm`
+-->
+
 [Void Linux](https://voidlinux.org/)
 > For the XTerm package info, see https://github.com/void-linux/void-packages/tree/master/srcpkgs/xterm
 
