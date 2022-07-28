@@ -11,27 +11,11 @@ You can easily and quickly install XTerm on a command line on most GNU/Linux dis
 
 Here are the command line interface (CLI) commands for installing XTerm on some distributions:
 
-## Arch Linux
-
-The CLI command for installing XTerm from a package by using [Pacman](https://wiki.archlinux.org/title/Pacman) on [Arch Linux](https://archlinux.org/):
-
-`pacman -Syu xterm`
-
+Arch Linux: `pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
 
-> For the XTerm package info, see https://archlinux.org/packages/extra/x86_64/xterm/.
-
-> *archlinux.org* provides a very helpful page on installing and getting started with XTerm: https://wiki.archlinux.org/title/Xterm.
-
-## Debian
-
-The CLI command for installing XTerm from a package by using [APT](https://packages.debian.org/sid/apt) on [Debian](https://www.debian.org/):
-
-`sudo apt-get install xterm`
-
-> For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
-
-<!-- https://www.debian.org/releases/ -->
+Debian: `sudo apt-get install xterm`
+<!-- https://www.debian.org/releases/ and [APT](https://packages.debian.org/sid/apt) -->
 
 ## Ubuntu
 
@@ -88,6 +72,12 @@ In addition to the Linux distributions above, an XTerm package is available for 
 > For the XTerm package info, see https://packages.altlinux.org/en/sisyphus/srpms/xterm/.
 
 [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/)
+
+[Arch Linux](https://archlinux.org/)
+> For the XTerm package info, see https://archlinux.org/packages/extra/x86_64/xterm/.
+
+[Debian](https://www.debian.org/)
+> For the XTerm package info, see [**Exact hits: Package xterm**](https://packages.debian.org/search?searchon=names&keywords=xterm) **>** your Debian version **>** see **Architecture** in the **Download xterm** table.
 
 [Gentoo Linux](https://www.gentoo.org/)
 > For the XTerm package info, see https://packages.gentoo.org/packages/x11-terms/xterm.
