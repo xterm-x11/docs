@@ -33,4 +33,4 @@ If your system has an XTerm package available but is not listed, please open an 
 
 # XTerm package details
 
-In addition to the package search and package information that you can view on a command line from your package manager tool, https://pkgs.org/ provides extensive information on almost all XTerm packages. See the https://pkgs.org/download/xterm page for more information. Find your system in the list there and click the package name to go to the package information page.
+In addition to the package search and package information that you can view on a command line from your package manager tool, https://pkgs.org/ provides extensive information on almost all XTerm packages. See the https://pkgs.org/download/xterm page for more information. Find your system on the list there and click the package name to go to the package information page.
