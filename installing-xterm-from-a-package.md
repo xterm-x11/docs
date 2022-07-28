@@ -25,23 +25,14 @@ openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
 # XTerm packages for other Linux distributions
 
-In addition to the Linux distributions above, an XTerm package is available for a number of various other Linux distributions. Below are some of them.
+XTerm packages are available for various Linux distributions, including:
 
-[Adélie Linux](https://www.adelielinux.org/)
-> For the XTerm package info, see https://pkg.adelielinux.org/current/xterm.
-
-[AlmaLinux](https://almalinux.org/)
-
-[Alpine Linux](https://www.alpinelinux.org/)
-> For the XTerm package info, see https://pkgs.alpinelinux.org/packages?name=xterm&branch=edge.
-
-[ALT Linux](https://en.altlinux.org/)
-> For the XTerm package info, see https://packages.altlinux.org/en/sisyphus/srpms/xterm/.
-
-[Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/)
-
-[Arch Linux](https://archlinux.org/)
-> For the XTerm package info, see https://archlinux.org/packages/extra/x86_64/xterm/.
+[Adélie Linux](https://www.adelielinux.org/): [XTerm package details](https://pkg.adelielinux.org/current/xterm)
+[AlmaLinux](https://almalinux.org/): [XTerm package details]
+[Alpine Linux](https://www.alpinelinux.org/): [XTerm package details](https://pkgs.alpinelinux.org/packages?name=xterm&branch=edge)
+[ALT Linux](https://en.altlinux.org/): [XTerm package details](https://packages.altlinux.org/en/sisyphus/srpms/xterm/)
+[Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/): [XTerm package details]
+[Arch Linux](https://archlinux.org/): [XTerm package details](https://archlinux.org/packages/extra/x86_64/xterm/)
 
 [CentOS Linux](https://www.centos.org/centos-linux/)
 
