@@ -29,10 +29,10 @@ XTerm packages are available for various Linux distributions, including:
 
 [Adélie Linux](https://www.adelielinux.org/), [AlmaLinux](https://almalinux.org/), [Alpine Linux](https://www.alpinelinux.org/), [ALT Linux](https://en.altlinux.org/), [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/), [Arch Linux](https://archlinux.org/), [CentOS Linux](https://www.centos.org/centos-linux/), [CentOS Stream](https://www.centos.org/centos-stream/), [Debian](https://www.debian.org/), [Fedora](https://getfedora.org/), [FreeBSD](https://www.freebsd.org/), [Funtoo Linux](https://www.funtoo.org), [Gentoo Linux](https://www.gentoo.org/), [KaOS](https://kaosx.us/), [Linux Mint](https://www.linuxmint.com/), [Mageia](https://www.mageia.org/en/), [NetBSD](https://netbsd.org/), [OpenBSD](https://www.openbsd.org/), [OpenMandriva](https://www.openmandriva.org/), [openSUSE](https://www.opensuse.org/), [Oracle Solaris](https://www.oracle.com/solaris/), [PCLinuxOS](https://www.pclinuxos.com/), [RHEL](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux), [Rocky Linux](https://rockylinux.org/), [Sabayon Linux](https://www.sabayon.org/), [Slackware Linux](http://www.slackware.com/),[SUSE Linux Enterprise products](https://www.suse.com/products/), [Ubuntu](https://ubuntu.com/server/docs/package-management/), [Void Linux](https://voidlinux.org/),
 
-If your system has an XTerm package available but not mentioned on this page, open an issue at [xterm-x11/docs](https://github.com/xterm-x11/docs/issues) to let us know.
+If your system has an XTerm package available but not mentioned on the previous list, open an issue at [xterm-x11/docs](https://github.com/xterm-x11/docs/issues) to let us know.
 
 # XTerm package details
 
-In addition to the package search and details from your package-managing tool that you can view on a command line, pkgs.org provides a dedicated page for each XTerm package with extensive details. See https://pkgs.org/download/xterm for more information.
+In addition to the package search and package information that you can view on a command line from your package manager tool, https://pkgs.org/ provides extensive information on almost all XTerm packages. See the https://pkgs.org/download/xterm page for more information. Find your system in the list there and click the package name to go to the package information page.
 
 Email them to include the identified missing Linux distros: https://pkgs.org/download/xterm.
