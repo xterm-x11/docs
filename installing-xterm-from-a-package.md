@@ -1,8 +1,8 @@
 <!-- 
 // top menu
 // 'Install'
-// _'XTerm package' = this page
-// _'Source xterm.tar.gz'
+// _'Package' = this page
+// _'Source file'
 -->
  
 # XTerm installation commands for some Linux distributions
