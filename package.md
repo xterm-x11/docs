@@ -9,7 +9,7 @@
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
-Here are the command line interface (CLI) commands for installing XTerm from a package on some distributions:
+Here are the commands for installing XTerm from a package on some distributions:
 
 Arch Linux: `pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
