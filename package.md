@@ -9,6 +9,27 @@
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
+Before installing XTerm, verify that your system is using X11 (rather than Wayland).
+There is a number of commands you can choose from to check this:
+
+`$ echo $XDG_SESSION_TYPE`
+
+`$ printf 'Session is: %s\n' "${DISPLAY:+X11}${WAYLAND_DISPLAY:+WAYLAND}"`
+
+`$ loginctl show-session $(awk '/tty/ {print $1}' <(loginctl)) -p Type | awk -F= '{print $2}'`
+
+`$ loginctl show-session $(loginctl | grep $(whoami) | awk '{print $1}') -p Type`
+
+`$ loginctl show-session $(loginctl show-user $(whoami) -p Display --value) -p Type --value`
+
+`$ loginctl show-session "$XDG_SESSION_ID" -p Type`
+
+<!--
+Also $ echo $WAYLAND_DISPLAY (prints nothing if Wayland is not used)
+Source for thee above commands:
+https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used/371164#371164
+-->
+
 Here are the commands for installing XTerm from a package on some distributions:
 
 Arch Linux: `pacman -Syu xterm`
