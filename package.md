@@ -59,6 +59,6 @@ If your system has an XTerm package available but is not listed, please open an 
 
 In addition to the package search and package information that you can view on a command line from your package manager tool, two following website provide information on almost all XTerm packages:
 
-* https://pkgs.org/download/xterm. Find your system there on the list and click the package name to go to the package information page on https://pkgs.org/, where extensive information is available about the package, including the link to the package homepage.
+* https://pkgs.org/download/xterm. Find your system there on the list and click the package name to go to the package information page on https://pkgs.org/ where extensive information is available about the package, including the link to the package homepage.
 
 * https://repology.org/project/xterm/versions. Find the package for your system and click the package name to be redirected to the package homepage.
