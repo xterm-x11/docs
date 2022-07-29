@@ -31,7 +31,7 @@ Source for thee above commands:
 https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used/371164#371164
 -->
 
-Here are the commands for installing XTerm from a package on some distributions:
+Next are the commands for installing XTerm from a package on some distributions:
 
 Arch Linux: `pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
