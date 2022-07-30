@@ -47,7 +47,7 @@ Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.
 
 openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
 
-TIP: If you are using another system, see the following two sections. Alternatively, you may need to run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
+TIP: If you are using another system, see the following two sections. Alternatively, you might need to run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
 
 3. Run XTerm to verify that it's been successfully installed: `$ xterm`
 
