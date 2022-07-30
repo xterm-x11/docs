@@ -35,17 +35,17 @@ https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x
 
 Here are the commands for installing XTerm from a package on some better-known distributions:
 
-Arch Linux: `pacman -Syu xterm`
+Arch Linux: `$ pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
 
-Debian, Linux Mint: `sudo apt-get install xterm`
+Debian, Linux Mint: `$ sudo apt-get install xterm`
 <!-- https://www.debian.org/releases/ and [APT](https://packages.debian.org/sid/apt) -->
 
-Ubuntu: `sudo apt install xterm`
+Ubuntu: `$ sudo apt install xterm`
 
-Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.x86_64`
+Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `$ sudo dnf install xterm.x86_64`
 
-openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
+openSUSE, SUSE Linux Enterprise: `$ sudo zypper install xterm`
 
 TIP: If you are using another system, see the following two sections. Alternatively, you might need to run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
 
