@@ -9,7 +9,7 @@
 
 You can easily and quickly install XTerm on a command line on most GNU/Linux distributions by using a package manager.
 
-Before installing XTerm, verify that your system is using X11 (rather than Wayland).
+1. Before installing XTerm, verify that your system is using [X11](https://x.org/wiki/UserDocumentation/).
 
 There are a few commands you can choose from to check this:
 
@@ -31,7 +31,9 @@ Source for thee above commands:
 https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used/371164#371164
 -->
 
-Next are the commands for installing XTerm from a package on some better-known distributions:
+2. Run the package manager's installation command to install XTerm.
+
+Here are the commands for installing XTerm from a package on some better-known distributions:
 
 Arch Linux: `pacman -Syu xterm`
 <!-- source: https://bbs.archlinux.org/viewtopic.php?id=242823 -->
@@ -44,6 +46,12 @@ Ubuntu: `sudo apt install xterm`
 Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `sudo dnf install xterm.x86_64`
 
 openSUSE, SUSE Linux Enterprise: `sudo zypper install xterm`
+
+TIP: If you are using another system, see the following two sections. Alternatively, you may need to run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
+
+3. Run XTerm to verify that it's been successfully installed: `$ xterm`
+
+4. XTerm requires post-installation configuration. See [internal-link](https://xterm.org/some-other-page) for configuration instructions.
 
 # Packages for Linux and UNIX systems
 
