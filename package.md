@@ -11,7 +11,7 @@ You can easily and quickly install XTerm on a command line on most GNU/Linux dis
 
 1. Before installing XTerm, verify that your system is using [X11](https://x.org/wiki/UserDocumentation/).
 
-There are a few commands you can choose from to check this:
+There are a few commands you can choose one from to check this:
 
 `$ echo $XDG_SESSION_TYPE`
 
