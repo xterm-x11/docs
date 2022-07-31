@@ -31,6 +31,7 @@ Source for thee above commands:
 https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used/371164#371164
 -->
 
+1. Some distributions like Debian or openSUSE include XTerm pre-installed by default. You can check if XTerm is already installed on your system by running `$ xterm` in the terminal. If XTerm is indeed pre-installed, skip the next steps and proceed to the last step, which is post-installation configuration.
 2. Run the package manager's installation command to install XTerm.
 
 Here are the commands for installing XTerm from a package on some better-known distributions:
