@@ -29,7 +29,7 @@ There are a few commands you can choose one from to check this:
 
 <!--
 Also $ echo $WAYLAND_DISPLAY (prints nothing if Wayland is not used)
-Source for thee above commands:
+Source for the above commands:
 https://unix.stackexchange.com/questions/202891/how-to-know-whether-wayland-or-x11-is-being-used/371164#371164
 -->
 
