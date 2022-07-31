@@ -53,7 +53,7 @@ TIP: If you are using another system, see the following two sections. You might 
 
 4. Run XTerm to verify that it's been successfully installed: `$ xterm`
 
-5. XTerm requires post-installation configuration. See [internal-link](https://xterm.org/some-other-page) for configuration instructions.
+5. XTerm requires post-installation configuration. See [internal-link-placeholder](https://xterm.org/some-other-page) for configuration instructions.
 
 # Packages for Linux and UNIX systems
 
