@@ -55,7 +55,7 @@ Fedora, Rocky Linux, CentOS Linux, CentOS Stream, RHEL: `$ sudo dnf install xter
 
 openSUSE, SUSE Linux Enterprise: `$ sudo zypper install xterm`
 
-TIP: If you are using another system, see the following two sections. You might need to run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
+If you are using another system, see the following two sections.
 
 **Step 4**
 
@@ -74,6 +74,8 @@ XTerm packages are available for the following systems:
 If your system has an XTerm package available but is not listed, please open an issue at [xterm-x11/docs](https://github.com/xterm-x11/docs/issues) to let us know.
 
 # XTerm package info
+
+Before running the package manager's installation command to install XTerm, you can run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
 
 In addition to the package search and package information that you can view on a command line from your package manager, the two following website provide information on almost all XTerm packages:
 
