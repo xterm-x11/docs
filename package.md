@@ -75,7 +75,7 @@ If your system has an XTerm package available but is not listed, please open an 
 
 # XTerm package info
 
-Before running the package manager's installation command to install XTerm, you can run a command to search for the XTerm package to find the correct package name in the packagage manager's repository.
+Before running the package manager's installation command to install XTerm, you can run a command to search for the XTerm package to find the correct package name in the package manager's repository.
 
 In addition to the package search and package information that you can view on a command line from your package manager, the two following website provide information on almost all XTerm packages:
 
