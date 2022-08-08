@@ -11,7 +11,7 @@ You can easily and quickly install XTerm on a command line on most GNU/Linux dis
 
 **Step 1**
 
-Some distributions include XTerm pre-installed by default. You can check if XTerm is already installed on your system by running the `xterm` command in the terminal. If XTerm is indeed pre-installed, skip the next steps and proceed to step 5 that is post-installation configuration.
+Some distributions include XTerm pre-installed by default. You can check if XTerm is already installed on your system by running the `xterm` command in the terminal. If XTerm is indeed pre-installed, skip the next steps and proceed to step 5 to configure XTerm.
 
 **Step 2**
 
@@ -63,7 +63,7 @@ Run XTerm to verify that it's been successfully installed: `$ xterm`
 
 **Step 5**
 
-XTerm requires post-installation configuration. See [internal-link-placeholder](https://xterm.org/some-other-page) for configuration instructions.
+Configure XTerm. See [internal-link-placeholder-to-some-other-page-about-configuring-xterm](https://xterm.org/some-other-page-about-configuring-xterm).
 
 # Packages for Linux and UNIX systems
 
