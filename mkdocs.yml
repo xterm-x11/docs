@@ -11,13 +11,13 @@ nav:
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure'
     - 'Procedure': 'configure.md'
-    - 'Themes': 'xresources-themes.md'
+    - 'Themes': 'themes.md'
     # = refer to the configuration procedure page
     # = theme n+1
        # * screenshot
        # * link to the sample Xresources file for HD-15-inch laptops that incorporates this theme
        # * link to the file containing only this theme (to be added into Xresources)
-    - 'Template': 'xresources-template.md'
+    - 'Template': 'template.md'
     # = refer to the configuration procedure page
     # = introduce the template Xresources file and explain that it's self-documenting
        # * link to the template Xresources file
