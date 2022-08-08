@@ -9,7 +9,7 @@ nav:
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
-  - 'Configure XTerm'
+  - 'Configure'
     - 'Themes': 'xresources-themes.md'
 <!--
 = refer to the configuration procedure page
