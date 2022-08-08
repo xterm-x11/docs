@@ -10,8 +10,13 @@ nav:
   - 'Download': git-exports.md
 -->
   - 'Install'
-    - 'Package': 'package.md
-    - 'xterm.tar.gz': xterm.tar.gx.md
+    - 'Package': 'package.md'
+    - 'xterm.tar.gz': 'xterm.tar.gx.md'
+  - 'Configure XTerm'
+    - 'Themes': 'themes.md'
+<!--
+
+-->
   - 'Manpage':
     - 'xterm': 'manpage-xterm.md'
     - 'uxterm': 'manpage-uxterm.md'
