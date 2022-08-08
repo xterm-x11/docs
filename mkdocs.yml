@@ -13,9 +13,19 @@ nav:
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure XTerm'
-    - 'Themes': 'themes.md'
+    - 'Themes': 'Xresources-themes.md'
 <!--
-
+= refer to the configuration procedure page
+= theme n+1
+* screenshot
+* link to the sample Xresources file that incorporates this theme
+* link to the file containing only this theme (to be added into Xresources)
+-->
+'Template': 'Xresources-template.md'
+<!--
+= refer to the configuration procedure page
+= introduce the template Xresources file and explain that it's self-documenting
+* link to the template Xresources file
 -->
   - 'Manpage':
     - 'xterm': 'manpage-xterm.md'
