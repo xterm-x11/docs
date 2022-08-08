@@ -6,9 +6,6 @@ nav:
     - 'Story': 'story.md'
     - 'FAQ': 'faq.md'
     - 'Terminal Icon': 'icon.md'
-<!-- 
-  - 'Download': git-exports.md
--->
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
@@ -18,7 +15,7 @@ nav:
 = refer to the configuration procedure page
 = theme n+1
 * screenshot
-* link to the sample Xresources file that incorporates this theme
+* link to the sample Xresources file for HD-15-inch laptops that incorporates this theme
 * link to the file containing only this theme (to be added into Xresources)
 -->
 'Template': 'Xresources-template.md'
