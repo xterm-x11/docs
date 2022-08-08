@@ -6,7 +6,12 @@ nav:
     - 'Story': 'story.md'
     - 'FAQ': 'faq.md'
     - 'Terminal Icon': 'icon.md'
+<!-- 
   - 'Download': git-exports.md
+-->
+  - 'Install'
+    - 'Package': 'package.md
+    - 'xterm.tar.gz': xterm.tar.gx.md
   - 'Manpage':
     - 'xterm': 'manpage-xterm.md'
     - 'uxterm': 'manpage-uxterm.md'
