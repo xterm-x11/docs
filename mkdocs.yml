@@ -30,8 +30,9 @@ nav:
     - 'uxterm': 'manpage-uxterm.md'
     - 'koi8rxterm': 'manpage-koi8rxterm.md'
   - 'Control Sequences':
-    -  'Guide': 'ctlseqs-guide.md'
-    -  'List': 'ctlseqs-list.md'
+    - 'Getting started with control sequences': 'getting-started-with-ctlseqs.md'
+    - 'Guide': 'ctlseqs-guide.md'
+    - 'List': 'ctlseqs-list.md'
   - 'Patch Log': 'log.md'
   - 'Utilities':
     - 'Vttest':
