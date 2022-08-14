@@ -5,7 +5,7 @@ nav:
   - 'About':
     - 'Story': 'story.md' # rethink
     - 'FAQ': 'faq.md' # rethink
-    - 'Terminal Icon': 'icon.md' # rethink placement and format
+    - 'Terminal Icon': 'icon.md' # rethink placement and title
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
