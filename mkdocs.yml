@@ -3,9 +3,9 @@ site_url: https://xterm.org
 nav:
   - Home: 'index.md'
   - 'About':
-    - 'Story': 'story.md'
-    - 'FAQ': 'faq.md'
-    - 'Terminal Icon': 'icon.md'
+    - 'Story': 'story.md' # rethink
+    - 'FAQ': 'faq.md' # rethink
+    - 'Terminal Icon': 'icon.md' # rethink placement and format
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
