@@ -21,6 +21,10 @@ nav:
     # = refer to the configuration procedure page
     # = introduce the template Xresources file and explain that it's self-documenting
        # * link to the template Xresources file
+  - 'Customize': 'customize.md'
+    - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
+    - 'Themes': 'themes.md'
+    - 'Template': 'template.md'
   - 'Manpage':
     - 'xterm': 'manpage-xterm.md'
     - 'uxterm': 'manpage-uxterm.md'
