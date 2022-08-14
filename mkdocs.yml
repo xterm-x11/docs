@@ -35,9 +35,12 @@ nav:
     - 'List': 'ctlseqs-list.md'
   - 'Release Notes': 'release-notes.md' # this is 'Patch Log': 'log.md' renamed
   - 'Libraries': 'libraries.md'
-    # include the following content from https://github.com/xterm-x11/docs/blob/main/downstreaming-for-updates-from-invisible-island-net.sh:
-       # https://invisible-island.net/xterm/xcursor/xcursor.html
-       # https://invisible-island.net/xterm/xft/xft.html
+    - 'Xcursor': 'xcursor.md'
+        # include the following content from https://github.com/xterm-x11/docs/blob/main/downstreaming-for-updates-from-invisible-island-net.sh:
+          # https://invisible-island.net/xterm/xcursor/xcursor.html
+    - 'Xft': 'xft.md'
+        # include the following content from https://github.com/xterm-x11/docs/blob/main/downstreaming-for-updates-from-invisible-island-net.sh:
+          # https://invisible-island.net/xterm/xft/xft.html
   - 'Utilities':
     - 'Vttest': # Investigate. Is this less important than Luit? If more important, then down after Luit.
       - 'About Vttest': 'vttest.md'
