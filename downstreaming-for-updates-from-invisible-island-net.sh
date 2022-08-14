@@ -21,6 +21,8 @@ wget https://invisible-island.net/vttest/vttest.html
 wget https://invisible-island.net/vttest/CHANGES.html
 wget https://invisible-island.net/vttest/CHANGES
 #
+wget https://invisible-island.net/xterm/xft/xft.html
+#
 wget https://invisible-island.net/luit/manpage/luit.html #check all links
 mv luit.html manpage-luit.html
 wget https://invisible-island.net/luit/manpage/luit.txt
