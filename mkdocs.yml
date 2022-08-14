@@ -35,8 +35,8 @@ nav:
     - 'List': 'ctlseqs-list.md'
   - 'Release Notes': 'release-notes.md' # this is 'Patch Log': 'log.md' renamed
   - 'Utilities':
-    - 'Vttest':
+    - 'Vttest': # Investigate. Is this less important than Luit? If more important, then down after Luit.
       - 'About Vttest': 'vttest.md'
       - 'Vttest Changes': 'changes.md'
-    - 'Xtoolkit': 'xtoolkit.md'
-    - 'Luit': 'luit.md'
+    - 'Xtoolkit': 'xtoolkit.md' # scope not clear yet
+    - 'Luit': 'luit.md' # Investigate. Is this more important than Vttest? If more important, then move up before Vttest.
