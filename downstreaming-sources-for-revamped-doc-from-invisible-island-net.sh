@@ -21,3 +21,5 @@ wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
 https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
 #
 https://invisible-mirror.net/archives/xterm/ #?
+#
+https://www.in-ulm.de/~mascheck/various/xterm/
