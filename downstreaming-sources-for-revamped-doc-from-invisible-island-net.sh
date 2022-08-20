@@ -17,6 +17,7 @@ wget https://invisible-island.net/xterm/xtoolkit/intrinsics.html
 wget https://invisible-island.net/xterm/xtoolkit/intrinsics.pdf
 wget https://invisible-island.net/xterm/xtoolkit/manpage-index.html #include all linked pages after the first link because those are separate pages
 wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
-
+#
+https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
 #
 https://invisible-mirror.net/archives/xterm/ #?
