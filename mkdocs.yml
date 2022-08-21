@@ -3,7 +3,7 @@ site_url: https://xterm.org
 nav:
   - Home: 'index.md'
   - 'About':
-    - 'Story': 'story.md' # rethink
+    - 'Story': 'story.md' # rethink the heading, but use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
     - 'FAQ': 'faq.md' # rethink
     - 'Terminal Icon': 'icon.md' # rethink placement and title
   - 'Install'
@@ -25,7 +25,7 @@ nav:
     - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
     - 'Themes': 'themes.md'
     - 'Template': 'template.md'
-  - 'Use'
+  - 'Use' # select content from https://invisible-island.net/xterm/xterm.faq.html and https://invisible-island.net/xterm/#related-discussion
     - 'Manpage': 'manpage.md' # content or even addition of the file under consideration
       - 'xterm': 'manpage-xterm.md'
       - 'uxterm': 'manpage-uxterm.md'
