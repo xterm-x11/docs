@@ -8,32 +8,33 @@ nav:
        - 'TBD': # https://invisible-island.net/xterm/xterm.icon.html
                   # From this page, link to the docs repo folder that is a copy of current-state
                   # https://github.com/ThomasDickey/xterm-snapshots/tree/master/icons.
-    - 'FAQ': 'faq.md' # rethink
-    - 'Terminal Icon': 'icon.md' # rethink placement and title
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure'
-    - 'Procedure': 'configure.md'
-    - 'Themes': 'themes.md'
-    # = refer to the configuration procedure page
-    # = theme n+1
-       # * screenshot
-       # * link to the sample Xresources file for HD-15-inch laptops that incorporates this theme
-       # * link to the file containing only this theme (to be added into Xresources)
-    - 'Template': 'template.md'
-    # = refer to the configuration procedure page
-    # = introduce the template Xresources file and explain that it's self-documenting
-       # * link to the template Xresources file
+    # explain the combination of the `.Xresources` file and xrdb command.
+    # procedure 1: xrdb update
+    # procedure 2: xrdb query
+    # procedure 3: xrdb remove
   - 'Customize': 'customize.md'
+      # = refer to the configuration procedure page
     - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
     - 'Themes': 'themes.md'
+      # refer to the configuration procedure page
+      # theme n+1
+         # * screenshot
+         # * link to the sample Xresources file for HD-15-inch laptops that incorporates this theme
+         # * link to the file containing only this theme (to be added into Xresources)
     - 'Template': 'template.md'
+    # refer to the configuration procedure page
+    # explain that this template file is self-documented
+    - 'Icon': # TBD, if the new icon is adopted, then mention (a) different icon selection and (b) color customization.
   - 'Use' # select content from https://invisible-island.net/xterm/xterm.faq.html and https://invisible-island.net/xterm/#related-discussion
     - 'Manpage': 'manpage.md' # content or even addition of the file under consideration
       - 'xterm': 'manpage-xterm.md'
       - 'uxterm': 'manpage-uxterm.md'
       - 'koi8rxterm': 'manpage-koi8rxterm.md'
+      - 'resize': 'manpage-resize.md'
     - 'Control Sequences':
       - 'Getting started with control sequences': 'getting-started-with-ctlseqs.md'
       - 'Guide': 'ctlseqs-guide.md'
