@@ -12,12 +12,13 @@ nav:
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure': 'configure.md'
-    # explain the combination of the `.Xresources` file and xrdb command.
+    # explain the combination of the `.Xresources` file and the `xrdb` command.
     # procedure 1: xrdb update
     # procedure 2: xrdb query
     # procedure 3: xrdb remove
   - 'Customize': 'customize.md'
-      # = refer to the configuration procedure page
+      # refer to the configuration procedure page
+      # make one single repo with two folders, Samples and Themes, one file Template, and one README
     - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
     - 'Themes': 'themes.md'
       # refer to the configuration procedure page
