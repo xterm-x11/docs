@@ -6,6 +6,8 @@ nav:
     - 'Story': 'story.md' # rethink or keep the heading
        - 'TBD': # use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
        - 'TBD': # https://invisible-island.net/xterm/xterm.icon.html
+                  # From this page, link to the docs repo folder that is a copy of current-state
+                  # https://github.com/ThomasDickey/xterm-snapshots/tree/master/icons.
     - 'FAQ': 'faq.md' # rethink
     - 'Terminal Icon': 'icon.md' # rethink placement and title
   - 'Install'
