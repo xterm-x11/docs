@@ -3,7 +3,7 @@ site_url: https://xterm.org
 nav:
   - Home: 'index.md'
   - 'About':
-    - 'Story': 'story.md' # rethink the heading,
+    - 'Story': 'story.md' # rethink or keep the heading
        - 'TBD': # use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
        - 'TBD': # https://invisible-island.net/xterm/xterm.icon.html
     - 'FAQ': 'faq.md' # rethink
