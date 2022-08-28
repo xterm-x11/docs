@@ -33,6 +33,9 @@ nav:
     - 'Static window title': # TBD
        # explain the default user@host title and where it comes from
        # explictly do not recommend this route and cross-reference to the dynamically set title, the page under Use
+    - 'Scrollbar': 'scrollbar.md'
+    - 'Internal border': 'internal-border.md'
+    - 'Window border': 'window-border.md'
   - 'Use' # select content from https://invisible-island.net/xterm/xterm.faq.html and https://invisible-island.net/xterm/#related-discussion
     # figure out a way to reference the manpage from each separate procedure page under Use, where applicable
     - 'Manpage': 'manpage.md' # content or even addition of the file under consideration
@@ -48,7 +51,6 @@ nav:
     - 'Tabs': 'tabs.md' # explain why tabs are not the best for a terminal emulator and explain how to achieve the tab-like behavior
     - 'Full-screen': 'full-screen.md'
     - 'Scrolling': 'scrolling.md'
-    - 'Scrollbar': 'scrollbar.md'
     - 'Prompt': 'prompt.md'
     - 'Dynamic window title': 'dynamic-window-title.md' # cross-reference to the permanently set title, the page under Customize
        # Manually setting the title
