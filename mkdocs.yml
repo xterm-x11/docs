@@ -12,7 +12,7 @@ nav:
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure': 'configure.md'
-    # explain the combination of the `.Xresources` file and the `xrdb` command.
+    # conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
     # procedure 1: xrdb update
     # procedure 2: xrdb query
     # procedure 3: xrdb remove
