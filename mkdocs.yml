@@ -3,7 +3,9 @@ site_url: https://xterm.org
 nav:
   - Home: 'index.md'
   - 'About':
-    - 'Story': 'story.md' # rethink the heading, but use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
+    - 'Story': 'story.md' # rethink the heading,
+       - 'TBD': # use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
+       - 'TBD': # https://invisible-island.net/xterm/xterm.icon.html
     - 'FAQ': 'faq.md' # rethink
     - 'Terminal Icon': 'icon.md' # rethink placement and title
   - 'Install'
