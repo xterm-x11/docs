@@ -30,7 +30,7 @@ nav:
     # refer to the configuration procedure page
     # explain that this template file is self-documented
     - 'Icon': # TBD, if the new icon is adopted, then mention (a) different icon selection and (b) color customization.
-    - 'Title': # TBD, explictly do not recommend this route and cross-reference to the dynamically set title, the page under Use
+    - 'Static window title': # TBD, explictly do not recommend this route and cross-reference to the dynamically set title, the page under Use
   - 'Use' # select content from https://invisible-island.net/xterm/xterm.faq.html and https://invisible-island.net/xterm/#related-discussion
     # figure out a way to reference the manpage from each separate procedure page under Use, where applicable
     - 'Manpage': 'manpage.md' # content or even addition of the file under consideration
@@ -48,7 +48,7 @@ nav:
     - 'Scrolling': 'scrolling.md'
     - 'Scrollbar': 'scrollbar.md'
     - 'Prompt': 'prompt.md'
-    - 'Window title': 'window-title.md' # cross-reference to the permanently set title, the page under Customize
+    - 'Dynamic window title': 'dynamic-window-title.md' # cross-reference to the permanently set title, the page under Customize
        # Manually setting the title
        # Title ops in scripts
   - 'Release Notes': 'release-notes.md' # this is 'Patch Log': 'log.md' renamed
