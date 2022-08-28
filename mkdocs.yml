@@ -42,7 +42,7 @@ nav:
       - 'Guide': 'ctlseqs-guide.md'
       - 'List': 'ctlseqs-list.md'
     - 'Copy-paste': 'copy-paste.md' # also describe text/lines selection process, including selection on the command line if possible
-    - 'Tabs': 'tabs.md'
+    - 'Tabs': 'tabs.md' # explain why tabs are not the best for a terminal emulator and explain how to achieve the tab-like behavior
     - 'Full-screen': 'full-screen.md'
     - 'Scrolling': 'scrolling.md'
     - 'Scrollbar': 'scrollbar.md'
