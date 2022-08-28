@@ -18,7 +18,7 @@ nav:
     # procedure 3: xrdb remove
   - 'Customize': 'customize.md'
       # refer to the configuration procedure page
-      # make one single repo with two folders, Samples and Themes, one file Template, and one README
+      # IMPORTANT! Make one single repo for .Xresources files with two repo folders, Samples and Themes, one file, Template, and one README.
     - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
     - 'Themes': 'themes.md'
       # refer to the configuration procedure page
