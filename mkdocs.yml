@@ -36,7 +36,7 @@ nav:
       - 'Getting started with control sequences': 'getting-started-with-ctlseqs.md'
       - 'Guide': 'ctlseqs-guide.md'
       - 'List': 'ctlseqs-list.md'
-    - 'Copy-paste': 'copy-paste.md' # also describe the selection process, including selection on the command line if possible
+    - 'Copy-paste': 'copy-paste.md' # also describe text/lines selection process, including selection on the command line if possible
     - 'Tabs': 'tabs.md'
     - 'Full-screen': 'full-screen.md'
     - 'Scrolling': 'scrolling.md'
