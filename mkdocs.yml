@@ -32,6 +32,7 @@ nav:
     - 'Icon': # TBD, if the new icon is adopted, then mention (a) different icon selection and (b) color customization.
     - 'Title': # TBD, explictly do not recommend this route and cross-reference to the dynamically set title, the page under Use
   - 'Use' # select content from https://invisible-island.net/xterm/xterm.faq.html and https://invisible-island.net/xterm/#related-discussion
+    # figure out a way to reference the manpage from each separate procedure page under Use, where applicable
     - 'Manpage': 'manpage.md' # content or even addition of the file under consideration
       - 'xterm': 'manpage-xterm.md'
       - 'uxterm': 'manpage-uxterm.md'
