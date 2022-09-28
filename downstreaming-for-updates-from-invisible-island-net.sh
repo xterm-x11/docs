@@ -36,6 +36,9 @@ wget https://invisible-mirror.net/archives/xterm/
 wget https://invisible-island.net/archives/vttest/
 wget https://invisible-island.net/archives/luit/
 #
+wget https://invisible-island.net/xterm/manpage/resize.html
+wget https://invisible-island.net/xterm/manpage/resize.txt
+#
 https://gitlab.freedesktop.org/xorg/lib/libxt #Git repo, not the page
 #
 https://invisible-island.net/datafiles/release/xterm.tar.gz
@@ -43,3 +46,5 @@ https://invisible-island.net/datafiles/release/vttest.tar.gz
 https://invisible-island.net/datafiles/release/luit.tar.gz
 #
 https://invisible-mirror.net/archives/xterm/ #?
+#
+# see more links under https://invisible-island.net/xterm/xterm.faq.html#more_info
