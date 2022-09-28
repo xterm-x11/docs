@@ -20,8 +20,6 @@ For new users: download and try the sample file
 
 (for the first draft, copy the following content from the .Xresources files (sample, template, draft, etc.))
 
-# procedure X: xrdb update ...
+# procedure: xrdb update ...
 
-# procedure Y: xrdb -query
-
-# procedure Z: xrdb -remove > xrdb update
+# procedure: xrdb -remove > xrdb update
