@@ -49,4 +49,4 @@ https://invisible-island.net/datafiles/release/luit.tar.gz
 #
 https://invisible-mirror.net/archives/xterm/ #?
 #
-# see more links under https://invisible-island.net/xterm/xterm.faq.html#more_info
+# see more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
