@@ -38,6 +38,8 @@ wget https://invisible-island.net/archives/luit/
 #
 wget https://invisible-island.net/xterm/manpage/resize.html
 wget https://invisible-island.net/xterm/manpage/resize.txt
+wget https://invisible-island.net/xterm/manpage/resize.ps
+wget https://invisible-island.net/xterm/manpage/resize.pdf
 #
 https://gitlab.freedesktop.org/xorg/lib/libxt #Git repo, not the page
 #
