@@ -1,3 +1,3 @@
-# .Xresources template
+# .Xresources template file
 
 Under construction.
