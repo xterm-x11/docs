@@ -1,0 +1,3 @@
+# .Xresources template
+
+Under construction.
