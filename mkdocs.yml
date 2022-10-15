@@ -10,7 +10,7 @@ nav:
   - 'Customize': 'customize.md'
       # refer to the configuration procedure page
       # IMPORTANT! Make one single repo for .Xresources files with two repo folders, Samples and Themes, one file, Template, and one README.
-    - 'Samples': 'samples.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
+    - 'Sample': 'sample.md' # content: link to the samples Github repo & clone that repo to the xterm-x11 org
     - 'Themes': 'themes.md'
       # refer to the configuration procedure page
       # theme n+1
@@ -20,8 +20,8 @@ nav:
     - 'Template': 'template.md'
     # refer to the configuration procedure page
     # explain that this template file is self-documented
-    - 'Icon': # TBD, if the new icon is adopted, then mention (a) different icon selection and (b) color customization.
-    - 'Static window title': # TBD
+    - 'Icon': 'icon.md' # TBD, if the new icon is adopted, then mention (a) different icon selection and (b) color customization.
+    - 'Static window title': 'static-window-title.md' # TBD
        # explain the default user@host title and where it comes from
        # explictly do not recommend this route and cross-reference to the dynamically set title, the page under Use
     - 'Scrollbar': 'scrollbar.md'
