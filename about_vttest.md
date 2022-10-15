@@ -1,3 +1,0 @@
-# About Vttest
-
-Under construction.
