@@ -16,7 +16,7 @@ nav:
     - 'Scrollbar': 'scrollbar.md'
     - 'Internal border': 'internal-border.md'
     - 'Window border': 'window-border.md'
-  - 'Use'
+  - 'Use': 'use.md'
     - 'Manpage': 'manpage.md'
       - 'xterm': 'manpage-xterm.md'
       - 'uxterm': 'manpage-uxterm.md'
