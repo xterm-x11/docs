@@ -2,7 +2,7 @@
 
 Under construction.
 
-refer to the configuration procedure page
+Refer to the configuration procedure page.
 
 Too much work, but in theory the format for listing themes could be:
 ```
