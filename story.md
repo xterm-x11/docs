@@ -1,8 +1,8 @@
-= TBD
+# TBD
 
 Content from https://invisible-island.net/xterm/xterm.faq.html#who_did_it
 
-= TBD
+# TBD
 
 Content from https://invisible-island.net/xterm/xterm.icon.html
 
