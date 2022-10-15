@@ -56,8 +56,8 @@ nav:
           # https://invisible-island.net/xterm/xft/xft.html
   - 'Utilities':
     - 'Vttest': # Investigate. Is this less important than Luit? If more important, then down after Luit.
-      - 'About Vttest': 'vttest.md'
-      - 'Vttest Changes': 'changes.md'
+      - 'About Vttest': 'about-vttest.md'
+      - 'Vttest Changes': 'vttest-changes.md'
     - 'Xtoolkit': 'xtoolkit.md' # scope not clear yet
     - 'Luit': 'luit.md' 
       # see more pages (e.g., manpage) to include under this: https://github.com/xterm-x11/docs/blob/main/downstreaming-for-updates-from-invisible-island-net.sh
