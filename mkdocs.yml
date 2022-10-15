@@ -5,7 +5,7 @@ nav:
   - 'Story': 'story.md' # rethink or keep the heading
   - 'Install'
     - 'Package': 'package.md'
-    - 'xterm.tar.gz': 'xterm.tar.gx.md'
+    - 'xterm.tar.gz': 'xterm.tar.gz.md'
   - 'Configure': 'configure.md'
   - 'Customize': 'customize.md'
       # refer to the configuration procedure page
