@@ -22,4 +22,6 @@ For new users: download and try the sample file
 
 # procedure: xrdb update ...
 
+# procedure: xrdb query
+
 # procedure: xrdb -remove > xrdb update
