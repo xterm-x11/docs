@@ -1,4 +1,4 @@
-# Sample
+# .Xresources sample file
 
 Under construction.
 
