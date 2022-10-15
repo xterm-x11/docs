@@ -1,13 +1,8 @@
 site_name: xterm
 site_url: https://xterm.org
 nav:
-  - Home: 'index.md'
-  - 'About':
-    - 'Story': 'story.md' # rethink or keep the heading
-       - 'TBD': # use https://invisible-island.net/xterm/xterm.faq.html#who_did_it
-       - 'TBD': # https://invisible-island.net/xterm/xterm.icon.html
-                  # From this page, link to the docs repo folder that is a copy of current-state
-                  # https://github.com/ThomasDickey/xterm-snapshots/tree/master/icons.
+  - Home: 'index.md' # = About
+  - 'Story': 'story.md' # rethink or keep the heading
   - 'Install'
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
