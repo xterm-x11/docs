@@ -2,6 +2,8 @@
 
 Under construction.
 
+Scope is not clear.
+
 Explain the differences among the list items and link to each:
 
 'xterm': 'manpage-xterm.md'
