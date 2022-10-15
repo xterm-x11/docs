@@ -1,4 +1,6 @@
-# TBD
+# TBD, The XTerm story
+
+Rethink or keep the heading.
 
 Content from https://invisible-island.net/xterm/xterm.faq.html#who_did_it
 
