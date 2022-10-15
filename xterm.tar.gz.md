@@ -1,3 +1,3 @@
-# xterm.tar.gx.md
+# xterm.tar.gz
 
 Under construction
