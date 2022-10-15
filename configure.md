@@ -1,4 +1,6 @@
-DRAFT: WORK IN PROGRESS
+= Configure
+
+Under construction.
 
 Conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
     
