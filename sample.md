@@ -2,4 +2,4 @@
 
 Under construction.
 
-Link to the samples Github repo & clone that repo to the xterm-x11 org.
+Link to the sample file in the https://github.com/xterm-x11/Xresources-files/ repo.
