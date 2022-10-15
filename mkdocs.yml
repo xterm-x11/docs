@@ -12,10 +12,6 @@ nav:
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gx.md'
   - 'Configure': 'configure.md'
-    # conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
-    # procedure 1: xrdb update
-    # procedure 2: xrdb query
-    # procedure 3: xrdb remove
   - 'Customize': 'customize.md'
       # refer to the configuration procedure page
       # IMPORTANT! Make one single repo for .Xresources files with two repo folders, Samples and Themes, one file, Template, and one README.
