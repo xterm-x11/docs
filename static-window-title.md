@@ -1,3 +1,3 @@
-# Static window title for XTerm
+# Static window title
 
 Under construction.
