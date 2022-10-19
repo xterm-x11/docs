@@ -42,3 +42,6 @@ nav:
       - 'Vttest changes': 'vttest-changes.md'
     - 'Xtoolkit': 'xtoolkit.md'
     - 'Luit': 'luit.md'
+
+theme:
+  name: material
