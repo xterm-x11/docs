@@ -7,7 +7,7 @@ nav:
     - 'Package': 'package.md'
     - 'xterm.tar.gz': 'xterm.tar.gz.md'
   - 'Configure': 'configure.md'
-  - 'Customize': 'customize.md'
+  - 'Customize': 'customize.md' # problem https://www.mkdocs.org/user-guide/writing-your-docs/ ?
     - 'Sample': 'sample.md'
     - 'Themes': 'themes.md'
     - 'Template': 'template.md'
@@ -16,8 +16,8 @@ nav:
     - 'Scrollbar': 'scrollbar.md'
     - 'Internal border': 'internal-border.md'
     - 'Window border': 'window-border.md'
-  - 'Use': 'use.md'
-    - 'Manpage': 'manpage.md'
+  - 'Use': 'use.md' # problem https://www.mkdocs.org/user-guide/writing-your-docs/ ?
+    - 'Manpage': 'manpage.md' # problem https://www.mkdocs.org/user-guide/writing-your-docs/ ?
       - 'xterm': 'manpage-xterm.md'
       - 'uxterm': 'manpage-uxterm.md'
       - 'koi8rxterm': 'manpage-koi8rxterm.md'
@@ -33,7 +33,7 @@ nav:
     - 'Prompt': 'prompt.md'
     - 'Dynamic window title': 'dynamic-window-title.md'
   - 'Release notes': 'release-notes.md'
-  - 'Libraries': 'libraries.md'
+  - 'Libraries': 'libraries.md' # problem https://www.mkdocs.org/user-guide/writing-your-docs/ ?
     - 'Xcursor': 'xcursor.md'
     - 'Xft': 'xft.md'
   - 'Utilities':
