@@ -41,13 +41,14 @@ wget https://invisible-island.net/xterm/manpage/resize.txt
 wget https://invisible-island.net/xterm/manpage/resize.ps
 wget https://invisible-island.net/xterm/manpage/resize.pdf
 #
-https://gitlab.freedesktop.org/xorg/lib/libxt #Git repo, not the page
+wget https://gitlab.freedesktop.org/xorg/lib/libxt #Git repo, not the page
 #
-https://invisible-island.net/datafiles/release/xterm.tar.gz
-https://invisible-island.net/datafiles/release/vttest.tar.gz
-https://invisible-island.net/datafiles/release/luit.tar.gz
+wget https://invisible-island.net/datafiles/release/xterm.tar.gz
+wget https://invisible-island.net/datafiles/release/vttest.tar.gz
+wget https://invisible-island.net/datafiles/release/luit.tar.gz
 #
-https://invisible-mirror.net/archives/xterm/ #?
-https://invisible-island.net/archives/vttest/
+wget https://invisible-mirror.net/archives/xterm/ # -R?
+wget https://invisible-island.net/archives/vttest/ # -R?
+wget https://invisible-island.net/archives/luit/ # -R?
 #
 # see more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
