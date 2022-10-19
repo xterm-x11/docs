@@ -47,8 +47,8 @@ wget https://invisible-island.net/datafiles/release/xterm.tar.gz
 wget https://invisible-island.net/datafiles/release/vttest.tar.gz
 wget https://invisible-island.net/datafiles/release/luit.tar.gz
 #
-wget https://invisible-island.net/archives/xterm/ # -R?
-wget https://invisible-island.net/archives/vttest/ # -R?
-wget https://invisible-island.net/archives/luit/ # -R?
+wget -r https://invisible-island.net/archives/xterm/ # --level=NUMBER ?
+wget -r https://invisible-island.net/archives/vttest/ # --level=NUMBER ?
+wget -r https://invisible-island.net/archives/luit/ # --level=NUMBER ?
 #
 # see more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
