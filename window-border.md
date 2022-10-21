@@ -1,3 +1,0 @@
-# Window border
-
-Under construction.
