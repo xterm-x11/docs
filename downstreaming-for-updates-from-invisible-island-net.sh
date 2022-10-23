@@ -3,6 +3,8 @@
 
 cd xterm-on-invisible-island
 
+rm *
+
 #recurrent downstreaming to fetch updates from https://invisible-island.net/:
 #(This list is for the pages that are to be downloaded regularly to fetch updates.)
 wget https://invisible-island.net/xterm/manpage/xterm.html
@@ -31,10 +33,6 @@ wget https://invisible-island.net/luit/manpage/luit.txt
 wget https://invisible-island.net/luit/manpage/luit.pdf
 wget https://invisible-island.net/luit/manpage/luit.ps
 wget https://invisible-island.net/luit/luit.html
-#
-wget https://invisible-mirror.net/archives/xterm/
-wget https://invisible-island.net/archives/vttest/
-wget https://invisible-island.net/archives/luit/
 #
 wget https://invisible-island.net/xterm/manpage/resize.html
 wget https://invisible-island.net/xterm/manpage/resize.txt

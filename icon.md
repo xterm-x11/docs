@@ -1,3 +1,0 @@
-# XTerm icon
-
-Under construction.
