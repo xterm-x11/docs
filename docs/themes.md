@@ -2,6 +2,10 @@
 
 This page is under construction.
 
+This content is currently available at
+https://github.com/xterm-x11/files.Xresources/tree/main/themes
+
+<!---
 Tasks for the technical writer:
 
 Refer to the configuration procedure page.
@@ -16,4 +20,4 @@ Too much work, but in theory the format for listing themes could be:
 ----
 ```
 Link to https://github.com/xterm-x11/files.Xresources/tree/main/themes
-
+--->
