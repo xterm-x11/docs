@@ -7,7 +7,7 @@ git checkout -b $(date -I)
 
 cd xterm-on-invisible-island
 
-rm *
+# rm *
 
 # Recurrent downstreaming to fetch updates from https://invisible-island.net/:
 # (This list is for the pages that are to be downloaded regularly to fetch updates.)
@@ -20,7 +20,7 @@ mv koi8rxterm.html manpage-koi8rxterm.html
 wget https://invisible-island.net/xterm/ctlseqs/ctlseqs-contents.html
 mv ctlseqs-contents.html ctlseqs-list.html
 wget https://invisible-island.net/xterm/ctlseqs/ctlseqs.html
-mv ctlseqs-contents.html ctlseqs-guide.html
+mv ctlseqs.html ctlseqs-guide.html
 wget https://invisible-island.net/xterm/xterm.log.html
 #
 wget https://invisible-island.net/vttest/vttest.html
@@ -80,3 +80,8 @@ git log -1 --oneline
 git push -u origin $(date -I)
 
 git switch main
+
+git branch -D $(date -I)
+
+echo "https://github.com/xterm-x11/docs/pull/new/$(date -I)"
+
