@@ -41,14 +41,20 @@ nav:
        - 'resize': manpage-resize.md
   - 'Release notes': release-notes.md
   - 'Libraries':
+       - 'Xtoolkit': xtoolkit.md
        - 'Xcursor': xcursor.md
        - 'Xft': xft.md
   - 'Utilities':
        - 'Vttest':
-           - 'About Vttest': vttest_about.md
-           - 'Vttest changes': vttest-changes.md
-           - 'Xtoolkit': xtoolkit.md # check if this should instead be under Libraries
-       - 'Luit': 'luit.md'
+           - 'About Vttest': vttest-about.md
+           - 'Vttest changes': vttest-release-notes.md
+           - 'vttest.tar.gz': vttest.tar.gz.md
+           - 'Vttest archives': vttest-archives.md
+       - 'Luit':
+           - 'About Luit': luit-about.md
+           - 'Luit manpage': luit-manpage.md
+           - 'luit.tar.gz': luit.tar.gz.md
+           - 'Luit archives': luit-archives.md
 
 theme:
   name: material
