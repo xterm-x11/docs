@@ -1,4 +1,4 @@
-# Manually entered window title
+# Manual window title
 
 This page is under construction.
 
