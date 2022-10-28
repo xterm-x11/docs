@@ -26,11 +26,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xterm.org/dynamic-window-title/</loc>
-         <lastmod>2022-10-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://xterm.org/full-screen/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
@@ -51,7 +46,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xterm.org/luit/</loc>
+         <loc>https://xterm.org/luit-about/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/luit-archives/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/luit-manpage/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/luit.tar.gz/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -72,6 +82,11 @@
     </url>
     <url>
          <loc>https://xterm.org/manpage-xterm/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/manual-window-title/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -131,12 +146,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xterm.org/vttest-changes/</loc>
+         <loc>https://xterm.org/vttest-about/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://xterm.org/vttest_about/</loc>
+         <loc>https://xterm.org/vttest-archives/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/vttest-release-notes/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xterm.org/vttest.tar.gz/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
