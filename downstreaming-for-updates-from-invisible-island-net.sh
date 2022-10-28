@@ -7,7 +7,7 @@ git checkout -b $(date -I)
 
 cd xterm-on-invisible-island
 
-# rm *
+rm *
 
 # Recurrent downstreaming to fetch updates from https://invisible-island.net/:
 # (This list is for the pages that are to be downloaded regularly to fetch updates.)
