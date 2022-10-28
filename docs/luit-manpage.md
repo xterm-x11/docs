@@ -1,4 +1,4 @@
-# Luit
+# Luit manpage
 
 This page is under construction.
 

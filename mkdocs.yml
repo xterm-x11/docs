@@ -47,7 +47,7 @@ nav:
   - 'Utilities':
        - 'Vttest':
            - 'About Vttest': vttest-about.md
-           - 'Vttest changes': vttest-release-notes.md
+           - 'Vttest release notes': vttest-release-notes.md
            - 'vttest.tar.gz': vttest.tar.gz.md
            - 'Vttest archives': vttest-archives.md
        - 'Luit':
