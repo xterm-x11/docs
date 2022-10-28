@@ -80,7 +80,7 @@ git add .
 
 git commit -m "downstreaming"
 
-git push -u origin downstreaming
+git push -f origin downstreaming
 
 git switch main
 
