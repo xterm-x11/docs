@@ -1,11 +1,13 @@
 #!/bin/bash
 #Downstreaming xterm-related pages from Thomas Dickey's https://invisible-island.net/
 
-cd xterm-on-invisible-island
-
 git branch -d downstreaming
 
 git switch -c downstreaming
+
+cd xterm-on-invisible-island
+
+rm *
 
 #recurrent downstreaming to fetch updates from https://invisible-island.net/:
 #(This list is for the pages that are to be downloaded regularly to fetch updates.)
