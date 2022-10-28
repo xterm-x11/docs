@@ -1,8 +1,12 @@
-# Dynamic window title
+# Manually entered window title
 
 This page is under construction.
 
-## Manually setting the title
+## Enabling manual titles
+
+This page is under construction.
+
+## Entering manual titles
 
 This page is under construction.
 
