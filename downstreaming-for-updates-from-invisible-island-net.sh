@@ -9,6 +9,24 @@ cd xterm-on-invisible-island
 
 rm *
 
+#Downstreaming xterm-related pages from Thomas Dickey's https://invisible-island.net/
+
+#copy information to be published on xterm.org from the xterm-related pages on https://invisible-island.net/ that are not expected to be updated:
+#(This list is for the pages that are to be downloaded only once (or so).)
+wget https://invisible-island.net/xterm/xterm.html
+wget https://invisible-island.net/xterm/xterm.faq.html
+wget https://invisible-island.net/xterm/xterm.icon.html
+#
+wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by XTerm and apps related to those libs
+# https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
+#
+wget https://invisible-island.net/xterm/xtoolkit/xtoolkit.html #X Toolkit links
+wget https://github.com/freedesktop/xorg-libXt/commit/85eb751e4e1683af6cee3ee9dce29f74911a639d
+wget https://invisible-island.net/xterm/xtoolkit/intrinsics.html
+wget https://invisible-island.net/xterm/xtoolkit/intrinsics.pdf
+wget https://invisible-island.net/xterm/xtoolkit/manpage-index.html #include all linked pages after the first link because those are separate pages
+wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
+
 #recurrent downstreaming to fetch updates from https://invisible-island.net/:
 #(This list is for the pages that are to be downloaded regularly to fetch updates.)
 wget https://invisible-island.net/xterm/manpage/xterm.html
@@ -49,32 +67,11 @@ wget https://invisible-island.net/datafiles/release/xterm.tar.gz
 wget https://invisible-island.net/datafiles/release/vttest.tar.gz
 wget https://invisible-island.net/datafiles/release/luit.tar.gz
 #
-wget https://invisible-island.net/archives/xterm/ # --level=NUMBER ? Add the `-r` option to wget and test.
-wget https://invisible-island.net/archives/vttest/ # --level=NUMBER ? Add the `-r` option to wget and test.
-wget https://invisible-island.net/archives/luit/ # --level=NUMBER ? Add the `-r` option to wget and test.
+# wget https://invisible-island.net/archives/xterm/ # --level=NUMBER ? Add the `-r` option to wget and test.
+# wget https://invisible-island.net/archives/vttest/ # --level=NUMBER ? Add the `-r` option to wget and test.
+# wget https://invisible-island.net/archives/luit/ # --level=NUMBER ? Add the `-r` option to wget and test.
 #
 # see more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
-
-#Downstreaming xterm-related pages from Thomas Dickey's https://invisible-island.net/
-
-#copy information to be published on xterm.org from the xterm-related pages on https://invisible-island.net/ that are not expected to be updated:
-#(This list is for the pages that are to be downloaded only once (or so).)
-wget https://invisible-island.net/xterm/xterm.html
-wget https://invisible-island.net/xterm/xterm.faq.html
-wget https://invisible-island.net/xterm/xterm.icon.html
-#
-wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by XTerm and apps related to those libs
-#
-wget https://invisible-island.net/xterm/xtoolkit/xtoolkit.html #X Toolkit links
-wget https://github.com/freedesktop/xorg-libXt/commit/85eb751e4e1683af6cee3ee9dce29f74911a639d
-wget https://invisible-island.net/xterm/xtoolkit/intrinsics.html
-wget https://invisible-island.net/xterm/xtoolkit/intrinsics.pdf
-wget https://invisible-island.net/xterm/xtoolkit/manpage-index.html #include all linked pages after the first link because those are separate pages
-wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
-#
-https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
-#
-https://www.in-ulm.de/~mascheck/various/xterm/
 
 git add .
 
