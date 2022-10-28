@@ -2,6 +2,4 @@
 
 This page is under construction.
 
-Tasks for the technical writer:
-
-Explain why tabs are not the best for a terminal emulator and explain how to achieve the tab-like behavior.
+XTerm does not offer tabs as a feature on purpose. This page will explain readers how to use XTerm without tabs and why lacking tabs is not a UX inconvenience.
