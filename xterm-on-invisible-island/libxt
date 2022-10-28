@@ -32,7 +32,7 @@ if (gl.startup_calls && window.fetch) {
   });
 }
 if (gl.startup_graphql_calls && window.fetch) {
-  const headers = {"X-CSRF-Token":"Hqoo8dU4nGwCi3BY7+y/DjUNREdsPpUcCFfGUd1Bp9h7Vdc14/w9v6as2QvNsTt3CcuiZwXY5gKL9QrfSAMNGA==","x-gitlab-feature-category":"projects"};
+  const headers = {"X-CSRF-Token":"IUkT5YcOz2tMVpxmmPu+cL1/GflCpD0ZPwg90Y3bRU7oPM2TIyuLxoaX2xpeay++hRBWBbY9Dxj5ahP0Q+6qCA==","x-gitlab-feature-category":"projects"};
   const url = `https://gitlab.freedesktop.org/api/graphql`
 
   const opts = {
@@ -129,7 +129,7 @@ window.gon={};gon.features={"lazyLoadCommits":false,"highlightJs":true,"fileLine
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#292961" name="theme-color">
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="6Ov6jRzaY2k1sUW/dE8BLV5ZBFmzVxc6uclmvaqIQq6NFAVJKh7CupGW7OxWEoVUYp/iedqxZCQ6a6ozP8robg==" />
+<meta name="csrf-token" content="qqTkWabA5tMheVf5wwYmOEplilm+ZG5DDAn6ZeRc6dFj0TovAuWifuu4EIUFlrf2cgrFpUr9XELKa9RAKmkGlw==" />
 <meta name="csp-nonce" />
 <meta name="action-cable-url" content="/-/cable" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
