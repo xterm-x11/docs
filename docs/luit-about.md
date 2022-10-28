@@ -1,4 +1,4 @@
-# Luit
+# About Luit
 
 This page is under construction.
 
