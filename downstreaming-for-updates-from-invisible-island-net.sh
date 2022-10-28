@@ -3,6 +3,8 @@
 
 cd xterm-on-invisible-island
 
+git branch -d downstreaming
+
 git switch -c downstreaming
 
 #recurrent downstreaming to fetch updates from https://invisible-island.net/:
