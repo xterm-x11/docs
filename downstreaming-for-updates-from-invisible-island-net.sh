@@ -1,9 +1,9 @@
 #!/bin/bash
 #Downstreaming xterm-related pages from Thomas Dickey's https://invisible-island.net/
 
-git branch -d downstreaming
+set -e
 
-git switch -c downstreaming
+git checkout -b $(date -I)
 
 cd xterm-on-invisible-island
 
@@ -73,10 +73,10 @@ wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf #download source
 
 git add .
 
-git commit -m "downstreaming"
+git commit -m "downstreaming at $(date -Iminutes)"
 
-git push -f origin downstreaming
+git log -1 --oneline
+
+git push -u origin $(date -I)
 
 git switch main
-
-git branch -d downstreaming
