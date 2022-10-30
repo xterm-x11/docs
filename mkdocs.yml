@@ -20,12 +20,12 @@ nav:
        - 'Full-screen': full-screen.md
        - 'Scrolling': scrolling.md
        - 'Prompt': prompt.md
-       - 'Manual window title': manual-window-title.md
   - 'Customize':
        - 'Sample': sample.md
        - 'Themes': themes.md
        - 'Template': template.md
        - 'Icon': icon.md
+       - 'Manual window title': manual-window-title.md
        - 'Static window title': static-window-title.md
        - 'Scrollbar': scrollbar.md
        - 'Internal border': internal-border.md
