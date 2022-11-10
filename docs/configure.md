@@ -18,8 +18,6 @@ If you get `.Xresources`, you already have it and you need to edit its contents 
 
 If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that file. To create it, you can download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file (the instructions are inside) or run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
 
-(for the first draft, copy the following content from the .Xresources files (sample, template, draft, etc.))
-
 ## Checking the currently applied Xresources
 
 Run `$ xrdb -query` to view the latest applied Xresources, such as contents of the `~/.Xresources` file.
