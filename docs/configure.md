@@ -20,6 +20,8 @@ TIP: To create the `~/.Xresources` dotfile, you can download and use the [sample
 
 Run `$ xrdb -query` to view the latest applied X resources.
 
+TIP: This command might be useful after editing the `~/.Xresources` dotfile, especially after changing XTerm themes.
+
 ## Updating the ~/.Xresources dotfile
 
 1. Add or remove the lines or edit the values in your `~/.Xresources` dotfile.
