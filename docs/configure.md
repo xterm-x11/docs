@@ -20,7 +20,7 @@ TIP: To create the `.Xresources` dotfile, you can download and use the [sample](
 
 Run `$ xrdb -query` to view the latest applied X resources, such as contents of the `~/.Xresources` dotfile.
 
-## Updating the .Xresources file
+## Updating the .Xresources dotfile
 
 1. Add or remove the lines or edit the values in your `~/.Xresources` dotfile.
 2. Optional but recommended: Run `$ xrdb -remove` to clear all previously applied Xresources. (This ensures you won't get conflicts or a mix of applied both old and new properties or values.)
