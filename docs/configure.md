@@ -18,7 +18,7 @@ TIP: To create the `~/.Xresources` dotfile, you can download and use the [sample
 
 ## Checking the latest applied X resources
 
-Run `$ xrdb -query` to view the latest applied X resources, such as contents of the `~/.Xresources` dotfile.
+Run `$ xrdb -query` to view the latest applied X resources.
 
 ## Updating the ~/.Xresources dotfile
 
