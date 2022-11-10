@@ -24,7 +24,7 @@ If you get `ls: cannot access '.Xresources': No such file or directory`, you nee
 
 To view the latest applied contents of the `~/.Xresources` file, run `$ xrdb -query`.
 
-# Updating the .Xresources file
+## Updating the .Xresources file
 
 1. Add or remove the lines or edit the values in your `~/.Xresources` file.
 2. Run `$ xrdb -remove` to clear all previously applied Xresources to avoid conflicts or a mix of old and new lines and values
