@@ -26,9 +26,9 @@ To view the latest applied contents of the `~/.Xresources` file, run `$ xrdb -qu
 
 # Updating the .Xresources file
 
-1. Edit the values or add or remove the lines in your `~/.Xresources` file.
-2. Optional: If you have added or removed lines in `~/.Xresources`, that could cause conflicts or a mix of settings that you might want to be applied. To avoid getting an error message or unexpected results, run `$ xrdb -remove` to remove all Xresources.
-3. Run `$ xrdb -merge ~/.Xresources`.
+1. Add or remove the lines or edit the values in your `~/.Xresources` file.
+2. Run `$ xrdb -remove` to clear all previously applied Xresources to avoid conflicts or a mix of old and new lines and values
+3. Run `$ xrdb -merge ~/.Xresources`. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
 4. Open a new XTerm window to verify that the update has been applied: `$ xterm &`.
 
 ## Additional resources
