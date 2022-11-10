@@ -10,18 +10,16 @@ Make `xrdb -query` the first step of the Configure page (to find out what's ther
 
 Make checking (which command? `ls -a .Xresources`?)  for `.Xresources` in the user's home as the first or second step of the Configure page (to check if this file already exists)
 
-If the file exists, you get
-```
-$ ls -a ~/.Xresources
-.Xresources
-```
-And if the file doesn't exist, you get
-```
-$ ls -a ~/.Xresources
-ls: cannot access '.Xresources': No such file or directory
-```
+Before doing anything regarding the `.Xresources` file, first check if you already have it in your user's home directory:
 
-For new users: download and try the sample file
+```
+$ ls -a ~/.Xresources
+
+```
+If you get `.Xresources`, you already have it and you need to edit its contents to configure XTerm.
+
+If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that file. To create it, you can download and use the (sample)[https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources] file (the instructions are inside) or run `$ touch ~/.Xresources`.
+
 
 (for the first draft, copy the following content from the .Xresources files (sample, template, draft, etc.))
 
