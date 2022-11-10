@@ -6,16 +6,18 @@ Conceptually explain the combination of the X resources, the `.Xresources` file,
     
 Make `xrdb -query` the first step of the Configure page (to find out what's there already)
 
+## Checking for the .Xresources file
+
 Make checking (which command? `ls -a .Xresources`?)  for `.Xresources` in the user's home as the first or second step of the Configure page (to check if this file already exists)
 
 If the file exists, you get
 ```
-$ ls -a .Xresources
+$ ls -a ~/.Xresources
 .Xresources
 ```
 And if the file doesn't exist, you get
 ```
-$ ls -a .Xresources
+$ ls -a ~/.Xresources
 ls: cannot access '.Xresources': No such file or directory
 ```
 
