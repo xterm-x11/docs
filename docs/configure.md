@@ -1,11 +1,7 @@
 # Configuring XTerm
 
-This page is under construction.
-
 Conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
     
-Make `xrdb -query` the first step of the Configure page (to find out what's there already)
-
 ## Checking for the .Xresources file
 
 Make checking (which command? `ls -a .Xresources`?)  for `.Xresources` in the user's home as the first or second step of the Configure page (to check if this file already exists)
