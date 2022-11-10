@@ -12,10 +12,8 @@ Make checking (which command? `ls -a .Xresources`?)  for `.Xresources` in the us
 
 Before doing anything regarding the `.Xresources` file, first check if you already have it in your user's home directory:
 
-```
-$ ls -a ~/.Xresources
+`$ ls -a ~/.Xresources`
 
-```
 If you get `.Xresources`, you already have it and you need to edit its contents to configure XTerm.
 
 If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that file. To create it, you can download and use the (sample)[https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources] file (the instructions are inside) or run `$ touch ~/.Xresources`.
