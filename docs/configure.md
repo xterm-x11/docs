@@ -22,15 +22,15 @@ If you get `ls: cannot access '.Xresources': No such file or directory`, you nee
 
 # procedure: xrdb query
 
-This page is under construction.
+To view the latest applied contents of the `~/.Xresources` file, run `$ xrdb -query`.
 
-To view the applied contents of this file, run `$ xrdb -query`.
+# Updating the .Xresources file
 
-# procedure: xrdb -remove > xrdb update
-
-This page is under construction.
-
-1. Update your `~/.Xresources` file.
+1. Edit the values or add or remove the lines in your `~/.Xresources` file.
 2. Optional: If you have added or removed lines in `~/.Xresources`, that could cause conflicts or a mix of settings that you might want to be applied. To avoid getting an error message or unexpected results, run `$ xrdb -remove` to remove all Xresources.
 3. Run `$ xrdb -merge ~/.Xresources`.
 4. Open a new XTerm window to verify that the update has been applied: `$ xterm &`.
+
+## Additional resources
+
+Run `$ xrdb -help` or see the [xrdb](https://www.x.org/releases/X11R7.7/doc/man/man1/xrdb.1.xhtml) manpage.
