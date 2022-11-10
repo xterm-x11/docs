@@ -14,7 +14,7 @@ Before doing anything regarding the `.Xresources` dotfile, first check if you al
 
 - If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that dotfile.
 
-TIP: To create the `.Xresources` dotfile, you can download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file (the instructions are inside) or run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
+TIP: To create the `.Xresources` dotfile, you can  download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file (recommended, instructions inside) or run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
 
 ## Checking the latest applied X resources
 
