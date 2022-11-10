@@ -22,6 +22,10 @@ Run `$ xrdb -query` to view the latest applied X resources.
 
 TIP: This command might be useful after editing the `~/.Xresources` dotfile, especially after changing XTerm color themes.
 
+## Applying the X resources from the ~/.Xresources dotfile
+
+Run `$ xrdb -merge ~/.Xresources`.
+
 ## Updating the ~/.Xresources dotfile
 
 1. Add or remove parameters or change their values in your `~/.Xresources` dotfile.
