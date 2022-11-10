@@ -2,8 +2,6 @@
 
 This page is under construction.
 
-Tasks for the technical writer:
-
 Conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
     
 Make `xrdb -query` the first step of the Configure page (to find out what's there already)
