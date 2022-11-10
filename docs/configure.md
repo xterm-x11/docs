@@ -1,8 +1,6 @@
 # Configuring XTerm
 
-Conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
-https://wiki.archlinux.org/title/X_resources
-
+Almost all of XTerm's configuration is kept as [X resources](https://wiki.archlinux.org/title/X_resources) in the `~/.Xresources` dotfile. Configuring XTerm can be as easy as simply downloading or editing your `~/.Xresources` dotfile and running the `xrdb` command to apply the X resources.
 
 ## Checking for the .Xresources dotfile
 
