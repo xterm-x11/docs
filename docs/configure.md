@@ -16,13 +16,13 @@ Before doing anything regarding the `~/.Xresources` dotfile, first check if you 
 
 - If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that dotfile.
 
-TIP: To create the `~/.Xresources` dotfile, you can download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file, which is recommended (further instructions are inside that file). Alternatively, you can run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
+**TIP** To create the `~/.Xresources` dotfile, you can download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file, which is recommended (further instructions are inside that file). Alternatively, you can run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
 
 ## Checking the latest applied X resources
 
 Run `$ xrdb -query` to view the latest applied X resources.
 
-TIP: This command might be useful after editing the `~/.Xresources` dotfile, especially after changing XTerm color themes.
+**TIP** This command might be useful after editing the `~/.Xresources` dotfile, especially after changing XTerm color themes.
 
 ## Applying the X resources from the ~/.Xresources dotfile
 
