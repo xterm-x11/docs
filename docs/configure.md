@@ -30,10 +30,10 @@ Run `$ xrdb -merge ~/.Xresources`.
 
 ## Updating the ~/.Xresources dotfile
 
-1. Add or remove parameters or change their values in your `~/.Xresources` dotfile.
-2. Optional and recommended: run `$ xrdb -remove` to clear all previously applied X resources and thus avoid getting a mix of old and new XTerm parameters and values.
-3. Run `$ xrdb -merge ~/.Xresources` to apply new parameters or values. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
-4. Open a new XTerm window to verify that the update has been applied: `$ xterm &`.
+1\. Add or remove parameters or change their values in your `~/.Xresources` dotfile.
+2\. Optional and recommended: run `$ xrdb -remove` to clear all previously applied X resources and thus avoid getting a mix of old and new XTerm parameters and values.
+3\. Run `$ xrdb -merge ~/.Xresources` to apply new parameters or values. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
+4\. Open a new XTerm window to verify that the update has been applied: `$ xterm &`.
 
 ## Additional resources
 
