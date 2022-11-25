@@ -1,37 +1,43 @@
 # Configuring XTerm
 
-This page is under construction.
+Almost all of XTerm's configuration is kept as [X resources](https://wiki.archlinux.org/title/X_resources) in the `~/.Xresources` dotfile.
 
-Tasks for the technical writer:
+The X resources that you can configure for XTerm are listed in the [template](https://github.com/xterm-x11/files.Xresources/blob/main/template.Xresources) file and in the XTerm manpage, which is available as `$ man xterm` or [online](https://invisible-island.net/xterm/manpage/xterm.html#h2-RESOURCES).
 
-Conceptually explain the combination of the X resources, the `.Xresources` file, and the `xrdb` command.
-    
-Make `xrdb -query` the first step of the Configure page (to find out what's there already)
+To configure XTerm on a system, simply download or create and edit your `~/.Xresources` dotfile, and then run the `xrdb` command to apply the X resources from your `~/.Xresources` dotfile. See the next sections for step-by-step instructions.
 
-Make checking (which command? `ls -a .Xresources`?)  for `.Xresources` in the user's home as the first or second step of the Configure page (to check if this file already exists)
-If the file exists, you get
-```
-$ ls -a .Xresources
-.Xresources
-```
-And if the file doesn't exist, you get
-```
-$ ls -a .Xresources
-ls: cannot access '.Xresources': No such file or directory
-```
+## Checking for the ~/.Xresources dotfile
 
-For new users: download and try the sample file
+Before doing anything regarding the `~/.Xresources` dotfile, first check if you already have it in the system's user home directory:
 
-(for the first draft, copy the following content from the .Xresources files (sample, template, draft, etc.))
+`$ ls -a ~/.Xresources`
 
-# procedure: xrdb update ...
+- If you get `.Xresources`, that dotfile is already there, and you just need to edit it to configure XTerm.
 
-This page is under construction.
+- If you get `ls: cannot access '.Xresources': No such file or directory`, you need to create that dotfile.
 
-# procedure: xrdb query
+**TIP** To create the `~/.Xresources` dotfile, you can download and use the [sample](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file, which is recommended (further instructions are inside that file). Alternatively, you can run `$ touch ~/.Xresources` to create a blank one where you can add XTerm configuration lines.
 
-This page is under construction.
+## Checking the latest applied X resources
 
-# procedure: xrdb -remove > xrdb update
+Run `$ xrdb -query` to view the latest applied X resources.
 
-This page is under construction.
+**TIP** This command might be useful after editing the `~/.Xresources` dotfile, especially after changing XTerm color themes.
+
+## Applying the X resources from the ~/.Xresources dotfile
+
+Run `$ xrdb -merge ~/.Xresources`.
+
+## Updating the ~/.Xresources dotfile
+
+1\. Add or remove parameters or change their values in your `~/.Xresources` dotfile.
+
+2\. Optional and recommended: run `$ xrdb -remove` to clear all previously applied X resources and thus avoid getting a mix of old and new XTerm parameters and values.
+
+3\. Run `$ xrdb -merge ~/.Xresources` to apply new parameters or values. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
+
+4\. Open a new XTerm window to verify that the update has been applied: `$ xterm &`.
+
+## Additional resources
+
+Run `$ xrdb -help` or see the [xrdb](https://www.x.org/releases/X11R7.7/doc/man/man1/xrdb.1.xhtml) manpage.
