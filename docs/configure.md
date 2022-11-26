@@ -49,7 +49,7 @@ Run `$ xrdb -merge ~/.Xresources`.
 
 ### .Xdefaults-*host* and XENVIRONMENT
 
-"On POSIX-based systems, the user's environment resource file name is specified by the value of the `XENVIRONMENT` Environment Variable. If this environment variable does not exist, the user's home directory is searched for a file named `.Xdefaults-`*`host`*, where *`host`* is the host name of the machine on which the application is running." [*Source*](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html)
+"On POSIX-based systems, the user's environment resource file name is specified by the value of the `XENVIRONMENT` Environment Variable. If this environment variable does not exist, the user's home directory is searched for a file named `.Xdefaults-<host>`, where `<host>` is the host name of the machine on which the application is running." [*Source*](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html)
 
 ### XAPPLRESDIR
 
