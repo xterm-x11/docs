@@ -41,9 +41,7 @@ Run `$ xrdb -merge ~/.Xresources`.
 
 You can reference another file in the `~/.Xresources` dotfile with a path that is relative to the `~/.Xresources` dotfile. This means you can load XTerm's X resources from another file by adding the following statement on a line in `~/.Xresources`:
 
-```
-#include "/*path_to_file_with_x_resources_for_xterm*"
-```
+`#include "/<path_to_file_with_x_resources_for_xterm>"`
 
 ### Differences between `.Xresources` and `.Xdefaults`
 
