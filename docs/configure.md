@@ -39,9 +39,9 @@ Run `$ xrdb -merge ~/.Xresources`.
 
 ### Referencing another file in `~/.Xresources`
 
-You can reference another file in the `~/.Xresources` dotfile with an absolute path, `/home/<user>/...`, not using the tilde `~`. This means you can load XTerm's X resources from another file by adding the following statement on a line in `~/.Xresources`:
+You can reference another file in the `~/.Xresources` dotfile with an absolute path, for example `/home/<user>/...`, not using the tilde `~`. This means you can load XTerm's X resources from another file by adding the following statement on a line in `~/.Xresources`:
 
-`#include "/<path_to_file_with_x_resources_for_xterm>"`
+`#include "/<absolute_path_to_file>/<file_with_x_resources_for_xterm>"`
 
 ### Differences between `.Xresources` and `.Xdefaults`
 

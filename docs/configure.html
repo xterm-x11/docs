@@ -35,8 +35,8 @@ The X resources that you can configure for XTerm are listed in the [template](ht
 <p>3. Open a new XTerm window by running <code>$ xterm &amp;</code> to visually verify the changes in the window.</p>
 <h2>~/.Xresources for advanced use cases</h2>
 <h3>Referencing another file in <code>~/.Xresources</code></h3>
-<p>You can reference another file in the <code>~/.Xresources</code> dotfile with an absolute path, <code>/home/&lt;user&gt;/...</code>, not using the tilde <code>~</code>. This means you can load XTerm's X resources from another file by adding the following statement on a line in <code>~/.Xresources</code>:</p>
-<p><code>#include "/&lt;path_to_file_with_x_resources_for_xterm&gt;"</code></p>
+<p>You can reference another file in the <code>~/.Xresources</code> dotfile with an absolute path, for example <code>/home/&lt;user&gt;/...</code>, not using the tilde <code>~</code>. This means you can load XTerm's X resources from another file by adding the following statement on a line in <code>~/.Xresources</code>:</p>
+<p><code>#include "/&lt;absolute_path_to_file&gt;/&lt;file_with_x_resources_for_xterm&gt;"</code></p>
 <h3>Differences between <code>.Xresources</code> and <code>.Xdefaults</code></h3>
 <ul>
 <li><code>.Xresources</code> are loaded into the X server, so are linked to a particular display environment.</li>
