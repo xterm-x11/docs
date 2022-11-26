@@ -31,13 +31,19 @@ Run `$ xrdb -merge ~/.Xresources`.
 
 1\. Edit your `~/.Xresources` dotfile, adding or removing XTerm parameters or changing their values.
 
-2\. Optional: run `$ xrdb -remove` to clear **(!)** *all* previously loaded X resources and thus avoid getting a mix of old and new XTerm parameters and values.
+2\. Run `$ xrdb -merge ~/.Xresources` to load the updated X resources. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
 
-3\. Run `$ xrdb -merge ~/.Xresources` to load the updated X resources. (If you get any error messages in the output, edit the `~/.Xresources` file to resolve the errors.)
-
-4\. Open a new XTerm window by running `$ xterm &` to visually verify the changes in the window.
+3\. Open a new XTerm window by running `$ xterm &` to visually verify the changes in the window.
 
 ## ~/.Xresources for advanced use cases
+
+### Referencing another file in `~/.Xresources`
+
+You can reference another file in the `~/.Xresources` dotfile with a path that is relative to the `~/.Xresources` dotfile. This means you can load XTerm's X resources from another file by adding the following statement on a line in `~/.Xresources`:
+
+```
+#include "/*path_to_file_with_x_resources_for_xterm*"
+```
 
 ### Differences between `.Xresources` and `.Xdefaults`
 
@@ -75,3 +81,5 @@ Another in-depth alternative is to set `XAPPLRESDIR`, which lets one set up a di
 ## Additional resources
 
 Run `$ xrdb -help` or see the [xrdb](https://www.x.org/releases/X11R7.7/doc/man/man1/xrdb.1.xhtml) manpage for more `xrdb` options.
+
+**WARNING** If you decide to use `$ xrdb -remove`, be aware that it clears **(!)** *all* previously loaded X resources, including the X resources that were loaded at system startup.
