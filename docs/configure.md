@@ -80,4 +80,4 @@ Another in-depth alternative is to set `XAPPLRESDIR`, which lets one set up a di
 
 Run `$ xrdb -help` or see the [xrdb](https://www.x.org/releases/X11R7.7/doc/man/man1/xrdb.1.xhtml) manpage for more `xrdb` options.
 
-**WARNING** If you decide to use `$ xrdb -remove`, be aware that it clears **(!)** *all* previously loaded X resources, including the X resources that were loaded at system startup.
+**WARNING** If you decide to use `$ xrdb -remove`, be aware that it clears **(!)** *all* previously loaded X resources, including the X resources that were loaded at login.
