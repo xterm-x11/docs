@@ -6,10 +6,10 @@
 
 * Developed for the X Window System that is time-tested and available across Linux and UNIX systems.
 * Packages available on most Linux and UNIX systems.
-* Hundreds of community color themes, with easy color theme creation.
+* Hundreds of community color themes, with 256 color support and easy color theme creation.
 * Configured in a simple config file: Download, upload, and back up your configuration as a single file. Easy-to-read, single-line parameters and values. Easy-to-understand configuration steps for novice terminal users.
 * One of the faster terminal emulators.
-* Powerline/airline support.
+* Powerline support.
 * Unicode support.
 
 XTerm is the terminal emulator for the X Window System (X.org).
