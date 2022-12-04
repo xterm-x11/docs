@@ -9,8 +9,6 @@ The X resources that you can configure for XTerm are listed in the [template](ht
 
 To configure XTerm on a system, simply download or create and edit your `~/.Xresources` dotfile, and then run the `xrdb` command to load the X resources from your `~/.Xresources` dotfile. See the next sections for step-by-step instructions.
 
-**NOTE** Running `xrdb` interferes with dynamic loading of X resources by applications.
-
 ## Checking for the ~/.Xresources dotfile
 
 Before doing anything regarding the `~/.Xresources` dotfile, first check if you already have it in the system's user home directory. Because `~/.Xdefaults` and `~/.Xdefaults-*` are other dotfiles where X resources might be stored, you can check for their presence too. Read the output of the command to find out:
@@ -81,5 +79,7 @@ Another in-depth alternative is to set `XAPPLRESDIR`, which lets one set up a di
 ## Additional resources
 
 Run `$ xrdb -help` or see the [xrdb](https://www.x.org/releases/X11R7.7/doc/man/man1/xrdb.1.xhtml) manpage for more `xrdb` options.
+
+**WARNING** Running some of the `xrdb` options interferes with dynamic loading of X resources by applications.
 
 **WARNING** If you decide to use `$ xrdb -remove`, be aware that it clears **(!)** *all* previously loaded X resources, including the X resources that were loaded at login.
