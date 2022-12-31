@@ -60,6 +60,30 @@ theme:
   name: material
   favicon: favicon.png
   logo: logo-favicon.png # https://github.com/xterm-x11/xterm-snapshots/blob/master/icons/xterm-color.png (the .svg file is a bit corrupted)
+  palette:
+    primary: lime
+    accent: lime
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.expand
+  extra:
+    consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well
+        as to measure the effectiveness of our documentation and whether users
+        find what they're searching for. With your consent, you're helping us to
+        make our documentation better.
+        # https://squidfunk.github.io/mkdocs-material/setup/ensuring-data-privacy/#cookie-consent
+      actions:
+        - accept
+        - manage
+        - reject
+  copyright: >
+    Copyright &copy; Copyright © 1997-2021,2022 by Thomas E. Dickey, unless another writer is referenced in the page file.
+    <a href="#__consent">Change cookie settings</a>
 repo_url: https://github.com/xterm-x11/docs
 plugins:
   - search
