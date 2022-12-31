@@ -12,7 +12,7 @@ Each XTerm window runs as a separate process. Some may run on remote machines, u
 
 * Developed for the X Window System that is time-tested and available across Linux and UNIX systems.
 * Packages available on most Linux and UNIX systems.
-* Independent of the Linux desktop environment, so you can stick with it even if you decide to switch desktop environments.
+* Independent of the Linux desktop environment, so you can spend your training time to become a more advanced user of this one terminal emulator rather than having to learn yet another terminal emulator if you switch desktop environments.
 * Configured in a simple config file that is portable across systems and desktop environments: Download, upload, and back up your configuration as a single file. Easy-to-read, single-line parameters and values. Easy-to-understand configuration steps for novice terminal users.
 * One of the faster terminal emulators.
 * Hundreds of community color themes, with 256 color support and easy color theme creation.
