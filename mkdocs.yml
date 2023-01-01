@@ -1,60 +1,65 @@
 # favicon.ico is converted by using GIMP from https://github.com/xterm-x11/xterm-snapshots/blob/master/icons/xterm-color.png (the .svg file is a bit corrupted)
 site_name: XTerm
 site_url: https://xterm.org
+# &copy; as ©
+copyright: >
+  Copyright © 1997-2022 by Thomas E. Dickey or another writer in the page file.
+  <br/>
+  No cookies are served on this website.
 nav:
-  - 'Home': index.md
-  - 'Story': story.md
-  - 'Install':
-       - 'Package': package.md
-       - 'xterm.tar.gz': xterm.tar.gz.md
-  - 'Configure': configure.md
-  - 'Get started':
+  - Home: index.md
+  - Story: story.md
+  - Install:
+       - Package: package.md
+       - xterm.tar.gz: xterm.tar.gz.md
+  - Configure: configure.md
+  - Get started:
        # Select content from
        # https://invisible-island.net/xterm/xterm.faq.html
        # and
        # https://invisible-island.net/xterm/#related-discussion
        # Figure out a way to reference the manpage from each separate procedure page under Use,
        # where applicable.
-       - 'Copy-paste': copy-paste.md
-       - 'Tabs': tabs.md
-       - 'Full-screen': full-screen.md
-       - 'Scrolling': scrolling.md
-       - 'Prompt': prompt.md
-  - 'Customize':
-       - 'Sample': sample.md
-       - 'Themes': themes.md
-       - 'Template': template.md
-       - 'Icon': icon.md
-       - 'Manual window title': manual-window-title.md
-       - 'Static window title': static-window-title.md
-       - 'Scrollbar': scrollbar.md
-       - 'Internal border': internal-border.md
-       - 'Window border': window-border.md
-  - 'Control sequences':
-       - 'Getting started with control sequences': getting-started-with-ctlseqs.md
-       - 'Guide': ctlseqs-guide.md
-       - 'List': ctlseqs-list.md
-  - 'Manpage':
-       - 'xterm': manpage-xterm.md
-       - 'uxterm': manpage-uxterm.md
-       - 'koi8rxterm': manpage-koi8rxterm.md
-       - 'resize': manpage-resize.md
-  - 'Release notes': release-notes.md
-  - 'Libraries':
-       - 'Xtoolkit': xtoolkit.md
-       - 'Xcursor': xcursor.md
-       - 'Xft': xft.md
-  - 'Utilities':
-       - 'Vttest':
-           - 'About Vttest': vttest-about.md
-           - 'Vttest release notes': vttest-release-notes.md
-           - 'vttest.tar.gz': vttest.tar.gz.md
-           - 'Vttest archives': vttest-archives.md
-       - 'Luit':
-           - 'About Luit': luit-about.md
-           - 'Luit manpage': luit-manpage.md
-           - 'luit.tar.gz': luit.tar.gz.md
-           - 'Luit archives': luit-archives.md
+       - Copy-paste: copy-paste.md
+       - Tabs: tabs.md
+       - Full-screen: full-screen.md
+       - Scrolling: scrolling.md
+       - Prompt: prompt.md
+  - Customize:
+       - Sample: sample.md
+       - Themes: themes.md
+       - Template: template.md
+       - Icon: icon.md
+       - Manual window title: manual-window-title.md
+       - Static window title: static-window-title.md
+       - Scrollbar: scrollbar.md
+       - Internal border: internal-border.md
+       - Window border: window-border.md
+  - Control sequences:
+       - Getting started with control sequences: getting-started-with-ctlseqs.md
+       - Guide: ctlseqs-guide.md
+       - List: ctlseqs-list.md
+  - Manpage:
+       - xterm: manpage-xterm.md
+       - uxterm: manpage-uxterm.md
+       - koi8rxterm: manpage-koi8rxterm.md
+       - resize: manpage-resize.md
+  - Release notes: release-notes.md
+  - Libraries:
+       - Xtoolkit: xtoolkit.md
+       - Xcursor: xcursor.md
+       - Xft: xft.md
+  - Utilities:
+       - Vttest:
+           - About Vttest: vttest-about.md
+           - Vttest release notes: vttest-release-notes.md
+           - vttest.tar.gz: vttest.tar.gz.md
+           - Vttest archives: vttest-archives.md
+       - Luit:
+           - About Luit: luit-about.md
+           - Luit manpage: luit-manpage.md
+           - luit.tar.gz: luit.tar.gz.md
+           - Luit archives: luit-archives.md
 
 theme:
   name: material
@@ -68,6 +73,8 @@ theme:
     code: Roboto Mono
   features:
     - navigation.expand
+#   - navigation.tabs
+   
   extra:
     consent:
       title: Cookie consent
@@ -81,9 +88,7 @@ theme:
         - accept
         - manage
         - reject
-  copyright: >
-    Copyright &copy; Copyright © 1997-2021,2022 by Thomas E. Dickey, unless another writer is referenced in the page file.
-    <a href="#__consent">Change cookie settings</a>
+
 repo_url: https://github.com/xterm-x11/docs
 plugins:
   - search
