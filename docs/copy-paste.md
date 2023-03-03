@@ -9,8 +9,16 @@ https://unix.stackexchange.com/a/624719
 https://unix.stackexchange.com/a/227707
 https://unix.stackexchange.com/a/225076
 +
-Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):
-     INCORPORATE/MIGRATE: [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard)
+ INCORPORATE/MIGRATE: [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard) IN IT:
+ ```
+Since patch #209 (2006), xterm has provided a workaround: a menu entry (and resource selectToClipboard) which changes xterm's behavior for a special token SELECT in its default translations. If the resource is true (or the menu item enabled), xterm provides its selection to the CLIPBOARD. A menu item is provided, of course, since many applications follow the ICCM. In the default translations, these lines use SELECT:
+
+    Shift <KeyPress> Select:select-cursor-start() \
+                               select-cursor-end(SELECT, CUT_BUFFER0) \n\
+    Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
+```
++
+Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):  
     [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
     [Appendix B. Translation Table Syntax (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Table_Syntax)
 
