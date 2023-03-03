@@ -2,10 +2,15 @@
 
 Investigate and see the full comment:
 "If you want to retain support for PRIMARY and still be able to use the CLIPBOARD"
+
 source1: https://unix.stackexchange.com/questions/227701/how-to-use-ctrl-insert-to-copy-from-xterm/227707#227707 (see primarily Thomas's answer)
+
 source2: https://unix.stackexchange.com/questions/225062/how-can-i-copy-text-from-xterm-awesome-debian-virtualbox/293856#293856 (see primarily Thomas's answer)
+
 source3: https://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard (incorporate/migrate)
+
 source4: https://askubuntu.com/a/1203478
+
 source5: https://wiki.archlinux.org/title/Xterm#PRIMARY_and_CLIPBOARD
 
 ## Selecting text in an XTerm window
