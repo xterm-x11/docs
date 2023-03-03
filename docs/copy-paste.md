@@ -5,9 +5,9 @@ overview of selectToClipboard, menu, and translations: by Thomas https://unix.st
 translations
 answer by Thomas https://unix.stackexchange.com/a/293904
  also by Thomas https://unix.stackexchange.com/a/293856
-https://unix.stackexchange.com/a/227707
 https://unix.stackexchange.com/a/624719
 https://unix.stackexchange.com/a/227707
+https://unix.stackexchange.com/a/225076
 +
 Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):
     [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard)
