@@ -1,10 +1,23 @@
 # Copy-pasting
 
+overview of selectToClipboard, menu, and translations: by Thomas https://unix.stackexchange.com/a/293856
+
+translations
+answer by Thomas https://unix.stackexchange.com/a/293904
+ also by Thomas https://unix.stackexchange.com/a/293856
+https://unix.stackexchange.com/a/227707
+https://unix.stackexchange.com/a/624719
+https://unix.stackexchange.com/a/227707
++
+Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):
+    [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard)
+    [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
+    [Appendix B. Translation Table Syntax (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Table_Syntax)
+
 Investigate and see the full comment:
 "If you want to retain support for PRIMARY and still be able to use the CLIPBOARD"
 
-https://unix.stackexchange.com/questions/227701/how-to-use-ctrl-insert-to-copy-from-xterm/227707#227707
-see primarily Thomas's answer; ignore the question
+https://unix.stackexchange.com/a/293856
 
 https://unix.stackexchange.com/questions/225062/how-can-i-copy-text-from-xterm-awesome-debian-virtualbox/293856#293856
 see primarily Thomas's answer; ignore the question
@@ -17,6 +30,9 @@ ignore the question;
 https://wiki.archlinux.org/title/Xterm#PRIMARY_and_CLIPBOARD
 
 https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
+
+suggestion to install parcellite
+https://unix.stackexchange.com/a/225071
 
 ## Selecting text in an XTerm window
 
