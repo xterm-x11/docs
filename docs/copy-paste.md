@@ -235,10 +235,10 @@ https://unix.stackexchange.com/questions/227701/how-to-use-ctrl-insert-to-copy-f
 
 ### Additional resources
 
-[Clipboard](https://wiki.archlinux.org/title/Clipboard)
-[Cut-and-paste in X](https://specifications.freedesktop.org/clipboards-spec/clipboards-latest.txt)
-[X Selections, Cut Buffers, and Kill Rings](https://www.jwz.org/doc/x-cut-and-paste.html)
-[X11: How does “the” clipboard work?](https://www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html)
-[X Window selection](https://en.wikipedia.org/wiki/X_Window_selection)
-[Peer-to-Peer Communication by Means of Selections](https://tronche.com/gui/x/icccm/sec-2.html#s-2)
+- [Clipboard](https://wiki.archlinux.org/title/Clipboard)
+- [Cut-and-paste in X](https://specifications.freedesktop.org/clipboards-spec/clipboards-latest.txt)
+- [X Selections, Cut Buffers, and Kill Rings](https://www.jwz.org/doc/x-cut-and-paste.html)
+- [X11: How does “the” clipboard work?](https://www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html)
+- [X Window selection](https://en.wikipedia.org/wiki/X_Window_selection)
+- [Peer-to-Peer Communication by Means of Selections](https://tronche.com/gui/x/icccm/sec-2.html#s-2)
 
