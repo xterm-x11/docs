@@ -10,19 +10,12 @@ https://unix.stackexchange.com/a/227707
 https://unix.stackexchange.com/a/225076
 +
 Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):
-    [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard)
+     INCORPORATE/MIGRATE: [Why can't I select/paste to/from other programs? (xterm FAQ)](http://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard)
     [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
     [Appendix B. Translation Table Syntax (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Table_Syntax)
 
 Investigate and see the full comment:
 "If you want to retain support for PRIMARY and still be able to use the CLIPBOARD"
-
-https://unix.stackexchange.com/a/293856
-
-https://unix.stackexchange.com/questions/225062/how-can-i-copy-text-from-xterm-awesome-debian-virtualbox/293856#293856
-see primarily Thomas's answer; ignore the question
-
-https://invisible-island.net/xterm/xterm.faq.html#xterm_select_clipboard (incorporate/migrate)
 
 https://askubuntu.com/a/1203478
 ignore the question;
