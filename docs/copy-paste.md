@@ -18,7 +18,7 @@ Since patch #209 (2006), xterm has provided a workaround: a menu entry (and reso
     Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
 ```
 +
-Further reading (suggested by Thomas in https://unix.stackexchange.com/a/293904):  
+Further reading about translations (suggested by Thomas in https://unix.stackexchange.com/a/293904):  
     [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
     [Appendix B. Translation Table Syntax (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Table_Syntax)
 
@@ -31,6 +31,8 @@ ignore the question;
 https://wiki.archlinux.org/title/Xterm#Copy_and_paste
 +
 https://wiki.archlinux.org/title/Xterm#PRIMARY_and_CLIPBOARD
++
+https://wiki.archlinux.org/title/Clipboard
 
 https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
 
