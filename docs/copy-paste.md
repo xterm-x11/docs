@@ -28,6 +28,8 @@ Investigate and see the full comment:
 https://askubuntu.com/a/1203478
 ignore the question;
 
+https://wiki.archlinux.org/title/Xterm#Copy_and_paste
++
 https://wiki.archlinux.org/title/Xterm#PRIMARY_and_CLIPBOARD
 
 https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
