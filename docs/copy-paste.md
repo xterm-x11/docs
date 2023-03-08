@@ -54,6 +54,8 @@ and mention most important info from it
 
 `XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
 
+`XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
+
 See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
                
