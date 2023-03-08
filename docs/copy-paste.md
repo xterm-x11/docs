@@ -52,6 +52,8 @@ and mention most important info from it
 
 `XTerm*on5Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (inactive by default)
 
+`XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
+
 See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
 
