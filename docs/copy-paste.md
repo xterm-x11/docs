@@ -125,6 +125,10 @@ From XTerm's manpage on [pointer usage](https://invisible-island.net/xterm/manpa
                determines the maximum number of clicks by the onXClicks
                resource values which are set.
 
+       multiClickTime (class MultiClickTime)
+               Specifies the maximum time in milliseconds between multi-click
+               select events.  The default is "250" milliseconds.
+               
        cutNewline (class CutNewline)
                If "false", triple clicking to select a line does not include
                the newline at the end of the line.  If "true", the Newline is
