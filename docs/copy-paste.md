@@ -58,15 +58,7 @@ and mention most important info from it
 
 `XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
 
-
-
-See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
-
-
-       cutToBeginningOfLine (class CutToBeginningOfLine)
-               If "false", triple clicking to select a line selects only from
-               the current word forward.  If "true", the entire line is
-               selected.  The default is "true".
+See XTerm's manpage for explanations of these parameters in the section on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
 
 
