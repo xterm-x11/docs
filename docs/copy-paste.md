@@ -56,10 +56,6 @@ and mention most important info from it
 
 See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
-
-       multiClickTime (class MultiClickTime)
-               Specifies the maximum time in milliseconds between multi-click
-               select events.  The default is "250" milliseconds.
                
        cutNewline (class CutNewline)
                If "false", triple clicking to select a line does not include
