@@ -48,6 +48,8 @@ and mention most important info from it
 
 `XTerm*on3Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `line`)
 
+If `XTerm*on3Clicks: line`, then:
+
 > `XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
 
 > `XTerm*cutToBeginningOfLine:` `true` or `false` (implicit default is `true`)
