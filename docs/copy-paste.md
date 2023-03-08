@@ -44,86 +44,17 @@ https://unix.stackexchange.com/a/225071
 - [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
 and mention most important info from it
 
-From XTerm's manpage on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE):
+XTerm*on2Clicks: word or line or group or page or all or regex or none
+! implicit default is word
+XTerm*on3Clicks: word or line or group or page or all or regex or none
+! implicit default is line
+XTerm*on4Clicks: word or line or group or page or all or regex or none
+! inactive by default
+XTerm*on5Clicks: word or line or group or page or all or regex or none
+! inactive by default
 
-       on2Clicks (class On2Clicks)
+See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
-       on3Clicks (class On3Clicks)
-
-       on4Clicks (class On4Clicks)
-
-       on5Clicks (class On5Clicks)
-               Specify selection behavior in response to multiple mouse
-               clicks.  A single mouse click is always interpreted as
-               described in the Selection Functions section (see POINTER
-               USAGE).  Multiple mouse clicks (using the button which
-               activates the select-start action) are interpreted according to
-               the resource values of on2Clicks, etc.  The resource value can
-               be one of these:
-
-               word
-                  Select a "word" as determined by the charClass resource.
-                  See the CHARACTER CLASSES section.
-
-                  If the pointer is on a "word" then xterm searches back to
-                  the beginning of the word, and then to the end.
-
-                  If the pointer is not on a "word" then the result depends on
-                  whether it is on whitespace (including a newline), or past
-                  the end of the line.  In the latter case xterm may select a
-                  "word" beginning after the newline, if there is no
-                  additional whitespace.
-
-               line
-                  Select a line (counting wrapping).
-
-               group
-                  Select a group of adjacent lines (counting wrapping).  The
-                  selection stops on a blank line, and does not extend outside
-                  the current page.
-
-               page
-                  Select all visible lines, i.e., the page.
-
-               all
-                  Select all lines, i.e., including the saved lines.
-
-               regex
-                  Select the best match for the POSIX extended regular
-                  expression (ERE) which follows in the resource value:
-
-                  o   Xterm matches the regular expression against a byte
-                      array for the entire (possibly wrapped) line.  That byte
-                      array may be UTF-8 or ISO-8859-1, depending on the mode
-                      in which xterm is running.
-
-                  o   Xterm steps through each byte-offset in this array,
-                      keeping track of the best (longest) match.  If more than
-                      one match ties for the longest length, the first is
-                      used.
-
-                      Xterm does this to make it convenient to click anywhere
-                      in the area of interest and cause the regular expression
-                      to match the entire word, etc.
-
-                  o   The "^" and "$" anchors in a regular expression denote
-                      the ends of the entire line.
-
-                  o   If the regular expression contains backslashes "\" those
-                      should be escaped "\\" because the X libraries interpret
-                      backslashes in resource strings.
-
-               none
-                  No selection action is associated with this resource.  Xterm
-                  interprets it as the end of the list.  For example, you may
-                  use it to disable triple (and higher) clicking by setting
-                  on3Clicks to "none".
-
-               The default values for on2Clicks and on3Clicks are "word" and
-               "line", respectively.  There is no default value for on4Clicks
-               or on5Clicks, making those inactive.  On startup, xterm
-               determines the maximum number of clicks by the onXClicks
-               resource values which are set.
 
        multiClickTime (class MultiClickTime)
                Specifies the maximum time in milliseconds between multi-click
