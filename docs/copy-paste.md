@@ -48,17 +48,16 @@ and mention most important info from it
 
 `XTerm*on3Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `line`)
 
-If `XTerm*on3Clicks: line`, then:
-
-> `XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
-
-> `XTerm*cutToBeginningOfLine:` `true` or `false` (implicit default is `true`)
+> If `XTerm*on3Clicks: line`, then `XTerm*cutToBeginningOfLine:` `true` or `false` (implicit default is `true`)
 
 `XTerm*on4Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (inactive by default)
 
 `XTerm*on5Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (inactive by default)
 
+`XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
+
 `XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
+
 
 See XTerm's manpage for explanations of these parameters in the section on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
