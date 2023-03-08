@@ -44,14 +44,13 @@ https://unix.stackexchange.com/a/225071
 - [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
 and mention most important info from it
 
-XTerm*on2Clicks: word or line or group or page or all or regex or none
-! implicit default is word
-XTerm*on3Clicks: word or line or group or page or all or regex or none
-! implicit default is line
-XTerm*on4Clicks: word or line or group or page or all or regex or none
-! inactive by default
-XTerm*on5Clicks: word or line or group or page or all or regex or none
-! inactive by default
+XTerm*on2Clicks: word or line or group or page or all or regex or none (implicit default is word)
+
+XTerm*on3Clicks: word or line or group or page or all or regex or none (implicit default is line)
+
+XTerm*on4Clicks: word or line or group or page or all or regex or none (inactive by default)
+
+XTerm*on5Clicks: word or line or group or page or all or regex or none (inactive by default)
 
 See XTerm's manpage for explanations on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
