@@ -162,6 +162,46 @@ source: https://askubuntu.com/a/541730
 
 https://unix.stackexchange.com/questions/227701/how-to-use-ctrl-insert-to-copy-from-xterm
 
+*
+
+(if not already listed above): https://invisible-island.net/xterm/manpage/xterm.html#h3-Custom-Key-Bindings
+
+```
+       Here is an example which uses shifted select/paste to copy to the
+       clipboard, and unshifted select/paste for the primary selection.  In
+       each case, a (different) cut buffer is also a target or source of the
+       select/paste operation.  It is important to remember however, that cut
+       buffers store data in ISO-8859-1 encoding, while selections can store
+       data in a variety of formats and encodings.  While xterm owns the
+       selection, it highlights it.  When it loses the selection, it removes
+       the corresponding highlight.  But you can still paste from the
+       corresponding cut buffer.
+
+           *VT100*translations:    #override \n\
+              ~Shift~Ctrl<Btn2Up>: insert-selection(PRIMARY, CUT_BUFFER0) \n\
+               Shift~Ctrl<Btn2Up>: insert-selection(CLIPBOARD, CUT_BUFFER1) \n\
+              ~Shift     <BtnUp> : select-end(PRIMARY, CUT_BUFFER0) \n\
+               Shift     <BtnUp> : select-end(CLIPBOARD, CUT_BUFFER1)
+
+       In the example, the class name VT100 is used rather than the widget
+       name.  These are different; a class name could apply to more than one
+       widget.  A leading "*" is used because the widget hierarchy above the
+       vt100 widget depends on whether the toolbar support is compiled into
+       xterm.
+
+```
+>>>>
+It worked as follows:
+```
+! xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+! is mutually exclusive with:
+xterm*VT100*translations: #override \n\
+   Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
+   Ctrl Shift <Key>V:  insert-selection(SELECT)
+Should I test the corresponding mouse buttons next?
+```
+
+*
 
 ### Additional resources
 
