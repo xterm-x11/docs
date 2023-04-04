@@ -67,6 +67,13 @@ See XTerm's manpage for explanations of these parameters in the section on [poin
 
 The `XTerm.vt100.selectToClipboard:` resource switches the target buffer for copying between the PRIMARY buffer and the CLIPBOARD buffer.
 
+NOTE: This works in combination with the following:
+```
+xterm*VT100*translations: #override \n\
+   Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
+   Ctrl Shift <Key>V:  insert-selection(SELECT)
+```
+
 The `false` value is the implicit default and does not need to be explicitly set (you don't need to include this line unless this resource has already been set to `true`):
 `XTerm.vt100.selectToClipboard: false`
 
@@ -87,34 +94,22 @@ From XTerm's manpage:
                that handle only one of these mechanisms.  The default is
                "false", which tells it to use PRIMARY. [Source](https://invisible-island.net/xterm/manpage/xterm.html)
 
+REWRITE THE BELOW SECTIONS
 
 ## Copying text in an XTerm window
 
-**TIP** With both `false` and `true`, you can select text to have XTerm automatically copy it to PRIMARY for pasting in an XTerm window, that is without pressing **Ctrl+C**.
-
-### `false`
+**TIP** With both `false` and `true`, you can select text to have XTerm automatically copy it to PRIMARY for pasting in an XTerm window.
 
 The `false` value means that any text you select in an XTerm window is automatically copied to PRIMARY, which means you don't need to press any key to copy the selected text.
 
-With `false`, you are unable to use the **Ctrl+C** keyboard shortcut.
-
-### `true`
-
-The `true` value enables you to also be able to use the **Ctrl+C** keyboard shortcut to copy text you select in an XTerm window to CLIPBOARD for subsequent pasting in both XTerm and other applications.
-
-When you press **Ctrl+C**, the command-line output is **^C**.
+REWRITE The `true` value enables you to copy text you select in an XTerm window to CLIPBOARD for subsequent pasting in both XTerm and other applications.
 
 ## Pasting text from XTerm in another application
 
 **TIP** With both `false` and `true`, you can paste the text copied from an XTerm window (to PRIMARY or CLIPBOARD) into another application by pressing **Shift+Insert**.
 
-### `false`
-
 Use the middle mouse button or the **Shift+Insert** keyboard shortcut to paste text that you copied in an XTerm window to PRIMARY.
 
-### `true`
-
-Use the **Ctrl+V** to paste text that you copied in an XTerm window to CLIPBOARD.
 
 ## Pasting text from XTerm in XTerm
 
@@ -131,15 +126,17 @@ Copy the selected options from the manpage and incorporate into the above sectio
 * 
 
 `xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)`
-`XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)`
+
+NOTE: This is mutually exclusive, that is does not work in combination, with the following:
+```
+xterm*VT100*translations: #override \n\
+   Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
+   Ctrl Shift <Key>V:  insert-selection(SELECT)
+```
+
 
 source1: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dunkvn6/?utm_source=share&utm_medium=web2x&context=3
 source2: https://askubuntu.com/a/1300290
-
-*
-
-This doesn't work: "Paste with Ctrl+Shift+v Copy with Ctrl+Shift+c"
-source: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dunczk3/?utm_source=share&utm_medium=web2x&context=3
 
 *
 
