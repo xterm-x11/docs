@@ -17,16 +17,11 @@ Since patch #209 (2006), xterm has provided a workaround: a menu entry (and reso
                                select-cursor-end(SELECT, CUT_BUFFER0) \n\
     Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
 ```
+I understand that these are translations, but I don't understand these two lines ^.
 +
 Further reading about translations (suggested by Thomas in https://unix.stackexchange.com/a/293904):  
     [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
     [Appendix B. Translation Table Syntax (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Table_Syntax)
-
-Investigate and see the full comment:
-"If you want to retain support for PRIMARY and still be able to use the CLIPBOARD"
-
-https://askubuntu.com/a/1203478
-ignore the question;
 
 https://wiki.archlinux.org/title/Xterm#Copy_and_paste
 +
@@ -36,13 +31,13 @@ https://wiki.archlinux.org/title/Clipboard
 
 https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
 
-suggestion to install parcellite
-https://unix.stackexchange.com/a/225071
 
 ## Selecting text in an XTerm window
 
 - [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
 and mention most important info from it
+
+Explain that the clicks are by the left mouse/trackpad button.
 
 `XTerm*on2Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `word`)
 
@@ -67,23 +62,11 @@ See XTerm's manpage for explanations of these parameters in the section on [poin
 
 The `XTerm.vt100.selectToClipboard:` resource switches the target buffer for copying between the PRIMARY buffer and the CLIPBOARD buffer.
 
-NOTE: This works in combination with the following:
-```
-xterm*VT100*translations: #override \n\
-   Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
-   Ctrl Shift <Key>V:  insert-selection(SELECT)
-```
-
 The `false` value is the implicit default and does not need to be explicitly set (you don't need to include this line unless this resource has already been set to `true`):
 `XTerm.vt100.selectToClipboard: false`
 
 To switch the target buffer to CLIPBOARD, set this to `true`:
 `XTerm.vt100.selectToClipboard: true`
-
-**TIP** If you ever need to switch the target buffer back to PRIMARY, explicitly set it to `false`:
-`XTerm.vt100.selectToClipboard: false`
-
-Also see [Configure](configure.md).
 
 From XTerm's manpage:
 
@@ -93,6 +76,20 @@ From XTerm's manpage:
                change this at runtime, allowing the user to work with programs
                that handle only one of these mechanisms.  The default is
                "false", which tells it to use PRIMARY. [Source](https://invisible-island.net/xterm/manpage/xterm.html)
+
+**NOTE**: You can combine the `XTerm.vt100.selectToClipboard:` resource with the translations for setting custom keyboard shortcuts:
+```
+xterm*VT100*translations: #override \n\
+   Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
+   Ctrl Shift <Key>V:  insert-selection(SELECT)
+```
++
+- [ ] EXPLAIN WHY SHIFT ABOVE ^
+
+**TIP** If you ever need to switch the target buffer back to PRIMARY, either remove the `XTerm.vt100.selectToClipboard:` resource or explicitly set it to `XTerm.vt100.selectToClipboard: false`.
+
+Also see [Configure](configure.md).
+
 
 REWRITE THE BELOW SECTIONS
 
@@ -108,8 +105,9 @@ REWRITE The `true` value enables you to copy text you select in an XTerm window 
 
 **TIP** With both `false` and `true`, you can paste the text copied from an XTerm window (to PRIMARY or CLIPBOARD) into another application by pressing **Shift+Insert**.
 
-Use the middle mouse button or the **Shift+Insert** keyboard shortcut to paste text that you copied in an XTerm window to PRIMARY.
+To paste text that you copied in an XTerm window to PRIMARY, use the middle mouse button or the **Shift+Insert** keyboard shortcut.
 
+To paste text that you copied in an XTerm window to CLIPBOARD, use the standard pasting method for that application like the **Ctrl+V** keyboard shortcut or a menu selection.
 
 ## Pasting text from XTerm in XTerm
 
@@ -123,6 +121,13 @@ Copy the selected options from the manpage and incorporate into the above sectio
 
 ## WIP
 
+*
+
+Investigate and see the full comment:
+"If you want to retain support for PRIMARY and still be able to use the CLIPBOARD"
+https://askubuntu.com/a/1203478
+ignore the question;
+
 * 
 
 `xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)`
@@ -133,27 +138,29 @@ xterm*VT100*translations: #override \n\
    Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
    Ctrl Shift <Key>V:  insert-selection(SELECT)
 ```
-
-
 source1: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dunkvn6/?utm_source=share&utm_medium=web2x&context=3
 source2: https://askubuntu.com/a/1300290
 
 *
 
+Look up mouse button emulation installation and add a TIP.
++
 [the middle mouse button ... which is usually emulated as simultaneously clicking both buttons on a two-button mouse. ... if middle mouse button emulation is enabled. Middle mouse button is clicking the mouse wheel nowadays.
 source: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dunk7nv/?utm_source=share&utm_medium=web2x&context=3
 
 *
 
-> I would like to be able to copy and paste from any app using the global clipboard
-"You might need a clipboard manager for that."
-https://wiki.archlinux.org/title/Clipboard#List_of_clipboard_managers
-source: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dumb4sc/?utm_source=share&utm_medium=web2x&context=3
+How to mention the these?
 
-*
-
-"The `xcb` program also provides command-line access to the cut buffers."
-source: https://askubuntu.com/a/541730
+- Mention use of clipboard managers.
+    > I would like to be able to copy and paste from any app using the global clipboard
+    "You might need a clipboard manager for that."
+    https://wiki.archlinux.org/title/Clipboard#List_of_clipboard_managers
+    source: https://www.reddit.com/r/archlinux/comments/7z9f2r/comment/dumb4sc/?utm_source=share&utm_medium=web2x&context=3
+- "The `xcb` program also provides command-line access to the cut buffers."
+    source: https://askubuntu.com/a/541730
+- suggestion to install parcellite
+    https://unix.stackexchange.com/a/225071
 
 *
 
@@ -197,7 +204,14 @@ xterm*VT100*translations: #override \n\
    Ctrl Shift <Key>V:  insert-selection(SELECT)
 Should I test the corresponding mouse buttons next?
 ```
+I am yet to test the Shift+<BtnUp> combinations.
 
+Also, I just realized that there is possibly an alternative syntax re <KeyPress> that I must also test:
+```
+! XTerm*VT100.Translations:       #override\n\
+! Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+! Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
+```
 *
 
 ### Additional resources
