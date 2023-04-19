@@ -37,6 +37,8 @@ https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
 - [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
 and mention most important info from it
 
+Explain that the default behavior is every selection gets copied automatically, so you don't need to press any keyboard shortcuts (like **Ctrl+C**) or go into any menu (like clicking a **Copy** button).
+
 Explain that the clicks are by the left mouse/trackpad button.
 
 `XTerm*on2Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `word`)
@@ -57,16 +59,17 @@ Explain that the clicks are by the left mouse/trackpad button.
 See XTerm's manpage for explanations of these parameters in the section on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
 
 
-
 ## Configuring which buffer XTerm copies to
 
 The `XTerm.vt100.selectToClipboard:` resource switches the target buffer for copying between the PRIMARY buffer and the CLIPBOARD buffer.
 
-The `false` value is the implicit default and does not need to be explicitly set (you don't need to include this line unless this resource has already been set to `true`):
-`XTerm.vt100.selectToClipboard: false`
-
 To switch the target buffer to CLIPBOARD, set this to `true`:
 `XTerm.vt100.selectToClipboard: true`
+
+**NOTE** The `false` value is the implicit default and does not need to be explicitly set (you don't need to include this line unless this resource has already been set to `true`):
+`XTerm.vt100.selectToClipboard: false`
+
+**TIP** If you ever need to switch the target buffer back to PRIMARY, either remove the `XTerm.vt100.selectToClipboard:` resource or explicitly set it to `XTerm.vt100.selectToClipboard: false`.
 
 From XTerm's manpage:
 
@@ -77,7 +80,13 @@ From XTerm's manpage:
                that handle only one of these mechanisms.  The default is
                "false", which tells it to use PRIMARY. [Source](https://invisible-island.net/xterm/manpage/xterm.html)
 
-**NOTE**: You can combine the `XTerm.vt100.selectToClipboard:` resource with the translations for setting custom keyboard shortcuts:
+## Keyboard shortcuts
+
+The default keyboard shortcut to pasting from CLIPBOARD and PRIMARY into an XTerm window is to press **Shift+Insert**.
+
+**NOTE** **Shift+Insert** is the default regardless of whether you set `XTerm.vt100.selectToClipboard: to `false` or to `true`.
+
+You can combine the `XTerm.vt100.selectToClipboard:` resource with the translations for setting custom keyboard shortcuts:
 ```
 xterm*VT100*translations: #override \n\
    Ctrl Shift <Key>C:  copy-selection(SELECT) \n\
@@ -86,12 +95,10 @@ xterm*VT100*translations: #override \n\
 +
 - [ ] EXPLAIN WHY SHIFT ABOVE ^
 
-**TIP** If you ever need to switch the target buffer back to PRIMARY, either remove the `XTerm.vt100.selectToClipboard:` resource or explicitly set it to `XTerm.vt100.selectToClipboard: false`.
-
 Also see [Configure](configure.md).
 
 
-REWRITE THE BELOW SECTIONS
+CONTINUE REWRITING THE BELOW SECTIONS
 
 ## Copying text in an XTerm window
 
@@ -105,7 +112,9 @@ REWRITE The `true` value enables you to copy text you select in an XTerm window 
 
 **TIP** With both `false` and `true`, you can paste the text copied from an XTerm window (to PRIMARY or CLIPBOARD) into another application by pressing **Shift+Insert**.
 
-To paste text that you copied in an XTerm window to PRIMARY, use the middle mouse button or the **Shift+Insert** keyboard shortcut.
+To paste text that you copied in an XTerm window to PRIMARY, use the **Shift+Insert** keyboard shortcut or the middle mouse button or EMULATION? (might still be useful as a TIP, but also not useful in some laptops).
+
+ ^v Clearly define the defaults and differentiate any custom settings like `vt100.Translations`.
 
 To paste text that you copied in an XTerm window to CLIPBOARD, use the standard pasting method for that application like the **Ctrl+V** keyboard shortcut or a menu selection.
 
@@ -113,7 +122,9 @@ To paste text that you copied in an XTerm window to CLIPBOARD, use the standard 
 
 You can paste copied text from an XTerm window in the same XTerm window or other XTerm window.
 
-Regardless of which buffer you're pasting text from (PRIMARY or CLIPBOARD) into an XTerm window, use the middle mouse button or the **Shift+Insert** keyboard shortcut.
+ ^v Clearly define the defaults and differentiate any custom settings like `vt100.Translations`.
+ 
+Regardless of which buffer you're pasting text from (PRIMARY or CLIPBOARD) into an XTerm window, use the **Shift+Insert** keyboard shortcut or the middle mouse button.
 
 ## Advanced options
 
@@ -206,11 +217,20 @@ Should I test the corresponding mouse buttons next?
 ```
 I am yet to test the Shift+<BtnUp> combinations.
 
-Also, I just realized that there is possibly an alternative syntax re <KeyPress> that I must also test:
+Also, I just realized that there is possibly an alternative syntax re <KeyPress> that I must also test. Now I've tested it and confirm it to work:
 ```
-! XTerm*VT100.Translations:       #override\n\
-! Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
-! Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
+XTerm*VT100.Translations:       #override\n\
+Shift Ctrl <KeyPress> v: insert-selection(CLIPBOARD)\n\
+Shift Ctrl <KeyPress> c: copy-selection(CLIPBOARD)\n
+```
+or using the alternative syntax:
+```
+XTerm.vt100.Translations:       #override\n\
+```
+or using the alternative syntax:
+```
+Shift Ctrl <Key>V: insert-selection(CLIPBOARD)\n\
+Shift Ctrl <Key>C: copy-selection(CLIPBOARD)\n
 ```
 *
 
