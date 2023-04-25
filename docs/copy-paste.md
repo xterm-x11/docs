@@ -37,26 +37,48 @@ https://www.davidsimmons.com/soft/xtermhacks/#copynpaste
 - [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
 and mention most important info from it
 
-Explain that the default behavior is every selection gets copied automatically, so you don't need to press any keyboard shortcuts (like **Ctrl+C**) or go into any menu (like clicking a **Copy** button).
+The default behavior in XTerm is every selection gets copied automatically, so you don't need to press any keyboard shortcuts (like **Ctrl+C**) or go into any menu (like clicking a **Copy** button).
 
-Explain that the clicks are by the left mouse/trackpad button.
+XTerm offers up to four different types of selection by multiple clicks using the left mouse (or trackpad) button. Each type of selection is set as an X resource.
 
-`XTerm*on2Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `word`)
+### Selection defaults
 
-`XTerm*on3Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (implicit default is `line`)
+Here are the implicit defaults:
 
-> If `XTerm*on3Clicks: line`, then `XTerm*cutToBeginningOfLine:` `true` or `false` (implicit default is `true`)
+`XTerm*on2Clicks:` `word`
 
-`XTerm*on4Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (inactive by default)
+`XTerm*on3Clicks:` `line`
 
-`XTerm*on5Clicks:` `word` or `line` or `group` or `page` or `all` or `regex` or `none` (inactive by default)
+`XTerm*on4Clicks:` (inactive)
 
-`XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
+`XTerm*on5Clicks:` (inactive)
 
-`XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
+MOVE THE FOLLOWING SECTION INTO THE CUSTOMIZE PAGES OF THE DOCS?
+WHAT'S THE DIFFERENCE BETWEEN CONFIGURING AND CUSTOMIZING?
+IS CONFIGURING PART OF THE DEFAULTS PAGE AND SHOULD THE INTRO PAGE BE CONSIDERED A DEFAULTS PAGE?
+(IF SO, THEN DELETE "### Selection defaults" ABOVE)
+### Customizing selections
 
+You can customize selections in XTerm. For the X resources `XTerm*on2Clicks:`, `XTerm*on3Clicks:`, `XTerm*on4Clicks:`, `XTerm*on5Clicks:`, you can set custom selections by specifying any of the following values (as written in XTerm's manpage):
 
-See XTerm's manpage for explanations of these parameters in the section on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE)
+* `word`
+* `line`
+* `group`
+* `page`
+* `all`
+* `regex`
+* `none`
+
+XTerm offers some further customizations of selections through additional X resources, including the following:
+
+* `XTerm*multiClickTime:` `250` (implicit default is `250` milliseconds)
+
+* `XTerm*cutNewline:` `true` or `false` (implicit default is `true`)
+
+* `XTerm*cutToBeginningOfLine:` `true` or `false` (implicit default is `true`)
+   TEST AND EXPLORE AND REWRITE AS NEEDED: Requires the X resource for that number of clicks to be set to `line`, for example: `XTerm*on3Clicks: line`.
+   
+For more information, see XTerm's manpage for explanations of these parameters in the section on [pointer usage](https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE).
 
 
 ## Configuring which buffer XTerm copies to
