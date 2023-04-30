@@ -1,8 +1,5 @@
 # Copy-pasting
 
-AI:
-Add `XTerm.vt100.selectToClipboard: true` to the sample file.
-Add `XTerm.vt100.selectToClipboard: true` to the template file.
 Add a statement that `XTerm.vt100.selectToClipboard: true` is added to the sample file.
 
 overview of selectToClipboard, menu, and translations: by Thomas https://unix.stackexchange.com/a/293856
