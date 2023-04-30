@@ -28,6 +28,7 @@ nav:
        - Sample: sample.md
        - Themes: themes.md
        - Template: template.md
+       - Copy-paste: customize-copy-paste.md
        - Prompt: prompt.md
        - Icon: icon.md
        - Manual window title: manual-window-title.md
