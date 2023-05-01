@@ -4,8 +4,8 @@
 
 You can easily select text in an XTerm window as you would expect in another application:
 * Left-click and drag to select any text.
-* Double-click to select a word (default).
-* Triple-click to select the whole line (default).
+* Double-click to select a word.
+* Triple-click to select the whole line.
 
 **IMPORTANT** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
 
