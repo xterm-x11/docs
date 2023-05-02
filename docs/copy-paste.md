@@ -1,3 +1,5 @@
+author: Max Leonov
+
 # Copy-pasting
 
 ## Selecting text in XTerm

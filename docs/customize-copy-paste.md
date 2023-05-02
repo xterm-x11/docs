@@ -1,3 +1,49 @@
+authors: Thomas E. Dickey, Max Leonov
+
+The two lines - "SELECT" is the runtime-selectable PRIMARY versus CLIPBOARD.
+The "SELECT" and "CUT_BUFFER0" are the targets that xterm tries to use.
+
+       selectToClipboard (class SelectToClipboard)
+               Tells xterm whether to use the PRIMARY or CLIPBOARD for SELECT
+               tokens in the selection mechanism.  The set-select action can
+               change this at runtime, allowing the user to work with programs
+               that handle only one of these mechanisms.  The default is
+               “false”, which tells it to use PRIMARY.
+
+The primary selection only lasts as long as it is highlighted,
+but cut-buffers are persistent.  Copying to the clipboard may seem
+like the primary, but since it's also persistent, that's different.
+But I made the "SELECT" an alias for either because the translations
+bindings work either way, and updating both would be more confusing.
+
+       Here is an example which uses shifted select/paste to copy to the
+       clipboard, and unshifted select/paste for the primary selection.  In
+       each case, a (different) cut buffer is also a target or source of the
+       select/paste operation.  It is important to remember however, that cut
+       buffers store data in ISO-8859-1 encoding, while selections can store
+       data in a variety of formats and encodings.  While xterm owns the
+       selection, it highlights it.  When it loses the selection, it removes
+       the corresponding highlight.  But you can still paste from the
+       corresponding cut buffer.
+
+Cut buffers do not hold as many types of data as primary/clipboard (in particular,
+they do not hold UTF-8 -- xterm will show a "#" when it sees a non-Latin1
+character in that case):
+
+               Specify the character (or string) which xterm will substitute
+               when pasted text includes a character which cannot be
+               represented in the current encoding.  For instance, pasting
+               UTF-8 text into a display of ISO-8859-1 characters will only be
+               able to display codes 0–255, while UTF-8 text can include
+               Unicode values above 255.  The default is “#” (a single pound
+               sign).
+
+-- 
+Thomas E. Dickey <dickey@invisible-island.net>
+https://invisible-island.net
+
+
+
 # Copy-pasting
 
 Add a statement that `XTerm.vt100.selectToClipboard: true` is added to the sample file.
