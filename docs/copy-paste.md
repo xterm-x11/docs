@@ -1,6 +1,6 @@
 author: Max Leonov
 
-# Copy-pasting
+# Copy-paste
 
 ## Selecting text in XTerm
 
