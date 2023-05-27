@@ -1,55 +1,10 @@
 authors: Thomas E. Dickey, Max Leonov
 
-The two lines - "SELECT" is the runtime-selectable PRIMARY versus CLIPBOARD.
-The "SELECT" and "CUT_BUFFER0" are the targets that xterm tries to use.
-
-       selectToClipboard (class SelectToClipboard)
-               Tells xterm whether to use the PRIMARY or CLIPBOARD for SELECT
-               tokens in the selection mechanism.  The set-select action can
-               change this at runtime, allowing the user to work with programs
-               that handle only one of these mechanisms.  The default is
-               “false”, which tells it to use PRIMARY.
-
-The primary selection only lasts as long as it is highlighted,
-but cut-buffers are persistent.  Copying to the clipboard may seem
-like the primary, but since it's also persistent, that's different.
-But I made the "SELECT" an alias for either because the translations
-bindings work either way, and updating both would be more confusing.
-
-       Here is an example which uses shifted select/paste to copy to the
-       clipboard, and unshifted select/paste for the primary selection.  In
-       each case, a (different) cut buffer is also a target or source of the
-       select/paste operation.  It is important to remember however, that cut
-       buffers store data in ISO-8859-1 encoding, while selections can store
-       data in a variety of formats and encodings.  While xterm owns the
-       selection, it highlights it.  When it loses the selection, it removes
-       the corresponding highlight.  But you can still paste from the
-       corresponding cut buffer.
-
-Cut buffers do not hold as many types of data as primary/clipboard (in particular,
-they do not hold UTF-8 -- xterm will show a "#" when it sees a non-Latin1
-character in that case):
-
-               Specify the character (or string) which xterm will substitute
-               when pasted text includes a character which cannot be
-               represented in the current encoding.  For instance, pasting
-               UTF-8 text into a display of ISO-8859-1 characters will only be
-               able to display codes 0–255, while UTF-8 text can include
-               Unicode values above 255.  The default is “#” (a single pound
-               sign).
-
--- 
-Thomas E. Dickey <dickey@invisible-island.net>
-https://invisible-island.net
-
-
+WIP
 
 # Copy-pasting
 
-Add a statement that `XTerm.vt100.selectToClipboard: true` is added to the sample file.
-
 overview of selectToClipboard, menu, and translations: by Thomas https://unix.stackexchange.com/a/293856
-
 translations
 answer by Thomas https://unix.stackexchange.com/a/293904
  also by Thomas https://unix.stackexchange.com/a/293856
@@ -65,7 +20,40 @@ Since patch #209 (2006), xterm has provided a workaround: a menu entry (and reso
                                select-cursor-end(SELECT, CUT_BUFFER0) \n\
     Shift <KeyPress> Insert:insert-selection(SELECT, CUT_BUFFER0) \n\
 ```
-I understand that these are translations, but I don't understand these two lines ^.
+
+The two lines - `SELECT` is the runtime-selectable PRIMARY versus CLIPBOARD.
+
+The `SELECT` and `CUT_BUFFER0` are the targets that XTerm tries to use.
+
+       selectToClipboard (class SelectToClipboard)
+               Tells xterm whether to use the PRIMARY or CLIPBOARD for SELECT
+               tokens in the selection mechanism.  The set-select action can
+               change this at runtime, allowing the user to work with programs
+               that handle only one of these mechanisms.  The default is
+               “false”, which tells it to use PRIMARY.
+
+The primary selection only lasts as long as it is highlighted, but cut-buffers are persistent. Copying to the clipboard may seem like the primary, but since it's also persistent, that's different. But the `SELECT` is an alias for either because the translations bindings work either way, and updating both would be more confusing.
+
+       Here is an example which uses shifted select/paste to copy to the
+       clipboard, and unshifted select/paste for the primary selection.  In
+       each case, a (different) cut buffer is also a target or source of the
+       select/paste operation.  It is important to remember however, that cut
+       buffers store data in ISO-8859-1 encoding, while selections can store
+       data in a variety of formats and encodings.  While xterm owns the
+       selection, it highlights it.  When it loses the selection, it removes
+       the corresponding highlight.  But you can still paste from the
+       corresponding cut buffer.
+
+Cut buffers do not hold as many types of data as primary/clipboard (in particular, they do not hold UTF-8 -- xterm will show a `#` when it sees a non-Latin1 character in that case):
+
+               Specify the character (or string) which xterm will substitute
+               when pasted text includes a character which cannot be
+               represented in the current encoding.  For instance, pasting
+               UTF-8 text into a display of ISO-8859-1 characters will only be
+               able to display codes 0–255, while UTF-8 text can include
+               Unicode values above 255.  The default is “#” (a single pound
+               sign).
+
 +
 Further reading about translations (suggested by Thomas in https://unix.stackexchange.com/a/293904):  
     [Chapter 10. Translation Management (X Toolkit Intrinsics - C Language Interface)](https://www.x.org/releases/X11R7.7/doc/libXt/intrinsics.html#Translation_Management)
@@ -78,18 +66,11 @@ https://wiki.archlinux.org/title/Xterm#PRIMARY_and_CLIPBOARD
 https://wiki.archlinux.org/title/Clipboard
 
 
-## Selecting text in an XTerm window
-
-- [ ] read all of https://invisible-island.net/xterm/manpage/xterm.html#h2-POINTER-USAGE
-and mention most important info from it
-
-The default behavior in XTerm is every selection gets copied automatically, so you don't need to press any keyboard shortcuts (like **Ctrl+C**) or go into any menu (like clicking a **Copy** button).
+### Text selection defaults
 
 XTerm offers up to four different types of selection by multiple clicks using the left mouse (or trackpad) button. Each type of selection is set as an X resource.
 
-### Selection defaults
-
-Here are the implicit defaults:
+Here are the implicit defaults for selecting text in an XTerm window:
 
 `XTerm*on2Clicks:` `word`
 
@@ -99,10 +80,6 @@ Here are the implicit defaults:
 
 `XTerm*on5Clicks:` (inactive)
 
-MOVE THE FOLLOWING SECTION INTO THE CUSTOMIZE PAGES OF THE DOCS?
-WHAT'S THE DIFFERENCE BETWEEN CONFIGURING AND CUSTOMIZING?
-IS CONFIGURING PART OF THE DEFAULTS PAGE AND SHOULD THE INTRO PAGE BE CONSIDERED A DEFAULTS PAGE?
-(IF SO, THEN DELETE "### Selection defaults" ABOVE)
 ### Customizing selections
 
 You can customize selections in XTerm. For the X resources `XTerm*on2Clicks:`, `XTerm*on3Clicks:`, `XTerm*on4Clicks:`, `XTerm*on5Clicks:`, you can set custom selections by specifying any of the following values (as written in XTerm's manpage):
@@ -133,6 +110,8 @@ The `XTerm.vt100.selectToClipboard:` resource switches the target buffer for cop
 
 To switch the target buffer to CLIPBOARD, set this to `true`:
 `XTerm.vt100.selectToClipboard: true`
+
+**NOTE** This is already set to `true` in the downloadable [sample.Xresources](https://github.com/xterm-x11/files.Xresources/blob/main/sample.Xresources) file.
 
 **NOTE** The `false` value is the implicit default and does not need to be explicitly set (you don't need to include this line unless this resource has already been set to `true`):
 `XTerm.vt100.selectToClipboard: false`
@@ -310,4 +289,3 @@ Shift Ctrl <Key>C: copy-selection(CLIPBOARD)\n
 - [X11: How does “the” clipboard work?](https://www.uninformativ.de/blog/postings/2017-04-02/0/POSTING-en.html)
 - [X Window selection](https://en.wikipedia.org/wiki/X_Window_selection)
 - [Peer-to-Peer Communication by Means of Selections](https://tronche.com/gui/x/icccm/sec-2.html#s-2)
-
