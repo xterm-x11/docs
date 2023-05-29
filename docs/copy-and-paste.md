@@ -1,6 +1,6 @@
 author: Max Leonov
 
-# Copy and paste
+# Copy-pasting
 
 ## Selecting text in XTerm
 
@@ -9,7 +9,20 @@ You can easily select text in an XTerm window as you would expect in another app
 * Double-click to select a word.
 * Triple-click to select the whole line.
 
-**TIP** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+**IMPORTANT** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+
+With a mouse or trackpad that has a scroll wheel, you can extend your initial selection beyond the visible screen in an XTerm window:
+
+1\. Make your initial selection by left-clicking and dragging to highlight text.
+
+2\. Scroll down (or up) to where you want to continue the started selection.
+
+3\. Right-click precisely on the line and column where you want to complete the selection.
+
+If the selection is very long, you can continue to scroll and right-click to extend your initial selection multiple times.
+
+**NOTE** Right-clicking means using mouse button 3, and scrolling works as described when when XTerm is not using the mouse protocol.
+
 
 ## Copying text in XTerm
 
@@ -23,8 +36,8 @@ By default, XTerm automatically copies every text selection you make in an XTerm
 
 By default, to paste copied text into an XTerm window, use the **Shift+Insert** keyboard shortcut or the middle mouse button (if your mouse or trackpad has one).
 
-**TIP** Depending on your system, you should be able to use the **Shift+Insert** keyboard shortcut for pasting text copied from an XTerm window into other applications (like **Ctrl+V**). If you stick with using the **Shift+Insert** keyboard shortcut in XTerm, it's easier to remember and more convenient to use this same shortcut every time you paste text copied to or from XTerm.
-
 **TIP** You can set a custom keyboard shortcut for pasting selected text. For how to do that, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+
+**TIP** Depending on your system, you should be able to use the **Shift+Insert** keyboard shortcut for pasting text copied from an XTerm window into other applications (like **Ctrl+V**). If you stick with using the **Shift+Insert** keyboard shortcut in XTerm, it's easier to remember and more convenient to use this same shortcut every time you paste text copied to or from XTerm.
 
 **TIP** If your hardware doesn't have the middle mouse button, you might be able to set up emulation to use both the left and right mouse buttons instead of the middle mouse button.
