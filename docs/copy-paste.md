@@ -12,7 +12,9 @@ You can easily select text in an XTerm window as you would expect in another app
 With a mouse or trackpad that has a scroll wheel, you can extend your initial selection beyond the visible screen in an XTerm window:
 
 1\. Make your initial selection by left-clicking and dragging to highlight text.
+
 2\. Scroll down (or up) to where you want to continue the started selection.
+
 3\. Right-click precisely on the line and column where you want to complete the selection.
 
 If the selection is very long, you can continue to scroll and right-click to extend your initial selection multiple times.
