@@ -9,6 +9,8 @@ You can easily select text in an XTerm window as you would expect in another app
 * Double-click to select a word.
 * Triple-click to select the whole line.
 
+**IMPORTANT** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+
 With a mouse or trackpad that has a scroll wheel, you can extend your initial selection beyond the visible screen in an XTerm window:
 
 1\. Make your initial selection by left-clicking and dragging to highlight text.
@@ -19,7 +21,8 @@ With a mouse or trackpad that has a scroll wheel, you can extend your initial se
 
 If the selection is very long, you can continue to scroll and right-click to extend your initial selection multiple times.
 
-**IMPORTANT** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+**NOTE** Right-clicking means using mouse button 3, and scrolling works as described when when XTerm is not using the mouse protocol.
+
 
 ## Copying text in XTerm
 
