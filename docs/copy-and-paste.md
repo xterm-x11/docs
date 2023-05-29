@@ -11,7 +11,7 @@ You can easily select text in an XTerm window as you would expect in another app
 
 **TIP** XTerm's X resources enable you to configure how much of text you wish to get selected on multiple clicks, adjust the clicking speed (as time interval) for multiple clicks, include or exclude the new line, and more. For more information, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
 
-With a mouse or trackpad that has a scroll wheel, you can extend your initial selection beyond the visible screen in an XTerm window:
+With a mouse or trackball that has a scroll wheel, you can extend your initial selection beyond the visible screen in an XTerm window:
 
 1\. Make your initial selection by left-clicking and dragging to highlight text.
 
