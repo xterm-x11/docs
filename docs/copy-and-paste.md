@@ -21,7 +21,7 @@ With a mouse or trackpad that has a scroll wheel, you can extend your initial se
 
 If the selection is very long, you can continue to scroll and right-click to extend your initial selection multiple times.
 
-**NOTE** Right-clicking means using mouse button 3, and scrolling works as described when when XTerm is not using the mouse protocol.
+**NOTE** Right-clicking means using mouse button 3, and scrolling works as described when XTerm is not using the mouse protocol.
 
 
 ## Copying text in XTerm
