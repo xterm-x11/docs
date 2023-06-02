@@ -1,6 +1,7 @@
 # List prerequisites
-# 1. Update local mks docs
-# 2. Update local material theme for mks docs
+# 1. Update local mks docs.
+# 2. Update local material theme for mks docs.
+# 3. The scipts require Bash.
 
 # run backup-invisible-xterm.sh
 sh get-xterm-related-updates-from-invisible-island-net.sh
