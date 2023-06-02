@@ -1,6 +1,7 @@
 # The original file is https://invisible-island.net/xterm/xterm.log.html
 
-cp ../xterm-on-invisible-island/xterm.log.html ../stage/release-notes-nav.html ../stage/release-notes-content.html
+cp ../xterm-on-invisible-island/xterm.log.html ../stage/release-notes-nav.html
+cp ../xterm-on-invisible-island/xterm.log.html ../stage/release-notes-content.html
 
 # get the line number for this HTML element, pipe it as a variable with read, and delete the first lines of the file excluding the line of this HTML element
 sed -n '/<div class="nav">/=' ../stage/release-notes-nav.html | (read ; LINEBEFORE=$(( $REPLY - 1 )); sed -i "1,$LINEBEFORE d" ../stage/release-notes-nav.html)
