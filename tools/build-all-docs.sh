@@ -3,7 +3,7 @@
 # 2. Update local material theme for mks docs.
 # 3. The scipts require Bash.
 
-# run backup-invisible-xterm.sh
+# run the script that wgets up-to-date XTerm content from invisible-island.net
 sh get-xterm-related-updates-from-invisible-island-net.sh
 
 # run "the command to build mks docs (see mks docs docs)"
