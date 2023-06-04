@@ -20,7 +20,7 @@ nav:
        # https://invisible-island.net/xterm/#related-discussion
        # Figure out a way to reference the manpage from each separate procedure page under Use,
        # where applicable.
-       - Copy-paste: copy-paste.md
+       - Copy and paste: copy-and-paste.md
        - Tabs: tabs.md
        - Full-screen: full-screen.md
        - Scrolling: scrolling.md
