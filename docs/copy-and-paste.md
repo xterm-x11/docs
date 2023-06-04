@@ -38,6 +38,6 @@ By default, to paste copied text into an XTerm window, use the **Shift+Insert** 
 
 **TIP** Depending on your system, you should be able to use the **Shift+Insert** keyboard shortcut for pasting text copied from an XTerm window into other applications (like **Ctrl+V**). If you stick with using the **Shift+Insert** keyboard shortcut in XTerm, it's easier to remember and more convenient to use this same shortcut every time you paste text copied to or from XTerm.
 
-**TIP** You can set a custom keyboard shortcut for pasting selected text. For how to do that, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md).
+**TIP** You can set a custom keyboard shortcut for pasting selected text. For how to do that, see [Configure](configure.md) and [Customize copy-paste](customize-copy-paste.md). This is useful in some situations such as when the keyboard you're using doesn't have a dedicated **Insert** button, making it difficult to press **Shift+Insert**.
 
 **TIP** If your hardware doesn't have the middle mouse button, you might be able to set up emulation to use both the left and right mouse buttons instead of the middle mouse button.
