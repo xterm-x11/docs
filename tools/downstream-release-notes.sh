@@ -6,6 +6,9 @@ cp ../xterm-on-invisible-island/xterm.log.html ../stage/release-notes-content.ht
 # get the line number for this HTML element, pipe it as a variable with read, and delete the first lines of the file excluding the line of this HTML element
 sed -n '/<div class="nav">/=' ../stage/release-notes-nav.html | (read ; LINEBEFORE=$(( $REPLY - 1 )); sed -i "1,$LINEBEFORE d" ../stage/release-notes-nav.html)
 
+# remove the line `<li class="nav-top"><a href="xterm.log.html">(top)</a></li>` from ../stage/release-notes-nav.html
+sed -i /'nav-top'/d  ../stage/release-notes-nav.html
+
 # get the line number for this HTML element, pipe it as a variable with read, and delete the last lines of the file excluding the line of this HTML element
 sed -n '/<\/div>/=' ../stage/release-notes-nav.html | (read ; LINEAFTER=$(( $REPLY + 1 )); sed -i "$LINEAFTER,$ d" ../stage/release-notes-nav.html)
 
