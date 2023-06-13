@@ -3,7 +3,7 @@ site_name: XTerm
 site_url: https://xterm.org
 # &copy; as ©
 copyright: >
-  Copyright © 1997-2022 by Thomas E. Dickey or another writer in the page file.
+  Copyright © 1997-2022 by Thomas E. Dickey et al.
   <br/>
   No cookies are served on this website.
 nav:
