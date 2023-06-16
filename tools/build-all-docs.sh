@@ -26,9 +26,16 @@ cd tools
 
 # run the script for downstreaming c.html
 
-cd ..
+cd ../../xterm-x11.github.io
+git switch main
+git pull
+git switch -c update
+cp -r ../site ../../xterm-x11.github.io
+git add .
+git commit -m "website update"
+git push -u origin update
 
-mkdocs serve
-
-firefox http://127.0.0.1:8000/
+# cd ..
+# mkdocs serve
+# firefox http://127.0.0.1:8000/
 
