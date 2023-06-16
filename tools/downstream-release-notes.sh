@@ -24,14 +24,16 @@ cat ../stage/release-notes-nav.html ../stage/release-notes-content.html > ../sta
 # delete both file excerpts
 rm ../stage/release-notes-nav.html ../stage/release-notes-content.html
 
-cp ../site/release-notes/index.html ../site/release-notes/index-part-1.html ../site/release-notes/index-part-2.html
+cp ../site/release-notes/index.html ../site/release-notes/index-part-1.html
+cp ../site/release-notes/index.html ../site/release-notes/index-part-2.html
 
 # get the line number for this HTML element, pipe it as a variable with read, and delete the last lines of the file including the line of this HTML element
-sed -n '/'downstreamed content'/=' ../site/release-notes/index-part-1.html | (read ; sed -i "$REPLY,$ d" ../site/release-notes/index-part-1.html)
+sed -n '/downstreamed content/=' ../site/release-notes/index-part-1.html | (read ; sed -i "$REPLY,$ d" ../site/release-notes/index-part-1.html)
 
 # get the line number for this HTML element, pipe it as a variable with read, and delete the first lines of the file including the line of this HTML element
-sed -n '/'end of downstreamed content'/=' ../site/release-notes/index-part-2.html | (read ; sed -i "1,$REPLY d" ../site/release-notes/index-part-2.html)
+sed -n '/end of downstreamed content/=' ../site/release-notes/index-part-2.html | (read ; sed -i "1,$REPLY d" ../site/release-notes/index-part-2.html)
 
 cat ../site/release-notes/index-part-1.html ../stage/downstreamed-complete-release-notes-page.html ../site/release-notes/index-part-2.html > ../site/release-notes/index.html
 
+rm ../stage/downstreamed-complete-release-notes-page.html
 rm ../site/release-notes/index-part-1.html ../site/release-notes/index-part-2.html
