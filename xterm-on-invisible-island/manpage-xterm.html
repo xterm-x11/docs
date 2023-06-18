@@ -169,18 +169,18 @@
 
 </pre>
 <h2><a name="h2-OPTIONS" id="h2-OPTIONS">OPTIONS</a></h2>
-<pre>       Because <i>xterm</i> uses the X Toolkit library, it accepts the standard X
-       Toolkit command line options.  <i>Xterm</i> also accepts many application-
+<pre>       Because <i>xterm</i> uses the <i>X Toolkit</i> library, it accepts the standard <i>X</i>
+       <i>Toolkit</i> command line options.  <i>Xterm</i> also accepts many application-
        specific options.
 
        By convention, if an option begins with a "<b>+</b>" instead of a "<b>-</b>", the
        option is restored to its default value.
 
-       Most of the <i>xterm</i> options are actually parsed by the X Toolkit, which
+       Most of the <i>xterm</i> options are actually parsed by the <i>X Toolkit</i>, which
        sets resource values, and overrides corresponding resource-settings in
-       your X resource files.  <i>Xterm</i> provides the X Toolkit with a table of
-       options.  A few of these are marked, telling the X Toolkit to ignore
-       them (<b><a href="#OPTIONS:-help">-help</a></b>, <b><a href="#OPTIONS:-version">-version</a></b>, <b><a href="#OPTIONS:-class">-class</a></b>, <b><a href="#OPTIONS:-e">-e</a></b>, and <b><a href="#OPTIONS:-into">-into</a></b>).  After the X Toolkit has
+       your X resource files.  <i>Xterm</i> provides the <i>X Toolkit</i> with a table of
+       options.  A few of these are marked, telling the <i>X Toolkit</i> to ignore
+       them (<b><a href="#OPTIONS:-help">-help</a></b>, <b><a href="#OPTIONS:-version">-version</a></b>, <b><a href="#OPTIONS:-class">-class</a></b>, <b><a href="#OPTIONS:-e">-e</a></b>, and <b><a href="#OPTIONS:-into">-into</a></b>).  After the <i>X Toolkit</i> has
        parsed the command-line parameters, it removes those which it handles,
        leaving the specially-marked parameters for <i>xterm</i> to handle.
 
@@ -209,9 +209,9 @@
        open the display, and are useful for testing and configuration scripts.
        Along with <b><a href="#OPTIONS:-class">-class</a></b>, they are checked before other options.  To do this,
        <i>xterm</i> has its own (much simpler) argument parser, along with a table of
-       the X Toolkit's built-in list of options.
+       the <i>X Toolkit</i>'s built-in list of options.
 
-       Relying upon the X Toolkit to parse the options and associated values
+       Relying upon the <i>X Toolkit</i> to parse the options and associated values
        has the advantages of simplicity and good integration with the X
        resource mechanism.  There are a few drawbacks
 
@@ -227,14 +227,14 @@
            options, some are deemed more important, and can override other
            options.
 
-           The X Toolkit uses patterns (constants and wildcards) to match
+           The <i>X Toolkit</i> uses patterns (constants and wildcards) to match
            resources.  Once a particular pattern has been used, it will not
            modify it.  To override a given setting, a more-specific pattern
            must be used, e.g., replacing "*" with ".".  Some poorly-designed
            resource files are too specific to allow the command-line options
            to affect the relevant widget values.
 
-       <b>o</b>   In a few cases, the X Toolkit combines its standard options in ways
+       <b>o</b>   In a few cases, the <i>X Toolkit</i> combines its standard options in ways
            which do not work well with <i>xterm</i>.  This happens with the color
            (<b><a href="#X-Toolkit-Options:-fg">-fg</a></b>, <b><a href="#X-Toolkit-Options:-bg">-bg</a></b>) and reverse (<b><a href="#X-Toolkit-Options:-rv">-rv</a></b>) options.  <i>Xterm</i> makes a special case
            of these and adjusts its sense of "reverse" to lessen user
@@ -309,6 +309,12 @@
                window border) in pixels.  That is the <i>vt100</i> <b><a href="#VT100-Widget-Resources:internalBorder">internalBorder</a></b>
                resource.  The default is "2".
 
+       <b><a title="OPTIONS:-barc" name="OPTIONS:-barc">-barc</a></b>   This option, corresponding to the <b><a href="#VT100-Widget-Resources:cursorBar">cursorBar</a></b> resource, makes the
+               cursor a bar instead of a box.
+
+       <b><a title="OPTIONS:+barc" name="OPTIONS:_barc">+barc</a></b>   This option, corresponding to the <b><a href="#VT100-Widget-Resources:cursorBar">cursorBar</a></b> resource, makes the
+               cursor a box instead of a bar.
+
        <b><a title="OPTIONS:-baudrate" name="OPTIONS:-baudrate">-baudrate</a></b> <i>number</i>
                Set the line-speed, used to test the behavior of applications
                that use the line-speed when optimizing their output to the
@@ -363,7 +369,7 @@
                Normally it is "XTerm", but can be set to another class such as
                "UXTerm" to override selected resources.
 
-               X Toolkit sets the <b><a href="#Properties-set-by-X-Toolkit:WM_CLASS">WM_CLASS</a></b> property using the instance name
+               <i>X Toolkit</i> sets the <b><a href="#Properties-set-by-X-Toolkit:WM_CLASS">WM_CLASS</a></b> property using the instance name
                and this class value.
 
        <b><a title="OPTIONS:-cm" name="OPTIONS:-cm">-cm</a></b>     This option disables recognition of ANSI color-change escape
@@ -426,7 +432,7 @@
                double-width font is specified, you also need to turn on the
                <b><a href="#VT100-Widget-Resources:cjkWidth">cjkWidth</a></b> resource.
 
-               If you specify both <b><a href="#OPTIONS:-fa">-fa</a></b> and the X Toolkit option <b><a href="#X-Toolkit-Options:-fn">-fn</a></b>, the <b><a href="#OPTIONS:-fa">-fa</a></b>
+               If you specify both <b><a href="#OPTIONS:-fa">-fa</a></b> and the <i>X Toolkit</i> option <b><a href="#X-Toolkit-Options:-fn">-fn</a></b>, the <b><a href="#OPTIONS:-fa">-fa</a></b>
                setting overrides the latter.
 
                See also the <b><a href="#VT100-Widget-Resources:renderFont">renderFont</a></b> resource, which combines with this to
@@ -960,9 +966,11 @@
 
        <b><a title="OPTIONS:+u8" name="OPTIONS:_u8">+u8</a></b>     This option resets the <b><a href="#VT100-Widget-Resources:utf8">utf8</a></b> resource.
 
-       <b><a title="OPTIONS:-uc" name="OPTIONS:-uc">-uc</a></b>     This option makes the cursor underlined instead of a box.
+       <b><a title="OPTIONS:-uc" name="OPTIONS:-uc">-uc</a></b>     This option, corresponding to the <b>cursorUnderline</b> resource,
+               makes the cursor underlined instead of a box.
 
-       <b><a title="OPTIONS:+uc" name="OPTIONS:_uc">+uc</a></b>     This option makes the cursor a box instead of underlined.
+       <b><a title="OPTIONS:+uc" name="OPTIONS:_uc">+uc</a></b>     This option m, corresponding to the <b>cursorUnderline</b> resource,
+               akes the cursor a box instead of underlined.
 
        <b><a title="OPTIONS:-ulc" name="OPTIONS:-ulc">-ulc</a></b>    This option disables the display of characters with underline
                attribute as color rather than with underlining.
@@ -1055,7 +1063,7 @@
 <h3><a name="h3-Old-Options" id="h3-Old-Options">Old Options</a></h3>
 <pre>       The following command line arguments are provided for compatibility
        with older versions.  They may not be supported in the next release as
-       the X Toolkit provides standard options that accomplish the same task.
+       the <i>X Toolkit</i> provides standard options that accomplish the same task.
 
        <a title="Old Options:%" name="Old-Options:percent."><b>%</b><i>geom</i></a>   This option specifies the preferred size and position of the
                Tektronix window.  It is shorthand for specifying the
@@ -1072,13 +1080,13 @@
        <b><a title="Old Options:-n" name="Old-Options:-n">-n</a></b> <i>string</i>
                This option specifies the icon name for <i>xterm</i>'s windows.  It is
                shorthand for specifying the "<b><a href="#Application-Resources:iconName">iconName</a></b>" resource.  Note that
-               this is not the same as the toolkit option <b><a href="#X-Toolkit-Options:-name">-name</a></b>.  The default
-               icon name is the application name.
+               this is not the same as the <i>X Toolkit</i> option <b><a href="#X-Toolkit-Options:-name">-name</a></b>.  The
+               default icon name is the application name.
 
                If no suitable icon is found, <i>xterm</i> provides a compiled-in
                pixmap.
 
-               X Toolkit sets the <b><a href="#Properties-set-by-X-Toolkit:WM_ICON_NAME">WM_ICON_NAME</a></b> property using this value.
+               <i>X Toolkit</i> sets the <b><a href="#Properties-set-by-X-Toolkit:WM_ICON_NAME">WM_ICON_NAME</a></b> property using this value.
 
        <b><a title="Old Options:-r" name="Old-Options:-r">-r</a></b>      This option indicates that reverse video should be simulated by
                swapping the foreground and background colors.  It is
@@ -1091,17 +1099,17 @@
 
 </pre>
 <h3><a name="h3-X-Toolkit-Options" id="h3-X-Toolkit-Options">X Toolkit Options</a></h3>
-<pre>       The following standard X Toolkit command line arguments are commonly
+<pre>       The following standard <i>X Toolkit</i> command line arguments are commonly
        used with <i>xterm</i>:
 
        <b><a title="X Toolkit Options:-bd" name="X-Toolkit-Options:-bd">-bd</a></b> <i>color</i>
                This option specifies the color to use for the border of the
                window.  The corresponding resource name is <b>borderColor</b>.  <i>Xterm</i>
-               uses the X Toolkit default, which is "XtDefaultForeground".
+               uses the <i>X Toolkit</i> default, which is "XtDefaultForeground".
 
                <i>Xterm</i>'s VT100 window has two borders: the <i>inner</i> border
                <b><a href="#VT100-Widget-Resources:internalBorder">internalBorder</a></b> and the <i>outer</i> border <b>borderWidth</b>, managed by the
-               X Toolkit.
+               <i>X Toolkit</i>.
 
                Normally <i>xterm</i> fills the inner border using the VT100 window's
                background color.  If the <b><a href="#VT100-Widget-Resources:colorInnerBorder">colorInnerBorder</a></b> resource is enabled,
@@ -1136,6 +1144,11 @@
                This option specifies the font to be used for displaying normal
                text.  The corresponding resource name is <i>font</i>.  The resource
                value default is <i>fixed</i>.
+
+               <i>Xterm</i>'s <b><a href="#X-Toolkit-Options:-fn">-fn</a></b> option accepts a comma-separated list like <b><a href="#OPTIONS:-fa">-fa</a></b>, for
+               the VT100 widget, using the first bitmap font (and discarding
+               additional fonts).  However, other widgets (such as the
+               toolbar) will be confused by this and give a warning.
 
        <b><a title="X Toolkit Options:-font" name="X-Toolkit-Options:-font">-font</a></b> <i>font</i>
                This is the same as <b><a href="#X-Toolkit-Options:-fn">-fn</a></b>.
@@ -1174,14 +1187,14 @@
                title is the command line specified after the <b><a href="#OPTIONS:-e">-e</a></b> option, if
                any, otherwise the application name.
 
-               X Toolkit sets the <b><a href="#Properties-set-by-X-Toolkit:WM_NAME">WM_NAME</a></b> property using this value.
+               <i>X Toolkit</i> sets the <b><a href="#Properties-set-by-X-Toolkit:WM_NAME">WM_NAME</a></b> property using this value.
 
        <b><a title="X Toolkit Options:-xrm" name="X-Toolkit-Options:-xrm">-xrm</a></b> <i>resourcestring</i>
                This option specifies a resource string to be used.  This is
                especially useful for setting resources that do not have
                separate command line options.
 
-       X Toolkit accepts alternate names for a few of these options, e.g.,
+       <i>X Toolkit</i> accepts alternate names for a few of these options, e.g.,
 
        <b>o</b>   "<b>-background</b>" for "<b><a href="#X-Toolkit-Options:-bg">-bg</a></b>"
 
@@ -1193,12 +1206,12 @@
 
 </pre>
 <h2><a name="h2-RESOURCES" id="h2-RESOURCES">RESOURCES</a></h2>
-<pre>       <i>Xterm</i> understands all of the core X Toolkit resource names and classes.
-       It also uses the X Toolkit resource types (such as booleans, colors,
+<pre>       <i>Xterm</i> understands all of the core <i>X Toolkit</i> resource names and classes.
+       It also uses the <i>X Toolkit</i> resource types (such as booleans, colors,
        fonts, integers, and strings) along with their respective converters.
        Those resource types are not always sufficient:
 
-       <b>o</b>   <i>Xterm</i>'s resource values may be lists of names.  X Toolkit resource
+       <b>o</b>   <i>Xterm</i>'s resource values may be lists of names.  <i>X Toolkit</i> resource
            types do not include lists.  <i>Xterm</i> uses a string for the resource,
            and parses it.
 
@@ -1246,13 +1259,13 @@
                Summarizing that as a table:
 
                <b>PIE     stty   termcap</b>   <i>erase</i>
-
                -------------------------------
                false    ^H      ^H       ^H
                false    ^H      ^?       ^?
                false    ^?      ^H       ^H
                false    ^?      ^?       ^?
                true     ^H      ^H       ^H
+
                true     ^H      ^?       ^H
                true     ^?      ^H       ^?
                true     ^?      ^?       ^?
@@ -1449,13 +1462,13 @@
 
        <b><a title="Application Resources:menuHeight" name="Application-Resources:menuHeight">menuHeight</a></b> (class <b>MenuHeight</b>)
                Specifies the height of the toolbar, which may be increased by
-               the X toolkit layout widget depending upon the fontsize used.
+               the <i>X Toolkit</i> Layout widget depending upon the fontsize used.
                The default is "25".
 
        <b><a title="Application Resources:menuLocale" name="Application-Resources:menuLocale">menuLocale</a></b> (class <b>MenuLocale</b>)
                Specify the locale used for character-set computations when
                loading the popup menus.  Use this to improve initialization
-               performance of the Athena popup menus, which may load
+               performance of the <i>Athena</i> popup menus, which may load
                unnecessary (and very large) fonts, e.g., in a locale having
                UTF-8 encoding.  The default is "C" (POSIX).
 
@@ -1692,6 +1705,7 @@
                rprnt     no       <i>CHAR</i> will redraw the current line.
                start     yes      <i>CHAR</i> will <i>restart</i> the output after stopping
                                   it.
+
                status    no       <i>CHAR</i> will cause a system-generated status
                                   line to be printed.
                stop      yes      <i>CHAR</i> will stop the output.
@@ -2030,7 +2044,7 @@
 
        <b><a title="VT100 Widget Resources:awaitInput" name="VT100-Widget-Resources:awaitInput">awaitInput</a></b> (class <b>AwaitInput</b>)
                Specifies whether or not <i>xterm</i> uses a 50 millisecond timeout to
-               await input (i.e., to support the Xaw3d arrow scrollbar).  The
+               await input (i.e., to support the <i>Xaw3d</i> arrow scrollbar).  The
                default is "false".
 
        <b><a title="VT100 Widget Resources:backarrowKey" name="VT100-Widget-Resources:backarrowKey">backarrowKey</a></b> (class <b>BackarrowKey</b>)
@@ -2430,6 +2444,11 @@
                be worked around.  See the <b><a href="#OPTIONS:-cu">-cu</a></b> option for details.  The default
                is "false".
 
+       <b><a title="VT100 Widget Resources:cursorBar" name="VT100-Widget-Resources:cursorBar">cursorBar</a></b> (class <b>CursorBar</b>)
+               Specifies whether to make the cursor a left-bar or a box,
+               unless the <b>cursorUnderline</b> resource is set.  The default is
+               "false".
+
        <b><a title="VT100 Widget Resources:cursorBlink" name="VT100-Widget-Resources:cursorBlink">cursorBlink</a></b> (class <b>CursorBlink</b>)
                Specifies whether to make the cursor blink.  <i>Xterm</i> accepts
                either a keyword (ignoring case) or the number shown in
@@ -2497,8 +2516,9 @@
                blinking.  The default is "600".
 
        <b><a title="VT100 Widget Resources:cursorUnderLine" name="VT100-Widget-Resources:cursorUnderLine">cursorUnderLine</a></b> (class <b>CursorUnderLine</b>)
-               Specifies whether to make the cursor underlined or a box.  The
-               default is "false".
+               Specifies whether to make the cursor underlined or a box.  If
+               unset (false), the <b><a href="#VT100-Widget-Resources:cursorBar">cursorBar</a></b> resource may set the cursor shape.
+               The default is "false".
 
        <b><a title="VT100 Widget Resources:cutNewline" name="VT100-Widget-Resources:cutNewline">cutNewline</a></b> (class <b>CutNewline</b>)
                If "false", triple clicking to select a line does not include
@@ -2897,7 +2917,7 @@
 
                Two TrueType fonts can be specified in this way.  The first is
                the primary font; the second acts as a manual override to the
-               fontconfig fontset.
+               <i>fontconfig</i> fontset.
 
                If no <b><a href="#VT100-Widget-Resources:faceName">faceName</a></b> resource is specified, or if there is no match
                for both TrueType normal and bold fonts, <i>xterm</i> uses the XLFD
@@ -3098,6 +3118,7 @@
                7      U+00B0    degree sign
                8      U+00B1    plus-minus sign
                9      U+2424    symbol for newline
+
                10     U+240B    symbol for vertical tabulation
                11     U+2518    box drawings light up and left
                12     U+2510    box drawings light down and left
@@ -3359,6 +3380,29 @@
 
                Set this to "0" to disable fallbacks entirely.
 
+       <b><a title="VT100 Widget Resources:limitFontHeight" name="VT100-Widget-Resources:limitFontHeight">limitFontHeight</a></b> (class <b>LimitFontHeight</b>)
+               When scaling a TrueType font to provide the parts for a double-
+               high character, <i>xterm</i> compares the scaled font with the
+               original to ensure that it is taller.
+
+               The default is "10" (percent).
+
+       <b><a title="VT100 Widget Resources:limitFontWidth" name="VT100-Widget-Resources:limitFontWidth">limitFontWidth</a></b> (class <b>LimitFontWidth</b>)
+               When looking for fallback fonts, <i>xterm</i> checks to see that the
+               the character to be displayed is the same width as the primary
+               font.  If a character extends outside the font's bounding box,
+               <i>xterm</i> will clip it, to fit.
+
+               This resource controls the amount by which the character can
+               extend outside its bounding box before <i>xterm</i> looks further for
+               a better font.
+
+               This resource is also used in scaling TrueType fonts for
+               double-wide characters, like <b><a href="#VT100-Widget-Resources:limitFontHeight">limitFontHeight</a></b> for double-wide
+               characters.
+
+               The default is "10" (percent).
+
        <b><a title="VT100 Widget Resources:limitResize" name="VT100-Widget-Resources:limitResize">limitResize</a></b> (class <b>LimitResize</b>)
                Limits resizing of the screen via control sequence to a given
                multiple of the display dimensions.  The default is "1".
@@ -3438,7 +3482,7 @@
 
                    *localeFilter: xterm-filter -p
 
-               Alternatively, you may put those parameter within a shell
+               Alternatively, you may put those parameters within a shell
                script to execute the converter, and set this resource to point
                to the shell script.
 
@@ -3669,7 +3713,7 @@
                which the margin bell should be rung, when enabled by the
                <b><a href="#VT100-Widget-Resources:marginBell">marginBell</a></b> resource.  The default is "10".
 
-       <a title="VT100 Widget Resources:..name..Keymap" name="VT100-Widget-Resources:..name..Keymap"><i>name</i><b>Keymap </b></a><b>(class</b> <i>Name</i><b>Keymap)</b>
+       <i>name</i><b>Keymap</b> (class <i>Name</i><b>Keymap</b>)
                See the discussion of the <b><a href="#Actions:keymap">keymap</a></b><b>()</b> action.
 
        <b><a title="VT100 Widget Resources:nextEventDelay" name="VT100-Widget-Resources:nextEventDelay">nextEventDelay</a></b> (class <b>NextEventDelay</b>)
@@ -4110,7 +4154,7 @@
                <b>o</b>   The command-line <b><a href="#X-Toolkit-Options:-rv">-rv</a></b> option tells the X libraries to
                    reverse the foreground and background colors.  <i>Xterm</i>'s
                    command-line options set resource values.  In particular,
-                   the X Toolkit sets the <b><a href="#VT100-Widget-Resources:reverseVideo">reverseVideo</a></b> resource when the <b><a href="#X-Toolkit-Options:-rv">-rv</a></b>
+                   the <i>X Toolkit</i> sets the <b><a href="#VT100-Widget-Resources:reverseVideo">reverseVideo</a></b> resource when the <b><a href="#X-Toolkit-Options:-rv">-rv</a></b>
                    option is used.
 
                <b>o</b>   If the user has also used command-line options <b><a href="#X-Toolkit-Options:-fg">-fg</a></b> or <b><a href="#X-Toolkit-Options:-bg">-bg</a></b>
@@ -4267,7 +4311,7 @@
        <b><a title="VT100 Widget Resources:showMissingGlyphs" name="VT100-Widget-Resources:showMissingGlyphs">showMissingGlyphs</a></b> (class <b>ShowMissingGlyphs</b>)
                Tells <i>xterm</i> whether to display a box outlining places where a
                character has been used that the font does not represent.  The
-               default is "false".
+               default is "true".
 
        <b><a title="VT100 Widget Resources:showWrapMarks" name="VT100-Widget-Resources:showWrapMarks">showWrapMarks</a></b> (class <b>ShowWrapMarks</b>)
                For debugging <i>xterm</i> and applications that may manipulate the
@@ -4389,8 +4433,8 @@
        <b><a title="VT100 Widget Resources:translations" name="VT100-Widget-Resources:translations">translations</a></b> (class <b>Translations</b>)
                Specifies the key and button bindings for menus, selections,
                "programmed strings", etc.  The <b><a href="#VT100-Widget-Resources:translations">translations</a></b> resource, which
-               provides much of <i>xterm</i>'s configurability, is a feature of the X
-               Toolkit Intrinsics library (<a href="https://invisible-island.net/xterm/xtoolkit/xtoolkit.html"><b>Xt</b></a>).  See the <b><a href="#h3-Actions">Actions</a></b> section.
+               provides much of <i>xterm</i>'s configurability, is a feature of the <i>X</i>
+               <i>Toolkit Intrinsics</i> library (<a href="https://invisible-island.net/xterm/xtoolkit/xtoolkit.html"><b>Xt</b></a>).  See the <b><a href="#h3-Actions">Actions</a></b> section.
 
        <b><a title="VT100 Widget Resources:trimSelection" name="VT100-Widget-Resources:trimSelection">trimSelection</a></b> (class <b>TrimSelection</b>)
                If you set <b><a href="#VT100-Widget-Resources:highlightSelection">highlightSelection</a></b>, you can see the text which is
@@ -4620,7 +4664,7 @@
        <b><a title="VT100 Widget Resources:xftTrackMemUsage" name="VT100-Widget-Resources:xftTrackMemUsage">xftTrackMemUsage</a></b> (class <b>XftTrackMemUsage</b>)
                Enables glyph memory tracking (introduced in Xft 2.3.5), which
                allows Xft to efficiently discard obsolete data when running
-               short of memory.  The default is "true".
+               short of memory.  The default is "false".
 
        <b><a title="VT100 Widget Resources:ximFont" name="VT100-Widget-Resources:ximFont">ximFont</a></b> (class <b>XimFont</b>)
                This option specifies the font to be used for displaying the
@@ -4675,7 +4719,7 @@
 </pre>
 <h3><a name="h3-Menu-Resources" id="h3-Menu-Resources">Menu Resources</a></h3>
 <pre>       The resources that may be specified for the various menus are described
-       in the documentation for the Athena <b>SimpleMenu</b> widget.  The name and
+       in the documentation for the <i>Athena</i> <b>SimpleMenu</b> widget.  The name and
        classes of the entries in each of the menus are listed below.
        Resources named "<b><a href="#VT100-Widget-Resources:line">line</a></b><i>N</i>" where <i>N</i> is a number are separators with class
        <b>SmeLine</b>.
@@ -4979,7 +5023,7 @@
 
 </pre>
 <h3><a name="h3-Scrollbar-Resources" id="h3-Scrollbar-Resources">Scrollbar Resources</a></h3>
-<pre>       The following resources are useful when specified for the Athena
+<pre>       The following resources are useful when specified for the <i>Athena</i>
        Scrollbar widget:
 
        <b><a title="Scrollbar Resources:background" name="Scrollbar-Resources:background">background</a></b> (class <b>Background</b>)
@@ -5849,7 +5893,7 @@
        which can be controlled by writing escape sequences to the terminal.
        These are disabled if the SendEvents feature is enabled:
 
-              <b><a title="VT Fonts:Allow Color Ops" name="VT-Fonts:Allow-Color-Ops">Allow Color Ops</a></b> (resource <b><a href="#Menu-Resources:allow-font-ops">allow-font-ops</a></b>)
+              <b><a title="VT Fonts:Allow Color Ops" name="VT-Fonts:Allow-Color-Ops">Allow Color Ops</a></b> (resource <b><a href="#Menu-Resources:allow-color-ops">allow-color-ops</a></b>)
                      This corresponds to the <b><a href="#VT100-Widget-Resources:allowColorOps">allowColorOps</a></b> resource.  Enable
                      or disable control sequences that set/query the colors.
 
@@ -6997,8 +7041,8 @@
 <h3><a name="h3-Default-Scrollbar-Bindings" id="h3-Default-Scrollbar-Bindings">Default Scrollbar Bindings</a></h3>
 <pre>       Key bindings are normally associated with the <i>vt100</i> or <i>tek4014</i> widgets
        which act as terminal emulators.  <i>Xterm</i>'s scrollbar (and toolbar if it
-       is configured) are separate widgets.  Because all of these use the X
-       Toolkit, they have corresponding <b><a href="#VT100-Widget-Resources:translations">translations</a></b> resources.  Those
+       is configured) are separate widgets.  Because all of these use the <i>X</i>
+       <i>Toolkit</i>, they have corresponding <b><a href="#VT100-Widget-Resources:translations">translations</a></b> resources.  Those
        resources are distinct, and match different patterns, e.g., the
        differences in widget-name and number of levels of widgets which they
        may contain.
@@ -7332,8 +7376,8 @@
 </pre>
 <h3><a name="h3-Properties-set-by-X-Toolkit" id="h3-Properties-set-by-X-Toolkit">Properties set by X Toolkit</a></h3>
 <pre>       <b><a title="Properties set by X Toolkit:WM_CLASS" name="Properties-set-by-X-Toolkit:WM_CLASS">WM_CLASS</a></b>
-            This shows the <i>instance name</i> and the X resource <i>class</i>, passed to X
-            Toolkit during initialization of <i>xterm</i>, e.g.,
+            This shows the <i>instance name</i> and the X resource <i>class</i>, passed to <i>X</i>
+            <i>Toolkit</i> during initialization of <i>xterm</i>, e.g.,
 
                 WM_CLASS(STRING) = "xterm", "UXTerm"
 
@@ -7345,7 +7389,7 @@
 
        <b><a title="Properties set by X Toolkit:WM_COMMAND" name="Properties-set-by-X-Toolkit:WM_COMMAND">WM_COMMAND</a></b>
             This shows the command-line arguments for <i>xterm</i> which are passed
-            to X Toolkit during initialization, e.g.,
+            to <i>X Toolkit</i> during initialization, e.g.,
 
                 WM_COMMAND(STRING) = { "xterm", "-class", "UXTerm", "-title", "uxterm", "-u8" }
 
@@ -7367,7 +7411,7 @@
 
 </pre>
 <h3><a name="h3-Properties-set-by-Xterm" id="h3-Properties-set-by-Xterm">Properties set by Xterm</a></h3>
-<pre>       X Toolkit does not manage EWMH properties.  Xterm does this directly.
+<pre>       <i>X Toolkit</i> does not manage EWMH properties.  Xterm does this directly.
 
        <b><a title="Properties set by Xterm:_NET_WM_ICON_NAME" name="Properties-set-by-Xterm:_NET_WM_ICON_NAME">_NET_WM_ICON_NAME</a></b>
             stores the icon name.
@@ -7609,7 +7653,7 @@
        X Desktop Group (version 1.3, 2005).
 
        EWMH uses <i>UTF8_STRING</i> pervasively without defining it, but does mention
-       the  ICCCM.   Version 2.0 of the ICCCM does not address UTF-8.  That is
+       the ICCCM.  Version 2.0 of the ICCCM does not address UTF-8.   That  is
        an extension added in XFree86.
 
        <b>o</b>   Markus Kuhn summarized this in <i>UTF-8 and Unicode FAQ for Unix/Linux</i>
@@ -7617,33 +7661,33 @@
 
            <a href="https://www.cl.cam.ac.uk/~mgk25/unicode.html">https://www.cl.cam.ac.uk/~mgk25/unicode.html</a>
 
-       <b>o</b>   Juliusz  Chroboczek  proposed  the  UTF8_STRING  selection  atom in
+       <b>o</b>   Juliusz Chroboczek  proposed  the  UTF8_STRING  selection  atom  in
            1999/2000, which became part of the ICCCM in XFree86.
 
            <a href="https://www.irif.fr/~jch/software/UTF8_STRING/">https://www.irif.fr/~jch/software/UTF8_STRING/</a>
 
-           An Xorg developer removed that part of the  documentation  in  2004
-           when  incorporating other work from XFree86 into Xorg.  The feature
+           An  Xorg  developer  removed that part of the documentation in 2004
+           when incorporating other work from XFree86 into Xorg.  The  feature
            is still supported in Xorg, though undocumented as of 2019.
 
 </pre>
 <h2><a name="h2-AUTHORS" id="h2-AUTHORS">AUTHORS</a></h2>
 <pre>       Far too many people.
 
-       These contributed to the X Consortium: Loretta Guarino  Reid  (DEC-UEG-
+       These  contributed  to the X Consortium: Loretta Guarino Reid (DEC-UEG-
        WSL),  Joel  McCormack  (DEC-UEG-WSL),  Terry  Weissman  (DEC-UEG-WSL),
-       Edward Moy (Berkeley), Ralph R. Swick  (MIT-Athena),  Mark  Vandevoorde
-       (MIT-Athena),  Bob  McNamara  (DEC-MAD),  Jim  Gettys (MIT-Athena), Bob
-       Scheifler  (MIT  X  Consortium),  Doug  Mink  (SAO),   Steve   Pitschke
+       Edward  Moy  (Berkeley),  Ralph R. Swick (MIT-Athena), Mark Vandevoorde
+       (MIT-Athena), Bob McNamara  (DEC-MAD),  Jim  Gettys  (MIT-Athena),  Bob
+       Scheifler   (MIT   X  Consortium),  Doug  Mink  (SAO),  Steve  Pitschke
        (Stellar), Ron Newman (MIT-Athena), Jim Fulton (MIT X Consortium), Dave
        Serisky (HP), Jonathan Kamens (MIT-Athena).
 
-       Beginning with XFree86, there were far more identifiable  contributors.
+       Beginning  with XFree86, there were far more identifiable contributors.
        The <i>THANKS</i> file in <i>xterm</i>'s source lists 243 in June 2022.  Keep in mind
-       these: Jason Bacon, Jens Schweikhardt, Ross  Combs,  Stephen  P.  Wall,
+       these:  Jason  Bacon,  Jens  Schweikhardt, Ross Combs, Stephen P. Wall,
        David Wexelblat, and Thomas Dickey (invisible-island.net).
 
-Patch #374                        2022-10-10                          <b>XTERM(1)</b>
+Patch #380                        2023-02-26                          <b>XTERM(1)</b>
 </pre>
 <div class="nav">
 <ul>

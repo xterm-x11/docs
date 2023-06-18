@@ -2,7 +2,7 @@
  *****************************************************************************
  * this file is part of xterm                                                *
  *                                                                           *
- * Copyright 1997-2021,2022 by Thomas E. Dickey                              *
+ * Copyright 1997-2022,2023 by Thomas E. Dickey                              *
  *                                                                           *
  * All Rights Reserved                                                       *
  *                                                                           *
@@ -30,7 +30,7 @@
  * sale, use or other dealings in this Software without prior written        *
  * authorization.                                                            *
  *****************************************************************************
-  $XTermId: xterm.log.html,v 1.2453 2022/10/24 00:25:20 tom Exp $
+  $XTermId: xterm.log.html,v 1.2516 2023/05/31 00:00:49 tom Exp $
   -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
@@ -58,7 +58,7 @@
   <a href="/">https://invisible-island.net/</a><a href=
   "/xterm/">xterm/</a><a href=
   "/xterm/xterm.log.html">xterm.log</a><br>
-  Copyright © © 1997-2021,2022 by <a href=
+  Copyright © © 1997-2022,2023 by <a href=
   "mailto:dickey@invisible-island.net">Thomas E. Dickey</a>
   <hr>
   <h2>Contents</h2>
@@ -75,6 +75,13 @@
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="xterm.log.html">(top)</a></li>
+      <li><a href="#xterm_382">Patch #382 - 2023/05/30</a></li>
+      <li><a href="#xterm_381">Patch #381 - 2023/05/28</a></li>
+      <li><a href="#xterm_380">Patch #380 - 2023/05/09</a></li>
+      <li><a href="#xterm_379">Patch #379 - 2023/02/15</a></li>
+      <li><a href="#xterm_378">Patch #378 - 2023/01/09</a></li>
+      <li><a href="#xterm_377">Patch #377 - 2022/11/25</a></li>
+      <li><a href="#xterm_376">Patch #376 - 2022/11/16</a></li>
       <li><a href="#xterm_375">Patch #375 - 2022/10/23</a></li>
       <li><a href="#xterm_374">Patch #374 - 2022/10/10</a></li>
       <li><a href="#xterm_373">Patch #373 - 2022/09/25</a></li>
@@ -663,6 +670,192 @@
       <li><a href="#xterm_01">Patch #1 - 1996/1/6</a></li>
     </ul>
   </div>
+  <h2><a name="xterm_382" id="xterm_382">Patch #382 -
+  2023/05/30</a></h2>
+  <ul>
+    <li>amend change to <tt>CursorBack</tt> in <a href=
+    "#xterm_380">patch #380</a>, allowing the result to be on the
+    hidden right-half of double-cell characters (report by Rajeev
+    V. Pillai).</li>
+    <li>amend <tt>xtermDrawString</tt>, fixing regression with
+    <tt>--disable-wide-chars</tt> configuration from <a href=
+    "#xterm_380">patch #380</a>.</li>
+    <li>corrected pathname for <tt>run-tic.sh</tt>, for full
+    install in an out-of-tree build (report by Rajeev V.
+    Pillai).</li>
+  </ul>
+  <h2><a name="xterm_381" id="xterm_381">Patch #381 -
+  2023/05/28</a></h2>
+  <ul>
+    <li>fix a regression in wide bitmap fonts versus check for
+    missing glyphs (report by Rajeev V. Pillai).</li>
+  </ul>
+  <h2><a name="xterm_380" id="xterm_380">Patch #380 -
+  2023/05/09</a></h2>
+  <ul>
+    <li>simplify the change for <code>sixelScrolling</code> from
+    <a href="#xterm_374">patch #374</a> (report by Per
+    Bothner).</li>
+    <li>add <tt>xterm+focus</tt> and <tt>report+da2</tt>, update
+    <tt>report+version</tt> building blocks in terminfo, from
+    post-ncurses 6.4</li>
+    <li>drop the <tt>-title</tt> option from <tt>uxterm</tt> and
+    <tt>koi8rxterm</tt>, because that interferes with deriving the
+    default title from the <tt>-e</tt> option (Debian <a href=
+    "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1031837">#1031837</a>).
+    Compensate for this by using the <tt>-class</tt> option to
+    derive a default title.</li>
+    <li>improve description of readline 2003 mode in
+    <tt>ctlseqs.ms</tt> (report by Thomas Wolff).</li>
+    <li>other improvements to status-line feature (report by Thomas
+    Wolff):
+      <ul>
+        <li>clear status line on <tt>DECCOLM</tt></li>
+        <li>ignore <tt>DECSASD</tt> if no previous
+        <tt>DECSSDT</tt></li>
+        <li>allow <tt>DECSSDT&nbsp;1</tt> immediately after
+        <tt>DECSSDT&nbsp;2</tt>, i.e., without switching back to
+        host mode.</li>
+      </ul>
+    </li>
+    <li>adjust <tt>RequestResize</tt> to avoid shrinking screen
+    when using <tt>DECCOLM</tt> while the status-line is active
+    (report/patch by Thomas Wolff).</li>
+    <li>disallow wrapping before the beginning of the screen, to
+    the end of the screen, for cursor-back sequences (Redhat
+    <a href=
+    "https://bugzilla.redhat.com/show_bug.cgi?id=2182357">#2182357</a>).</li>
+    <li>modify makefile to install the 16x16 xpm files (report by
+    Harald Dunkel).</li>
+    <li>update test-package to reflect resolution of Debian
+    <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=906901">
+    #906901</a>.</li>
+    <li>change default of <code>showMissingGlyphs</code> to
+    <em>True</em>.</li>
+    <li>improve handling of double-sized characters when those
+    happen to be missing from the bitmap font and/or are
+    fullwidth.</li>
+    <li>pointer/overflow fixes (reported by David Leadbeater):
+      <ul>
+        <li>improve limit-checks for control-sequence numeric
+        parameters in SIXEL graphics.</li>
+        <li>add null-pointer checks in <tt>WriteNow</tt> macro to
+        handle a case where <tt>SS2</tt> or <tt>SS3</tt> might be
+        in effect while processing a combining character.</li>
+        <li>disallow ReGIS reporting for character-set names
+        containing characters other than alphanumerics or
+        underscore.</li>
+        <li>implement TrueType fallback font for double-sized
+        characters, including Unicode fullwidth. Also add
+        <tt>limitFontHeight</tt> to provide for configuring the
+        distinction between slightly-oversized glyphs and
+        double-sized glyphs.</li>
+      </ul>
+    </li>
+    <li>configure script improvements:
+      <ul>
+        <li>check for <tt>nfsd_t</tt></li>
+      </ul>
+    </li>
+    <li>fix a typo in the underline cursor thickness derivation
+    (patch by Jan Engelhardt).</li>
+  </ul>
+  <h2><a name="xterm_379" id="xterm_379">Patch #379 -
+  2023/02/15</a></h2>
+  <ul>
+    <li>improve text-cursor (patch by Jan Engelhardt):
+      <ul>
+        <li>allow selecting <tt>CURSOR_BAR</tt> mode from
+        command-line/Xresources.</li>
+        <li>draw cursor using filled rectangle instead of rectangle
+        outline to permit thicker underlines/bars.</li>
+        <li>scale up cursor relative to font size.</li>
+      </ul>
+    </li>
+    <li>improve readline modes (Fedora <a href=
+    "https://bugzilla.redhat.com/show_bug.cgi?id=2166860">#2166860</a>):
+      <ul>
+        <li>document readline modes</li>
+        <li>change the feature to configure by default</li>
+        <li>replace hard-coded SS3 for cursor movement with current
+        mode</li>
+        <li>replace hard-coded erase/lnext characters with current
+        values</li>
+      </ul>
+    </li>
+    <li>improve status-line (report by Thomas Wolff):
+      <ul>
+        <li><tt>RIS</tt> turns off status-line</li>
+        <li>Right-margin (<tt>DECLRMM</tt> and <tt>DECSLRM</tt>)
+        limits the length of text written/updated in the
+        status-line.</li>
+        <li>Most controls which affect the whole screen are ignored
+        while updating the status-line.</li>
+      </ul>
+    </li>
+    <li>modify configure check for <tt>tgetent</tt> to allow for
+    some special cases of ncurses configuration (report by Satadru
+    Pramani).</li>
+    <li>reduce timeout, improve warning message if resize is run on
+    a terminal which is not VT100-compatible.</li>
+    <li>reduce compiler warnings in configure script.</li>
+  </ul>
+  <h2><a name="xterm_378" id="xterm_378">Patch #378 -
+  2023/01/09</a></h2>
+  <ul>
+    <li>improve descriptions of <em>XTQMODKEYS</em> and
+    <em>XTQALLOWED</em> features in <tt>ctlseqs.ms</tt> (reports by
+    Bram Moolenaar, Thomas Wolff).</li>
+    <li>add <tt>bracketed+paste</tt> and <tt>report+version</tt>
+    building blocks to terminfo, from ncurses 6.4</li>
+    <li>improve check for unsupported formatting characters, e.g.,
+    zero-width space, to properly ignore them (report by Thomas
+    Wolff).</li>
+    <li>improve/document error-checking for some of the controls
+    which return responses: DECRQSS, XTGETXRES, XTSETTCAP,
+    XTGETTCAP (prompted by discussion with David Leadbeater).</li>
+    <li>improve limit-checks for fallback font cache (report by
+    Dimitrije Erdeljan).</li>
+    <li>improve check for too-wide glyph in fallback font by
+    allowing xterm to continue searching for a suitable font rather
+    than just failing on the first. Also add
+    <tt>limitFontWidth</tt> to allow changing the amount by which a
+    glyph must extend outside the font's bounding box to disallow
+    it.</li>
+  </ul>
+  <h2><a name="xterm_377" id="xterm_377">Patch #377 -
+  2022/11/25</a></h2>
+  <ul>
+    <li>add control sequences for reporting the current state of
+    the modified keys options (XTQMODKEYS) and allowed/disallowed
+    operations (XTQALLOWED), (prompted by discussion with Bram
+    Moolenaar).</li>
+    <li>amend <code>modifyOtherKeys</code> case 2 to distinguish
+    the escape character with modifiers, e.g., shift-escape, from a
+    plain escape character (suggested by Bram Moolenaar).</li>
+    <li>improve parsing and error-recovery in the case where a list
+    of X11 bitmap fonts is given in the <code>-fn</code> and
+    related options.</li>
+    <li>change default for <code>xftTrackMemUsage</code> to false,
+    because libXft does not handle certain fonts.</li>
+  </ul>
+  <h2><a name="xterm_376" id="xterm_376">Patch #376 -
+  2022/11/16</a></h2>
+  <ul>
+    <li>modify configure script to always check for gcc
+    attributes,</li>
+    <li>update <code>install-sh</code>.</li>
+    <li>fix parsing of <code>result&nbsp;-u</code> in
+    <code>vttests/halves.pl</code>.</li>
+    <li>add a note in <code>ctlseqs.ms</code> about compatibility
+    of <code>TBC</code>.</li>
+    <li>fix a copy/paste error in manual (patch by Grady
+    Martin).</li>
+    <li>add null-pointer checks in <code>x_strcasecmp</code> and
+    <code>x_strncasecmp</code>, to help with error-recovery for a
+    missing font (Debian <a href=
+    "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1022942">#1022942</a>).</li>
+  </ul>
   <h2><a name="xterm_375" id="xterm_375">Patch #375 -
   2022/10/23</a></h2>
   <ul>
