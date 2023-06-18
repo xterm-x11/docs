@@ -32,7 +32,7 @@ git switch main
 git pull
 git switch -c update
 cd -
-cp -r ../site ../../xterm-x11.github.io
+cp -r ../site/* ../../xterm-x11.github.io
 cd ../../xterm-x11.github.io
 git add .
 git commit -m "website update"
