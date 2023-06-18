@@ -5,7 +5,7 @@ set -e
 
 git checkout -b $(date -I)
 
-cd xterm-on-invisible-island
+cd ../xterm-on-invisible-island
 
 rm *
 
