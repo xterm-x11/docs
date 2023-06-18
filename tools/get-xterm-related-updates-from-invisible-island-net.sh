@@ -67,7 +67,8 @@ wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by X
 # https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
 #
 wget https://invisible-island.net/xterm/xtoolkit/xtoolkit.html #X Toolkit links
-wget https://github.com/freedesktop/xorg-libXt/commit/85eb751e4e1683af6cee3ee9dce29f74911a639d
+# wget https://github.com/freedesktop/xorg-libXt/commit/85eb751e4e1683af6cee3ee9dce29f74911a639d
+# the previous link is now a 404 page
 wget https://invisible-island.net/xterm/xtoolkit/intrinsics.html
 wget https://invisible-island.net/xterm/xtoolkit/intrinsics.pdf
 wget https://invisible-island.net/xterm/xtoolkit/manpage-index.html #include all linked pages after the first link because those are separate pages
