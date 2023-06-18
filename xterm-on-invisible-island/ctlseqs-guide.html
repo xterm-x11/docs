@@ -31,8 +31,8 @@
 
                              <i>Thomas Dickey</i>
                       XFree86 Project (1996-2006)
-                    invisible-island.net (2006-2022)
-               updated for XTerm Patch #374 (2022/10/10)
+                    invisible-island.net (2006-2023)
+               updated for XTerm Patch #379 (2023/04/20)
 
 </pre>
 <h2><a name="h2-Definitions" id="h2-Definitions">Definitions</a></h2>
@@ -437,7 +437,7 @@ C1 controls, ordered by the final character(s).
             * |     &#8658;&nbsp; DECSNLS
           <i>xterm</i> responds with DCS 1 $ r <i>Pt</i> ST for valid requests,
           replacing the <i>Pt</i> with the corresponding CSI string, or DCS 0 $
-          r <i>Pt</i> ST for invalid requests.
+          r  ST for invalid requests.
 
 <a name="h4-Device-Control-functions:DCS-Ps-$-t-Pt-ST.EE8">DCS <i>Ps</i> $ t <i>Pt</i> ST</a>
           Restore presentation status (DECRSPS), VT320 and up.  The
@@ -450,23 +450,33 @@ C1 controls, ordered by the final character(s).
           Request resource values (XTGETXRES), <i>xterm</i>.  The string
           following the "Q" is a list of names encoded in hexadecimal (2
           digits per character) separated by ; which correspond to <i>xterm</i>
-          resource names.  Only boolean, numeric and string resources
-          are supported by this query.
+          resource names.
 
           <i>xterm</i> responds with
           DCS 1 + R <i>Pt</i> ST for valid requests, adding to <i>Pt</i> an = , and
-          the value of the corresponding resource that <i>xterm</i> is using,
-          or
+          the value of the corresponding <i>xterm</i> resource, or
           DCS 0 + R <i>Pt</i> ST for invalid requests.
           The strings are encoded in hexadecimal (2 digits per
           character).
 
+          Only boolean, numeric and string resources for the VT100
+          widget are supported by this query.  <i>XTerm</i> evaluates resources
+          at startup time.  Several of <i>xterm</i>'s state variables use
+          resources to determine their initial value.  Because the
+          resource variable may not reflect the current state, <i>xterm</i>
+          provides control sequences for querying the state directly:
+
+          <b>o</b>   XTQALLOWED
+          <b>o</b>   XTQMODKEYS
+
 <a name="h4-Device-Control-functions:DCS-plus-p-Pt-ST.F94">DCS + p <i>Pt</i> ST</a>
           Set Termcap/Terminfo Data (XTSETTCAP), <i>xterm</i>.  The string
-          following the "p" is a name to use for retrieving data from
-          the terminal database.  The data will be used for the "tcap"
-          keyboard configuration's function- and special-keys, as well
-          as by the Request Termcap/Terminfo String control.
+          following the "p" is encoded in hexadecimal.  After decoding
+          it, <i>xterm</i> will use the name to retrieve data from the terminal
+          database.  If successful, that overrides the <b><a href="/xterm/manpage/xterm.html#Application-Resources:termName">termName</a></b> resource
+          when handling the "tcap" keyboard configuration's function-
+          and special-keys, as well as by the Request Termcap/Terminfo
+          String control.
 
 <a name="h4-Device-Control-functions:DCS-plus-q-Pt-ST.F95">DCS + q <i>Pt</i> ST</a>
           Request Termcap/Terminfo String (XTGETTCAP), <i>xterm</i>.  The
@@ -488,9 +498,12 @@ C1 controls, ordered by the final character(s).
           DCS 1 + r <i>Pt</i> ST for valid requests, adding to <i>Pt</i> an = , and
           the value of the corresponding string that <i>xterm</i> would send,
           or
-          DCS 0 + r <i>Pt</i> ST for invalid requests.
+          DCS 0 + r ST for invalid requests.
           The strings are encoded in hexadecimal (2 digits per
-          character).
+          character).  If more than one name is given, <i>xterm</i> replies
+          with each name/value pair in the same response.  An invalid
+          name (one not found in <i>xterm</i>'s tables) ends processing of the
+          list of names.
 
 </pre>
 <h2><a name="h3-Functions-using-CSI-_-ordered-by-the-final-character_s_" id="h3-Functions-using-CSI-_-ordered-by-the-final-character_s_">Functions using CSI , ordered by the final character(s)</a></h2>
@@ -744,7 +757,9 @@ C1 controls, ordered by the final character(s).
           Horizontal and Vertical Position [row;column] (default =
           [1,1]) (HVP).
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-g.1CA7">CSI <i>Ps</i> g</a>  Tab Clear (TBC).
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-g.1CA7">CSI <i>Ps</i> g</a>  Tab Clear (TBC).  ECMA-48 defines additional codes, but the
+          VT100 user manual notes that it ignores other codes.  DEC's
+          later terminals (and <i>xterm</i>) do the same, for compatibility.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-g:Ps-=-0.1DF9"><i>Ps</i> = 0</a>  &#8658;&nbsp; Clear Current Column (default).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-g:Ps-=-3.1DFC"><i>Ps</i> = 3</a>  &#8658;&nbsp; Clear All.
 
@@ -865,7 +880,12 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-6-0.1F7E"><i>Ps</i> = 1 0 6 0</a>  &#8658;&nbsp; Set legacy keyboard emulation, i.e, X11R6,
           <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-6-1.1F7F"><i>Ps</i> = 1 0 6 1</a>  &#8658;&nbsp; Set VT220 keyboard emulation, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-1.1F7A"><i>Ps</i> = 2 0 0 1</a>  &#8658;&nbsp; Enable readline mouse button-1, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-2.1F7B"><i>Ps</i> = 2 0 0 2</a>  &#8658;&nbsp; Enable readline mouse button-2, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-3.1F7C"><i>Ps</i> = 2 0 0 3</a>  &#8658;&nbsp; Enable readline mouse button-3, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-4.1F7D"><i>Ps</i> = 2 0 0 4</a>  &#8658;&nbsp; Set bracketed paste mode, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-5.1F7E"><i>Ps</i> = 2 0 0 5</a>  &#8658;&nbsp; Enable readline character-quoting, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-2-0-0-6.1F7F"><i>Ps</i> = 2 0 0 6</a>  &#8658;&nbsp; Enable readline newline pasting, <i>xterm</i>.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-i.1CA9">CSI <i>Ps</i> i</a>  Media Copy (MC).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-i:Ps-=-0.1DFB"><i>Ps</i> = 0</a>  &#8658;&nbsp; Print screen (default).
@@ -930,7 +950,7 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-6-9.1ED0"><i>Ps</i> = 6 9</a>  &#8658;&nbsp; Disable left and right margin mode (DECLRMM),
           VT420 and up.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-8-0.1EC9"><i>Ps</i> = 8 0</a>  &#8658;&nbsp; Disable <i>Sixel Display Mode</i> (DECSDM), VT330,
-          VT340, VT382.  Turns on ``Sixel Scrolling''.  See the section
+          VT340, VT382.  Turns on "Sixel Scrolling".  See the section
           <b><a href="#h3-Sixel-Graphics">Sixel Graphics</a></b> and mode 8 4 5 2 .
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-9-5.1ECF"><i>Ps</i> = 9 5</a>  &#8658;&nbsp; Clear screen when DECCOLM is set/reset
           (DECNCSM), VT510 and up.
@@ -995,7 +1015,12 @@ C1 controls, ordered by the final character(s).
           X11R6, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-6-1.1F83"><i>Ps</i> = 1 0 6 1</a>  &#8658;&nbsp; Reset keyboard emulation to Sun/PC style,
           <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-1.1F7E"><i>Ps</i> = 2 0 0 1</a>  &#8658;&nbsp; Disable readline mouse button-1, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-2.1F7F"><i>Ps</i> = 2 0 0 2</a>  &#8658;&nbsp; Disable readline mouse button-2, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-3.1F80"><i>Ps</i> = 2 0 0 3</a>  &#8658;&nbsp; Disable readline mouse button-3, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-4.1F81"><i>Ps</i> = 2 0 0 4</a>  &#8658;&nbsp; Reset bracketed paste mode, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-5.1F82"><i>Ps</i> = 2 0 0 5</a>  &#8658;&nbsp; Disable readline character-quoting, <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-2-0-0-6.1F83"><i>Ps</i> = 2 0 0 6</a>  &#8658;&nbsp; Disable readline newline pasting, <i>xterm</i>.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7">CSI <i>Pm</i> m</a>  Character Attributes (SGR).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m:Ps-=-0.1DF9"><i>Ps</i> = 0</a>  &#8658;&nbsp; Normal (default), VT100.
@@ -1158,6 +1183,28 @@ C1 controls, ordered by the final character(s).
 
           If no parameters are given, all resources are reset to their
           initial values.
+
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m.1D16">CSI ? <i>Pp</i> m</a>
+          Query key modifier options (XTQMODKEYS), <i>xterm</i>.
+
+          The parameter <i>Pp</i> identifies the resource to query.
+
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-0.1E65"><i>Pp</i> = 0</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyKeyboard">modifyKeyboard</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-1.1E66"><i>Pp</i> = 1</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyCursorKeys">modifyCursorKeys</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-2.1E67"><i>Pp</i> = 2</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyFunctionKeys">modifyFunctionKeys</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-4.1E69"><i>Pp</i> = 4</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyOtherKeys">modifyOtherKeys</a></b>.
+
+          XTerm's response can be used to restore this state, because it
+          is formatted as an XTMODKEYS control, i.e.,
+
+            CSI &gt; <i>Pp</i> m
+
+          where
+
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-0.1E65"><i>Pp</i> = 0</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyKeyboard">modifyKeyboard</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-1.1E66"><i>Pp</i> = 1</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyCursorKeys">modifyCursorKeys</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-2.1E67"><i>Pp</i> = 2</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyFunctionKeys">modifyFunctionKeys</a></b>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pp-m:Pp-=-4.1E69"><i>Pp</i> = 4</a>  &#8658;&nbsp; <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:modifyOtherKeys">modifyOtherKeys</a></b>.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n.1CAE">CSI <i>Ps</i> n</a>  Device Status Report (DSR).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-5.1E05"><i>Ps</i> = 5</a>  &#8658;&nbsp; Status Report.
@@ -1852,6 +1899,32 @@ C1 controls, ordered by the final character(s).
           If the second parameter is neither a base64 string nor ? ,
           then the selection is cleared.
 
+            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-6-0.101A"><i>Ps</i> = 6 0</a>  &#8658;&nbsp; Query allowed features (XTQALLOWED).  <i>XTerm</i>
+          replies with
+
+            OSC 6 0  ; <i>Pt</i> ST
+
+          where <i>Pt</i> is a comma-separated list of the <i>allowed</i> optional
+          runtime features, i.e., zero or more of these resource names:
+
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowColorOps">allowColorOps</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowFontOps">allowFontOps</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowMouseOps">allowMouseOps</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowPasteControls">allowPasteControls</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowTcapOps">allowTcapOps</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowTitleOps">allowTitleOps</a></b>
+            <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowWindowOps">allowWindowOps</a></b>
+
+            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-6-1.101B"><i>Ps</i> = 6 1</a>  &#8658;&nbsp; Query disallowed features (XTQDISALLOWED).  The
+          second parameter (i.e., the main feature) must be one of the
+          resource names returned by OSC 6 0 .  <i>XTerm</i> replies with
+
+            OSC 6 1  ; <i>Pt</i> ST
+
+          where <i>Pt</i> is a comma-separated list of the optional runtime
+          features which would be disallowed if the main feature is
+          disabled.
+
             <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-1-0-4;c.1114"><i>Ps</i> = 1 0 4 ; <i>c</i></a> &#8658;&nbsp; Reset Color Number <i>c</i>.  It is reset to the
           color specified by the corresponding X resource.  Any number
           of <i>c</i> parameters may be given.  These parameters correspond to
@@ -2389,6 +2462,50 @@ followed by the pasted text, followed by
 For background and discussion, see the FAQ:
 
   <a href="https://invisible-island.net/xterm/xterm-paste64.html"><i>XTerm - bracketed-paste</i></a>
+
+</pre>
+<h2><a name="h2-Readline-Modes" id="h2-Readline-Modes">Readline Modes</a></h2>
+<pre>
+Several modes provide support for mouse button events in <i>readline</i>.
+Bracketed paste is one of these <i>readline</i> modes, but is used more widely.
+
+Some assumptions (particular mouse buttons) and limitations (the mouse
+is clicked on the current row on the screen) apply:
+
+2 0 0 1   If mouse button 1 is used to end or extend a selection (the
+          <b><a href="/xterm/manpage/xterm.html#Actions:select-end">select-end</a></b> action), and if the cursor position is on the same
+          row as the mouse-click, send left/right cursor control
+          sequences to the host to adjust the cursor position to match
+          the mouse click.
+
+2 0 0 2   When pasting text (the <b><a href="/xterm/manpage/xterm.html#Actions:insert-selection">insert-selection</a></b> action which is
+          normally bound to mouse button 2), if mouse protocol is not
+          enabled, and if the cursor position is on the same row as the
+          mouse-click, send left/right cursor control sequences to the
+          host to adjust the cursor position to match the mouse click.
+
+2 0 0 3   If mouse button 3 is double-clicked when ending or extending a
+          selection, (the <b><a href="/xterm/manpage/xterm.html#Actions:select-end">select-end</a></b> action), and if the cursor position
+          is on the same line as the mouse-click:
+
+          <b>o</b>   Send left/right cursor control sequences to the host to
+              adjust the cursor position to match the mouse click.
+
+          <b>o</b>   In addition to the same <i>row</i>, the selection may be part of
+              a wrapped line as in other <i>xterm</i> selections (see the
+              <b><a href="/xterm/manpage/xterm.html#h3-Selection-Functions">Selection Functions</a></b> section in the manual page).
+
+          <b>o</b>   After adjusting the cursor position, <i>xterm</i> sends erase-
+              characters (one for each character in the selection) to
+              tell the host to delete the selected text.
+
+2 0 0 5   When writing a selection to the host (i.e., pasting text),
+          escape each character with the <i>literal-next</i> (Ctrl-V)
+          character.
+
+2 0 0 6   Normally when <i>xterm</i> writes selections to the host, it
+          translates newlines to carriage returns.  This mode disables
+          the translation, passing newlines literally.
 
 </pre>
 <h2><a name="h2-Title-Modes" id="h2-Title-Modes">Title Modes</a></h2>
@@ -3371,6 +3488,7 @@ and less-detailed manual pages.
 </ul></li>
 <li><a href="#h2-The-Alternate-Screen-Buffer">The Alternate Screen Buffer</a></li>
 <li><a href="#h2-Bracketed-Paste-Mode">Bracketed Paste Mode</a></li>
+<li><a href="#h2-Readline-Modes">Readline Modes</a></li>
 <li><a href="#h2-Title-Modes">Title Modes</a></li>
 <li><a href="#h2-Mouse-Tracking">Mouse Tracking</a>
 <ul>
