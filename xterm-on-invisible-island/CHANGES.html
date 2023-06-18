@@ -23,8 +23,34 @@
 <hr>
 
 <pre>
--- $Id: CHANGES,v 1.247 2022/08/27 16:21:13 tom Exp $
+-- $Id: CHANGES,v 1.254 2023/02/01 22:02:06 tom Exp $
 -------------------------------------------------------------------------------
+
+<a name="t20230201" href="#index-t20230201" id="t20230201">20230201</a>
+        + reduce compiler-warnings in configure-checks
+
+<a name="t20221229" href="#index-t20221229" id="t20221229">20221229</a>
+        + configure-script fixes:
+          CF_XOPEN_SOURCE:  amend the test for conflict between _XOPEN_SOURCE
+          and _POSIX_C_SOURCE to allow for the former to be undefined because
+          unneeded.
+          CF_FCNTL_VS_IOCTL:  include &lt;sys/ioctl.h&gt;, for systems which may
+          define FIONREAD there (Redhat <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2151353">#2151353</a>)
+
+<a name="t20221111" href="#index-t20221111" id="t20221111">20221111</a>
+        + improve DECTABSR test by adding menu for changing/resetting tabs.
+
+        + improve DECCIR test by adding character-set menu
+
+        + replace va_out() with vfprintf() where available, fixing some recent
+          changes which used formatting not handled in logging; improve
+          va_out() as well, e.g., for VMS (report by James Holderness).
+
+        + updated/improved configure macros
+
+        + update install-sh
+
+        + update config.guess, config.sub
 
 <a name="t20220827" href="#index-t20220827" id="t20220827">20220827</a>
         + modify alternate-screen tests to demonstrate the effect of setting
@@ -865,6 +891,12 @@ VERSION 2.0
 <div class="nav">
 <ul>
 <li class="nav-top"><a href="CHANGES.html">(top)</a></li>
+
+<li><a name="index-t20230201" href="#t20230201" id="index-t20230201">2023/02/01</a></li>
+
+<li><a name="index-t20221229" href="#t20221229" id="index-t20221229">2022/12/29</a></li>
+
+<li><a name="index-t20221111" href="#t20221111" id="index-t20221111">2022/11/11</a></li>
 
 <li><a name="index-t20220827" href="#t20220827" id="index-t20220827">2022/08/27</a></li>
 
