@@ -28,6 +28,10 @@ wget https://invisible-island.net/vttest/vttest.html
 wget https://invisible-island.net/vttest/CHANGES.html
 wget https://invisible-island.net/vttest/CHANGES
 #
+https://invisible-island.net/ncurses/tack.html
+https://invisible-island.net/ncurses/ncurses-examples.html
+https://invisible-island.net/ncurses/tctest.html
+#
 wget https://invisible-island.net/xterm/xft/xft.html # looks like a manpage, but better check
 #
 wget https://invisible-island.net/xterm/xcursor/xcursor.html # looks like a manpage, but better check
