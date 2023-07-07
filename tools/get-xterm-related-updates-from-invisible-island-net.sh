@@ -65,6 +65,28 @@ wget https://invisible-island.net/xterm/xterm.faq.html
 wget https://invisible-island.net/xterm/xterm.icon.html
 #
 https://invisible-island.net/scripts/readme.html
+##
+https://invisible-island.net/datafiles/release/buildscripts.tar.gz
+https://invisible-island.net/scripts/buildscripts/CHANGES.html
+https://invisible-island.net/scripts/buildscripts/CHANGES
+##
+https://invisible-island.net/datafiles/release/misc-scripts.tar.gz
+https://invisible-island.net/scripts/misc-scripts/CHANGES.html
+https://invisible-island.net/scripts/misc-scripts/CHANGES
+##
+https://invisible-island.net/datafiles/release/github-scripts.tar.gz
+https://invisible-island.net/scripts/github-scripts/CHANGES.html
+https://invisible-island.net/scripts/github-scripts/CHANGES
+##
+https://invisible-island.net/datafiles/release/mapsym-scripts.tar.gz
+https://invisible-island.net/scripts/mapsym-scripts/CHANGES.html
+https://invisible-island.net/scripts/mapsym-scripts/CHANGES
+##
+https://invisible-island.net/datafiles/release/other-scripts.tar.gz
+https://invisible-island.net/scripts/other-scripts/CHANGES.html
+https://invisible-island.net/scripts/other-scripts/CHANGES
+##
+# Note: Make sure to explore more links and tools in https://invisible-island.net/scripts/readme.html and elsewhere in https://invisible-island.net/
 #
 wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by XTerm and apps related to those libs
 # https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
