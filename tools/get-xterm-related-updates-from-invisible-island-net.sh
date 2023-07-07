@@ -96,6 +96,7 @@ wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by X
 # https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
 #
 https://invisible-island.net/ncurses/announce.html
+https://invisible-island.net/ncurses/ncurses.html
 #
 wget https://invisible-island.net/xterm/xtoolkit/xtoolkit.html #X Toolkit links
 # wget https://github.com/freedesktop/xorg-libXt/commit/85eb751e4e1683af6cee3ee9dce29f74911a639d
