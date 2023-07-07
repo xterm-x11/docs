@@ -64,6 +64,8 @@ wget https://invisible-island.net/xterm/xterm.html
 wget https://invisible-island.net/xterm/xterm.faq.html
 wget https://invisible-island.net/xterm/xterm.icon.html
 #
+https://invisible-island.net/scripts/readme.html
+#
 wget https://invisible-island.net/personal/git-exports.html #Xorg libs used by XTerm and apps related to those libs
 # https://invisible-island.net/personal/git-exports.html#others # see what can be linked or forked under Other stuff, and where to incorporate it in the docs website
 #
