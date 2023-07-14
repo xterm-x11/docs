@@ -17,15 +17,13 @@ mkdocs build
 
 cd tools
 
-# run the script for downstreaming xterm.log.html
+# run the script for downstreaming the local copies of the invisible-island.net pages
 ./downstream-release-notes.sh
+./downstream-manpage-xterm.sh
+./downstream-manpage-uxterm.sh
+./downstream-manpage-koi8rterm.sh
 
-# run the script for downstreaming a.html
-
-# run the script for downstreaming b.html
-
-# run the script for downstreaming c.html
-
+<<comment
 
 cd ../../xterm-x11.github.io
 git switch main
@@ -37,6 +35,8 @@ cd ../../xterm-x11.github.io
 git add .
 git commit -m "website update"
 git push -u origin update
+
+comment
 
 # cd ..
 # mkdocs serve
