@@ -1,3 +1,8 @@
+#!/bin/bash
+#Downstreaming xterm-related pages from Thomas Dickey's https://invisible-island.net/
+
+set -e
+
 # The original file is https://invisible-island.net/xterm/xterm.log.html
 
 cp ../xterm-on-invisible-island/xterm.log.html ../stage/release-notes-nav.html
