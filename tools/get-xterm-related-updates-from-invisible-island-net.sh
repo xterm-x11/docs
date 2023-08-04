@@ -24,6 +24,17 @@ mv ctlseqs-contents.html ctlseqs-list.html
 #
 wget https://invisible-island.net/xterm/xterm.log.html
 #
+wget https://www.invisible-island.net/lynx/lynx.html
+wget https://www.invisible-island.net/lynx/lynx-develop.html
+wget https://lynx.invisible-island.net/current/index.html # check for more links
+wget https://lynx.invisible-island.net/current/CHANGES.html
+wget https://lynx.invisible-island.net/current/CHANGES
+wget https://www.invisible-island.net/lynx/lynx-autoconf.html
+wget https://lynx.invisible-island.net/lynx_help/Lynx_users_guide.html # check for more links
+wget https://lynx.invisible-island.net/lynx_help/lynx_help_main.html # check for more links
+wget https://www.invisible-island.net/lynx/lynx-ncurses.html
+wget https://www.invisible-island.net/lynx/lynx-security.html
+#
 wget https://invisible-island.net/vttest/vttest.html
 wget https://invisible-island.net/vttest/CHANGES.html
 wget https://invisible-island.net/vttest/CHANGES
