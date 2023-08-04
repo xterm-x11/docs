@@ -74,10 +74,13 @@ wget https://invisible-island.net/datafiles/release/xterm.tar.gz
 wget https://invisible-island.net/datafiles/release/vttest.tar.gz
 wget https://www.invisible-island.net/datafiles/release/tack.tar.gz
 wget https://www.invisible-island.net/datafiles/current/tack.tar.gz
+wget https://www.invisible-island.net/datafiles/release/tctest.tar.gz
 wget https://invisible-island.net/datafiles/release/luit.tar.gz
 #
 # wget https://invisible-island.net/archives/xterm/ # --level=NUMBER ? Add the `-r` option to wget and test.
 # wget https://invisible-island.net/archives/vttest/ # --level=NUMBER ? Add the `-r` option to wget and test.
+# wget tack? ^
+# wget https://www.invisible-island.net/archives/tctest/ # --level=NUMBER ? Add the `-r` option to wget and test.
 # wget https://invisible-island.net/archives/luit/ # --level=NUMBER ? Add the `-r` option to wget and test.
 #
 # See more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
