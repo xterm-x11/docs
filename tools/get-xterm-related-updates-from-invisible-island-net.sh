@@ -27,6 +27,10 @@ wget https://invisible-island.net/xterm/xterm.log.html
 wget https://invisible-island.net/vttest/vttest.html
 wget https://invisible-island.net/vttest/CHANGES.html
 wget https://invisible-island.net/vttest/CHANGES
+wget https://www.invisible-island.net/vttest/manpage/vttest.html
+wget https://www.invisible-island.net/vttest/manpage/vttest.txt
+wget https://www.invisible-island.net/vttest/manpage/vttest.pdf
+wget https://www.invisible-island.net/vttest/manpage/vttest.ps
 #
 https://invisible-island.net/ncurses/tack.html
 https://invisible-island.net/ncurses/ncurses-examples.html
