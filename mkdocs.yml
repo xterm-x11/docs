@@ -49,9 +49,10 @@ nav:
        - Xtoolkit: xtoolkit.md
        - Xcursor: xcursor.md
        - Xft: xft.md
-  - Utilities:
+  - Quality engineering:
        - Vttest:
            - About Vttest: vttest-about.md
+           - Vttest manpage: vttest-manpage.md
            - Vttest release notes: vttest-release-notes.md
            - vttest.tar.gz: vttest.tar.gz.md
            - Vttest archives: vttest-archives.md
