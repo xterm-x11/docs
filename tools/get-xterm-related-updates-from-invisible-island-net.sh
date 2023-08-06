@@ -24,9 +24,40 @@ mv ctlseqs-contents.html ctlseqs-list.html
 #
 wget https://invisible-island.net/xterm/xterm.log.html
 #
+wget https://www.invisible-island.net/lynx/lynx.html
+wget https://www.invisible-island.net/lynx/lynx-develop.html
+wget https://lynx.invisible-island.net/current/index.html # check for more links
+wget https://lynx.invisible-island.net/current/CHANGES.html
+wget https://lynx.invisible-island.net/current/CHANGES
+wget https://www.invisible-island.net/lynx/lynx-autoconf.html
+wget https://lynx.invisible-island.net/lynx_help/Lynx_users_guide.html # check for more links
+wget https://lynx.invisible-island.net/lynx_help/lynx_help_main.html # check for more links
+wget https://www.invisible-island.net/lynx/lynx-ncurses.html
+wget https://www.invisible-island.net/lynx/lynx-security.html
+#
 wget https://invisible-island.net/vttest/vttest.html
 wget https://invisible-island.net/vttest/CHANGES.html
 wget https://invisible-island.net/vttest/CHANGES
+wget https://www.invisible-island.net/vttest/manpage/vttest.html
+wget https://www.invisible-island.net/vttest/manpage/vttest.txt
+wget https://www.invisible-island.net/vttest/manpage/vttest.pdf
+wget https://www.invisible-island.net/vttest/manpage/vttest.ps
+#
+wget https://www.invisible-island.net/ncurses/tack.html
+wget https://www.invisible-island.net/ncurses/tack/CHANGES.html
+wget https://www.invisible-island.net/ncurses/tack/CHANGES
+wget https://www.invisible-island.net/ncurses/tack/tack.html
+wget https://www.invisible-island.net/ncurses/tack/tack.txt
+wget https://www.invisible-island.net/ncurses/tack/tack.pdf
+wget https://www.invisible-island.net/ncurses/tack/tack.ps
+#
+wget https://www.invisible-island.net/ncurses/tctest.html
+wget https://www.invisible-island.net/ncurses/tctest/CHANGES.html
+wget https://www.invisible-island.net/ncurses/tctest/CHANGES
+wget https://www.invisible-island.net/ncurses/tctest/tctest.html
+wget https://www.invisible-island.net/ncurses/tctest/tctest.txt
+wget https://www.invisible-island.net/ncurses/tctest/tctest.pdf
+wget https://www.invisible-island.net/ncurses/tctest/tctest.ps
 #
 https://invisible-island.net/ncurses/tack.html
 https://invisible-island.net/ncurses/ncurses-examples.html
@@ -52,10 +83,15 @@ wget https://gitlab.freedesktop.org/xorg/lib/libxt #Git repo, not the page
 #
 wget https://invisible-island.net/datafiles/release/xterm.tar.gz
 wget https://invisible-island.net/datafiles/release/vttest.tar.gz
+wget https://www.invisible-island.net/datafiles/release/tack.tar.gz
+wget https://www.invisible-island.net/datafiles/current/tack.tar.gz
+wget https://www.invisible-island.net/datafiles/release/tctest.tar.gz
 wget https://invisible-island.net/datafiles/release/luit.tar.gz
 #
 # wget https://invisible-island.net/archives/xterm/ # --level=NUMBER ? Add the `-r` option to wget and test.
 # wget https://invisible-island.net/archives/vttest/ # --level=NUMBER ? Add the `-r` option to wget and test.
+# wget tack? ^
+# wget https://www.invisible-island.net/archives/tctest/ # --level=NUMBER ? Add the `-r` option to wget and test.
 # wget https://invisible-island.net/archives/luit/ # --level=NUMBER ? Add the `-r` option to wget and test.
 #
 # See more links to manpages under https://invisible-island.net/xterm/xterm.faq.html#more_info
