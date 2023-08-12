@@ -48,20 +48,31 @@ nav:
   - Libraries:
        - Xtoolkit: xtoolkit.md
        - Xcursor: xcursor.md
+       - NCURSES: ncurses.md
+#          - ?
        - Xft: xft.md
   - Quality engineering:
        - Vttest:
            - About Vttest: vttest-about.md
-           - Vttest manpage: vttest-manpage.md
+           - Vttest manpage: manpage-vttest.md
            - Vttest release notes: vttest-release-notes.md
            - vttest.tar.gz: vttest.tar.gz.md
            - Vttest archives: vttest-archives.md
        - Luit:
            - About Luit: luit-about.md
-           - Luit manpage: luit-manpage.md
+           - Luit manpage: manpage-luit.md
            - luit.tar.gz: luit.tar.gz.md
            - Luit archives: luit-archives.md
-
+#      - tack (ncurses):
+#          - tack manpage: manpage-tack.md
+#          - download?
+#      - tctest (ncurses):
+#          - tctest manpage: manpage-tctest.md
+#          - download?
+#      - ncurses-examples (ncurses):
+#          - ?
+#      - scripts:
+#          - ?
 theme:
   name: material
   favicon: favicon.png
