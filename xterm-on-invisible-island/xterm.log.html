@@ -30,7 +30,7 @@
  * sale, use or other dealings in this Software without prior written        *
  * authorization.                                                            *
  *****************************************************************************
-  $XTermId: xterm.log.html,v 1.2516 2023/05/31 00:00:49 tom Exp $
+  $XTermId: xterm.log.html,v 1.2535 2023/07/10 21:11:27 tom Exp $
   -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
@@ -75,6 +75,8 @@
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="xterm.log.html">(top)</a></li>
+      <li><a href="#xterm_384">Patch #384 - 2023/07/10</a></li>
+      <li><a href="#xterm_383">Patch #383 - 2023/06/27</a></li>
       <li><a href="#xterm_382">Patch #382 - 2023/05/30</a></li>
       <li><a href="#xterm_381">Patch #381 - 2023/05/28</a></li>
       <li><a href="#xterm_380">Patch #380 - 2023/05/09</a></li>
@@ -670,6 +672,58 @@
       <li><a href="#xterm_01">Patch #1 - 1996/1/6</a></li>
     </ul>
   </div>
+  <h2><a name="xterm_384" id="xterm_384">Patch #384 -
+  2023/07/10</a></h2>
+  <ul>
+    <li>exclude ASCII space from <code>showMissingGlyphs</code>,
+    since a few bitmap fonts lack this (report by "SanRemo",
+    Emanuel Haupt).</li>
+    <li>correct a step in rendering double-width characters with
+    bitmap-fonts (report by Peter Fabinski, Debian <a href=
+    "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1039986">#1039986</a>).</li>
+    <li>fixes for ReGIS-related problems (report by Ben Wong):
+      <ul>
+        <li>mimic an undocumented hardware VT340 feature which
+        handles color initialization with incomplete
+        parameters.</li>
+        <li>handle whitespace between operator/operands for color
+        values.</li>
+        <li>reset ReGIS-context when resetting graphics in
+        <tt>RIS</tt>.</li>
+      </ul>
+    </li>
+  </ul>
+  <h2><a name="xterm_383" id="xterm_383">Patch #383 -
+  2023/06/27</a></h2>
+  <ul>
+    <li>expand description of full- and soft-reset in the
+    manual.</li>
+    <li>fixes for full- and soft-reset:
+      <ul>
+        <li>clear alternate screen on full reset.</li>
+        <li>disable menu-entry for active icon; it merely shows
+        whether the feature is enabled.</li>
+        <li>use <tt>appcursorDefault</tt> and
+        <tt>appkeypadDefault</tt> resources for reset of
+        <tt>DECCKM</tt> and <tt>DECKPM</tt>.</li>
+        <li>save initial resource values for
+        <tt>sixelScrolling</tt> and <tt>privateColorRegisters</tt>,
+        using those in full reset.</li>
+        <li>update checkbox for <em>Enable Blinking Cursor</em>
+        (report by Rajeev V. Pillai).</li>
+      </ul>
+    </li>
+    <li>add reply for <tt>DECSACE</tt> with <tt>DECRQSS</tt>.</li>
+    <li>modify status-line feature to exit without erasing for
+    <tt>DECSTR</tt>.</li>
+    <li>add private mode <tt>1045</tt> which imitates the original
+    xterm cursor-back reverse wrapping mode <tt>45</tt> (see
+    <a href="#xterm_380">patch #380</a>).</li>
+    <li>improve checks for non-Unicode values, e.g., in
+    <tt>DECRQCRA</tt>.</li>
+    <li>re-checkout from RCS archive to fix stale identifiers
+    (report by Sven Joachim).</li>
+  </ul>
   <h2><a name="xterm_382" id="xterm_382">Patch #382 -
   2023/05/30</a></h2>
   <ul>

@@ -34,7 +34,7 @@ if (gl.startup_calls && window.fetch) {
   });
 }
 if (gl.startup_graphql_calls && window.fetch) {
-  const headers = {"X-CSRF-Token":"eiGZ2gd0vSjikZI8wJlTH5pl1ayRYsOBv2Z5JUva5cZw9HYhGgSF5bmNTU0O5_eCVBEkVqKRKJONlhgA-zHrRQ","x-gitlab-feature-category":"projects"};
+  const headers = {"X-CSRF-Token":"a1dVjMw7V_yCko0xEilWoGgOZK8HnCXjUAeXbsr7kfhbPlniBEMYhXWomgxj44kQ2VFymhSJUZxAoL6UHcJyGg","x-gitlab-feature-category":"projects"};
   const url = `https://gitlab.freedesktop.org/api/graphql`
 
   const opts = {
@@ -132,7 +132,7 @@ window.gon={};gon.features={"highlightJs":true,"synchronizeFork":true,"workItems
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#292961" name="theme-color">
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="HCu3ZUBDKIfMGxxzgPqQqmEX_UcoI8Mo2yj1C1ShyOEW_lieXTMQSpcHwwJOhDQ3r2MMvRvQKDrp2JQu5ErGYg" />
+<meta name="csrf-token" content="w8nNgRHGoHzZlF39Edgntrlvpg3nq9thpCaBj_DKBIjzoMHv2b7vBS6uSsBgEvgGCDCwOPS-rx60gah1J_Pnag" />
 <meta name="csp-nonce" />
 <meta name="action-cable-url" content="/-/cable" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
@@ -656,7 +656,7 @@ Project ID: 731
 <li class="nav-item">
 <a class="nav-link gl-display-flex gl-align-items-center stat-link" href="/xorg/lib/libxt/-/tags"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="label-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#label"></use></svg><strong class="project-stat-value">106</strong> Tags</a></li>
 <li class="nav-item">
-<div class="stat-text d-flex align-items-center"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="disk-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#disk"></use></svg><strong class="project-stat-value">11.6 MB</strong> Project Storage</div>
+<div class="stat-text d-flex align-items-center"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="disk-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#disk"></use></svg><strong class="project-stat-value">11.2 MB</strong> Project Storage</div>
 </li>
 </ul>
 
@@ -729,15 +729,6 @@ Read more
 </div>
 </section>
 <div data-links="[{&quot;text&quot;:&quot;zip&quot;,&quot;path&quot;:&quot;/xorg/lib/libxt/-/archive/master/libxt-master.zip&quot;},{&quot;text&quot;:&quot;tar.gz&quot;,&quot;path&quot;:&quot;/xorg/lib/libxt/-/archive/master/libxt-master.tar.gz&quot;},{&quot;text&quot;:&quot;tar.bz2&quot;,&quot;path&quot;:&quot;/xorg/lib/libxt/-/archive/master/libxt-master.tar.bz2&quot;},{&quot;text&quot;:&quot;tar&quot;,&quot;path&quot;:&quot;/xorg/lib/libxt/-/archive/master/libxt-master.tar&quot;}]" id="js-directory-downloads"></div>
-<section class="border-top pt-1 mt-1">
-<h5 class="m-0 dropdown-bold-header">Download artifacts</h5>
-<h6 class="m-0 dropdown-header">Previous Artifacts</h6>
-<ul>
-<li><a rel="nofollow" download="" href="/xorg/lib/libxt/-/jobs/artifacts/master/download?job=build">build</a></li>
-<li><a rel="nofollow" download="" href="/xorg/lib/libxt/-/jobs/artifacts/master/download?job=flawfinder-sast">flawfinder-sast</a></li>
-<li><a rel="nofollow" download="" href="/xorg/lib/libxt/-/jobs/artifacts/master/download?job=semgrep-sast">semgrep-sast</a></li>
-</ul>
-</section>
 </div>
 </div><div class="project-clone-holder d-none d-md-inline-block">
 <div class="git-clone-holder js-git-clone-holder">
