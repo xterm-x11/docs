@@ -112,7 +112,7 @@ wget https://invisible-island.net/datafiles/release/buildscripts.tar.gz
 wget https://invisible-island.net/scripts/buildscripts/CHANGES.html
 wget https://invisible-island.net/scripts/buildscripts/CHANGES
 ##
-https://invisible-island.net/datafiles/release/misc-scripts.tar.gz
+wget https://invisible-island.net/datafiles/release/misc-scripts.tar.gz
 wget https://invisible-island.net/scripts/misc-scripts/CHANGES.html
 wget https://invisible-island.net/scripts/misc-scripts/CHANGES
 ##
