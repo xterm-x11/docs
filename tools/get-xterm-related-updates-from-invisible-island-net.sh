@@ -28,7 +28,9 @@ wget https://invisible-island.net/lynx/lynx.html
 wget https://invisible-island.net/lynx/lynx-develop.html
 wget https://lynx.invisible-island.net/current/index.html # check for more links
 wget https://lynx.invisible-island.net/current/CHANGES.html
+mv CHANGES.html lynx-changes.html
 wget https://lynx.invisible-island.net/current/CHANGES
+mv CHANGES lynx-changes
 wget https://invisible-island.net/lynx/lynx-autoconf.html
 wget https://lynx.invisible-island.net/lynx_help/Lynx_users_guide.html # check for more links
 wget https://lynx.invisible-island.net/lynx_help/lynx_help_main.html # check for more links
@@ -36,7 +38,9 @@ wget https://invisible-island.net/lynx/lynx-ncurses.html
 wget https://invisible-island.net/lynx/lynx-security.html
 #
 wget https://invisible-island.net/vttest/CHANGES.html
+mv CHANGES.html vttest-changes.html
 wget https://invisible-island.net/vttest/CHANGES
+mv CHANGES vttest-changes
 wget https://invisible-island.net/vttest/manpage/vttest.html
 mv vttest.html manpage-vttest.html
 wget https://invisible-island.net/vttest/manpage/vttest.txt
@@ -46,7 +50,9 @@ wget https://invisible-island.net/vttest/vttest.html
 #
 wget https://invisible-island.net/ncurses/tack.html
 wget https://invisible-island.net/ncurses/tack/CHANGES.html
+mv CHANGES.html ncurses-changes.html
 wget https://invisible-island.net/ncurses/tack/CHANGES
+mv CHANGES ncurses-changes
 wget https://invisible-island.net/ncurses/tack/tack.html # manpage?
 wget https://invisible-island.net/ncurses/tack/tack.txt
 wget https://invisible-island.net/ncurses/tack/tack.pdf
@@ -54,7 +60,9 @@ wget https://invisible-island.net/ncurses/tack/tack.ps
 #
 wget https://invisible-island.net/ncurses/tctest.html
 wget https://invisible-island.net/ncurses/tctest/CHANGES.html
+mv CHANGES.html ncurses-changes.html
 wget https://invisible-island.net/ncurses/tctest/CHANGES
+mv CHANGES ncurses-changes
 wget https://invisible-island.net/ncurses/tctest/tctest.html # manpage?
 wget https://invisible-island.net/ncurses/tctest/tctest.txt
 wget https://invisible-island.net/ncurses/tctest/tctest.pdf
@@ -110,23 +118,33 @@ wget https://invisible-island.net/scripts/readme.html
 ##
 wget https://invisible-island.net/datafiles/release/buildscripts.tar.gz
 wget https://invisible-island.net/scripts/buildscripts/CHANGES.html
+mv CHANGES.html buildscripts-changes.html
 wget https://invisible-island.net/scripts/buildscripts/CHANGES
+mv CHANGES buildscripts-changes
 ##
 wget https://invisible-island.net/datafiles/release/misc-scripts.tar.gz
 wget https://invisible-island.net/scripts/misc-scripts/CHANGES.html
+mv CHANGES.html misc-scripts-changes.html
 wget https://invisible-island.net/scripts/misc-scripts/CHANGES
+mv CHANGES misc-scripts-changes
 ##
 wget https://invisible-island.net/datafiles/release/github-scripts.tar.gz
 wget https://invisible-island.net/scripts/github-scripts/CHANGES.html
+mv CHANGES.html github-scripts-changes.html
 wget https://invisible-island.net/scripts/github-scripts/CHANGES
+mv CHANGES github-scripts-changes
 ##
 wget https://invisible-island.net/datafiles/release/mapsym-scripts.tar.gz
 wget https://invisible-island.net/scripts/mapsym-scripts/CHANGES.html
+mv CHANGES.html mapsym-scripts-changes.html
 wget https://invisible-island.net/scripts/mapsym-scripts/CHANGES
+mv CHANGES mapsym-scripts-changes
 ##
 wget https://invisible-island.net/datafiles/release/other-scripts.tar.gz
 wget https://invisible-island.net/scripts/other-scripts/CHANGES.html
+mv CHANGES.html other-scripts-changes.html
 wget https://invisible-island.net/scripts/other-scripts/CHANGES
+mv CHANGES other-scripts-changes
 ##
 # Note: Make sure to explore more links and tools in https://invisible-island.net/scripts/readme.html and elsewhere in https://invisible-island.net/
 #
@@ -160,4 +178,3 @@ git switch main
 git branch -D $(date -I)
 
 echo "https://github.com/xterm-x11/docs/pull/new/$(date -I)"
-
