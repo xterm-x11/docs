@@ -107,7 +107,7 @@ wget https://invisible-island.net/datafiles/release/luit.tar.gz
 # Copy the information to be published on xterm.org from the xterm-related pages on https://invisible-island.net/ that are not expected to be updated:
 # (This list is for the pages that are to be downloaded only once (or so).)
 wget http://www.bitsavers.org/pdf/dec/vax/vaxstation100/AA-N660A-TE_VAXstation_100_Users_Guide_Jun84.pdf
-wget http://www.bitsavers.org/pdf/dec/standards/EL-SM070-00_DEC_STD_070_Video_Systems_Reference_Manual_Dec91.pdf
+# wget http://www.bitsavers.org/pdf/dec/standards/EL-SM070-00_DEC_STD_070_Video_Systems_Reference_Manual_Dec91.pdf # already downloaded, commenting out to avoid lsf warning messages pointing to https://git-lfs.com/ during script runs
 wget http://www.bitsavers.org/pdf/dec/dtj/dtj_v02-03_1990.pdf
 #
 wget https://invisible-island.net/xterm/xterm.html
