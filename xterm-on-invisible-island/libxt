@@ -34,7 +34,7 @@ if (gl.startup_calls && window.fetch) {
   });
 }
 if (gl.startup_graphql_calls && window.fetch) {
-  const headers = {"X-CSRF-Token":"eiGZ2gd0vSjikZI8wJlTH5pl1ayRYsOBv2Z5JUva5cZw9HYhGgSF5bmNTU0O5_eCVBEkVqKRKJONlhgA-zHrRQ","x-gitlab-feature-category":"projects"};
+  const headers = {"X-CSRF-Token":"vMpCSPsK4hqxzaB3lM2VtiPnR9NEqVbUjO4r4LgSGxpUKl89F7VFagyyqqSfAmRraPUyFKPrbd5N_t98P-f20w","x-gitlab-feature-category":"projects"};
   const url = `https://gitlab.freedesktop.org/api/graphql`
 
   const opts = {
@@ -132,7 +132,7 @@ window.gon={};gon.features={"highlightJs":true,"synchronizeFork":true,"workItems
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="#292961" name="theme-color">
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="HCu3ZUBDKIfMGxxzgPqQqmEX_UcoI8Mo2yj1C1ShyOEW_lieXTMQSpcHwwJOhDQ3r2MMvRvQKDrp2JQu5ErGYg" />
+<meta name="csrf-token" content="2MVEqClNGpO3MMp-hw2ORQo0aWfdbxACNURQRvRJOk4wJVndxfK94wpPwK2Mwn-YQSYcoDotKwj0VKTac7zXhw" />
 <meta name="csp-nonce" />
 <meta name="action-cable-url" content="/-/cable" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png" />
@@ -563,6 +563,20 @@ Snippets
 
 
 
+<div class="gl-broadcast-message broadcast-banner-message banner js-broadcast-notification-13 light-indigo" role="alert">
+<div class="gl-broadcast-message-content">
+<div class="gl-broadcast-message-icon">
+<svg class="s16" data-testid="bullhorn-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#bullhorn"></use></svg>
+</div>
+<div class="gl-broadcast-message-text js-broadcast-message-preview">
+<p>The planned migration went sideways a little, but the service is partially back and currently under-test. Expect disruptions and potentially data loss until further notice. Sorry for the disruption!</p>
+</div>
+</div>
+<button class="gl-button btn btn-icon btn-sm btn-default btn-default-tertiary gl-close-btn-color-inherit gl-broadcast-message-dismiss js-dismiss-current-broadcast-notification" aria-label="Close" data-id="13" data-expire-date="2023-08-31T16:46:54Z" type="button"><svg class="s16 gl-icon gl-button-icon gl-mx-3! gl-text-white" data-testid="close-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#close"></use></svg>
+
+</button>
+</div>
+
 
 
 
@@ -650,13 +664,13 @@ Project ID: 731
 <nav class="project-stats">
 <ul class="nav gl-gap-5">
 <li class="nav-item">
-<a class="nav-link gl-display-flex gl-align-items-center stat-link" href="/xorg/lib/libxt/-/commits/master"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="commit-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#commit"></use></svg><strong class="project-stat-value">527</strong> Commits</a></li>
+<a class="nav-link gl-display-flex gl-align-items-center stat-link" href="/xorg/lib/libxt/-/commits/master"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="commit-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#commit"></use></svg><strong class="project-stat-value">528</strong> Commits</a></li>
 <li class="nav-item">
 <a class="nav-link gl-display-flex gl-align-items-center stat-link" href="/xorg/lib/libxt/-/branches"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="branch-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#branch"></use></svg><strong class="project-stat-value">20</strong> Branches</a></li>
 <li class="nav-item">
 <a class="nav-link gl-display-flex gl-align-items-center stat-link" href="/xorg/lib/libxt/-/tags"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="label-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#label"></use></svg><strong class="project-stat-value">106</strong> Tags</a></li>
 <li class="nav-item">
-<div class="stat-text d-flex align-items-center"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="disk-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#disk"></use></svg><strong class="project-stat-value">11.6 MB</strong> Project Storage</div>
+<div class="stat-text d-flex align-items-center"><svg class="s16 icon gl-mr-2 gl-text-gray-500" data-testid="disk-icon"><use href="/assets/icons-87cb0ce1047e0d3e1ddd352a88d6807e6155673ebba21022180ab5ee153c2026.svg#disk"></use></svg><strong class="project-stat-value">14 MB</strong> Project Storage</div>
 </li>
 </ul>
 

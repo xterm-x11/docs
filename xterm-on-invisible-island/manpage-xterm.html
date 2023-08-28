@@ -5739,23 +5739,125 @@
        VT<i>xxx</i> Commands:
 
               <b><a title="VT Options:Do Soft Reset" name="VT-Options:Do-Soft-Reset">Do Soft Reset</a></b> (resource <b><a href="#Menu-Resources:softreset">softreset</a></b>)
-                     Reset scroll regions.  This can be convenient when some
-                     program has left the scroll regions set incorrectly
-                     (often a problem when using VMS or TOPS-20).  This
-                     corresponds to the VT220 DECSTR control sequence.
+                     This corresponds to the VT220 DECSTR control sequence.  A
+                     soft reset leaves the contents of the window intact, but
+                     resets modes which affect subsequent updates:
+
+                     Soft reset differs from full reset in a minor detail:
+
+                     <b>o</b>   Set the saved cursor position to the upper-left
+                         corner of the window.
+
+                     <b>o</b>   Exit from the status-line without erasing it.
+
+                     Both soft/full resets do the following:
+
+                     <b>o</b>   Make the cursor visible, with shape reset according
+                         to the <b><a href="#VT100-Widget-Resources:cursorUnderLine">cursorUnderLine</a></b> and <b><a href="#VT100-Widget-Resources:cursorBar">cursorBar</a></b> resources.
+
+                     <b>o</b>   Enable or disable the cursor-blinking state according
+                         to the <b><a href="#VT100-Widget-Resources:cursorBlink">cursorBlink</a></b> resource, and set the <i>Enable</i>
+                         <i>Blinking Cursor</i> menu checkmark to match.
+
+                     <b>o</b>   Reset video attributes, e.g., bold, italic,
+                         underline, blink.
+
+                     <b>o</b>   Reset the ANSI color mode to the <i>xterm</i> default
+                         foreground and background.
+
+                     <b>o</b>   Reset the 256-color palette to its initial state.
+
+                     <b>o</b>   Reset the selected character set, e.g., ASCII,
+                         alternate character set.  The UTF-8 modes are not
+                         changed.
+
+                     <b>o</b>   Reset ECMA-48 KAM.
+
+                     <b>o</b>   Reset DECCKM and DECKPAM per resources
+                         <b><a href="#VT100-Widget-Resources:appcursorDefault">appcursorDefault</a></b> and <b><a href="#VT100-Widget-Resources:appkeypadDefault">appkeypadDefault</a></b>.
+
+                     <b>o</b>   Reset the key-modifier modes to the values set by
+                         resources <b><a href="#VT100-Widget-Resources:formatOtherKeys">formatOtherKeys</a></b>, <b><a href="#VT100-Widget-Resources:modifyCursorKeys">modifyCursorKeys</a></b>,
+                         <b><a href="#VT100-Widget-Resources:modifyFunctionKeys">modifyFunctionKeys</a></b>, <b><a href="#VT100-Widget-Resources:modifyKeyboard">modifyKeyboard</a></b>, and
+                         <b><a href="#VT100-Widget-Resources:modifyOtherKeys">modifyOtherKeys</a></b>.
+
+                     <b>o</b>   Reset origin mode (DECOM).
+
+                     <b>o</b>   Reset all margins (i.e., top/bottom and left/right).
+                         This can be convenient when some program has left the
+                         scroll regions set incorrectly (often a problem when
+                         using VMS or TOPS-20).
+
+                     <b>o</b>   Set autowrap and reverse wrapping according to the
+                         resource values <b><a href="#VT100-Widget-Resources:autoWrap">autoWrap</a></b> and <b><a href="#VT100-Widget-Resources:reverseWrap">reverseWrap</a></b>.
+
+                     <b>o</b>   Reset checksum extension to the <b><a href="#VT100-Widget-Resources:checksumExtension">checksumExtension</a></b>
+                         resource.
 
               <b><a title="VT Options:Do Full Reset" name="VT-Options:Do-Full-Reset">Do Full Reset</a></b> (resource <b><a href="#Menu-Resources:hardreset">hardreset</a></b>)
-                     The full reset entry will clear the screen, reset tabs to
-                     every eight columns, and reset the terminal modes (such
-                     as wrap and smooth scroll) to their initial states just
-                     after <i>xterm</i> has finished processing the command line
-                     options.  This corresponds to the VT102 RIS control
-                     sequence, with a few obvious differences.  For example,
-                     your session is not disconnected as a real VT102 would
-                     do.
+                     A full reset does this in addition to a soft reset:
+
+                     <b>o</b>   Clear the window.
+
+                     <b>o</b>   Reset tab stops to every eight columns.
+
+                     <b>o</b>   Reset the screen to match the <b><a href="#VT100-Widget-Resources:reverseVideo">reverseVideo</a></b> resource.
+
+                     <b>o</b>   Resize the screen to 80 columns if 132-column mode
+                         was initially enabled with the <b><a href="#VT100-Widget-Resources:c132">c132</a></b> resource.
+
+                     <b>o</b>   Reset scrolling (jump versus smooth) per the
+                         <b><a href="#VT100-Widget-Resources:jumpScroll">jumpScroll</a></b> resource.
+
+                     <b>o</b>   Enable linefeed mode (ECMA-48 LNM) and send/receive
+                         mode (ECMA-48 SRM).
+
+                     <b>o</b>   Reset DEC user-defined keys (DECUDK).
+
+                     <b>o</b>   Disable application mode for cursor- and keypad-keys
+                         (DECCKM, DECKPAM).
+
+                     <b>o</b>   Reset menu entry <i>8-bit Controls</i>, per resource
+                         <b><a href="#VT100-Widget-Resources:eightBitControl">eightBitControl</a></b>.
+
+                     <b>o</b>   Reset interpretation of the backarrow key, per
+                         initial resource settings.
+
+                     <b>o</b>   Set the keyboard type according to the resources
+                         <b><a href="#Application-Resources:keyboardType">keyboardType</a></b>, <b><a href="#Application-Resources:hpFunctionKeys">hpFunctionKeys</a></b>, <b><a href="#Application-Resources:scoFunctionKeys">scoFunctionKeys</a></b>,
+                         <b><a href="#Application-Resources:sunFunctionKeys">sunFunctionKeys</a></b>, <b><a href="#Application-Resources:tcapFunctionKeys">tcapFunctionKeys</a></b>, <b><a href="#VT100-Widget-Resources:oldXtermFKeys">oldXtermFKeys</a></b> and
+                         <b><a href="#Application-Resources:sunKeyboard">sunKeyboard</a></b>.
+
+                     <b>o</b>   Turn mouse tracking off.
+
+                     <b>o</b>   Reset title and pointer modes per resources
+                         <b><a href="#VT100-Widget-Resources:titleModes">titleModes</a></b> and <b><a href="#VT100-Widget-Resources:pointerMode">pointerMode</a></b>.
+
+                     <b>o</b>   Reset the readline and bracketed paste modes.
+
+                     <b>o</b>   Discard all SIXEL and ReGIS graphics data from
+                         memory.
+
+                     <b>o</b>   Reset <b><a href="#VT100-Widget-Resources:sixelScrolling">sixelScrolling</a></b> and <b><a href="#VT100-Widget-Resources:privateColorRegisters">privateColorRegisters</a></b> from
+                         initial resource values.
+
+                     <b>o</b>   Set DECSDM if the <b><a href="#VT100-Widget-Resources:sixelScrolling">sixelScrolling</a></b> resource is true.
+                         Otherwise, reset DECSDM.
+
+                     A full reset does this, unlike a soft reset:
+
+                     <b>o</b>   Move the cursor to the upper-left corner of the
+                         window, and then save that position.
+
+                     <b>o</b>   Hide the status-line, setting its display-type to
+                         "none".
 
               <b><a title="VT Options:Reset and Clear Saved Lines" name="VT-Options:Reset-and-Clear-Saved-Lines">Reset and Clear Saved Lines</a></b> (resource <b><a href="#Menu-Resources:clearsavedlines">clearsavedlines</a></b>)
                      Perform a full reset, and also clear the saved lines.
+
+                     This corresponds to the VT102 RIS control sequence, with
+                     a few obvious differences.  For example, your session is
+                     not disconnected as a real VT102 would do.
 
        Commands for setting the current screen:
 
@@ -7687,7 +7789,7 @@
        these:  Jason  Bacon,  Jens  Schweikhardt, Ross Combs, Stephen P. Wall,
        David Wexelblat, and Thomas Dickey (invisible-island.net).
 
-Patch #380                        2023-02-26                          <b>XTERM(1)</b>
+Patch #383                        2023-06-27                          <b>XTERM(1)</b>
 </pre>
 <div class="nav">
 <ul>
