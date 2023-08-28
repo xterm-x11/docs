@@ -159,4 +159,4 @@ AUTHORS
 
 
 
-Patch #380                        2023-02-26                         RESIZE(1)
+Patch #383                        2023-06-27                         RESIZE(1)

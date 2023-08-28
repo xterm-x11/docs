@@ -32,7 +32,7 @@
                              <i>Thomas Dickey</i>
                       XFree86 Project (1996-2006)
                     invisible-island.net (2006-2023)
-               updated for XTerm Patch #379 (2023/04/20)
+               updated for XTerm Patch #383 (2023/06/22)
 
 </pre>
 <h2><a name="h2-Definitions" id="h2-Definitions">Definitions</a></h2>
@@ -434,6 +434,7 @@ C1 controls, ordered by the final character(s).
             $ |     &#8658;&nbsp; DECSCPP
             $ }     &#8658;&nbsp; DECSASD
             $ ~     &#8658;&nbsp; DECSSDT
+            * x     &#8658;&nbsp; DECSACE
             * |     &#8658;&nbsp; DECSNLS
           <i>xterm</i> responds with DCS 1 $ r <i>Pt</i> ST for valid requests,
           replacing the <i>Pt</i> with the corresponding CSI string, or DCS 0 $
@@ -799,16 +800,21 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-1.1EC2"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; <a href="https://www.freebsd.org/cgi/man.cgi?query=more&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>more(1)</b></a> fix (see <b>curses</b> resource).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-2.1EC3"><i>Ps</i> = 4 2</a>  &#8658;&nbsp; Enable National Replacement Character sets
           (DECNRCM), VT220.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-3.1EC4"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Enable Graphics Expanded Print Mode (DECGEPM).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-3.1EC4"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Enable Graphic Expanded Print Mode (DECGEPM),
+          VT340.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-4.1EC5"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Turn on margin bell, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-4.1EC5"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Enable Graphics Print Color Mode (DECGPCM).
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-5.1EC6"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Reverse-wraparound mode, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-5.1EC6"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Enable Graphics Print ColorSpace (DECGPCS).
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-6.1EC7"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Start logging, <i>xterm</i>.  This is normally
-          disabled by a compile-time option.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-4.1EC5"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Enable Graphic Print Color Mode (DECGPCM),
+          VT340.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-5.1EC6"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Reverse-wraparound mode (XTREVWRAP), <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-5.1EC6"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Enable Graphic Print Color Syntax (DECGPCS),
+          VT340.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-6.1EC7"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Start logging (XTLOGGING), <i>xterm</i>.  This is
+          normally disabled by a compile-time option.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-6.1EC7"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Graphic Print Background Mode, VT340.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-7.1EC8"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Use <i>Alternate Screen Buffer</i>, <i>xterm</i>.  This may
           be disabled by the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:titeInhibit">titeInhibit</a></b> resource.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-7.1EC8"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Enable Graphics Rotated Print Mode (DECGRPM).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-7.1EC8"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Enable Graphic Rotated Print Mode (DECGRPM),
+          VT340.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-6-6.1EC9"><i>Ps</i> = 6 6</a>  &#8658;&nbsp; Application keypad mode (DECNKM), VT320.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-6-7.1ECA"><i>Ps</i> = 6 7</a>  &#8658;&nbsp; Backarrow key sends backspace (DECBKM), VT340,
           VT420.  This sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:backarrowKey">backarrowKey</a></b> resource to "true".
@@ -859,6 +865,8 @@ C1 controls, ordered by the final character(s).
           is received, <i>xterm</i>.  This enables the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:popOnBell">popOnBell</a></b> resource.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-4.1F80"><i>Ps</i> = 1 0 4 4</a>  &#8658;&nbsp; Reuse the most recent data copied to
           CLIPBOARD, <i>xterm</i>.  This enables the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:keepClipboard">keepClipboard</a></b> resource.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-5.1F81"><i>Ps</i> = 1 0 4 5</a>  &#8658;&nbsp; Extended Reverse-wraparound mode
+          (XTREVWRAP2), <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-6.1F82"><i>Ps</i> = 1 0 4 6</a>  &#8658;&nbsp; Enable switching to/from <i>Alternate Screen</i>
           <i>Buffer</i>, <i>xterm</i>.  This works for terminfo-based systems,
           updating the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:titeInhibit">titeInhibit</a></b> resource.
@@ -935,15 +943,19 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-1.1EC6"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; No <a href="https://www.freebsd.org/cgi/man.cgi?query=more&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>more(1)</b></a> fix (see <b>curses</b> resource).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-2.1EC7"><i>Ps</i> = 4 2</a>  &#8658;&nbsp; Disable National Replacement Character sets
           (DECNRCM), VT220.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-3.1EC8"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Disable Graphics Expanded Print Mode (DECGEPM).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-3.1EC8"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Disable Graphic Expanded Print Mode (DECGEPM),
+          VT340.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-4.1EC9"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Turn off margin bell, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-4.1EC9"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Disable Graphics Print Color Mode (DECGPCM).
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-5.1ECA"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; No Reverse-wraparound mode, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-5.1ECA"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Disable Graphics Print ColorSpace (DECGPCS).
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-6.1ECB"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Stop logging, <i>xterm</i>.  This is normally disabled
-          by a compile-time option.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-4.1EC9"><i>Ps</i> = 4 4</a>  &#8658;&nbsp; Disable Graphic Print Color Mode (DECGPCM),
+          VT340.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-5.1ECA"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; No Reverse-wraparound mode (XTREVWRAP), <i>xterm</i>.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-5.1ECA"><i>Ps</i> = 4 5</a>  &#8658;&nbsp; Disable Graphic Print Color Syntax (DECGPCS),
+          VT340.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-6.1ECB"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Stop logging (XTLOGGING), <i>xterm</i>.  This is
+          normally disabled by a compile-time option.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-7.1ECC"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Use <i>Normal Screen Buffer</i>, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-7.1ECC"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Disable Graphics Rotated Print Mode (DECGRPM).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-7.1ECC"><i>Ps</i> = 4 7</a>  &#8658;&nbsp; Disable Graphic Rotated Print Mode (DECGRPM),
+          VT340.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-6-6.1ECD"><i>Ps</i> = 6 6</a>  &#8658;&nbsp; Numeric keypad mode (DECNKM), VT320.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-6-7.1ECE"><i>Ps</i> = 6 7</a>  &#8658;&nbsp; Backarrow key sends delete (DECBKM), VT340,
           VT420.  This sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:backarrowKey">backarrowKey</a></b> resource to "false".
@@ -991,6 +1003,8 @@ C1 controls, ordered by the final character(s).
           resource.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-4-3.1F83"><i>Ps</i> = 1 0 4 3</a>  &#8658;&nbsp; Disable raising of the window when Control-
           G is received, <i>xterm</i>.  This disables the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:popOnBell">popOnBell</a></b> resource.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-4-5.1F85"><i>Ps</i> = 1 0 4 5</a>  &#8658;&nbsp; No Extended Reverse-wraparound mode
+          (XTREVWRAP2), <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-4-6.1F86"><i>Ps</i> = 1 0 4 6</a>  &#8658;&nbsp; Disable switching to/from <i>Alternate Screen</i>
           <i>Buffer</i>, <i>xterm</i>.  This works for terminfo-based systems,
           updating the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:titeInhibit">titeInhibit</a></b> resource.  If currently using the
@@ -2907,6 +2921,13 @@ Instruction Set, a graphics description language.
             <a name="h4-ReGIS-Graphics:DCS-Pm-p-Pr..Pr-ST:Pm-=-2.C8B"><i>Pm</i> = 2</a> &#8658;&nbsp; resume command, use command display mode.
             <a name="h4-ReGIS-Graphics:DCS-Pm-p-Pr..Pr-ST:Pm-=-3.C8C"><i>Pm</i> = 3</a> &#8658;&nbsp; start new command, use command display mode.
 
+A few of the VT330/VT340 private modes conflict with <i>xterm</i>.  Codes 4 0
+to 4 7  were first used by xterm in X10R4 (December 1986).  While X11R1
+<i>xterm</i> dropped codes 4 1  and 4 2 , the remaining ones are still used.
+The VT330/VT340 introduced in April 1987 uses 4 4  to 4 7  for color
+graphics printing controls.  When configured for ReGIS, <i>xterm</i> uses the
+VT330/VT340 interpretation of these private modes.
+
 </pre>
 <h2><a name="h2-Non-VT100-Modes" id="h2-Non-VT100-Modes">Non-VT100 Modes</a></h2>
 <pre>
@@ -3404,44 +3425,44 @@ and less-detailed manual pages.
         be used in termcap for <b>vi</b>, for example, to turn off saving of
         lines, but restore whatever the original state was on exit.
 
-    while  the  SCOSC/SCORC  pair  was  added  in  1995  by XFree86 (and
+    while the SCOSC/SCORC  pair  was  added  in  1995  by  XFree86  (and
     documented long afterwards).
 
-    The SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use  these
-    controls  (they  used the VT100-compatible SC/RC pair).  SCOSC/SCORC
-    were an artifact of DOS 2.00 (January 1983), by Microsoft and  later
+    The  SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use these
+    controls (they used the VT100-compatible SC/RC  pair).   SCOSC/SCORC
+    were  an artifact of DOS 2.00 (January 1983), by Microsoft and later
     supported by SCO and other vendors.
 
-    The  SCOSC/SCORC pair is considered a <i>private mode</i> because the final
+    The SCOSC/SCORC pair is considered a <i>private mode</i> because the  final
     characters (s  and u ) fall in the range from "`" to "~" (octal 0140
-    to  octal 0176).  Other <i>private</i> control sequences can be constructed
+    to octal 0176).  Other <i>private</i> control sequences can be  constructed
     by using octets 074 to 077 (characters "&lt;", "=", "&gt;", or "?") at the
     beginning  of  the  parameter  string.   The  XTSAVE  and  XTRESTORE
     controls use "?") in this manner.
 
     Because  the  XTSAVE  and  XTRESTORE  controls  are  private,  other
-    terminals  may  behave differently.  For example, DEC (a contributor
-    to the early <i>xterm</i> as well as a manufacturer of terminals)  used  an
-    incompatible  private control in one of its terminals more than five
+    terminals may behave differently.  For example, DEC  (a  contributor
+    to  the  early <i>xterm</i> as well as a manufacturer of terminals) used an
+    incompatible private control in one of its terminals more than  five
     years later (for the VT420 PCTerm, announced in February 1992).
 
-    In that model of the VT420, CSI ? <i>Pm</i>;  <i>Pc</i>  r  selects  the  <i>PC  TERM</i>
-    emulation  mode.  When this mode is enabled, the keyboard sends <i>scan</i>
-    <i>codes</i> rather than characters (analogous to X keyboard events).   The
-    first  parameter of this private control enables or disables <i>PC TERM</i>
+    In  that  model  of  the  VT420,  CSI ? <i>Pm</i>; <i>Pc</i> r selects the <i>PC TERM</i>
+    emulation mode.  When this mode is enabled, the keyboard sends  <i>scan</i>
+    <i>codes</i>  rather than characters (analogous to X keyboard events).  The
+    first parameter of this private control enables or disables <i>PC  TERM</i>
     mode, while the second selects a character set.  An ambiguity arises
     if an application omits the second parameter.  In that special case,
-    it cannot be distinguished from XTRESTORE.  DEC did  not  take  this
+    it  cannot  be  distinguished from XTRESTORE.  DEC did not take this
     into account when designing the feature.
 
-    If  there  were  potential  users, <i>xterm</i> could accommodate this by a
-    resource setting.  In retrospect (thirty years  later),  there  have
-    been  no  uses  of  <i>PC TERM</i>, while the XTRESTORE feature is still in
+    If there were potential users, <i>xterm</i> could  accommodate  this  by  a
+    resource  setting.   In  retrospect (thirty years later), there have
+    been no uses of <i>PC TERM</i>, while the XTRESTORE  feature  is  still  in
     use.
 
 <b>o</b>   The <i>aixterm</i> manual page gives the format of the control sequence for
-    foreground  and  background  colors  8-15, but does not specify what
-    those colors are.  That is implied by the description's  mention  of
+    foreground and background colors 8-15, but  does  not  specify  what
+    those  colors  are.  That is implied by the description's mention of
     <i>HFT</i>:
 
         The aixterm command provides a standard terminal type for
@@ -3451,9 +3472,9 @@ and less-detailed manual pages.
         the -v flag.
 
     Unlike <i>xterm</i>, there are no resource names for the 16 colors, leaving
-    the reader to assume that the mapping is  hard-coded.   The  control
-    sequences  for  colors 8-15 are not specified by ECMA-48, but rather
-    (as done in other instances by <i>xterm</i>) chosen to  not  conflict  with
+    the  reader  to  assume that the mapping is hard-coded.  The control
+    sequences for colors 8-15 are not specified by ECMA-48,  but  rather
+    (as  done  in  other instances by <i>xterm</i>) chosen to not conflict with
     current or future standards.
 </pre>
 <div class="nav">
