@@ -18,10 +18,26 @@ mkdocs build
 cd tools
 
 # run the script for downstreaming the local copies of the invisible-island.net pages
-./downstream-release-notes.sh
-./downstream-manpage-xterm.sh
-./downstream-manpage-uxterm.sh
+
 ./downstream-manpage-koi8rterm.sh
+./downstream-manpage-luit.sh
+./downstream-manpage-resize.sh
+./downstream-manpage-uxterm.sh
+./downstream-manpage-vttest.sh
+./downstream-manpage-xterm.sh
+./downstream-release-notes.sh
+
+<<comment
+
+./downstream-manpage-koi8rterm.sh \
+./downstream-manpage-luit.sh \
+./downstream-manpage-resize.sh \
+./downstream-manpage-uxterm.sh \
+./downstream-manpage-vttest.sh \
+./downstream-manpage-xterm.sh \
+./downstream-release-notes.sh
+
+comment
 
 <<comment
 
