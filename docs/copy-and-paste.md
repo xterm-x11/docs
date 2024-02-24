@@ -5,6 +5,7 @@ author: Max Leonov
 ## Selecting text in XTerm
 
 You can easily select text in an XTerm window as you would expect in another application:
+
 * Left-click and drag to select any text.
 * Double-click to select a word.
 * Triple-click to select the whole line.
