@@ -29,12 +29,12 @@ cd tools
 
 <<comment
 
-./downstream-manpage-koi8rterm.sh \
-./downstream-manpage-luit.sh \
-./downstream-manpage-resize.sh \
-./downstream-manpage-uxterm.sh \
-./downstream-manpage-vttest.sh \
-./downstream-manpage-xterm.sh \
+./downstream-manpage-koi8rterm.sh && \
+./downstream-manpage-luit.sh && \
+./downstream-manpage-resize.sh && \
+./downstream-manpage-uxterm.sh && \
+./downstream-manpage-vttest.sh && \
+./downstream-manpage-xterm.sh && \
 ./downstream-release-notes.sh
 
 comment
