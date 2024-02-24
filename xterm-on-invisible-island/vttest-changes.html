@@ -23,8 +23,74 @@
 <hr>
 
 <pre>
--- $Id: CHANGES,v 1.254 2023/02/01 22:02:06 tom Exp $
+-- $Id: CHANGES,v 1.285 2024/02/19 00:26:43 tom Exp $
 -------------------------------------------------------------------------------
+
+<a name="t20240218" href="#index-t20240218" id="t20240218">20240218</a>
+        + other improvements (report by James Holderness)
+
+          + modify DECAC test to include the window-frame
+
+          + accept a 23/unsupported response for DSR status of UDK
+
+        + improve/correct resetting of character-sets after tests:
+
+          + improve use of current settings in the reset function
+
+          + fix a case which tried to set a 96-character set in G0
+
+          + add a reset after SI/SO test (report by James Holderness)
+
+        + update config.guess, config.sub
+
+<a name="t20231230" href="#index-t20231230" id="t20231230">20231230</a>
+        + modify get_reply() to wait only 0.1 seconds for a response, in case
+          vttest is run on a terminal which is not VT100-compatible.
+
+        + switch to/from ISO-2022 mode from UTF-8 if the user's locale is
+          currently set to UTF-8.
+
+        + add DECRQSS test for XTQMODKEYS
+
+        + modify character set menus to filter out NRCS charsets when NRCS is
+          not enabled.
+
+        + improve DECRQSS tests for DECAC and DECATC
+
+        + add DA2 code 48 for Thai VT382
+
+        + make separate VT510 DECRQSS menu to distinguish from VT520.
+
+        + modify DECAUPSS/DECRQUPSS tests to exercise switching to valid
+          combinations for VT320 and VT520, etc., to test xterm <a href="/xterm/xterm.log.html#xterm_389">#389</a>.
+
+        + improve "-q" option, e.g., to avoid resetting the display of the
+          response on string-terminator (cf: <a href="#t20200920">20200920</a>).
+
+        &gt; fixes/improvements (report by James Holderness)
+          + correct code and comment for DECTEK mode (38) with DECRPM
+          + remove redundant code for DECVSSM mode (69)
+          + correct locator status query
+          + add identify-locator query
+          + correct final characters in DECSDDT, DECSDPT, DECSEST tests
+          + correct mnemonic for VT520 alternate text color
+          + add DECPRO test with VT320 DECRQSS
+          + add DECSRFR test with VT520 DECRQSS
+          + add DECUS test with VT520 DECRQSS
+          + add keyboard status codes for VT382
+          + add keyboard types from VT420, VT510 and VT520 manuals
+          + modify keyboard type parsing to report "unknown" for a zero
+          + use VT525 DECAC to initialize that terminal to white-on-black
+
+<a name="t20230924" href="#index-t20230924" id="t20230924">20230924</a>
+        + modify DEC private mode table and lookup function to handle different
+          interpretations of modes 35 and 69.
+
+        + add xterm private modes 1014, 1016 to DECRQM tests
+
+        + updated/improved configure macros
+
+        + update config.guess, config.sub
 
 <a name="t20230201" href="#index-t20230201" id="t20230201">20230201</a>
         + reduce compiler-warnings in configure-checks
@@ -891,6 +957,12 @@ VERSION 2.0
 <div class="nav">
 <ul>
 <li class="nav-top"><a href="CHANGES.html">(top)</a></li>
+
+<li><a name="index-t20240218" href="#t20240218" id="index-t20240218">2024/02/18</a></li>
+
+<li><a name="index-t20231230" href="#t20231230" id="index-t20231230">2023/12/30</a></li>
+
+<li><a name="index-t20230924" href="#t20230924" id="index-t20230924">2023/09/24</a></li>
 
 <li><a name="index-t20230201" href="#t20230201" id="index-t20230201">2023/02/01</a></li>
 

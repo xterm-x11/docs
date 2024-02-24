@@ -1,4 +1,4 @@
-VTTEST(1)                   General Commands Manual                  VTTEST(1)
+VTTEST(1)                        User commands                       VTTEST(1)
 
 
 
@@ -9,12 +9,12 @@ SYNOPSIS
        vttest [options] [24x80.132]
 
 DESCRIPTION
-       Vttest  is a program designed to test the functionality of a VT100 ter-
-       minal (or emulator thereof).  It tests both  display  (escape  sequence
+       Vttest  is  a  program  designed  to  test the functionality of a VT100
+       terminal (or emulator thereof).  It tests both display (escape sequence
        handling) and keyboard.
 
-       The program is menu-driven and contains full on-line operating instruc-
-       tions.
+       The   program  is  menu-driven  and  contains  full  on-line  operating
+       instructions.
 
        o   To run a given menu-item, you must enter its number.
 
@@ -53,7 +53,10 @@ OPTIONS
 
        -p   use padding, e.g., for a VT100 connected to a high-speed line.
 
-       -s   add  time-delay  in  selected  panning/scrolling  options  to show
+       -q   show  only  the  most  recent part of a continuous response, e.g.,
+            any-event mouse tests, to improve readability of the test.
+
+       -s   add time-delay  in  selected  panning/scrolling  options  to  show
             details.
 
        -8   use 8-bit controls (this can be changed with a menu option).
@@ -66,4 +69,4 @@ AUTHOR
 
 
 
-                                     LOCAL                           VTTEST(1)
+                                  2020-09-20                         VTTEST(1)

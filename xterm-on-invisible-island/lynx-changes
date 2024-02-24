@@ -1,7 +1,47 @@
--- $LynxId: CHANGES,v 1.1128 2023/01/08 14:08:16 tom Exp $
+-- $LynxId: CHANGES,v 1.1159 2024/01/15 21:41:51 tom Exp $
 ===============================================================================
 Changes since Lynx 2.8 release
 ===============================================================================
+
+2024-01-15 (2.9.0)
+* change version of OpenSSL used in Windows installers to 3.x and 1.1.1x,
+  for new/old respectively -TD
+* fixes for UBSAN/ASAN issues with clang on Windows -GV
+* modify install-doc rule to use relative path for symbolic links -TD
+* add support for gopher's hURL functionality (patch by Viatrix).
+* allow ^G interrupt to end read from a stalled connection without exiting
+  Lynx (Debian #1033423) -TD
+* allow the ^S keymap to be disabled in the configuration file, e.g.,
+    KEYMAP:^S:UNMAPPED
+  (report by TG) -TD
+* repair docs/OS-390.announce and docs/README.jp -TD
+* make the test-files non-empty, to appease some packaging tools -TD
+* check for getpwuid(), use in preference to deprecated cuserid() -TD
+* modify curses initialization to permit ^S built-in keymap to work without
+  needing external stty changes -TD
+* correct ifdef for LYmsec_delay() (report by Alexander Arkhipov) -TD
+* add a NUL after "/" in the SGML parser when the next character is ">", to
+  make PRETTYSRC view display correctly (report by "Dima") -TD
+* trim some obsolete style code for NeXT -TD
+* improve responsiveness with respect to SIGWINCH (report by Mark Zaharov) -TD
+* improve check for MAX_URI_SIZE -TD
+* improve check for UTF-8 character encoding in XML Text Declaration (report by
+  Lennart Jablonka) -TD
+* fix for decoding utf-8 in CDATA sections (patch by Hiltjo Posthuma)
+* treat HTTP 308 permanently redirected the same as HTTP 301 permanently moved
+  (Debian #1041686).
+* formatting fixes for manpage (Debian #1037353).
+* change defaults in configure script to use compression -TD
+* modify HTChunkPutb2() to avoid passing a zero-size or null pointer to
+  memcpy() -TD
+* correct loop in fill_addrinfo() which adds sizes of struct addrinfo's found
+  in getaddrinfo() call; the 2.8.8dev.15 change did not update the pointer to
+  the struct addrinfo's (Redhat #2185402) -TD
+* modify configure script to reduce implicit-function warnings -TD
+* add viewport meta-tag to documentation/test files -TD
+* update config.guess (2023-08-22), config.sub (2023-09-15)
+* update ro.po from
+    http://translationproject.org/latest/lynx
 
 2023-01-08 (2.9.0dev.12)
 * add a rewind() call before reading existing bookmark file opened for append
@@ -10,7 +50,7 @@ Changes since Lynx 2.8 release
 * improve compiler-warnings in configure script checks -TD
 * fix a few ifdef'ing problems (prompted by discussion with Klatt Volkmar) -TD
 * fix spelling errors found with codespell (report by Jens Schleusener) -TD
-* update es.po from
+* update eo.po from
     http://translationproject.org/latest/lynx
 
 2022-12-28 (2.9.0dev.11)

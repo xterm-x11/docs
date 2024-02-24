@@ -26,10 +26,56 @@
   "/current/CHANGES.html">CHANGES</a>
   <hr>
   <pre>
--- $LynxId: CHANGES,v 1.1128 2023/01/08 14:08:16 tom Exp $
+-- $LynxId: CHANGES,v 1.1159 2024/01/15 21:41:51 tom Exp $
 ===============================================================================
 Changes since Lynx 2.8 release
 ===============================================================================
+
+<a name="v2.9.0" href="#index-v2.9.0" id=
+"v2.9.0">2024-01-15 (2.9.0)</a>
+* change version of OpenSSL used in Windows installers to 3.x and 1.1.1x,
+  for new/old respectively -TD
+* fixes for UBSAN/ASAN issues with clang on Windows -GV
+* modify install-doc rule to use relative path for symbolic links -TD
+* add support for gopher's hURL functionality (patch by Viatrix).
+* allow ^G interrupt to end read from a stalled connection without exiting
+  Lynx (Debian <a href=
+"http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1033423">#1033423</a>) -TD
+* allow the ^S keymap to be disabled in the configuration file, e.g.,
+    KEYMAP:^S:UNMAPPED
+  (report by TG) -TD
+* repair docs/OS-390.announce and docs/README.jp -TD
+* make the test-files non-empty, to appease some packaging tools -TD
+* check for getpwuid(), use in preference to deprecated cuserid() -TD
+* modify curses initialization to permit ^S built-in keymap to work without
+  needing external stty changes -TD
+* correct ifdef for LYmsec_delay() (report by Alexander Arkhipov) -TD
+* add a NUL after "/" in the SGML parser when the next character is "&gt;", to
+  make PRETTYSRC view display correctly (report by "Dima") -TD
+* trim some obsolete style code for NeXT -TD
+* improve responsiveness with respect to SIGWINCH (report by Mark Zaharov) -TD
+* improve check for MAX_URI_SIZE -TD
+* improve check for UTF-8 character encoding in XML Text Declaration (report by
+  Lennart Jablonka) -TD
+* fix for decoding utf-8 in CDATA sections (patch by Hiltjo Posthuma)
+* treat HTTP 308 permanently redirected the same as HTTP 301 permanently moved
+  (Debian <a href=
+"http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1041686">#1041686</a>).
+* formatting fixes for manpage (Debian <a href=
+"http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1037353">#1037353</a>).
+* change defaults in configure script to use compression -TD
+* modify HTChunkPutb2() to avoid passing a zero-size or null pointer to
+  memcpy() -TD
+* correct loop in fill_addrinfo() which adds sizes of struct addrinfo's found
+  in getaddrinfo() call; the <a href=
+"#v2.8.8dev.15">2.8.8dev.15</a> change did not update the pointer to
+  the struct addrinfo's (Redhat <a href=
+"https://bugzilla.redhat.com/show_bug.cgi?id=2185402">#2185402</a>) -TD
+* modify configure script to reduce implicit-function warnings -TD
+* add viewport meta-tag to documentation/test files -TD
+* update config.guess (2023-08-22), config.sub (2023-09-15)
+* update ro.po from
+    http://translationproject.org/latest/lynx
 
 <a name="v2.9.0dev.12" href="#index-v2.9.0dev.12" id=
 "v2.9.0dev.12">2023-01-08 (2.9.0dev.12)</a>
@@ -39,7 +85,7 @@ Changes since Lynx 2.8 release
 * improve compiler-warnings in configure script checks -TD
 * fix a few ifdef'ing problems (prompted by discussion with Klatt Volkmar) -TD
 * fix spelling errors found with codespell (report by Jens Schleusener) -TD
-* update es.po from
+* update eo.po from
     http://translationproject.org/latest/lynx
 
 <a name="v2.9.0dev.11" href="#index-v2.9.0dev.11" id=
@@ -3737,8 +3783,7 @@ FreeBSD 4.1, 4.8, NetBSD 1.5, 1.6 and OpenBSD 2.8 (curses/ncurses).
   the user's customizations if any, and to save the old configuration
   information in a series, e.g., lynx.cfg-1, lynx.cfg-2, etc. -TD
 * re-fix the problem with config.cache not being removed at the beginning of
-  the configure script - see <a href=
-"#v2.8.5dev.3">2.8.5dev.3</a> (report by Clemens Fisher) -TD
+  the configure script - see 2.8.5dev.3 (report by Clemens Fisher) -TD
 
 <a name="v2.8.5dev.9" href="#index-v2.8.5dev.9" id=
 "v2.8.5dev.9">2002-10-06 (2.8.5dev.9)</a>
@@ -6637,7 +6682,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 * correct some typos in cernrules.txt -VH
 * move declaration of LastDisplayChar to make GridText.c compile with DJGPP -LP
 &gt; the remainder (most) of this patch from KW:
-* HTFTP.c: (already sent w/o description - this is updated to <a href="#v2.8.3dev.10">2.8.3dev.10</a>)
+* HTFTP.c: (already sent w/o description - this is updated to dev.10)
   - interrupted_in_next_data_char was not being reset.  That could make all
     subsequent FTP directory listings fail (by showing an empty directory)
     after receipt of one directory listing had been interrupted.
@@ -8002,9 +8047,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 * fix up some casts and mode_t types in HTAAProt.c, HTFile.c, LYLocal.c,
   LYUtils.c -John Bley
 
-<a name="v2.8.2dev.26__2.8.2pre.1" href=
-"#index-v2.8.2dev.26__2.8.2pre.1" id=
-"v2.8.2dev.26__2.8.2pre.1">1999-05-05 (2.8.2dev.26 - 2.8.2pre.1)</a>
+1999-05-05 (2.8.2dev.26 - 2.8.2pre.1)
 * remove some weird cruft from HTAAUtil.h (yeah, "/home2/luotonen" is a good
   default path) -John Bley
 * correct a buffer overflow in LYDownload.c (reported by John Bley) -TD
@@ -9052,8 +9095,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   LYMainLoop.c, including Lynx's version message - TD
 * fix some discrepancies between the code and the documentation (help files),
   for the alternate line edit keybindings, that were first included in the
-  distribution somewhere around -<a href=
-"#v2.8.2dev.3">2.8.2dev.3</a>, or so - KED
+  distribution somewhere around -dev.3, or so - KED
 * added a delete-to-beginning-of-line (for the alt bindings only), and a help
   page that describes the alternate bindings - KED
 * improved description of "HTML error tolerance" - KW
@@ -9103,7 +9145,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 * correct DOS/EMX logic in LYEdit.c which incremented 'filename' pointer when
   its length was greater than 1 rather than recopying the string, causing a
   core dump when 'filename' was freed (reported by LP, this applies to
-  <a href="#v2.8.1rel.2">2.8.1rel.2</a>) - TD
+  2.8.1rel.2) - TD
 * correct sense of 'already_exists()' function from <a href=
 "#v2.8.2dev.11">2.8.2dev.11</a>, which caused
   various file-menu operations to stop working (reported by IC) - TD
@@ -9306,7 +9348,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   file for append was due to the file's not existing and hence causing
   IsOurFile to return failure.  This caused the -traversal option to fail
   (reported by Francis Irving &lt;francis@ncgraphics.co.uk&gt;, applies to
-  <a href="#v2.8.1rel.2">2.8.1rel.2</a>) - TD
+  2.8.1rel.2) - TD
 * fixed line number removal code in HText_endAnchor in several places, it was
   modifying the wrong line which could lead to memory corruption - KW
 * tweaks in HText_startAnchor and HText_endAnchor for handling link numbers.
@@ -9378,12 +9420,11 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 * modify SGML.c to check for SGML_ELEMENT tag contents, fixing a case where an
   entity that appears within a TABLE but outside of any table row TR will be
   displayed by Lynx _without_ its entities being interpreted (analysis by Alan
-  J Flavell &lt;flavell@a5.ph.gla.ac.uk&gt;, applies to <a href=
-"#v2.8.1rel.2">2.8.1rel.2</a>) - KW
+  J Flavell &lt;flavell@a5.ph.gla.ac.uk&gt;, applies to 2.8.1rel.2) - KW
 * check that stdin is really a tty before trying to select from it in the
   NSL-FORK logic in HTParseInet(), file HTTCP.c (reported by Kim DeVaughn, for
   someone who was unable to run lynx -dump in a cron job, applies to
-  <a href="#v2.8.1rel.2">2.8.1rel.2</a>) - TD, BL
+  2.8.1rel.2) - TD, BL
 * updates for lynx_help_main.html (JES, IC).
 * change fopen for write in LYCookie.c to LYNewTxtFile so that the resulting
   file will be readable by only the owner (Bill Nottingham &lt;wen2@po.cwru.edu&gt;
@@ -9413,7 +9454,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 * modify PutDefs macro in LYShowInfo.c to check for nonnull table[N].value,
   which may be null due to limitations of cfg_defs.sh script on some
   platforms where an empty string was intended (reported by LV, PG, applies
-  to <a href="#v2.8.1rel.2">2.8.1rel.2</a>) - TD
+  to 2.8.1rel.2) - TD
 * correct typo in 'make distclean' rule; an extra '-' prevented removal of
   .orig and .rej files (patch by LV).
 
@@ -9503,8 +9544,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   out that this also sets 'inline', needed for GNU gettext) - TD
 * modify MakeNewTitle() to check for null pointer, fixing core dump with
   verbose images when value[src_type] is null (reported by John Bley
-  &lt;jbb6@acpub.duke.edu&gt; for <a href=
-"#v2.8.1rel.2">2.8.1rel.2</a>) - TD
+  &lt;jbb6@acpub.duke.edu&gt; for 2.8.1rel.2) - TD
 
 <a name="v2.8.2dev.4" href="#index-v2.8.2dev.4" id=
 "v2.8.2dev.4">1998-11-18 (2.8.2dev.4)</a>
@@ -9889,8 +9929,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 <a name="v2.8.1pre.1" href="#index-v2.8.1pre.1" id=
 "v2.8.1pre.1">1998-09-22 (2.8.1pre.1)</a>
 * correct logic error in parse_restrictions() which caused infinite loop,
-  probably from changes in <a href=
-"#v2.8.1dev.8">2.8.1dev.8</a> (reported by HN) - TD
+  probably from changes in dev.8 (reported by HN) - TD
 * add SHOW_KB_RATE symbol to lynx.cfg to allow user to control whether
   HTReadProgress should show KB/sec or bytes/sec - TD
 * modify HTReadProgress to allow user to display KB/sec or bytes/sec - BL
@@ -10039,8 +10078,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   spoofing (based on comments from Mike Castle) - TD
 * integrate WB's mouse changes (see 1997-04-24) for page-up/down into the Unix
   flavors of mouse support (e.g., ncurses and slang) - TD
-* use ncurses define_key to implement lynx-keymaps (see <a href=
-"#v2.8.1dev.10">2.8.1dev.10</a>) - TD
+* use ncurses define_key to implement lynx-keymaps (see dev.10) - TD
 * modify slang keymap code to work with slang 0.99-38 - TD
 * replace several ifdef'd pathname constructions to use LYAddPathToHome() - TD
 * make keymaps file consistently named on Unix and VMS - TD
@@ -10077,8 +10115,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   reported from incremental rendering mode!  - LP
 * set PARTIAL mode ON by default, unless it disabled in lynx.cfg or by
   configure --disable-partial option - LP
-* restore temporary -debug_partial switch, broken in <a href=
-"#v2.8.1dev.23">2.8.1dev.23</a> - LP
+* restore temporary -debug_partial switch, broken in dev.23 - LP
 * made trace in HText_appendCharacter() a little more readable
   for lynx special characters - LP
 * chartrans:  human-readable character set names in Options Menu now changed
@@ -10514,8 +10551,7 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
 
 <a name="v2.8.1dev.12" href="#index-v2.8.1dev.12" id=
 "v2.8.1dev.12">1998-05-14 (2.8.1dev.12)</a>
-* remove unneeded definition used in testing <a href=
-"#v2.8.1dev.11">2.8.1dev.11</a> from config.hin) - TD
+* remove unneeded definition used in testing dev.11 from config.hin) - TD
 <a name="v2.8.1dev.11" href="#index-v2.8.1dev.11" id=
 "v2.8.1dev.11">1998-05-14 (2.8.1dev.11)</a>
 * fixes for function-keys with slang configuration on DOS (patch by DK).
@@ -10709,6 +10745,8 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="CHANGES.html">(top)</a></li>
+      <li><a name="index-v2.9.0" href="#v2.9.0" id=
+      "index-v2.9.0">2024-01-15 (2.9.0)</a></li>
       <li><a name="index-v2.9.0dev.12" href="#v2.9.0dev.12" id=
       "index-v2.9.0dev.12">2023-01-08 (2.9.0dev.12)</a></li>
       <li><a name="index-v2.9.0dev.11" href="#v2.9.0dev.11" id=
@@ -11105,10 +11143,6 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
       "index-v2.8.2pre.3">1999-05-12 (2.8.2pre.3)</a></li>
       <li><a name="index-v2.8.2pre.2" href="#v2.8.2pre.2" id=
       "index-v2.8.2pre.2">1999-05-08 (2.8.2pre.2)</a></li>
-      <li><a name="index-v2.8.2dev.26__2.8.2pre.1" href=
-      "#v2.8.2dev.26__2.8.2pre.1" id=
-      "index-v2.8.2dev.26__2.8.2pre.1">1999-05-05 (2.8.2dev.26 -
-      2.8.2pre.1)</a></li>
       <li><a name="index-v2.8.2dev.25" href="#v2.8.2dev.25" id=
       "index-v2.8.2dev.25">1999-04-27 (2.8.2dev.25)</a></li>
       <li><a name="index-v2.8.2dev.24" href="#v2.8.2dev.24" id=

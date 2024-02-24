@@ -31,8 +31,8 @@
 
                              <i>Thomas Dickey</i>
                       XFree86 Project (1996-2006)
-                    invisible-island.net (2006-2023)
-               updated for XTerm Patch #383 (2023/06/22)
+                    invisible-island.net (2006-2024)
+               updated for XTerm Patch #390 (2024/02/19)
 
 </pre>
 <h2><a name="h2-Definitions" id="h2-Definitions">Definitions</a></h2>
@@ -126,7 +126,7 @@ designed:
         character such as carriage return before the string terminator.
 
 </pre>
-<h2><a name="h3-C1-_8-Bit_-Control-Characters" id="h3-C1-_8-Bit_-Control-Characters">C1 (8-Bit) Control Characters</a></h2>
+<h2><a name="h3-C1-lparen-8-Bit-rparen-Control-Characters" id="h3-C1-lparen-8-Bit-rparen-Control-Characters">C1 (8-Bit) Control Characters</a></h2>
 <pre>
 The <i>xterm</i> program recognizes both 8-bit and 7-bit control characters.
 It generates 7-bit controls (by default) or 8-bit if S8C1T is enabled.
@@ -168,16 +168,16 @@ equivalent:
 <a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-Z.1129">ESC Z</a>
      Return Terminal ID (DECID is 0x9a).  Obsolete form of CSI c  (DA).
 
-<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-[.112A">ESC [</a>
+<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-%5B.116B">ESC [</a>
      Control Sequence Introducer (CSI  is 0x9b).
 
 <a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-bs.11A4">ESC \</a>
      String Terminator (ST  is 0x9c).
 
-<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-].112C">ESC ]</a>
+<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-%5D.116D">ESC ]</a>
      Operating System Command (OSC  is 0x9d).
 
-<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-^.112D">ESC ^</a>
+<a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-%5E.116E">ESC ^</a>
      Privacy Message (PM  is 0x9e).
 
 <a name="h4-C1-lparen-8-Bit-rparen-Control-Characters:ESC-_.112E">ESC _</a>
@@ -316,13 +316,14 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-percent-6.1316"><i>C</i> = % 6</a>  &#8658;&nbsp; Portuguese, VT300.
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-percent-=.131D"><i>C</i> = % =</a>  &#8658;&nbsp; Hebrew, VT500.
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-=.FFF"><i>C</i> = =</a>  &#8658;&nbsp; Swiss, VT200.
-            <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-`,-E-or-6.1231"><i>C</i> = ` , E  or 6</a>  &#8658;&nbsp; Norwegian/Danish, VT200.
+            <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=--percent-60,-E-or-6.1582"><i>C</i> = ` , E  or 6</a>  &#8658;&nbsp; Norwegian/Danish, VT200.
           The final character A  is a special case, since the same final
           character is used by the VT300-control for the 96-character
           British Latin-1.
           There are a few other 94-character sets:
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-0.FF2"><i>C</i> = 0</a>  &#8658;&nbsp; DEC Special Character and Line Drawing Set, VT100.
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-lt.10A2"><i>C</i> = &lt;</a>  &#8658;&nbsp; DEC Supplemental, VT200.
+            <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-lt.10A2"><i>C</i> = &lt;</a>  &#8658;&nbsp; User Preferred Selection Set, VT300.
             <a name="h4-Controls-beginning-with-ESC:ESC-lparen-C:C-=-gt.109D"><i>C</i> = &gt;</a>  &#8658;&nbsp; DEC Technical, VT300.
           These are documented as 94-character sets (like USASCII)
           without NRCS:
@@ -389,9 +390,9 @@ C1 controls, ordered by the final character(s).
 
 <a name="h4-Controls-beginning-with-ESC:ESC-o.C9D">ESC o</a>     Invoke the G3 Character Set as GL (LS3).
 
-<a name="h4-Controls-beginning-with-ESC:ESC-|.CAA">ESC |</a>     Invoke the G3 Character Set as GR (LS3R).
+<a name="h4-Controls-beginning-with-ESC:ESC-%7C.CCD">ESC |</a>     Invoke the G3 Character Set as GR (LS3R).
 
-<a name="h4-Controls-beginning-with-ESC:ESC-}.CAB">ESC }</a>     Invoke the G2 Character Set as GR (LS2R).
+<a name="h4-Controls-beginning-with-ESC:ESC-%7D.CCE">ESC }</a>     Invoke the G2 Character Set as GR (LS2R).
 
 <a name="h4-Controls-beginning-with-ESC:ESC-~.CAC">ESC ~</a>     Invoke the G1 Character Set as GR (LS1R), VT100.
 
@@ -404,13 +405,13 @@ C1 controls, ordered by the final character(s).
 </pre>
 <h2><a name="h3-Device-Control-functions" id="h3-Device-Control-functions">Device-Control functions</a></h2>
 <pre>
-<a name="h4-Device-Control-functions:DCS-Ps;Ps-|-Pt-ST.F9D">DCS <i>Ps</i> ; <i>Ps</i> | <i>Pt</i> ST</a>
+<a name="h4-Device-Control-functions:DCS-Ps;Ps-%7C-Pt-ST.FC0">DCS <i>Ps</i> ; <i>Ps</i> | <i>Pt</i> ST</a>
           User-Defined Keys (DECUDK), VT220 and up.
 
           The first parameter:
-            <a name="h4-Device-Control-functions:DCS-Ps;Ps-|-Pt-ST:Ps-=-0.10EF"><i>Ps</i> = 0</a>  &#8658;&nbsp; Clear all UDK definitions before starting
+            <a name="h4-Device-Control-functions:DCS-Ps;Ps--percent-7C-Pt-ST:Ps-=-0.1438"><i>Ps</i> = 0</a>  &#8658;&nbsp; Clear all UDK definitions before starting
           (default).
-            <a name="h4-Device-Control-functions:DCS-Ps;Ps-|-Pt-ST:Ps-=-1.10F0"><i>Ps</i> = 1</a>  &#8658;&nbsp; Erase Below (default).
+            <a name="h4-Device-Control-functions:DCS-Ps;Ps--percent-7C-Pt-ST:Ps-=-1.1439"><i>Ps</i> = 1</a>  &#8658;&nbsp; Erase Below (default).
 
           The second parameter:
             <i>Ps</i> = 0  &#8656;&nbsp; Lock the keys (default).
@@ -420,6 +421,28 @@ C1 controls, ordered by the final character(s).
           denoting the key-code separated by a "/" from the hex-encoded
           key value.  The key codes correspond to the DEC function-key
           codes (e.g., F6=17).
+
+<a name="h4-Device-Control-functions:DCS-Ps!-u-Pt-ST.EB9">DCS <i>Ps</i>! u <i>Pt</i> ST</a>
+          Assigning User-Preferred Supplemental Sets (DECAUPSS), VT320,
+          VT510.  <i>XTerm</i> ignores this in UTF-8 mode.
+          VT320 provides these:
+            DCS 0 ! u % 5 ST  &#8658;&nbsp; DEC Supplemental Graphic
+            DCS 1 ! u A ST    &#8658;&nbsp; ISO Latin-1 supplemental
+          VT510 adds these:
+            DCS 0 ! u " ? ST  &#8658;&nbsp; DEC Greek
+            DCS 0 ! u " 4 ST  &#8658;&nbsp; DEC Hebrew
+            DCS 0 ! u % 0 ST  &#8658;&nbsp; DEC Turkish
+            DCS 0 ! u &amp; 4 ST  &#8658;&nbsp; DEC Cyrillic
+            DCS 1 ! u B ST    &#8658;&nbsp; ISO Latin-2 Supplemental
+            DCS 1 ! u F ST    &#8658;&nbsp; ISO Greek Supplemental
+            DCS 1 ! u H ST    &#8658;&nbsp; ISO Hebrew Supplemental
+            DCS 1 ! u M ST    &#8658;&nbsp; ISO Latin-5 Supplemental
+            DCS 1 ! u L ST    &#8658;&nbsp; ISO Latin-Cyrillic
+          VT520 accepts a few others (undocumented); xterm adds these:
+            DCS 0 ! u B ST    &#8658;&nbsp; United States (USASCII).
+            DCS 0 ! u 0 ST    &#8658;&nbsp; DEC Special Character and Line Drawing
+          Set.
+            DCS 0 ! u &gt; ST    &#8658;&nbsp; DEC Technical.
 
 <a name="h4-Device-Control-functions:DCS-$-q-Pt-ST.DF5">DCS $ q <i>Pt</i> ST</a>
           Request Status String (DECRQSS), VT420 and up.
@@ -436,6 +459,9 @@ C1 controls, ordered by the final character(s).
             $ ~     &#8658;&nbsp; DECSSDT
             * x     &#8658;&nbsp; DECSACE
             * |     &#8658;&nbsp; DECSNLS
+            , |     &#8658;&nbsp; DECAC (VT525 only)
+            , }     &#8658;&nbsp; DECATC (VT525 only)
+            &gt; <i>Pm</i> m  &#8658;&nbsp; XTQMODKEYS (xterm)
           <i>xterm</i> responds with DCS 1 $ r <i>Pt</i> ST for valid requests,
           replacing the <i>Pt</i> with the corresponding CSI string, or DCS 0 $
           r  ST for invalid requests.
@@ -622,7 +648,7 @@ C1 controls, ordered by the final character(s).
               sizes, but disallows modifying those sizes because that is
               done once, using resource-values.
           <b>o</b>   Graphics geometry is not necessarily the same as "window
-              size" (see the <b>dtterm</b> window manipulation extensions).
+              size" (see the <b>XTWINOPS</b> window manipulation extensions).
               <i>XTerm</i> limits the maximum graphics geometry according to
               the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:maxGraphicSize">maxGraphicSize</a></b> resource.
               The <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:maxGraphicSize">maxGraphicSize</a></b> resource can be either an explicit
@@ -662,15 +688,18 @@ C1 controls, ordered by the final character(s).
 
           (See discussion of <b><a href="#h2-Title-Modes">Title Modes</a></b>).
 
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-5-W.1C75">CSI ? 5 W</a> Reset tab stops to start with column 9, every 8 columns
+          (DECST8C), VT510.
+
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-X.1C98">CSI <i>Ps</i> X</a>  Erase <i>Ps</i> Character(s) (default = 1) (ECH).
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-Z.1C9A">CSI <i>Ps</i> Z</a>  Cursor Backward Tabulation <i>Ps</i> tab stops (default = 1) (CBT).
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-^.1C9E">CSI <i>Ps</i> ^</a>  Scroll down <i>Ps</i> lines (default = 1) (SD), ECMA-48.
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-%5E.1CDF">CSI <i>Ps</i> ^</a>  Scroll down <i>Ps</i> lines (default = 1) (SD), ECMA-48.
           This was a publication error in the original ECMA-48 5th
           edition (1991) corrected in 2003.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-`.1CA0">CSI <i>Ps</i> `</a>  Character Position Absolute  [column] (default = [row,1])
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-%60.1CCB">CSI <i>Ps</i> `</a>  Character Position Absolute  [column] (default = [row,1])
           (HPA).
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-a.1CA1">CSI <i>Ps</i> a</a>  Character Position Relative  [columns] (default = [row,col+1])
@@ -690,6 +719,7 @@ C1 controls, ordered by the final character(s).
             &#8658;&nbsp; CSI ? 6 2 ; <i>Ps</i> c  ("VT220")
             &#8658;&nbsp; CSI ? 6 3 ; <i>Ps</i> c  ("VT320")
             &#8658;&nbsp; CSI ? 6 4 ; <i>Ps</i> c  ("VT420")
+            &#8658;&nbsp; CSI ? 6 5 ; <i>Ps</i> c  ("VT510" to ("VT525")
 
           The VT100-style response parameters do not mean anything by
           themselves.  VT220 (and higher) parameters do, telling the
@@ -797,7 +827,7 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-3-5.1EC5"><i>Ps</i> = 3 5</a>  &#8658;&nbsp; Enable font-shifting functions (rxvt).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-3-8.1EC8"><i>Ps</i> = 3 8</a>  &#8658;&nbsp; Enter Tektronix mode (DECTEK), VT240, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-0.1EC1"><i>Ps</i> = 4 0</a>  &#8658;&nbsp; Allow 80 <b>&#8658;&nbsp;</b> 132 mode, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-1.1EC2"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; <a href="https://www.freebsd.org/cgi/man.cgi?query=more&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>more(1)</b></a> fix (see <b>curses</b> resource).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-1.1EC2"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/more.html">more(1)</a></b> fix (see <b>curses</b> resource).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-2.1EC3"><i>Ps</i> = 4 2</a>  &#8658;&nbsp; Enable National Replacement Character sets
           (DECNRCM), VT220.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-4-3.1EC4"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Enable Graphic Expanded Print Mode (DECGEPM),
@@ -841,6 +871,7 @@ C1 controls, ordered by the final character(s).
           This sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:scrollTtyOutput">scrollTtyOutput</a></b> resource to "true".
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-1-1.1F7A"><i>Ps</i> = 1 0 1 1</a>  &#8658;&nbsp; Scroll to bottom on key press (rxvt).  This
           sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:scrollKey">scrollKey</a></b> resource to "true".
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-1-4.1F7D"><i>Ps</i> = 1 0 1 4</a>  &#8658;&nbsp; Enable <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:fastScroll">fastScroll</a></b> resource, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-1-5.1F7E"><i>Ps</i> = 1 0 1 5</a>  &#8658;&nbsp; Enable urxvt Mouse Mode.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-1-6.1F7F"><i>Ps</i> = 1 0 1 6</a>  &#8658;&nbsp; Enable SGR Mouse PixelMode, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-3-4.1F7F"><i>Ps</i> = 1 0 3 4</a>  &#8658;&nbsp; Interpret "meta" key, <i>xterm</i>.  This sets the
@@ -940,7 +971,7 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-3-0.1EC4"><i>Ps</i> = 3 0</a>  &#8658;&nbsp; Don't show scrollbar (rxvt).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-3-5.1EC9"><i>Ps</i> = 3 5</a>  &#8658;&nbsp; Disable font-shifting functions (rxvt).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-0.1EC5"><i>Ps</i> = 4 0</a>  &#8658;&nbsp; Disallow 80 <b>&#8658;&nbsp;</b> 132 mode, <i>xterm</i>.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-1.1EC6"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; No <a href="https://www.freebsd.org/cgi/man.cgi?query=more&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>more(1)</b></a> fix (see <b>curses</b> resource).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-1.1EC6"><i>Ps</i> = 4 1</a>  &#8658;&nbsp; No <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/more.html">more(1)</a></b> fix (see <b>curses</b> resource).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-2.1EC7"><i>Ps</i> = 4 2</a>  &#8658;&nbsp; Disable National Replacement Character sets
           (DECNRCM), VT220.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-4-3.1EC8"><i>Ps</i> = 4 3</a>  &#8658;&nbsp; Disable Graphic Expanded Print Mode (DECGEPM),
@@ -982,6 +1013,7 @@ C1 controls, ordered by the final character(s).
           (rxvt).  This sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:scrollTtyOutput">scrollTtyOutput</a></b> resource to "false".
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-1-1.1F7E"><i>Ps</i> = 1 0 1 1</a>  &#8658;&nbsp; Don't scroll to bottom on key press (rxvt).
           This sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:scrollKey">scrollKey</a></b> resource to "false".
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-1-4.1F81"><i>Ps</i> = 1 0 1 4</a>  &#8658;&nbsp; Disable <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:fastScroll">fastScroll</a></b> resource, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-1-5.1F82"><i>Ps</i> = 1 0 1 5</a>  &#8658;&nbsp; Disable urxvt Mouse Mode.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-1-6.1F83"><i>Ps</i> = 1 0 1 6</a>  &#8658;&nbsp; Disable SGR Mouse Pixel-Mode, <i>xterm</i>.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-3-4.1F83"><i>Ps</i> = 1 0 3 4</a>  &#8658;&nbsp; Don't interpret "meta" key, <i>xterm</i>.  This
@@ -1142,7 +1174,7 @@ C1 controls, ordered by the final character(s).
           FAQ, which explains why semicolon is accepted as a
           subparameter delimiter:
 
-            <a href="https://invisible-island.net/xterm/xterm.faq.html#color_by_number"><i>Can I set a color by its number?</i></a>
+            <a href="/xterm/xterm.faq.html#color_by_number"><i>Can I set a color by its number?</i></a>
 
           These ISO-8613-6 controls (marked in ECMA-48 5th edition as
           "reserved for future standardization") are supported by <i>xterm</i>:
@@ -1279,9 +1311,6 @@ C1 controls, ordered by the final character(s).
           The last two parameters apply to VT300 &amp; up (keyboard ready)
           and VT400 &amp; up (LK01) respectively.
 
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Ps-n:Ps-=-5-3.1ED1"><i>Ps</i> = 5 3</a>  &#8658;&nbsp; Report Locator status.  The response is CSI ? 5
-          3 n  Locator available, if compiled-in, or CSI ? 5 0 n  No
-          Locator, if not.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Ps-n:Ps-=-5-5.1ED3"><i>Ps</i> = 5 5</a>  &#8658;&nbsp; Report Locator status.  The response is CSI ? 5
           3 n  Locator available, if compiled-in, or CSI ? 5 0 n  No
           Locator, if not.
@@ -1367,9 +1396,9 @@ C1 controls, ordered by the final character(s).
           limitations of C#.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-gt-Ps-q.1DB9">CSI &gt; <i>Ps</i> q</a>
-          <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-gt-Ps-q:Ps-=-0.1F0B"><i>Ps</i> = 0</a>  &#8658;&nbsp; Report <i>xterm</i> name and version (XTVERSION).  The
-          response is a DSR sequence identifying the version: DCS &gt; |
-          text ST
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-gt-Ps-q:Ps-=-0.1F0B"><i>Ps</i> = 0</a>  &#8658;&nbsp; Report <i>xterm</i> name and version (XTVERSION).
+          The response is a DSR sequence identifying the version:
+            DCS &gt; | text ST
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-q.1CB1">CSI <i>Ps</i> q</a>  Load LEDs (DECLL), VT100.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-q:Ps-=-0.1E03"><i>Ps</i> = 0</a>  &#8658;&nbsp; Clear all LEDS (default).
@@ -1529,6 +1558,12 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps;Ps-t:Ps-gt=-2-4.2140"><i>Ps</i> &gt;= 2 4</a>  &#8658;&nbsp; Resize to <i>Ps</i> lines (DECSLPP), VT340 and VT420.
           <i>xterm</i> adapts this by resizing its window.
 
+          XTWINOPS 2 2  (save/push title) and 2 3  (restore/pop title)
+          accept an optional third parameter for direct access to the
+          stack.  Parameters in the range 1 through 10, may be used to
+          store the title into the stack or retrieve the title from the
+          stack without pushing/popping.
+
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-gt-Pm-t.1DB6">CSI &gt; <i>Pm</i> t</a>
           This <i>xterm</i> control sets one or more features of the title
           modes (XTSMTITLE), xterm.  Each parameter enables a single
@@ -1553,11 +1588,24 @@ C1 controls, ordered by the final character(s).
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-u.1BC5">CSI u</a>     Restore cursor (SCORC, also ANSI.SYS).
 
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI&amp;u.1D37">CSI &amp; u</a>   User-Preferred Supplemental Set (DECRQUPSS), VT320, VT510.
+          Response is DECAUPSS.
+
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-u.1D85">CSI <i>Ps</i> SP u</a>
           Set margin-bell volume (DECSMBV), VT520.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-u:Ps-=-0,-5,-6,-7,-or-8.2223"><i>Ps</i> = 0 , 5 , 6 , 7 , or 8</a>  &#8658;&nbsp; high.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-u:Ps-=-1.1ED8"><i>Ps</i> = 1</a>  &#8658;&nbsp; off.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-u:Ps-=-2,-3-or-4.20D4"><i>Ps</i> = 2 , 3  or 4</a>  &#8658;&nbsp; low.
+
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-dq-v.1CC8">CSI " v</a>   Request Displayed Extent (DECRQDE), VT340, VT420.
+          Response is
+            CSI <i>Ph</i>; <i>Pw</i>; <i>Pc</i>; <i>Pr</i>; <i>Pp</i> " v
+          where
+            <i>Ph</i> is the number of lines of the current page
+            <i>Pw</i> is the number of columns of the current page
+            <i>Pc</i> is the column number at the top-left of the window
+            <i>Pr</i> is the row number at the top-left of the window
+            <i>Pp</i> is the current page number
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr;Pp;Pt;Pl;Pp-$-v.23D5">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> ; <i>Pp</i> ; <i>Pt</i> ; <i>Pl</i> ; <i>Pp</i> $ v</a>
           Copy Rectangular Area (DECCRA), VT400 and up.
@@ -1624,7 +1672,6 @@ C1 controls, ordered by the final character(s).
             3  &#8658;&nbsp; omit checksum for cells not explicitly initialized.
             4  &#8658;&nbsp; do not mask cell value to 8 bits or ignore combining
           characters.
-            5  &#8658;&nbsp; do not mask cell value to 7 bits.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pi;Pg;Pt;Pl;Pb;Pr-*-y.21D8">CSI <i>Pi</i> ; <i>Pg</i> ; <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> * y</a>
           Request Checksum of Rectangular Area (DECRQCRA), VT420 and up.
@@ -1652,58 +1699,58 @@ C1 controls, ordered by the final character(s).
           Erase Rectangular Area (DECERA), VT400 and up.
             <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> denotes the rectangle.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{.1D09">CSI <i>Pm</i> ' {</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-%7B.1D2C">CSI <i>Pm</i> ' {</a>
           Select Locator Events (DECSLE).
           Valid values for the first (and any additional parameters)
           are:
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{:Ps-=-0.1E5B"><i>Ps</i> = 0</a>  &#8658;&nbsp; only respond to explicit host requests (DECRQLP).
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'--percent-7B:Ps-=-0.21A4"><i>Ps</i> = 0</a>  &#8658;&nbsp; only respond to explicit host requests (DECRQLP).
           This is default.  It also cancels any filter rectangle.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{:Ps-=-1.1E5C"><i>Ps</i> = 1</a>  &#8658;&nbsp; report button down transitions.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{:Ps-=-2.1E5D"><i>Ps</i> = 2</a>  &#8658;&nbsp; do not report button down transitions.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{:Ps-=-3.1E5E"><i>Ps</i> = 3</a>  &#8658;&nbsp; report button up transitions.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'-{:Ps-=-4.1E5F"><i>Ps</i> = 4</a>  &#8658;&nbsp; do not report button up transitions.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'--percent-7B:Ps-=-1.21A5"><i>Ps</i> = 1</a>  &#8658;&nbsp; report button down transitions.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'--percent-7B:Ps-=-2.21A6"><i>Ps</i> = 2</a>  &#8658;&nbsp; do not report button down transitions.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'--percent-7B:Ps-=-3.21A7"><i>Ps</i> = 3</a>  &#8658;&nbsp; report button up transitions.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-'--percent-7B:Ps-=-4.21A8"><i>Ps</i> = 4</a>  &#8658;&nbsp; do not report button up transitions.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-pound-{.1E1E">CSI # {</a>
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{.1F08">CSI <i>Pm</i> # {</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-pound-%7B.1E41">CSI # {</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-%7B.1F2B">CSI <i>Pm</i> # {</a>
           Push video attributes onto stack (XTPUSHSGR), <i>xterm</i>.  The
           optional parameters correspond to the SGR encoding for video
           attributes, except for colors (which do not have a unique SGR
           code):
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-1.205B"><i>Ps</i> = 1</a>  &#8658;&nbsp; Bold.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-2.205C"><i>Ps</i> = 2</a>  &#8658;&nbsp; Faint.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-3.205D"><i>Ps</i> = 3</a>  &#8658;&nbsp; Italicized.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-4.205E"><i>Ps</i> = 4</a>  &#8658;&nbsp; Underlined.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-5.205F"><i>Ps</i> = 5</a>  &#8658;&nbsp; Blink.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-7.2061"><i>Ps</i> = 7</a>  &#8658;&nbsp; Inverse.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-8.2062"><i>Ps</i> = 8</a>  &#8658;&nbsp; Invisible.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-9.2063"><i>Ps</i> = 9</a>  &#8658;&nbsp; Crossed-out characters.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-2-1.20BA"><i>Ps</i> = 2 1</a>  &#8658;&nbsp; Doubly-underlined.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-3-0.20BA"><i>Ps</i> = 3 0</a>  &#8658;&nbsp; Foreground color.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound-{:Ps-=-3-1.20BB"><i>Ps</i> = 3 1</a>  &#8658;&nbsp; Background color.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-1.23A4"><i>Ps</i> = 1</a>  &#8658;&nbsp; Bold.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-2.23A5"><i>Ps</i> = 2</a>  &#8658;&nbsp; Faint.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-3.23A6"><i>Ps</i> = 3</a>  &#8658;&nbsp; Italicized.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-4.23A7"><i>Ps</i> = 4</a>  &#8658;&nbsp; Underlined.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-5.23A8"><i>Ps</i> = 5</a>  &#8658;&nbsp; Blink.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-7.23AA"><i>Ps</i> = 7</a>  &#8658;&nbsp; Inverse.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-8.23AB"><i>Ps</i> = 8</a>  &#8658;&nbsp; Invisible.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-9.23AC"><i>Ps</i> = 9</a>  &#8658;&nbsp; Crossed-out characters.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-2-1.2403"><i>Ps</i> = 2 1</a>  &#8658;&nbsp; Doubly-underlined.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-3-0.2403"><i>Ps</i> = 3 0</a>  &#8658;&nbsp; Foreground color.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-pound--percent-7B:Ps-=-3-1.2404"><i>Ps</i> = 3 1</a>  &#8658;&nbsp; Background color.
 
           If no parameters are given, all of the video attributes are
           saved.  The stack is limited to 10 levels.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr-$-{.1FEE">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> $ {</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr-$-%7B.2011">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> $ {</a>
           Selective Erase Rectangular Area (DECSERA), VT400 and up.
             <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> denotes the rectangle.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr-pound-|.21F1">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> # |</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr-pound-%7C.2214">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> # |</a>
           Report selected graphic rendition (XTREPORTSGR), <i>xterm</i>.  The
           response is an SGR sequence which contains the attributes
           which are common to all cells in a rectangle.
             <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> denotes the rectangle.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-|.1D0D">CSI <i>Ps</i> $ |</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-%7C.1D30">CSI <i>Ps</i> $ |</a>
           Select columns per page (DECSCPP), VT340.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-|:Ps-=-0.1E5F"><i>Ps</i> = 0</a>  &#8658;&nbsp; 80 columns, default if <i>Ps</i> omitted.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-|:Ps-=-8-0.1EC4"><i>Ps</i> = 8 0</a>  &#8658;&nbsp; 80 columns.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-|:Ps-=-1-3-2.1F1F"><i>Ps</i> = 1 3 2</a>  &#8658;&nbsp; 132 columns.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$--percent-7C:Ps-=-0.21A8"><i>Ps</i> = 0</a>  &#8658;&nbsp; 80 columns, default if <i>Ps</i> omitted.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$--percent-7C:Ps-=-8-0.220D"><i>Ps</i> = 8 0</a>  &#8658;&nbsp; 80 columns.
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$--percent-7C:Ps-=-1-3-2.2268"><i>Ps</i> = 1 3 2</a>  &#8658;&nbsp; 132 columns.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-|.1D10">CSI <i>Ps</i> ' |</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-%7C.1D33">CSI <i>Ps</i> ' |</a>
           Request Locator Position (DECRQLP).
           Valid values for the parameter are:
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-|:Ps-=-0,-1-or-omitted.231D"><i>Ps</i> = 0 , 1 or omitted</a> &#8658;&nbsp; transmit a single DECLRP locator
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'--percent-7C:Ps-=-0,-1-or-omitted.2666"><i>Ps</i> = 0 , 1 or omitted</a> &#8658;&nbsp; transmit a single DECLRP locator
           report.
 
           If Locator Reporting has been enabled by a DECELR, <i>xterm</i> will
@@ -1740,20 +1787,56 @@ C1 controls, ordered by the final character(s).
           decimal.
           The "<i>page</i>" parameter is not used by xterm.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-*-|.1D13">CSI <i>Ps</i> * |</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-*-%7C.1D36">CSI <i>Ps</i> * |</a>
           Select number of lines per screen (DECSNLS), VT420 and up.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-pound-}.1E20">CSI # }</a>   Pop video attributes from stack (XTPOPSGR), <i>xterm</i>.  Popping
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-pound-%7D.1E43">CSI # }</a>   Pop video attributes from stack (XTPOPSGR), <i>xterm</i>.  Popping
           restores the video-attributes which were saved using XTPUSHSGR
           to their previous state.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-}.1D11">CSI <i>Ps</i> ' }</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_-%7C.1F1C">CSI <i>Ps</i>; <i>Pf</i>; <i>Pb</i>, |</a>
+          Assign Color (DECAC), VT525 only.
+            <i>Ps</i> selects the color item
+            <i>Pf</i> is the foreground color index 0..15
+            <i>Pb</i> is the background color index 0..15
+          Color items:
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7C:Ps-=-1.2395"><i>Ps</i> = 1</a>  &#8658;&nbsp; normal text
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7C:Ps-=-2.2396"><i>Ps</i> = 2</a>  &#8658;&nbsp; window frame
+          <i>xterm</i> uses the SGR color palette with DECAC color item 1 to
+          update the VT100 window colors, like OSC  1 0  and 1 1 .
+
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_-%7D.1F1D">CSI <i>Ps</i>; <i>Pf</i>; <i>Pb</i>, }</a>
+          Alternate Text Color (DECATC), VT525 only.  This feature
+          specifies the colors to use when DECSTGLT is selected to 1 or
+          2.
+            <i>Ps</i> selects attribute combinations
+            <i>Pf</i> is the foreground color index 0..15
+            <i>Pb</i> is the background color index 0..15
+          Attribute combinations:
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-0.2395"><i>Ps</i> = 0</a>  &#8658;&nbsp; normal text
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1.2396"><i>Ps</i> = 1</a>  &#8658;&nbsp; bold
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-2.2397"><i>Ps</i> = 2</a>  &#8658;&nbsp; reverse
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-3.2398"><i>Ps</i> = 3</a>  &#8658;&nbsp; underline
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-4.2399"><i>Ps</i> = 4</a>  &#8658;&nbsp; blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-5.239A"><i>Ps</i> = 5</a>  &#8658;&nbsp; bold reverse
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-6.239B"><i>Ps</i> = 6</a>  &#8658;&nbsp; bold underline
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-7.239C"><i>Ps</i> = 7</a>  &#8658;&nbsp; bold blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-8.239D"><i>Ps</i> = 8</a>  &#8658;&nbsp; reverse underline
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-9.239E"><i>Ps</i> = 9</a>  &#8658;&nbsp; reverse blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-0.23F3"><i>Ps</i> = 1 0</a>  &#8658;&nbsp; underline blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-1.23F4"><i>Ps</i> = 1 1</a>  &#8658;&nbsp; bold reverse underline
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-2.23F5"><i>Ps</i> = 1 2</a>  &#8658;&nbsp; bold reverse blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-3.23F6"><i>Ps</i> = 1 3</a>  &#8658;&nbsp; bold underline blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-4.23F7"><i>Ps</i> = 1 4</a>  &#8658;&nbsp; reverse underline blink
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Pf;Pb_--percent-7D:Ps-=-1-5.23F8"><i>Ps</i> = 1 5</a>  &#8658;&nbsp; bold reverse underline blink
+
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-%7D.1D34">CSI <i>Ps</i> ' }</a>
           Insert <i>Ps</i> Column(s) (default = 1) (DECIC), VT420 and up.
 
-<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-}.1D0E">CSI <i>Ps</i> $ }</a>
+<a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-%7D.1D31">CSI <i>Ps</i> $ }</a>
           Select active status display (DECSASD), VT320 and up.
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-}:Ps-=-0.1E60"><i>Ps</i> = 0</a>  &#8658;&nbsp; main (default)
-            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$-}:Ps-=-1.1E61"><i>Ps</i> = 1</a>  &#8658;&nbsp; status line
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$--percent-7D:Ps-=-0.21A9"><i>Ps</i> = 0</a>  &#8658;&nbsp; main (default)
+            <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-$--percent-7D:Ps-=-1.21AA"><i>Ps</i> = 1</a>  &#8658;&nbsp; status line
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-'-~.1D12">CSI <i>Ps</i> ' ~</a>
           Delete <i>Ps</i> Column(s) (default = 1) (DECDC), VT420 and up.
@@ -1770,15 +1853,17 @@ C1 controls, ordered by the final character(s).
 <a name="h4-Operating-System-Commands:OSC-Ps;Pt-BEL.E91">OSC <i>Ps</i> ; <i>Pt</i> BEL</a>
 
 <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST.E65">OSC <i>Ps</i> ; <i>Pt</i> ST</a>
-          Set Text Parameters.  Some control sequences return
+          Set Text Parameters, <i>xterm</i>.  Some control sequences return
           information:
           <b>o</b>   For colors and font, if <i>Pt</i> is a "?", the control sequence
               elicits a response which consists of the control sequence
               which would set the corresponding value.
-          <b>o</b>   The <i>dtterm</i> control sequences allow you to determine the
-              icon name and window title.
+          <b>o</b>   A few of these control sequences began with <i>dtterm</i> (codes
+              0 , 1 , and 2 ).  Code 3  in <i>dtterm</i> sets the working
+              directory for the next session.  <i>XTerm</i> does that with the
+              <b><a href="/xterm/manpage/xterm.html#Actions:spawn-new-terminal">spawn-new-terminal</a></b> action.
 
-          XTerm accepts either BEL  or ST  for terminating OSC
+          <i>XTerm</i> accepts either BEL  or ST  for terminating OSC
           sequences, and when returning information, uses the same
           terminator used in a query.  While the latter is preferred,
           the former is supported for legacy applications:
@@ -1845,6 +1930,24 @@ C1 controls, ordered by the final character(s).
           list.  The colors are specified by name or RGB specification
           as per <i>XParseColor</i>.
 
+               <b>Resource                 Description</b>
+               -----------------------+-----------------------------
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:foreground">foreground</a></b>             | VT100 text foreground color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:background">background</a></b>             | VT100 text background color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:cursorColor">cursorColor</a></b>            | text cursor color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:pointerColor">pointerColor</a></b>           | pointer foreground color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:pointerColorBackground">pointerColorBackground</a></b> | pointer background
+               (<b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:foreground">foreground</a></b>)           | Tektronix foreground color
+               (<b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:background">background</a></b>)           | Tektronix background color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:highlightColor">highlightColor</a></b>         | highlight background color
+               (<b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:cursorColor">cursorColor</a></b>)          | Tektronix cursor color
+               <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:highlightTextColor">highlightTextColor</a></b>     | highlight foreground color
+               -----------------------+-----------------------------
+
+          The Tektronix colors are initially set from the VT100 colors,
+          but after that can be set independently using these control
+          sequences.
+
           If a "?" is given rather than a name or RGB specification,
           <i>xterm</i> replies with a control sequence of the same form which
           can be used to set the corresponding dynamic color.  Because
@@ -1863,10 +1966,14 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-1-8.101D"><i>Ps</i> = 1 8</a>  &#8658;&nbsp; Change Tektronix cursor color to <i>Pt</i>.
             <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-1-9.101E"><i>Ps</i> = 1 9</a>  &#8658;&nbsp; Change highlight foreground color to <i>Pt</i>.
 
-            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-2-2.1018"><i>Ps</i> = 2 2</a>  &#8658;&nbsp; Change pointer cursor to <i>Pt</i>.
+            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-2-2.1018"><i>Ps</i> = 2 2</a>  &#8658;&nbsp; Change pointer cursor shape to <i>Pt</i>.  The
+          parameter <i>Pt</i> sets the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:pointerShape">pointerShape</a></b> resource.  If <i>Pt</i> is empty,
+          or does not match any of the standard names, <i>n</i>  uses the
+          resource's default "xterm" shape.
 
-            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-4-6.101E"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Change Log File to <i>Pt</i>.  This is normally
-          disabled by a compile-time option.
+            <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-4-6.101E"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Change Log File to <i>Pt</i>.  The parameter <i>Pt</i> sets
+          the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:logFile">logFile</a></b> resource.  Logging is normally disabled by a
+          compile-time option.
 
             <a name="h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-5-0.1019"><i>Ps</i> = 5 0</a>  &#8658;&nbsp; Set Font to <i>Pt</i>.  These controls may be disabled
           using the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:allowFontOps">allowFontOps</a></b> resource.  If <i>Pt</i> begins with a "#",
@@ -2010,8 +2117,8 @@ Terminal keyboards have two types of keys:
 It uses the <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:translations">translations</a></b> resource to decide what to do with these
 events.
 
-<b>o</b>   Ordinary keys are handled with the <b>insert-seven-bit</b> or <b>insert-eight-</b>
-    <b>bit</b> action.
+<b>o</b>   Ordinary keys are handled with the <b><a href="/xterm/manpage/xterm.html#Actions:insert-seven-bit">insert-seven-bit</a></b> action, or the
+    <b><a href="/xterm/manpage/xterm.html#Actions:insert-eight-bit">insert-eight-bit</a></b> action.
 
 <b>o</b>   Special keys may be handled with other resources.  However, <i>xterm</i>
     also has built-in logic to map commonly-used special keys into
@@ -2067,9 +2174,9 @@ confuse it with CSI u  (restore-cursor).
 
 The <i>xterm</i> FAQ sections
 
-   <a href="https://invisible-island.net/xterm/xterm.faq.html#xterm_modother"><i>How can my program distinguish control-I from tab?</i></a>
+   <a href="/xterm/xterm.faq.html#xterm_modother"><i>How can my program distinguish control-I from tab?</i></a>
 
-   <a href="https://invisible-island.net/xterm/modified-keys.html"><i>XTerm - "Other" Modified Keys</i></a>
+   <a href="/xterm/modified-keys.html"><i>XTerm - "Other" Modified Keys</i></a>
 
 go into greater detail on this topic.
 
@@ -2475,7 +2582,7 @@ followed by the pasted text, followed by
    ESC [ 2 0 1 ~ .
 For background and discussion, see the FAQ:
 
-  <a href="https://invisible-island.net/xterm/xterm-paste64.html"><i>XTerm - bracketed-paste</i></a>
+  <a href="/xterm/xterm-paste64.html"><i>XTerm - bracketed-paste</i></a>
 
 </pre>
 <h2><a name="h2-Readline-Modes" id="h2-Readline-Modes">Readline Modes</a></h2>
@@ -2997,7 +3104,7 @@ real Tektronix 4014 would not respond to either.
             <a name="h4-Tektronix-4014-Mode:OSC-Ps;Pt-BEL:Ps-=-4-6.D00"><i>Ps</i> = 4 6</a>  &#8658;&nbsp; Change Log File to <i>Pt</i>.  This is normally
           disabled by a compile-time option.
 
-<a name="h4-Tektronix-4014-Mode:ESC-`.8DB">ESC `</a>     Normal Z Axis and Normal (solid) Vectors.
+<a name="h4-Tektronix-4014-Mode:ESC-%60.906">ESC `</a>     Normal Z Axis and Normal (solid) Vectors.
 
 <a name="h4-Tektronix-4014-Mode:ESC-a.8DC">ESC a</a>     Normal Z Axis and Dotted Line Vectors.
 
@@ -3089,10 +3196,11 @@ However long, the technical manuals have problems:
 <b>o</b>   DEC's manuals did not provide a comprehensive comparison of the
     features in different model.
 
-    Peter Sichel's <i>Host Interface Functions Checklist</i> spreadsheet is
-    useful for noting which model introduced a given feature (although
-    there are a few apparent errors such as the DECRQSS feature cited
-    for VT320 whereas the technical manual omits it).
+    <a href="/xterm/ctlseqs/dec_term_function_checklist.pdf"><i>Host Interface Functions Checklist</i></a> by Peter Sichel (January 12,
+    1994) is helpful.  This spreadsheet is useful for noting which model
+    introduced a given feature (although there are a few apparent errors
+    such as the DECRQSS feature cited for VT320 whereas the technical
+    manual omits it).
 
 <b>o</b>   Sometimes the manuals disagree.  For example, DEC's standard
     document (DEC STD 070) for terminals says that DECSCL performs a
@@ -3229,7 +3337,7 @@ documents were found on the bitsavers site.
 The DEC terminal family (VT100 through VT525) is upward-compatible,
 using standards plus <i>extensions</i>, e.g., "private modes".  Not all
 commonly-used features are standard.  For example, scrolling regions are
-not found in ECMA-48.  On the other hand, ECMA-48 was not intended to
+not found in ECMA-48.  On the other hand, ECMA-48 was not intended to be
 all-encompassing.  Quoting from the second edition:
 
     Full conformance to a standard means that all its requirements are
@@ -3243,7 +3351,7 @@ all-encompassing.  Quoting from the second edition:
 
     This Standard addresses a whole class of devices which can vary
     greatly from each other depending on the application for which a
-    device has been specifically designed. Obviously, a product which
+    device has been specifically designed.  Obviously, a product which
     implements all facilities described in this standard - thus being in
     "full conformance" with it - whilst theoretically possible, would be
     technically and economically unthinkable.
@@ -3284,8 +3392,8 @@ Again, it is possible to find discrepancies in the standards:
 
         ANSI X3.64-1979, and ECMA-48, <i>Additional Controls for Character-</i>
         <i>Imaging I/O Devices</i>, were developed in parallel, with close
-        liaison.  ISO DP 6429, Additional Control Functions for
-        Character-Imaging Devices, was developed as a synthesis of X3.04
+        liaison.  ISO DP 6429, <i>Additional Control Functions for</i>
+        <i>Character-Imaging Devices</i>, was developed as a synthesis of X3.64
         and ECMA-48.  During this process, some control functions as
         well as additional selective parameters were added.  Except for
         point 1 below, X3.64 is a subset of ISO 6429.  Although the two
@@ -3422,7 +3530,7 @@ and less-detailed manual pages.
         Most Dec Private mode settings can be saved away internally
         using \E[?<i>n</i>s, where <i>n</i> is the same number to set or reset the Dec
         Private mode.  The mode can be restored using \E[?<i>n</i>r.  This can
-        be used in termcap for <b>vi</b>, for example, to turn off saving of
+        be used in termcap for <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/vi.html">vi(1)</a></b>, for example, to turn off saving of
         lines, but restore whatever the original state was on exit.
 
     while the SCOSC/SCORC  pair  was  added  in  1995  by  XFree86  (and
@@ -3484,7 +3592,7 @@ and less-detailed manual pages.
 <li><a href="#h2-Definitions">Definitions</a>
 <ul>
 <li><a href="#h3-Control-Bytes_-Characters_-and-Sequences" name="h2-Control-Bytes_-Characters_-and-Sequences">Control Bytes, Characters, and Sequences</a></li>
-<li><a href="#h3-C1-_8-Bit_-Control-Characters" name="h2-C1-_8-Bit_-Control-Characters">C1 (8-Bit) Control Characters</a></li>
+<li><a href="#h3-C1-lparen-8-Bit-rparen-Control-Characters" name="h2-C1-lparen-8-Bit-rparen-Control-Characters">C1 (8-Bit) Control Characters</a></li>
 <li><a href="#h3-VT100-related-terminals" name="h2-VT100-related-terminals">VT100-related terminals</a></li>
 </ul></li>
 <li><a href="#h2-VT100-Mode">VT100 Mode</a>
