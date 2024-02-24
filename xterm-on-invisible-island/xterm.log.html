@@ -2,7 +2,7 @@
  *****************************************************************************
  * this file is part of xterm                                                *
  *                                                                           *
- * Copyright 1997-2022,2023 by Thomas E. Dickey                              *
+ * Copyright 1997-2023,2024 by Thomas E. Dickey                              *
  *                                                                           *
  * All Rights Reserved                                                       *
  *                                                                           *
@@ -30,7 +30,7 @@
  * sale, use or other dealings in this Software without prior written        *
  * authorization.                                                            *
  *****************************************************************************
-  $XTermId: xterm.log.html,v 1.2535 2023/07/10 21:11:27 tom Exp $
+  $XTermId: xterm.log.html,v 1.2600 2024/02/19 22:32:04 tom Exp $
   -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
@@ -58,7 +58,7 @@
   <a href="/">https://invisible-island.net/</a><a href=
   "/xterm/">xterm/</a><a href=
   "/xterm/xterm.log.html">xterm.log</a><br>
-  Copyright © © 1997-2022,2023 by <a href=
+  Copyright © © 1997-2023,2024 by <a href=
   "mailto:dickey@invisible-island.net">Thomas E. Dickey</a>
   <hr>
   <h2>Contents</h2>
@@ -75,6 +75,12 @@
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="xterm.log.html">(top)</a></li>
+      <li><a href="#xterm_390">Patch #390 - 2024/02/19</a></li>
+      <li><a href="#xterm_389">Patch #389 - 2024/01/01</a></li>
+      <li><a href="#xterm_388">Patch #388 - 2023/10/22</a></li>
+      <li><a href="#xterm_387">Patch #387 - 2023/10/15</a></li>
+      <li><a href="#xterm_386">Patch #386 - 2023/10/09</a></li>
+      <li><a href="#xterm_385">Patch #385 - 2023/10/01</a></li>
       <li><a href="#xterm_384">Patch #384 - 2023/07/10</a></li>
       <li><a href="#xterm_383">Patch #383 - 2023/06/27</a></li>
       <li><a href="#xterm_382">Patch #382 - 2023/05/30</a></li>
@@ -672,6 +678,184 @@
       <li><a href="#xterm_01">Patch #1 - 1996/1/6</a></li>
     </ul>
   </div>
+  <h2><a name="xterm_390" id="xterm_390">Patch #390 -
+  2024/02/19</a></h2>
+  <ul>
+    <li>improve typography of control-sequences page (patches by
+    Branden Robinson).</li>
+    <li>amend UPSS change from <a href="#xterm_389">patch #389</a>,
+    fixing a regression in VT100/VT220 character sets.</li>
+    <li>modify ANSI conformance per ECMA-43 and DEC 070:
+      <ul>
+        <li>set ANSI conformance level to 3 for DEC levels 2 and
+        up.</li>
+        <li>disable locking shifts in level 1, e.g., VT100.</li>
+        <li>disable single-shifts from G2/G3 in level 1.</li>
+        <li>use UPSS for G2/G3 in levels 2 and up.</li>
+      </ul>
+    </li>
+    <li>modify invisible-character attribute to permit
+    <tt>DECRQCRA</tt> to report a consistent checksum
+    (report/testcase by Thomas Wolff).</li>
+    <li>align terminfo building blocks in terminfo to correspond to
+    recent refactoring/trimming in ncurses.</li>
+    <li>set flag in regexec call for
+    <code>on<em>N</em>Clicks</code> to handle “<tt>^</tt>” anchor
+    (patch by Matthew Martin).</li>
+    <li>add line-drawing data for the characters in <a href=
+    "https://www.vt100.net/charsets/technical.html"><em>DEC
+    Technical</em></a> which have no Unicode equivalents.</li>
+    <li>remove a special case in <tt>encode_scs</tt> which made
+    xterm report Latin-1 when encoding is set to UTF-8, where ASCII
+    is the selected character set. This fixes a regression in
+    vttest for the <tt>DECRSPS</tt> cursor test.</li>
+    <li>correct values for <em>Ps</em> of <tt>DECAUPSS</tt> in
+    <tt>ctlseqs.ms</tt> (report by James Holderness).</li>
+    <li>simplify/correct expression for checking Unicode
+    non-characters (report by Thomas Wolff).</li>
+    <li>correct loop for trimming environment variables
+    (report/patch by Casper Dik).</li>
+    <li>fixes for manpage formatting (Debian <a href=
+    "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1041809">#1041809</a>).</li>
+    <li>update config.guess, config.sub</li>
+  </ul>
+  <h2><a name="xterm_389" id="xterm_389">Patch #389 -
+  2024/01/01</a></h2>
+  <ul>
+    <li>interchange variables in subparameter parsing, fixing a bug
+    where subparameters after the first parameter could be
+    misidentified (patch by Adam Saponara).</li>
+    <li>correct popping of icon/window titles in a case where only
+    one was pushed from <a href="#xterm_385">patch #385</a>
+    changes.</li>
+    <li>add <tt>XTQMODKEYS</tt> response in <tt>DECRQSS</tt>, as
+    alternative for vim.</li>
+    <li>correct <tt>DECCIR</tt> encoded information on character
+    set size, handle a VT525 quirk, and add <tt>DECST8C</tt>
+    (Windows Terminal <a href=
+    "https://github.com/microsoft/terminal/issues/14984">#14984</a>).</li>
+    <li>improve <tt>DECRQCRA</tt> (prompted by discussion with
+    James Holderness, Windows Terminal <a href=
+    "https://github.com/microsoft/terminal/issues/14974">#14974</a>).</li>
+    <li>add part of VT525 color controls:
+      <ul>
+        <li><tt>DECAC</tt>, to update default
+        foreground/background, respond to <tt>DECRQSS</tt></li>
+        <li><tt>DECATC</tt>, to respond with <tt>DECRQSS</tt></li>
+      </ul>
+    </li>
+    <li>prevent Unicode non-characters from being printed (prompted
+    by patch by Grady Martin).</li>
+    <li>modify <tt>send_SGR()</tt> to avoid modifying colors 16 to
+    255 in printed output (patch by Grady Martin).</li>
+    <li>minor cleanup of miscellaneous error-codes with
+    <tt>ERROR_MISC</tt>.</li>
+    <li>remove legacy <tt><em>CSI</em> 53</tt> for locator status,
+    corrected in <a href="#xterm_294">patch #294</a>.</li>
+    <li>modify <tt>DECRQUPSS</tt> and <tt>DECAUPSS</tt> feature to
+    support VT5xx character sets (report by Thomas Wolff).</li>
+    <li>improve configure script:
+      <ul>
+        <li>reduce configure-check compiler warnings (prompted by
+        Florian Weimer, Redhat <a href=
+        "https://bugzilla.redhat.com/show_bug.cgi?id=2251945">#2251945</a>)</li>
+        <li>improve usage messages in configure script to make it
+        clearer when an option value is optional.</li>
+      </ul>
+    </li>
+    <li>improve EWMH handling (report/analysis by Edward Rosten)
+      <ul>
+        <li>reset <tt>_NET_WM_STATE_HIDDEN</tt> flag from
+        <tt>_NET_WM_STATE</tt> before mapping the window to
+        deiconify.</li>
+        <li>cache X properties to reduce latency (adapted from
+        patch by Edward Rosten).</li>
+      </ul>
+    </li>
+  </ul>
+  <h2><a name="xterm_388" id="xterm_388">Patch #388 -
+  2023/10/22</a></h2>
+  <ul>
+    <li>improve <tt>disallowPasteControls</tt> by adding a category
+    for the special characters known to <tt>stty</tt> (prompted by
+    discussion with David Leadbeater).</li>
+    <li>amend support of <tt>DECAUPSS</tt>, undoing change to
+    initialization of G2/G3 so that pasting of GR characters works
+    properly (report/analysis by Petri Kaukasoina).</li>
+    <li>update config.guess, config.sub</li>
+  </ul>
+  <h2><a name="xterm_387" id="xterm_387">Patch #387 -
+  2023/10/15</a></h2>
+  <ul>
+    <li>add <tt>DECRQUPSS</tt> and <tt>DECAUPSS</tt>.</li>
+    <li>add <tt>DECRQDE</tt> (report by Jake Hamby).</li>
+    <li>correct indexing expression in title-stack, from <a href=
+    "#xterm_385">patch #385</a> changes (report by Brian
+    Lindholm).</li>
+  </ul>
+  <h2><a name="xterm_386" id="xterm_386">Patch #386 -
+  2023/10/09</a></h2>
+  <ul>
+    <li>improve references in <tt>ctlseqs.ms</tt> (prompted by
+    discussion with Kirill Chibisov).</li>
+    <li>make the maximum amount of memory used for buffering DCS
+    and OSC strings configurable with <tt>maxStringParse</tt>
+    resource (report by Daniel Franke).</li>
+    <li>improve performance of ReGIS when initializing the largest
+    fontsize (report by Ben Wong).</li>
+    <li>fix regression in SIXEL colors, in <a href=
+    "#xterm_385">patch #385</a> (report/patch by Jonny
+    Langley).</li>
+    <li>fix typo in <code>--with-wtmp</code> (report/patch by Sven
+    Joachim)</li>
+  </ul>
+  <h2><a name="xterm_385" id="xterm_385">Patch #385 -
+  2023/10/01</a></h2>
+  <ul>
+    <li>fixes for ReGIS (report by Ben Wong).
+      <ul>
+        <li>correct conversion from HLS to RGB</li>
+        <li>improve font-caching performance.</li>
+      </ul>
+    </li>
+    <li>update tables in <code>wcwidth.c</code> based on Unicode
+    15.1.0</li>
+    <li>improve <code>fastScroll</code> resource:
+      <ul>
+        <li>suppress screen-refreshes for carriage-returns</li>
+        <li>add <code>-jf</code> option to simplify use of this
+        resource.</li>
+        <li>add a control sequence for enabling/disabling the
+        resource.</li>
+        <li>enable this feature by default</li>
+      </ul>
+    </li>
+    <li>extend title-stack feature to allow an additional parameter
+    to directly access the stack, like the
+    <code>XTPUSHCOLORS</code> and <code>XTPOPCOLORS</code>
+    feature.</li>
+    <li>correct size and position of box shown for double-cell
+    character which happens to be missing from the bitmap font
+    (report by Peter Fabinski).</li>
+    <li>improved configure script:
+      <ul>
+        <li>add pattern for uClibc-ng to <tt>CF_XOPEN_SOURCE</tt>
+        (report/patch by Waldemar Brodkorb).</li>
+        <li>add configure options <tt>--with-utmp-path</tt> and
+        <tt>--with-wtmp-path</tt> to override configure script's
+        check for utmp/wtmp pathnames which are shown in the manual
+        (Debian <a href=
+        "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1042767">#1042767</a>).</li>
+        <li><tt>CF_XOPEN_SOURCE</tt> provides for defining
+        <tt>_DEFAULT_SOURCE</tt> for MinGW32 and MinGW64.</li>
+        <li>sed expression used to report gcc version now works
+        with MinGW</li>
+      </ul>
+    </li>
+    <li>ensure that line-attributes are reset after drawing missing
+    character (report by Christian Weisgerber).</li>
+    <li>update config.guess, config.sub</li>
+  </ul>
   <h2><a name="xterm_384" id="xterm_384">Patch #384 -
   2023/07/10</a></h2>
   <ul>

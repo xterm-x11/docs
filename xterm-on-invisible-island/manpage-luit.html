@@ -265,6 +265,37 @@ href="/luit/">luit/</a>
               SHELL is not set, <b>luit</b> executes /bin/sh.
 
 </pre>
+<h2><a name="h2-FILES" id="h2-FILES">FILES</a></h2>
+<pre>       <b>The</b> <b>file</b> <b>mapping</b> <b>locales</b> <b>to</b> <b>locale</b> <b>encodings.</b>
+
+</pre>
+<h2><a name="h2-BUGS" id="h2-BUGS">BUGS</a></h2>
+<h3><a name="h3-Limitations" id="h3-Limitations">Limitations</a></h3>
+<pre>       None   of   this  complexity  should  be  necessary.   Stateless  UTF-8
+       throughout the system is the way to go.
+
+       Charsets with a non-trivial intermediary byte are not yet supported.
+
+       Selecting alternate sets of control characters  is  not  supported  and
+       will never be.
+
+</pre>
+<h3><a name="h3-Security" id="h3-Security">Security</a></h3>
+<pre>       On  systems  with  SVR4  ("Unix-98") ptys (Linux version 2.2 and later,
+       SVR4), <b>luit</b> should be run as the invoking user.
+
+       On systems  without  SVR4  ("Unix-98")  ptys  (notably  BSD  variants),
+       running  <b>luit</b>  as  an  ordinary user will leave the tty world-writable;
+       this is a security hole, and <b>luit</b> will generate a  warning  (but  still
+       accept  to  run).   A possible solution is to make <b>luit</b> suid root; <b>luit</b>
+       should drop privileges sufficiently early to make this safe.   However,
+       the  startup  code  has  not  been exhaustively audited, and the author
+       takes no responsibility for any resulting security issues.
+
+       <b>Luit</b> will refuse to run if it is installed  setuid  and  cannot  safely
+       drop privileges.
+
+</pre>
 <h2><a name="h2-EXAMPLES" id="h2-EXAMPLES">EXAMPLES</a></h2>
 <pre>       The  most  typical  use of <b>luit</b> is to adapt an instance of <b>XTerm</b> to the
        locale's encoding.  Current versions of <b>XTerm</b> invoke <b>luit</b> automatically
@@ -292,34 +323,11 @@ href="/luit/">luit/</a>
               M-x set-terminal-coding-system RET iso-2022-8bit-ss2 RET
 
 </pre>
-<h2><a name="h2-FILES" id="h2-FILES">FILES</a></h2>
-<pre>       <b>The</b> <b>file</b> <b>mapping</b> <b>locales</b> <b>to</b> <b>locale</b> <b>encodings.</b>
+<h2><a name="h2-AUTHORS" id="h2-AUTHORS">AUTHORS</a></h2>
+<pre>       Luit was written by Juliusz  Chroboczek  &lt;jch@pps.jussieu.fr&gt;  for  the
+       XFree86 project.
 
-</pre>
-<h2><a name="h2-SECURITY" id="h2-SECURITY">SECURITY</a></h2>
-<pre>       On systems with SVR4 ("Unix-98") ptys (Linux  version  2.2  and  later,
-       SVR4), <b>luit</b> should be run as the invoking user.
-
-       On  systems  without  SVR4  ("Unix-98")  ptys  (notably  BSD variants),
-       running <b>luit</b> as an ordinary user will  leave  the  tty  world-writable;
-       this  is  a  security hole, and <b>luit</b> will generate a warning (but still
-       accept to run).  A possible solution is to make <b>luit</b>  suid  root;  <b>luit</b>
-       should  drop privileges sufficiently early to make this safe.  However,
-       the startup code has not been  exhaustively  audited,  and  the  author
-       takes no responsibility for any resulting security issues.
-
-       <b>Luit</b>  will  refuse  to  run if it is installed setuid and cannot safely
-       drop privileges.
-
-</pre>
-<h2><a name="h2-BUGS" id="h2-BUGS">BUGS</a></h2>
-<pre>       None  of  this  complexity  should  be  necessary.    Stateless   UTF-8
-       throughout the system is the way to go.
-
-       Charsets with a non-trivial intermediary byte are not yet supported.
-
-       Selecting  alternate  sets  of  control characters is not supported and
-       will never be.
+       Thomas E. Dickey has maintained <b>luit</b> for use by <b>xterm</b> since 2006.
 
 </pre>
 <h2><a name="h2-SEE-ALSO" id="h2-SEE-ALSO">SEE ALSO</a></h2>
@@ -343,14 +351,7 @@ href="/luit/">luit/</a>
 
        <b>o</b>   <i>Control Functions for Coded Character Sets (ISO 6429, <a href="https://www.ecma-international.org/publications-and-standards/standards//ecma-48/"><b>ECMA-48</b></a>)</i>
 
-       <b>o</b>   http://czyborra.com/charsets/
-
-</pre>
-<h2><a name="h2-AUTHOR" id="h2-AUTHOR">AUTHOR</a></h2>
-<pre>       Luit was written by Juliusz  Chroboczek  &lt;jch@pps.jussieu.fr&gt;  for  the
-       XFree86 project.
-
-       Thomas E. Dickey has maintained <b>luit</b> for use by <b>xterm</b> since 2006.
+       <b>o</b>   <a href="https://czyborra.com/charsets/">https://czyborra.com/charsets/</a>
 
                                 X Window System                        <b>LUIT(1)</b>
 </pre>
@@ -362,12 +363,16 @@ href="/luit/">luit/</a>
 <li><a href="#h2-DESCRIPTION">DESCRIPTION</a></li>
 <li><a href="#h2-OPTIONS">OPTIONS</a></li>
 <li><a href="#h2-ENVIRONMENT">ENVIRONMENT</a></li>
-<li><a href="#h2-EXAMPLES">EXAMPLES</a></li>
 <li><a href="#h2-FILES">FILES</a></li>
-<li><a href="#h2-SECURITY">SECURITY</a></li>
-<li><a href="#h2-BUGS">BUGS</a></li>
+<li><a href="#h2-BUGS">BUGS</a>
+<ul>
+<li><a href="#h3-Limitations">Limitations</a></li>
+<li><a href="#h3-Security">Security</a></li>
+</ul>
+</li>
+<li><a href="#h2-EXAMPLES">EXAMPLES</a></li>
+<li><a href="#h2-AUTHORS">AUTHORS</a></li>
 <li><a href="#h2-SEE-ALSO">SEE ALSO</a></li>
-<li><a href="#h2-AUTHOR">AUTHOR</a></li>
 </ul>
 </div>
 </body>

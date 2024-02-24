@@ -242,6 +242,34 @@ ENVIRONMENT
               entry in /etc/passwd) to decide  which  shell  to  execute.   If
               SHELL is not set, luit executes /bin/sh.
 
+FILES
+       The file mapping locales to locale encodings.
+
+BUGS
+   Limitations
+       None   of   this  complexity  should  be  necessary.   Stateless  UTF-8
+       throughout the system is the way to go.
+
+       Charsets with a non-trivial intermediary byte are not yet supported.
+
+       Selecting alternate sets of control characters  is  not  supported  and
+       will never be.
+
+   Security
+       On  systems  with  SVR4  ("Unix-98") ptys (Linux version 2.2 and later,
+       SVR4), luit should be run as the invoking user.
+
+       On systems  without  SVR4  ("Unix-98")  ptys  (notably  BSD  variants),
+       running  luit  as  an  ordinary user will leave the tty world-writable;
+       this is a security hole, and luit will generate a  warning  (but  still
+       accept  to  run).   A possible solution is to make luit suid root; luit
+       should drop privileges sufficiently early to make this safe.   However,
+       the  startup  code  has  not  been exhaustively audited, and the author
+       takes no responsibility for any resulting security issues.
+
+       Luit will refuse to run if it is installed  setuid  and  cannot  safely
+       drop privileges.
+
 EXAMPLES
        The  most  typical  use of luit is to adapt an instance of XTerm to the
        locale's encoding.  Current versions of XTerm invoke luit automatically
@@ -268,32 +296,11 @@ EXAMPLES
 
               M-x set-terminal-coding-system RET iso-2022-8bit-ss2 RET
 
-FILES
-       The file mapping locales to locale encodings.
+AUTHORS
+       Luit was written by Juliusz  Chroboczek  <jch@pps.jussieu.fr>  for  the
+       XFree86 project.
 
-SECURITY
-       On systems with SVR4 ("Unix-98") ptys (Linux  version  2.2  and  later,
-       SVR4), luit should be run as the invoking user.
-
-       On  systems  without  SVR4  ("Unix-98")  ptys  (notably  BSD variants),
-       running luit as an ordinary user will  leave  the  tty  world-writable;
-       this  is  a  security hole, and luit will generate a warning (but still
-       accept to run).  A possible solution is to make luit  suid  root;  luit
-       should  drop privileges sufficiently early to make this safe.  However,
-       the startup code has not been  exhaustively  audited,  and  the  author
-       takes no responsibility for any resulting security issues.
-
-       Luit  will  refuse  to  run if it is installed setuid and cannot safely
-       drop privileges.
-
-BUGS
-       None  of  this  complexity  should  be  necessary.    Stateless   UTF-8
-       throughout the system is the way to go.
-
-       Charsets with a non-trivial intermediary byte are not yet supported.
-
-       Selecting  alternate  sets  of  control characters is not supported and
-       will never be.
+       Thomas E. Dickey has maintained luit for use by xterm since 2006.
 
 SEE ALSO
        These are portable:
@@ -317,12 +324,6 @@ SEE ALSO
        o   Control Functions for Coded Character Sets (ISO 6429, ECMA-48)
 
        o   http://czyborra.com/charsets/
-
-AUTHOR
-       Luit was written by Juliusz  Chroboczek  <jch@pps.jussieu.fr>  for  the
-       XFree86 project.
-
-       Thomas E. Dickey has maintained luit for use by xterm since 2006.
 
 
 

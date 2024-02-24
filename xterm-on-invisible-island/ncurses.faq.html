@@ -1393,7 +1393,7 @@ Jesse Thilo, Warren Tucker, Peter Wemm.
       However, of its 40 command-line options, 60% &mdash; all of
       those which are frequently used &mdash; duplicate <a href=
       "man/tput.1.html"><code>tput</code></a>, <a href=
-      "man/tset.1.html#h3-reset---reinitialization"><code>reset</code></a>,
+      "man/tset.1.html#h3-reset----reinitialization"><code>reset</code></a>,
       or <a href="man/tabs.1.html"><code>tabs</code></a>. The
       others are rarely used, Linux-specific.</p>
     </li>
@@ -1526,59 +1526,93 @@ Jesse Thilo, Warren Tucker, Peter Wemm.
       "https://cvsweb.openbsd.org/src/lib/libcurses/">OpenBSD</a>
       use ncurses as the system curses library.</p>
 
-      <p>FreeBSD's system curses library limits its database to the
-      hashed database <a href=
-      "https://svnweb.freebsd.org/base/head/lib/ncurses/ncurses/termcap.c?revision=326025&amp;view=markup">
-      termcap reader</a> from <a href=
-      "https://github.com/ThomasDickey/ncurses-snapshots/blob/master/ncurses/tinfo/read_termcap.c">
-      ncurses</a>. Until 2021 (see <a href=
-      "https://cgit.freebsd.org/src/commit/?id=61f66a1f4403fded9aae14d890ad96914a3c0bc1">
-      commit</a>), the ncurses utility programs were not used with
-      FreeBSD's system curses (including <a href=
-      "https://svnweb.freebsd.org/base/head/usr.bin/tabs/">tabs</a>
-      and <a href=
-      "https://svnweb.freebsd.org/base/head/usr.bin/tput/">tput</a>&mdash;
-      but see discussion in the <a href=
-      "man/tput.1.html#h2-HISTORY">manual page</a>). The add-on
-      <a href=
-      "https://svnweb.freebsd.org/ports/head/devel/ncurses/">ncurses
-      port</a> provides a terminfo database, along with the
-      <em>ncurses</em> utility programs. Originally that used a
-      conventional directory-tree configuration, but changed in
-      <a href=
-      "https://svnweb.freebsd.org/ports/head/devel/ncurses/Makefile?r1=327793&amp;r2=337857">
-      2013</a> to use ncurses' hashed-database feature.</p>
-
-      <p>OpenBSD, on the other hand, used to use its own terminfo
-      reader for a hashed database. That was <a href=
-      "https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/lib/libcurses/tinfo/read_entry.c.diff?r1=1.16&amp;r2=1.17">
-      discarded</a> late in <a href=
+      <p>Both of those systems (FreeBSD for termcap until <a href=
+      "https://github.com/freebsd/freebsd-src/commit/61f66a1f4403fded9aae14d890ad96914a3c0bc1">
+      2021</a>, OpenBSD for terminfo until <a href=
       "https://cvsweb.openbsd.org/src/lib/libcurses/tinfo/read_entry.c?rev=1.17&amp;content-type=text/x-cvsweb-markup">
-      2015</a>.</p>
-
-      <p>Both of those systems (FreeBSD in 2020, OpenBSD until
-      2015) use source-only entries in their respective hashed
+      2015</a>) used source-only entries in their respective hashed
       system terminal databases. Since <a href=
       "/ncurses/announce-5.6.html">2006</a>, <em>ncurses</em>
       supports an alternate configuration, storing compiled
       (binary) entries in its hashed database, to improve runtime
       performance.</p>
+
+      <ul>
+        <li>
+          <p>FreeBSD's system curses library uses the <a href=
+          "https://github.com/freebsd/freebsd-src/blob/61f66a1f4403fded9aae14d890ad96914a3c0bc1/contrib/ncurses/ncurses/tinfo/read_termcap.c">
+          termcap reader</a> from <a href=
+          "https://github.com/ThomasDickey/ncurses-snapshots/blob/master/ncurses/tinfo/read_termcap.c">
+          ncurses</a>. The base system's terminal database is
+          referred to as &ldquo;termcap.db&rdquo; but is actually
+          an ncurses terminfo hashed database.</p>
+
+          <p>Until 2021 (see <a href=
+          "https://cgit.freebsd.org/src/commit/?id=61f66a1f4403fded9aae14d890ad96914a3c0bc1">
+          commit</a>), the ncurses utility programs were not used
+          with FreeBSD's system curses (including <a href=
+          "https://svnweb.freebsd.org/base/head/usr.bin/tabs/">tabs</a>
+          and <a href=
+          "https://svnweb.freebsd.org/base/head/usr.bin/tput/">tput</a>&mdash;
+          but see discussion in the <a href=
+          "man/tput.1.html#h2-HISTORY">manual page</a>). The add-on
+          <a href=
+          "https://svnweb.freebsd.org/ports/head/devel/ncurses/">ncurses
+          port</a> provides a terminfo database, along with the
+          <em>ncurses</em> utility programs. Originally that used a
+          conventional directory-tree configuration, but changed in
+          <a href=
+          "https://svnweb.freebsd.org/ports/head/devel/ncurses/Makefile?r1=327793&amp;r2=337857">
+          2013</a> to use ncurses' hashed-database feature. Several
+          years later, FreeBSD <a href=
+          "https://github.com/freebsd/freebsd-ports/commit/ad08c2f24145cb0a224d47568513e359bfe4cfa1">
+          changed back</a> to the directory-tree to eliminate
+          problems with some packages, e.g,. <a href=
+          "https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262130">
+          this</a>.</p>
+        </li>
+
+        <li>
+          <p>OpenBSD, on the other hand, used to use its own
+          terminfo reader for a hashed database. That was <a href=
+          "https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/lib/libcurses/tinfo/read_entry.c.diff?r1=1.16&amp;r2=1.17">
+          discarded</a> late in <a href=
+          "https://cvsweb.openbsd.org/src/lib/libcurses/tinfo/read_entry.c?rev=1.17&amp;content-type=text/x-cvsweb-markup">
+          2015</a>, to use ncurses.</p>
+        </li>
+      </ul>
     </li>
 
     <li>
       <p id="bsd_platform-other"><a href=
       "http://cvsweb.netbsd.org/bsdweb.cgi/src/share/terminfo/?only_with_tag=MAIN">
-      NetBSD</a> and Solaris 11 use ncurses' terminal database,
-      with their different implementations of curses.</p>
+      NetBSD</a> and <a href=
+      "https://github.com/oracle/solaris-userland/tree/master/components/ncurses">
+      Solaris 11</a> use ncurses' terminal database, with their
+      different implementations of curses.</p>
+
+      <p>NetBSD provides an add-on <a href=
+      "http://pkgsrc.se/devel/ncurses">package</a> for the ncurses
+      libraries and utilities. Although NetBSD developers prefer to
+      use their own version of the curses library, as of September
+      2023, slightly less than half of the packages whose build
+      script mentions curses specify ncurses (189 of 394).</p>
+
+      <p>Solaris installs ncurses for use by several programs
+      including bash, cmake, gdb, less, lftp, lynx, mutt, nano,
+      python (multiple versions), ruby, tmux, vim, xterm, and
+      zsh.</p>
     </li>
 
     <li>
       <p id="bsd_platform-macos">As of January 2020, <a href=
-      "https://opensource.apple.com/source/ncurses/ncurses-53.200.3/">
+      "https://opensource.apple.com/source/ncurses/">
       MacOS</a> and <a href=
       "https://cvsweb.openbsd.org/src/lib/libcurses/">OpenBSD</a>
-      provide <a href="/ncurses/announce-5.7.html">ncurses 5.7</a>
-      (from 2008) for their system curses library.</p>
+      provided <a href="/ncurses/announce-5.7.html">ncurses 5.7</a>
+      (from 2008) for their system curses library. A few years
+      later, that is still the same, but there are some hints that
+      might change.</p>
 
       <p>Due to its age, ncurses 5.7 may not work as expected. For
       instance, the command <a href=
@@ -1592,6 +1626,39 @@ Jesse Thilo, Warren Tucker, Peter Wemm.
       low-level terminfo or termcap interfaces (see <a href=
       "/ncurses/announce-6.2.html#h3-bug-fixes">ncurses 6.2</a>
       release notes).</p>
+
+      <ul>
+        <li>
+          <p>According to recent (September 2023) discussion with
+          OpenBSD developers, they plan to upgrade ncurses in
+          OpenBSD 7.4, while enabling the ncurses 6.x
+          enhancements.</p>
+        </li>
+
+        <li>
+          <p>For MacOS, the story is less clear.</p>
+
+          <p>Recent updates in Apple's Git repository have been
+          aimed at some of the ncurses updates in the terminfo
+          functions (see the &ldquo;<a href=
+          "https://github.com/apple-oss-distributions/ncurses/tree/rel/ncurses-61">ncurses-61</a>&rdquo;
+          branch which applies the changes for <a href=
+          "/ncurses/man/curs_terminfo.3x.html#h3-Formatting-Output">
+          tiparm_s</a>). That could help, but being fifteen years
+          out of date is a serious handicap.</p>
+
+          <p>In July 2023, the MacOS terminfo database was updated.
+          A subsequent bug report <a href=
+          "https://github.com/tmux/tmux/issues/3677">tmux #3677</a>
+          showed that the entry for xterm-256color had errors.
+          Because that sort of thing could happen if one used the
+          ncurses 5.7 utilities to compile a terminfo source from
+          ncurses 6.2 or later, I mention this problem on the
+          <a href=
+          "/ncurses/ncurses.html#download_database">terminal
+          database</a> section of the ncurses home page.</p>
+        </li>
+      </ul>
     </li>
 
     <li>
@@ -6718,7 +6785,7 @@ cat -v
 
   <p>Ncurses 5.0 can be configured to establish its own
   <code>SIGWINCH</code> hander. In this configuration, the <a href=
-  "/ncurses/man/curs_getch.3x.html#h3-Predefined-key-codes"><code>wgetch</code></a>
+  "/ncurses/man/curs_getch.3x.html#h3-Predefined-Key-Codes"><code>wgetch</code></a>
   function returns a special keycode <code>KEY_RESIZE</code> when a
   resizing event is detected. The signal handler also sets a flag
   which the library checks with <a href=

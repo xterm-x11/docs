@@ -1,11 +1,11 @@
 %!PS-Adobe-3.0
 %%Creator: groff version 1.22.4
-%%CreationDate: Sat Feb 20 11:14:02 2021
+%%CreationDate: Wed Jan  3 08:35:05 2024
 %%DocumentNeededResources: font Times-Roman
 %%+ font Times-Bold
 %%+ font Times-Italic
 %%DocumentSuppliedResources: procset grops 1.22 4
-%%Pages: 4
+%%Pages: 5
 %%PageOrder: Ascend
 %%DocumentMedia: Default 612 792 0 () ()
 %%Orientation: Portrait
@@ -486,84 +486,91 @@ R F1(setlocale)3.224 E F0 .724(returns a f)3.224 F(ailure,)-.1 E F1
 674.4 R 2.777(se)-.55 G .277
 (ntry in /etc/passwd\) to decide which shell to e)-2.777 F -.15(xe)-.15
 G 2.776(cute. If).15 F .276(SHELL is not set,)2.776 F F1(luit)144 686.4
-Q F0 -.15(exe)2.5 G(cutes /bin/sh.).15 E F3(EXAMPLES)72 703.2 Q F0 .266
-(The most typical use of)108 715.2 R F1(luit)2.767 E F0 .267
-(is to adapt an instance of)2.767 F F1(XT)2.767 E(erm)-.92 E F0 .267
-(to the locale')2.767 F 2.767(se)-.55 G 2.767(ncoding. Current)-2.767 F
--.15(ve)2.767 G .267(rsions of).15 F F1(XT)108 727.2 Q(erm)-.92 E F0(in)
-4.008 E -.2(vo)-.4 G -.1(ke).2 G F1(luit)4.108 E F0 1.507
-(automatically when it is needed.)4.008 F 1.507
-(If you are using an older release of)6.507 F F1(XT)4.007 E(erm)-.92 E
-F0 4.007(,o)C 4.007(ra)-4.007 G 2.5(XW)268.27 768 S(indo)-2.9 E 2.5(wS)
--.25 G 188.77(ystem 3)-2.5 F 0 Cg EP
+Q F0 -.15(exe)2.5 G(cutes /bin/sh.).15 E F3(FILES)72 703.2 Q F0 2.5(XW)
+268.27 768 S(indo)-2.9 E 2.5(wS)-.25 G 188.77(ystem 3)-2.5 F 0 Cg EP
 %%Page: 4 4
 %%BeginPageSetup
 BP
 %%EndPageSetup
 /F0 10/Times-Roman@0 SF 140.69(LUIT\(1\) General)72 48 R
-(Commands Manual)2.5 E(LUIT\(1\))143.19 E(dif)108 84 Q
-(ferent terminal emulator)-.25 E 2.5(,y)-.4 G(ou may in)-2.5 E -.2(vo)
--.4 G -.1(ke).2 G/F1 10/Times-Bold@0 SF(luit)2.6 E F0(manually:)2.5 E
-2.5($x)144 100.8 S(term \255u8 \255e luit)-2.5 E .363
-(If you are running in a UTF-8 locale b)108 117.6 R .363
-(ut need to access a remote machine that doesn')-.2 F 2.864(ts)-.18 G
-.364(upport UTF-8,)-2.864 F F1(luit)2.864 E F0
-(can adapt the remote output to your terminal:)108 129.6 Q 2.5($L)144
-146.4 S(C_ALL=fr_FR luit ssh le)-2.5 E -.05(ga)-.15 G -.15(cy).05 G
-(-machine).15 E F1(Luit)108 163.2 Q F0 .087(is also useful with applica\
-tions that hard-wire an encoding that is dif)2.587 F .086
-(ferent from the one normally used)-.25 F 1.181(on the system or w)108
-175.2 R 1.181(ant to use le)-.1 F -.05(ga)-.15 G 1.481 -.15(cy e).05 H
-1.181(scape sequences for multilingual output.).15 F 1.182
-(In particular)6.182 F 3.682(,v)-.4 G 1.182(ersions of)-3.832 F F1
-(Emacs)108 187.2 Q F0(that do not speak UTF-8 well can use)2.5 E F1
-(luit)2.5 E F0(for multilingual output:)2.5 E 2.5($l)144 204 S
-(uit \255encoding 'ISO 8859\2551' emacs \255nw)-2.5 E(And then, in)108
-220.8 Q F1(Emacs)2.5 E F0(,)A(M\255x set\255terminal\255coding\255syste\
-m RET iso\2552022\2558bit\255ss2 RET)144 237.6 Q/F2 10.95/Times-Bold@0
-SF(FILES)72 254.4 Q F1(The \214le mapping locales to locale encodings.)
-108 266.4 Q F2(SECURITY)72 283.2 Q F0 .344
-(On systems with SVR4 \(\231Unix-98\232\) ptys \(Linux v)108 295.2 R
+(Commands Manual)2.5 E(LUIT\(1\))143.19 E/F1 10/Times-Bold@0 SF
+(The \214le mapping locales to locale encodings.)108 84 Q/F2 10.95
+/Times-Bold@0 SF -.11(BU)72 100.8 S(GS).11 E F1(Limitations)87 112.8 Q
+F0(None of this comple)108 124.8 Q(xity should be necessary)-.15 E 5(.S)
+-.65 G(tateless UTF-8 throughout the system is the w)-5 E(ay to go.)-.1
+E(Charsets with a non-tri)108 141.6 Q
+(vial intermediary byte are not yet supported.)-.25 E(Selecting alterna\
+te sets of control characters is not supported and will ne)108 158.4 Q
+-.15(ve)-.25 G 2.5(rb).15 G(e.)-2.5 E F1(Security)87 175.2 Q F0 .344
+(On systems with SVR4 \(\231Unix-98\232\) ptys \(Linux v)108 187.2 R
 .344(ersion 2.2 and later)-.15 F 2.844(,S)-.4 G(VR4\),)-2.844 E F1(luit)
-2.844 E F0 .344(should be run as the in-)2.844 F -.2(vo)108 307.2 S
-(king user).2 E(.)-.55 E .707
+2.844 E F0 .344(should be run as the in-)2.844 F -.2(vo)108 199.2 S
+(king user).2 E(.)-.55 E .708
 (On systems without SVR4 \(\231Unix-98\232\) ptys \(notably BSD v)108
-324 R .707(ariants\), running)-.25 F F1(luit)3.207 E F0 .708
-(as an ordinary user will)3.208 F(lea)108 336 Q .463 -.15(ve t)-.2 H
-.163(he tty w).15 F .163(orld-writable; this is a security hole, and)-.1
-F F1(luit)2.663 E F0 .162(will generate a w)2.663 F .162(arning \(b)-.1
-F .162(ut still accept to run\).)-.2 F 2.673(Ap)108 348 S .174
-(ossible solution is to mak)-2.673 F(e)-.1 E F1(luit)2.674 E F0 .174
+216 R .707(ariants\), running)-.25 F F1(luit)3.207 E F0 .707
+(as an ordinary user will)3.207 F(lea)108 228 Q .462 -.15(ve t)-.2 H
+.162(he tty w).15 F .162(orld-writable; this is a security hole, and)-.1
+F F1(luit)2.663 E F0 .163(will generate a w)2.663 F .163(arning \(b)-.1
+F .163(ut still accept to run\).)-.2 F 2.674(Ap)108 240 S .174
+(ossible solution is to mak)-2.674 F(e)-.1 E F1(luit)2.674 E F0 .174
 (suid root;)2.674 F F1(luit)2.674 E F0 .174(should drop pri)2.674 F
 (vile)-.25 E .174(ges suf)-.15 F .174(\214ciently early to mak)-.25 F
-2.674(et)-.1 G .174(his safe.)-2.674 F(Ho)108 360 Q(we)-.25 E -.15(ve)
--.25 G 1.15 -.4(r, t).15 H .35(he startup code has not been e).4 F
+2.673(et)-.1 G .173(his safe.)-2.673 F(Ho)108 252 Q(we)-.25 E -.15(ve)
+-.25 G 1.149 -.4(r, t).15 H .349(he startup code has not been e).4 F
 (xhausti)-.15 E -.15(ve)-.25 G .349(ly audited, and the author tak).15 F
-.349(es no responsibility for an)-.1 F(y)-.15 E
-(resulting security issues.)108 372 Q F1(Luit)108 388.8 Q F0(will refus\
+.35(es no responsibility for an)-.1 F(y)-.15 E
+(resulting security issues.)108 264 Q F1(Luit)108 280.8 Q F0(will refus\
 e to run if it is installed setuid and cannot safely drop pri)2.5 E
-(vile)-.25 E(ges.)-.15 E F2 -.11(BU)72 405.6 S(GS).11 E F0
-(None of this comple)108 417.6 Q(xity should be necessary)-.15 E 5(.S)
--.65 G(tateless UTF-8 throughout the system is the w)-5 E(ay to go.)-.1
-E(Charsets with a non-tri)108 434.4 Q
-(vial intermediary byte are not yet supported.)-.25 E(Selecting alterna\
-te sets of control characters is not supported and will ne)108 451.2 Q
--.15(ve)-.25 G 2.5(rb).15 G(e.)-2.5 E F2(SEE ALSO)72 468 Q F0
-(These are portable:)108 480 Q<83>108 496.8 Q(xterm\(1\),)118 496.8 Q
-<83>108 513.6 Q(ncurses\(3X\).)118 513.6 Q(These are Linux-speci\214c:)
-108 530.4 Q<83>108 547.2 Q(unicode\(7\),)118 547.2 Q<83>108 564 Q
-(utf-8\(7\),)118 564 Q<83>108 580.8 Q(charsets\(7\).)118 580.8 Q
-(These are particularly useful:)108 597.6 Q<83>108 614.4 Q/F3 10
-/Times-Italic@0 SF(Char)118 614.4 Q(acter Code Structur)-.15 E 2.5(ea)
--.37 G(nd Extension T)-2.5 E(ec)-.92 E(hniques \(ISO 2022, ECMA-35\))
--.15 E F0<83>108 631.2 Q F3(Contr)118 631.2 Q
-(ol Functions for Coded Char)-.45 E(acter Sets \(ISO 6429, ECMA-48\))
--.15 E F0<83>108 648 Q(http://czyborra.com/charsets/)118 648 Q F2 -.548
-(AU)72 664.8 S(THOR).548 E F0(Luit w)108 676.8 Q(as written by Juliusz \
-Chroboczek <jch@pps.jussieu.fr> for the XFree86 project.)-.1 E
-(Thomas E. Dick)108 693.6 Q .3 -.15(ey h)-.1 H(as maintained).15 E F1
-(luit)2.5 E F0(for use by)2.5 E F1(xterm)2.5 E F0(since 2006.)2.5 E 2.5
-(XW)268.27 768 S(indo)-2.9 E 2.5(wS)-.25 G 188.77(ystem 4)-2.5 F 0 Cg EP
+(vile)-.25 E(ges.)-.15 E F2(EXAMPLES)72 297.6 Q F0 .267
+(The most typical use of)108 309.6 R F1(luit)2.767 E F0 .267
+(is to adapt an instance of)2.767 F F1(XT)2.767 E(erm)-.92 E F0 .267
+(to the locale')2.767 F 2.767(se)-.55 G 2.766(ncoding. Current)-2.767 F
+-.15(ve)2.766 G .266(rsions of).15 F F1(XT)108 321.6 Q(erm)-.92 E F0(in)
+3.036 E -.2(vo)-.4 G -.1(ke).2 G F1(luit)3.136 E F0 .536
+(automatically when it is needed.)3.036 F .536
+(If you are using an older release of)5.536 F F1(XT)3.037 E(erm)-.92 E
+F0 3.037(,o)C 3.037(rad)-3.037 G(if-)-3.037 E(ferent terminal emulator)
+108 333.6 Q 2.5(,y)-.4 G(ou may in)-2.5 E -.2(vo)-.4 G -.1(ke).2 G F1
+(luit)2.6 E F0(manually:)2.5 E 2.5($x)144 350.4 S
+(term \255u8 \255e luit)-2.5 E .363
+(If you are running in a UTF-8 locale b)108 367.2 R .363
+(ut need to access a remote machine that doesn')-.2 F 2.863(ts)-.18 G
+.363(upport UTF-8,)-2.863 F F1(luit)2.863 E F0
+(can adapt the remote output to your terminal:)108 379.2 Q 2.5($L)144
+396 S(C_ALL=fr_FR luit ssh le)-2.5 E -.05(ga)-.15 G -.15(cy).05 G
+(-machine).15 E F1(Luit)108 412.8 Q F0 .086(is also useful with applica\
+tions that hard-wire an encoding that is dif)2.586 F .087
+(ferent from the one normally used)-.25 F 1.182(on the system or w)108
+424.8 R 1.181(ant to use le)-.1 F -.05(ga)-.15 G 1.481 -.15(cy e).05 H
+1.181(scape sequences for multilingual output.).15 F 1.181
+(In particular)6.181 F 3.681(,v)-.4 G 1.181(ersions of)-3.831 F F1
+(Emacs)108 436.8 Q F0(that do not speak UTF-8 well can use)2.5 E F1
+(luit)2.5 E F0(for multilingual output:)2.5 E 2.5($l)144 453.6 S
+(uit \255encoding 'ISO 8859\2551' emacs \255nw)-2.5 E(And then, in)108
+470.4 Q F1(Emacs)2.5 E F0(,)A(M\255x set\255terminal\255coding\255syste\
+m RET iso\2552022\2558bit\255ss2 RET)144 487.2 Q F2 -.548(AU)72 504 S
+(THORS).548 E F0(Luit w)108 516 Q(as written by Juliusz Chroboczek <jch\
+@pps.jussieu.fr> for the XFree86 project.)-.1 E(Thomas E. Dick)108 532.8
+Q .3 -.15(ey h)-.1 H(as maintained).15 E F1(luit)2.5 E F0(for use by)2.5
+E F1(xterm)2.5 E F0(since 2006.)2.5 E F2(SEE ALSO)72 549.6 Q F0
+(These are portable:)108 561.6 Q<83>108 578.4 Q(xterm\(1\),)118 578.4 Q
+<83>108 595.2 Q(ncurses\(3X\).)118 595.2 Q(These are Linux-speci\214c:)
+108 612 Q<83>108 628.8 Q(unicode\(7\),)118 628.8 Q<83>108 645.6 Q
+(utf-8\(7\),)118 645.6 Q<83>108 662.4 Q(charsets\(7\).)118 662.4 Q
+(These are particularly useful:)108 679.2 Q<83>108 696 Q/F3 10
+/Times-Italic@0 SF(Char)118 696 Q(acter Code Structur)-.15 E 2.5(ea)-.37
+G(nd Extension T)-2.5 E(ec)-.92 E(hniques \(ISO 2022, ECMA-35\))-.15 E
+F0<83>108 712.8 Q F3(Contr)118 712.8 Q(ol Functions for Coded Char)-.45
+E(acter Sets \(ISO 6429, ECMA-48\))-.15 E F0 2.5(XW)268.27 768 S(indo)
+-2.9 E 2.5(wS)-.25 G 188.77(ystem 4)-2.5 F 0 Cg EP
+%%Page: 5 5
+%%BeginPageSetup
+BP
+%%EndPageSetup
+/F0 10/Times-Roman@0 SF 140.69(LUIT\(1\) General)72 48 R
+(Commands Manual)2.5 E(LUIT\(1\))143.19 E<83>108 84 Q
+(http://czyborra.com/charsets/)118 84 Q 2.5(XW)268.27 768 S(indo)-2.9 E
+2.5(wS)-.25 G 188.77(ystem 5)-2.5 F 0 Cg EP
 %%Trailer
 end
 %%EOF

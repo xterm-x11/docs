@@ -1,5 +1,5 @@
 <!--
-  $Id: vttest.html,v 1.104 2022/04/11 00:25:52 tom Exp $
+  $Id: vttest.html,v 1.106 2023/11/23 21:51:43 tom Exp $
   -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
@@ -30,7 +30,7 @@
   <hr>
 
   <p><a href="/">http://invisible-island.net/</a><br>
-  Copyright &copy; 1996-2019,2022 by Thomas E. Dickey</p>
+  Copyright &copy; 1996-2022,2023 by Thomas E. Dickey</p>
 
   <hr>
 
@@ -493,7 +493,7 @@
   possible to determine when/where the features originated. But
   they predate <strong>dtterm</strong>. Some additional information
   is given in <a href=
-  "/xterm/ctlseqs/ctlseqs.html#h2-Miscellaneous"><em>XTerm Control
+  "/xterm/ctlseqs/ctlseqs.html#h3-Miscellaneous"><em>XTerm Control
   Sequences</em></a>.</p>
 
   <h2 id="licensing-h2"><a name="licensing" id=
@@ -712,17 +712,21 @@ choice to the address below.
       the bug report&mdash; mentioned above. The string is (as of
       December 2011) returned as the response to the secondary
       device attributes control.</p>
+
+      <p>The comment &ldquo;<tt>I'm a VT52</tt>&rdquo; should be
+      &ldquo;<tt>VT100 emulating VT52</tt>&rdquo; (real VT52s
+      respond differently).</p>
     </li>
 
     <li>
       <p><a href="http://aminet.net/package/comm/term/Vttest">old
-      source on Aminet</a></p>
+      source on Aminet</a>, from 1987</p>
     </li>
 
     <li>
       <p><a href=
       "http://www.nic.funet.fi/pub/msdos/languages/c/vt100.c">older
-      source, from 1983</a></p>
+      source</a>, from 1983</p>
     </li>
   </ul>
 
@@ -791,6 +795,10 @@ choice to the address below.
       Perhaps its developers intended it to compete with dtterm,
       which it more closely resembled at that point in time.</p>
     </li>
+
+    <li><a href=
+    "https://tomscii.sig7.se/zutty/doc/VTTEST.html">Results of
+    testing Zutty with Vttest</a></li>
   </ul>
 
   <h3 id="link_tools-h3"><a name="link_tools" id=
@@ -916,6 +924,10 @@ choice to the address below.
 
     <li><a href=
     "http://ttssh2.sourceforge.jp/tmp/vttest-result/">ttsh2</a></li>
+
+    <li><a href=
+    "https://itguygonebad.medium.com/vttest-on-different-terminals-4235d4d7aee6">
+    vttest on different terminals</a></li>
 
     <li><a href="http://www.youtube.com/watch?v=4vTu0KekGOc">Wyse
     WY-185 Terminal demo</a> (YouTube, last 2 minutes)</li>

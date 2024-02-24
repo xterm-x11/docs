@@ -72,27 +72,6 @@ href="/xterm/">xterm/</a>
            environment variables, and writes that to the standard output.
 
 </pre>
-<h2><a name="h2-EXAMPLES" id="h2-EXAMPLES">EXAMPLES</a></h2>
-<pre>       For  <i>resize</i>'s output to take effect, <i>resize</i> must either be evaluated as
-       part of the command line (usually done with a shell alias or  function)
-       or  else  redirected  to  a file which can then be read in.  From the C
-       shell (usually known as <i>/bin/csh</i>), the following alias could be defined
-       in the user's <i>.cshrc</i>:
-
-               %  alias rs 'set noglob; eval `resize`'
-
-       After resizing the window, the user would type:
-
-               %  rs
-
-       Users  of  versions of the Bourne shell (usually known as <i>/bin/sh</i>) that
-       don't have command  functions  will  need  to  send  the  output  to  a
-       temporary file and then read it back in with the "." command:
-
-               $  resize &gt; /tmp/out
-               $  . /tmp/out
-
-</pre>
 <h2><a name="h2-OPTIONS" id="h2-OPTIONS">OPTIONS</a></h2>
 <pre>       The following options may be used with <i>resize</i>:
 
@@ -130,12 +109,6 @@ href="/xterm/">xterm/</a>
        normally associated with the <b>-s</b> option, they are parsed separately.
 
 </pre>
-<h2><a name="h2-FILES" id="h2-FILES">FILES</a></h2>
-<pre>       /etc/termcap   for the base termcap entry to modify.
-
-       ~/.cshrc       user's alias for the command.
-
-</pre>
 <h2><a name="h2-ENVIRONMENT" id="h2-ENVIRONMENT">ENVIRONMENT</a></h2>
 <pre>       SHELL          Unless  overridden  by  the <b>-c</b> option, <i>resize</i> determines
                       the user's current shell by
@@ -171,10 +144,31 @@ href="/xterm/">xterm/</a>
                       override their screensize.
 
 </pre>
-<h2><a name="h2-SEE-ALSO" id="h2-SEE-ALSO">SEE ALSO</a></h2>
-<pre>       <a href="/ncurses/man/curs_util.3x.html#h3-use_env"><b>use_env(3X)</b></a>
-       <a href="https://www.freebsd.org/cgi/man.cgi?query=csh&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>csh(1)</b></a>, <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/stty.html">stty(1)</a></b>, <a href="/ncurses/man/tset.1.html"><b>tset(1)</b></a>
-       <a href="/xterm/manpage/xterm.html"><b>xterm(1)</b></a>
+<h2><a name="h2-FILES" id="h2-FILES">FILES</a></h2>
+<pre>       /etc/termcap   for the base termcap entry to modify.
+
+       ~/.cshrc       user's alias for the command.
+
+</pre>
+<h2><a name="h2-EXAMPLES" id="h2-EXAMPLES">EXAMPLES</a></h2>
+<pre>       For <i>resize</i>'s output to take effect, <i>resize</i> must either be evaluated  as
+       part  of the command line (usually done with a shell alias or function)
+       or else redirected to a file which can then be read  in.   From  the  C
+       shell (usually known as <i>/bin/csh</i>), the following alias could be defined
+       in the user's <i>.cshrc</i>:
+
+           % alias rs 'set noglob; eval `resize`'
+
+       After resizing the window, the user would type:
+
+           % rs
+
+       Users of versions of the Bourne shell (usually known as  <i>/bin/sh</i>)  that
+       don't  have  command  functions  will  need  to  send  the  output to a
+       temporary file and then read it back in with the "." command:
+
+           $ resize &gt; /tmp/out
+           $ . /tmp/out
 
 </pre>
 <h2><a name="h2-AUTHORS" id="h2-AUTHORS">AUTHORS</a></h2>
@@ -183,7 +177,13 @@ href="/xterm/">xterm/</a>
        Copyright (c) 1984, 1985 by X Consortium
        See <a href="https://www.x.org/releases/X11R7.7/doc/man/man7/X.7.xhtml"><b>X(7)</b></a> for a complete copyright notice.
 
-Patch #383                        2023-06-27                         <b>RESIZE(1)</b>
+</pre>
+<h2><a name="h2-SEE-ALSO" id="h2-SEE-ALSO">SEE ALSO</a></h2>
+<pre>       <a href="/ncurses/man/curs_util.3x.html#h3-use_env"><b>use_env(3X)</b></a>
+       <a href="https://www.freebsd.org/cgi/man.cgi?query=csh&amp;apropos=0&amp;sektion=1&amp;manpath=SunOS+4.1.3&amp;arch=default&amp;format=html"><b>csh(1)</b></a>, <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/stty.html">stty(1)</a></b>, <a href="/ncurses/man/tset.1.html"><b>tset(1)</b></a>
+       <a href="/xterm/manpage/xterm.html"><b>xterm(1)</b></a>
+
+Patch #390                        2024-02-19                         <b>RESIZE(1)</b>
 </pre>
 <div class="nav">
 <ul>
@@ -191,12 +191,12 @@ Patch #383                        2023-06-27                         <b>RESIZE(1
 <li><a href="#h2-NAME">NAME</a></li>
 <li><a href="#h2-SYNOPSIS">SYNOPSIS</a></li>
 <li><a href="#h2-DESCRIPTION">DESCRIPTION</a></li>
-<li><a href="#h2-EXAMPLES">EXAMPLES</a></li>
 <li><a href="#h2-OPTIONS">OPTIONS</a></li>
-<li><a href="#h2-FILES">FILES</a></li>
 <li><a href="#h2-ENVIRONMENT">ENVIRONMENT</a></li>
-<li><a href="#h2-SEE-ALSO">SEE ALSO</a></li>
+<li><a href="#h2-FILES">FILES</a></li>
+<li><a href="#h2-EXAMPLES">EXAMPLES</a></li>
 <li><a href="#h2-AUTHORS">AUTHORS</a></li>
+<li><a href="#h2-SEE-ALSO">SEE ALSO</a></li>
 </ul>
 </div>
 </body>

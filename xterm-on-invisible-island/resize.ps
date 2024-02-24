@@ -1,6 +1,6 @@
 %!PS-Adobe-3.0
 %%Creator: groff version 1.22.4
-%%CreationDate: Tue Jun 27 08:25:11 2023
+%%CreationDate: Tue Feb 20 00:20:47 2024
 %%DocumentNeededResources: font Times-Roman
 %%+ font Times-Bold
 %%+ font Times-Italic
@@ -239,7 +239,7 @@ BP
 %%EndPageSetup
 /F0 10/Times-Roman@0 SF 148.22(RESIZE\(1\) X)72 48 R -.4(Wi)2.5 G(ndo).4
 E 2.5(wS)-.25 G 148.22(ystem RESIZE\(1\))-2.5 F/F1 10.95/Times-Bold@0 SF
--.219(NA)72 84 S(ME).219 E F0(resize - set en)108 96 Q
+-.219(NA)72 84 S(ME).219 E F0(resize \255 set en)108 96 Q
 (vironment and terminal settings to current xterm windo)-.4 E 2.5(ws)
 -.25 G(ize)-2.5 E F1(SYNOPSIS)72 112.8 Q/F2 10/Times-Bold@0 SF -.18(re)
 108 124.8 S(size).18 E F0([)2.5 E F2<ad76>2.5 E F0(|)2.5 E F2<ad75>2.5 E
@@ -290,122 +290,124 @@ t the)2.773 F(windo)128 360 Q(w')-.25 E 2.5(sd)-.55 G
 422.4 Q(,)-.65 E F3 -.37(re)2.618 G(size).37 E F0 .118
 (generates shell commands for setting the en)2.618 F .119(vironment v)
 -.4 F .119(ariables, and writes that to the stan-)-.25 F(dard output.)
-118 434.4 Q F1(EXAMPLES)72 451.2 Q F0 -.15(Fo)108 463.2 S(r).15 E F3
--.37(re)2.82 G(size).37 E F0 1.42 -.55('s o)D .32(utput to tak).55 F
-2.82(ee)-.1 G -.25(ff)-2.82 G(ect,).25 E F3 -.37(re)2.82 G(size).37 E F0
-.319(must either be e)2.82 F -.25(va)-.25 G .319
-(luated as part of the command line \(usually done).25 F .397(with a sh\
-ell alias or function\) or else redirected to a \214le which can then b\
-e read in.)108 475.2 R .398(From the C shell \(usu-)5.398 F(ally kno)108
-487.2 Q(wn as)-.25 E F3(/bin/csh)2.5 E F0(\), the follo)A
-(wing alias could be de\214ned in the user')-.25 E(s)-.55 E F3(.cshr)2.5
-E(c)-.37 E F0(:)A 5(%a)128 511.2 S(lias rs \010set noglob; e)-5 E -.25
-(va)-.25 G(l).25 E/F4 10/Courier@0 SF<92>2.5 E F0(resize)A F4<92>A F0
-<08>A(After resizing the windo)108 535.2 Q 1.3 -.65(w, t)-.25 H
-(he user w).65 E(ould type:)-.1 E 5(%r)128 559.2 S(s)-5 E .88
-(Users of v)108 583.2 R .88(ersions of the Bourne shell \(usually kno)
--.15 F .88(wn as)-.25 F F3(/bin/sh)3.38 E F0 3.38(\)t)C .88(hat don')
--3.38 F 3.38(th)-.18 G -2.25 -.2(av e)-3.38 H .88
-(command functions will)3.58 F(need to send the output to a temporary \
-\214le and then read it back in with the \231.)108 595.2 Q 2.5<9a63>-.7
-G(ommand:)-2.5 E 5($r)128 619.2 S(esize > /tmp/out)-5 E 5($./)128 631.2
-S(tmp/out)-5 E F1(OPTIONS)72 648 Q F0(The follo)108 660 Q
+118 434.4 Q F1(OPTIONS)72 451.2 Q F0(The follo)108 463.2 Q
 (wing options may be used with)-.25 E F3 -.37(re)2.5 G(size).37 E F0(:)A
-F2<ad63>108 676.8 Q F0 .626
+F2<ad63>108 480 Q F0 .626
 (This option indicates that C shell commands should be generated e)148
-676.8 R -.15(ve)-.25 G 3.126(ni).15 G 3.126(ft)-3.126 G .626(he user')
+480 R -.15(ve)-.25 G 3.126(ni).15 G 3.126(ft)-3.126 G .626(he user')
 -3.126 F 3.126(sc)-.55 G .626(urrent shell)-3.126 F
-(does not appear to use C shell syntax.)148 688.8 Q F2<ad73>108 705.6 Q
-F0([)2.5 E F3 -.45(ro)C(ws columns).45 E F0(])A .504(This option indica\
-tes that Sun console escape sequences will be used instead of the VT100\
--style)148 717.6 R F3(xterm)148 729.6 Q F0 .161(escape codes.)2.661 F
-(If)5.161 E F3 -.45(ro)2.661 G(ws).45 E F0(and)2.661 E F3(columns)2.661
-E F0 .161(are gi)2.661 F -.15(ve)-.25 G(n,).15 E F3 -.37(re)2.661 G
-(size).37 E F0 .161(will ask the)2.661 F F3(xterm)2.661 E F0 .162
-(to resize itself using)2.661 F -.15(Pa)72 768 S(tch #383).15 E 203.17
-(2023-06-27 1)166.1 F 0 Cg EP
+(does not appear to use C shell syntax.)148 492 Q F2<ad73>108 508.8 Q F0
+([)2.5 E F3 -.45(ro)C(ws columns).45 E F0(])A .504(This option indicate\
+s that Sun console escape sequences will be used instead of the VT100-s\
+tyle)148 520.8 R F3(xterm)148 532.8 Q F0 .162(escape codes.)2.662 F(If)
+5.162 E F3 -.45(ro)2.661 G(ws).45 E F0(and)2.661 E F3(columns)2.661 E F0
+.161(are gi)2.661 F -.15(ve)-.25 G(n,).15 E F3 -.37(re)2.661 G(size).37
+E F0 .161(will ask the)2.661 F F3(xterm)2.661 E F0 .161
+(to resize itself using)2.661 F(those v)148 544.8 Q(alues.)-.25 E .642(\
+Both of the escape sequences used for this option \(\214rst to obtain t\
+he windo)148 561.6 R 3.142(ws)-.25 G .642(ize and second to)-3.142 F .5
+(modify it\) are subject to)148 573.6 R F3(xterm)3 E F0 -.55('s)C F2
+(allo)3.55 E(wW)-.1 E(indo)-.18 E(wOps)-.1 E F0 .5(resource setting.)3 F
+.5(The windo)5.5 F 3(wm)-.25 G .5(anager may)-3 F
+(also choose to disallo)148 585.6 Q 2.5(wt)-.25 G(he change.)-2.5 E
+4.135
+(The VT100-style escape sequence used to determine the screen size al)
+148 602.4 R -.1(wa)-.1 G 4.135(ys w).1 F 4.135(orks for)-.1 F
+(VT100-compatible terminals.)148 614.4 Q(VT100s ha)5 E .3 -.15(ve n)-.2
+H 2.5(oc).15 G(orresponding w)-2.5 E(ay to modify the screensize.)-.1 E
+F2<ad75>108 631.2 Q F0 .572
+(This option indicates that Bourne shell commands should be generated e)
+148 631.2 R -.15(ve)-.25 G 3.072(ni).15 G 3.072(ft)-3.072 G .572
+(he user')-3.072 F 3.072(sc)-.55 G(urrent)-3.072 E
+(shell does not appear to use Bourne shell syntax.)148 643.2 Q F2<ad76>
+108 660 Q F0(This causes)148 660 Q F3 -.37(re)2.5 G(size).37 E F0
+(to print a v)2.5 E(ersion number to the standard output, and then e)
+-.15 E(xit.)-.15 E .884
+(Note that the Sun console escape sequences are recognized by XFree86)
+108 676.8 R F3(xterm)3.384 E F0 .884(and by)3.384 F F3(dtterm)3.384 E F0
+5.884(.T)C(he)-5.884 E F3 -.37(re)3.384 G(size).37 E F0
+(program may be installed as)108 688.8 Q F3(sunsize)2.5 E F0 2.5(,w)C
+(hich causes mak)-2.5 E(es it assume the)-.1 E F2<ad73>2.5 E F0(option.)
+2.5 E(The)108 705.6 Q F3 -.45(ro)2.72 G(ws).45 E F0(and)2.72 E F3
+(columns)2.72 E F0(ar)2.72 E .219(guments must appear last; though the)
+-.18 F 2.719(ya)-.15 G .219(re normally associated with the)-2.719 F F2
+<ad73>2.719 E F0(option,)2.719 E(the)108 717.6 Q 2.5(ya)-.15 G
+(re parsed separately)-2.5 E(.)-.65 E -.15(Pa)72 768 S(tch #390).15 E
+203.17(2024-02-19 1)166.1 F 0 Cg EP
 %%Page: 2 2
 %%BeginPageSetup
 BP
 %%EndPageSetup
 /F0 10/Times-Roman@0 SF 148.22(RESIZE\(1\) X)72 48 R -.4(Wi)2.5 G(ndo).4
-E 2.5(wS)-.25 G 148.22(ystem RESIZE\(1\))-2.5 F(those v)148 84 Q(alues.)
--.25 E .642(Both of the escape sequences used for this option \(\214rst\
- to obtain the windo)148 100.8 R 3.141(ws)-.25 G .641(ize and second to)
--3.141 F .5(modify it\) are subject to)148 112.8 R/F1 10/Times-Italic@0
-SF(xterm)3 E F0 -.55('s)C/F2 10/Times-Bold@0 SF(allo)3.55 E(wW)-.1 E
-(indo)-.18 E(wOps)-.1 E F0 .5(resource setting.)3 F .5(The windo)5.5 F 3
-(wm)-.25 G .5(anager may)-3 F(also choose to disallo)148 124.8 Q 2.5(wt)
--.25 G(he change.)-2.5 E 4.135
-(The VT100-style escape sequence used to determine the screen size al)
-148 141.6 R -.1(wa)-.1 G 4.135(ys w).1 F 4.135(orks for)-.1 F
-(VT100-compatible terminals.)148 153.6 Q(VT100s ha)5 E .3 -.15(ve n)-.2
-H 2.5(oc).15 G(orresponding w)-2.5 E(ay to modify the screensize.)-.1 E
-F2<ad75>108 170.4 Q F0 .572
-(This option indicates that Bourne shell commands should be generated e)
-148 170.4 R -.15(ve)-.25 G 3.072(ni).15 G 3.072(ft)-3.072 G .573
-(he user')-3.072 F 3.073(sc)-.55 G(urrent)-3.073 E
-(shell does not appear to use Bourne shell syntax.)148 182.4 Q F2<ad76>
-108 199.2 Q F0(This causes)148 199.2 Q F1 -.37(re)2.5 G(size).37 E F0
-(to print a v)2.5 E(ersion number to the standard output, and then e)
--.15 E(xit.)-.15 E .884
-(Note that the Sun console escape sequences are recognized by XFree86)
-108 216 R F1(xterm)3.384 E F0 .883(and by)3.384 F F1(dtterm)3.383 E F0
-5.883(.T)C(he)-5.883 E F1 -.37(re)3.383 G(size).37 E F0
-(program may be installed as)108 228 Q F1(sunsize)2.5 E F0 2.5(,w)C
-(hich causes mak)-2.5 E(es it assume the)-.1 E F2<ad73>2.5 E F0(option.)
-2.5 E(The)108 244.8 Q F1 -.45(ro)2.719 G(ws).45 E F0(and)2.719 E F1
-(columns)2.719 E F0(ar)2.719 E .219
-(guments must appear last; though the)-.18 F 2.719(ya)-.15 G .22
-(re normally associated with the)-2.719 F F2<ad73>2.72 E F0(option,)2.72
-E(the)108 256.8 Q 2.5(ya)-.15 G(re parsed separately)-2.5 E(.)-.65 E/F3
-10.95/Times-Bold@0 SF(FILES)72 273.6 Q F0(/etc/termcap)108 285.6 Q
-(for the base termcap entry to modify)183 285.6 Q(.)-.65 E(~/.cshrc)108
-302.4 Q(user')183 302.4 Q 2.5(sa)-.55 G(lias for the command.)-2.5 E F3
-(ENVIR)72 319.2 Q(ONMENT)-.329 E F0(SHELL)108 331.2 Q(Unless o)183 331.2
-Q -.15(ve)-.15 G(rridden by the).15 E F2<ad63>2.5 E F0(option,)2.5 E F1
--.37(re)2.5 G(size).37 E F0(determines the user')2.5 E 2.5(sc)-.55 G
-(urrent shell by)-2.5 E<83>183 348 Q(\214rst checking if)193 348 Q F2
-($SHELL)2.5 E F0(is set, and using that,)2.5 E<83>183 364.8 Q(otherwise)
-193 364.8 Q F1 -.37(re)2.5 G(size).37 E F0(looks in the passw)2.5 E
-(ord \214le \(/etc/passwd\).)-.1 E .026(Generally Bourne-shell v)183
-381.6 R .026(ariants \(including)-.25 F F1(ksh)2.526 E F0 2.526(\)d)C
+E 2.5(wS)-.25 G 148.22(ystem RESIZE\(1\))-2.5 F/F1 10.95/Times-Bold@0 SF
+(ENVIR)72 84 Q(ONMENT)-.329 E F0(SHELL)108 96 Q(Unless o)183 96 Q -.15
+(ve)-.15 G(rridden by the).15 E/F2 10/Times-Bold@0 SF<ad63>2.5 E F0
+(option,)2.5 E/F3 10/Times-Italic@0 SF -.37(re)2.5 G(size).37 E F0
+(determines the user')2.5 E 2.5(sc)-.55 G(urrent shell by)-2.5 E<83>183
+112.8 Q(\214rst checking if)193 112.8 Q F2($SHELL)2.5 E F0
+(is set, and using that,)2.5 E<83>183 129.6 Q(otherwise)193 129.6 Q F3
+-.37(re)2.5 G(size).37 E F0(looks in the passw)2.5 E
+(ord \214le \(/etc/passwd\).)-.1 E .025(Generally Bourne-shell v)183
+146.4 R .026(ariants \(including)-.25 F F3(ksh)2.526 E F0 2.526(\)d)C
 2.526(on)-2.526 G .026(ot modify)-2.526 F F2($SHELL)2.526 E F0 2.526(,s)
-C 2.526(oi)-2.526 G 2.525(ti)-2.526 G 2.525(sp)-2.525 G(ossible)-2.525 E
-(for)183 393.6 Q F1 -.37(re)2.5 G(size).37 E F0
-(to be confused if one runs)2.5 E F1 -.37(re)2.5 G(size).37 E F0
-(from a Bourne shell spa)2.5 E(wned from a C shell.)-.15 E 1.963
-(After determining the user')183 410.4 R 4.464(ss)-.55 G(hell,)-4.464 E
-F1 -.37(re)4.464 G(size).37 E F0 1.964(checks the shell')6.964 F 4.464
-(sn)-.55 G 1.964(ame ag)-4.464 F 1.964(ainst a table of)-.05 F(kno)183
-422.4 Q .008(wn shell names.)-.25 F .007
-(If it does not \214nd the name in its table,)5.008 F F1 -.37(re)2.507 G
-(size).37 E F0 .007(will use C shell syntax)2.507 F
-(for the generated commands to set en)183 434.4 Q(vironment v)-.4 E
-(ariables.)-.25 E(TERM)108 451.2 Q F1(Resize)183.63 451.2 Q F0 1.1 -.55
+C 2.526(oi)-2.526 G 2.526(ti)-2.526 G 2.526(sp)-2.526 G(ossible)-2.526 E
+(for)183 158.4 Q F3 -.37(re)2.5 G(size).37 E F0
+(to be confused if one runs)2.5 E F3 -.37(re)2.5 G(size).37 E F0
+(from a Bourne shell spa)2.5 E(wned from a C shell.)-.15 E 1.964
+(After determining the user')183 175.2 R 4.464(ss)-.55 G(hell,)-4.464 E
+F3 -.37(re)4.464 G(size).37 E F0 1.964(checks the shell')6.964 F 4.464
+(sn)-.55 G 1.964(ame ag)-4.464 F 1.963(ainst a table of)-.05 F(kno)183
+187.2 Q .007(wn shell names.)-.25 F .007
+(If it does not \214nd the name in its table,)5.007 F F3 -.37(re)2.507 G
+(size).37 E F0 .008(will use C shell syntax)2.507 F
+(for the generated commands to set en)183 199.2 Q(vironment v)-.4 E
+(ariables.)-.25 E(TERM)108 216 Q F3(Resize)183.63 216 Q F0 1.1 -.55
 ('s g).18 H(enerated shell command sets this to "xterm-ne).55 E
-(w" if not already set.)-.25 E(TERMCAP)108 468 Q F1(Resize)183.63 468 Q
-F0 3.179 -.55('s g).18 H 2.079(enerated shell command sets this v).55 F
-2.079(ariable on systems using termcap, e.g.,)-.25 F(when)183 480 Q F1
--.37(re)3.243 G(size).37 E F0 .743(is link)3.243 F .743(ed with the)-.1
-F F1(termcap)3.243 E F0 .743(library rather than a)3.243 F F1(terminfo)
-3.243 E F0(library)3.243 E 5.742(.T)-.65 G .742(he latter)-5.742 F
-(does not pro)183 492 Q(vide the complete te)-.15 E
-(xt for a termcap entry)-.15 E(.)-.65 E(COLUMNS, LINES)108 508.8 Q F1
-(Resize)183.63 520.8 Q F0 1.273 -.55('s g).18 H .173
-(enerated shell command sets these v).55 F .174
-(ariables on systems using terminfo.)-.25 F(Man)5.174 E(y)-.15 E .681
-(applications \(including the curses library\) use those v)183 532.8 R
-.681(ariables when set to o)-.25 F -.15(ve)-.15 G .68(rride their).15 F
-(screensize.)183 544.8 Q F3(SEE ALSO)72 561.6 Q F0(use_en)108 573.6 Q
-(v\(3x\))-.4 E(csh\(1\), stty\(1\), tset\(1\))108 585.6 Q(xterm\(1\))108
-597.6 Q F3 -.548(AU)72 614.4 S(THORS).548 E F0(Mark V)108 626.4 Q(ande)
--1.11 E -.2(vo)-.25 G(orde \(MIT).2 E(-Athena\), Edw)-.92 E(ard Mo)-.1 E
-2.5(y\()-.1 G(Berk)-2.5 E(ele)-.1 E(y\))-.15 E(Thomas Dick)108 638.4 Q
-.3 -.15(ey \()-.1 H(in).15 E(visible-island.net\).)-.4 E(Cop)108 650.4 Q
-(yright \(c\) 1984, 1985 by X Consortium)-.1 E(See)108 662.4 Q F1(X)3.29
-E F0(\(7\) for a complete cop).94 E(yright notice.)-.1 E -.15(Pa)72 768
-S(tch #383).15 E 203.17(2023-06-27 2)166.1 F 0 Cg EP
+(w" if not already set.)-.25 E(TERMCAP)108 232.8 Q F3(Resize)183.63
+232.8 Q F0 3.18 -.55('s g).18 H 2.079
+(enerated shell command sets this v).55 F 2.079
+(ariable on systems using termcap, e.g.,)-.25 F(when)183 244.8 Q F3 -.37
+(re)3.242 G(size).37 E F0 .743(is link)3.242 F .743(ed with the)-.1 F F3
+(termcap)3.243 E F0 .743(library rather than a)3.243 F F3(terminfo)3.243
+E F0(library)3.243 E 5.743(.T)-.65 G .743(he latter)-5.743 F
+(does not pro)183 256.8 Q(vide the complete te)-.15 E
+(xt for a termcap entry)-.15 E(.)-.65 E(COLUMNS, LINES)108 273.6 Q F3
+(Resize)183.63 285.6 Q F0 1.274 -.55('s g).18 H .174
+(enerated shell command sets these v).55 F .173
+(ariables on systems using terminfo.)-.25 F(Man)5.173 E(y)-.15 E .681
+(applications \(including the curses library\) use those v)183 297.6 R
+.681(ariables when set to o)-.25 F -.15(ve)-.15 G .681(rride their).15 F
+(screensize.)183 309.6 Q F1(FILES)72 326.4 Q F0(/etc/termcap)108 338.4 Q
+(for the base termcap entry to modify)183 338.4 Q(.)-.65 E(~/.cshrc)108
+355.2 Q(user')183 355.2 Q 2.5(sa)-.55 G(lias for the command.)-2.5 E F1
+(EXAMPLES)72 372 Q F0 -.15(Fo)108 384 S(r).15 E F3 -.37(re)2.82 G(size)
+.37 E F0 1.42 -.55('s o)D .32(utput to tak).55 F 2.82(ee)-.1 G -.25(ff)
+-2.82 G(ect,).25 E F3 -.37(re)2.82 G(size).37 E F0 .319
+(must either be e)2.82 F -.25(va)-.25 G .319
+(luated as part of the command line \(usually done).25 F .397(with a sh\
+ell alias or function\) or else redirected to a \214le which can then b\
+e read in.)108 396 R .398(From the C shell \(usu-)5.398 F(ally kno)108
+408 Q(wn as)-.25 E F3(/bin/csh)2.5 E F0(\), the follo)A
+(wing alias could be de\214ned in the user')-.25 E(s)-.55 E F3(.cshr)2.5
+E(c)-.37 E F0(:)A/F4 10/Courier@0 SF 6(%a)128 426 S
+(lias rs \010set noglob; eval \222resize\222\010)-6 E F0
+(After resizing the windo)108 442.8 Q 1.3 -.65(w, t)-.25 H(he user w).65
+E(ould type:)-.1 E F4 6(%r)128 460.8 S(s)-6 E F0 .88(Users of v)108
+477.6 R .88(ersions of the Bourne shell \(usually kno)-.15 F .88(wn as)
+-.25 F F3(/bin/sh)3.38 E F0 3.38(\)t)C .88(hat don')-3.38 F 3.38(th)-.18
+G -2.25 -.2(av e)-3.38 H .88(command functions will)3.58 F(need to send\
+ the output to a temporary \214le and then read it back in with the \
+\231.)108 489.6 Q 2.5<9a63>-.7 G(ommand:)-2.5 E F4 6($r)128 507.6 S
+(esize > /tmp/out)-6 E 6($./)128 519.6 S(tmp/out)-6 E F1 -.548(AU)72
+536.4 S(THORS).548 E F0(Mark V)108 548.4 Q(ande)-1.11 E -.2(vo)-.25 G
+(orde \(MIT).2 E(-Athena\), Edw)-.92 E(ard Mo)-.1 E 2.5(y\()-.1 G(Berk)
+-2.5 E(ele)-.1 E(y\))-.15 E(Thomas Dick)108 560.4 Q .3 -.15(ey \()-.1 H
+(in).15 E(visible-island.net\).)-.4 E(Cop)108 572.4 Q
+(yright \(c\) 1984, 1985 by X Consortium)-.1 E(See)108 584.4 Q F3(X)3.29
+E F0(\(7\) for a complete cop).94 E(yright notice.)-.1 E F1(SEE ALSO)72
+601.2 Q F0(use_en)108 613.2 Q(v\(3x\))-.4 E
+(csh\(1\), stty\(1\), tset\(1\))108 625.2 Q(xterm\(1\))108 637.2 Q -.15
+(Pa)72 768 S(tch #390).15 E 203.17(2024-02-19 2)166.1 F 0 Cg EP
 %%Trailer
 end
 %%EOF

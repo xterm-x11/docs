@@ -51,26 +51,6 @@ DESCRIPTION
        o   finally,  resize  generates  shell   commands   for   setting   the
            environment variables, and writes that to the standard output.
 
-EXAMPLES
-       For  resize's output to take effect, resize must either be evaluated as
-       part of the command line (usually done with a shell alias or  function)
-       or  else  redirected  to  a file which can then be read in.  From the C
-       shell (usually known as /bin/csh), the following alias could be defined
-       in the user's .cshrc:
-
-               %  alias rs 'set noglob; eval `resize`'
-
-       After resizing the window, the user would type:
-
-               %  rs
-
-       Users  of  versions of the Bourne shell (usually known as /bin/sh) that
-       don't have command  functions  will  need  to  send  the  output  to  a
-       temporary file and then read it back in with the "." command:
-
-               $  resize > /tmp/out
-               $  . /tmp/out
-
 OPTIONS
        The following options may be used with resize:
 
@@ -107,11 +87,6 @@ OPTIONS
        The rows and columns  arguments  must  appear  last;  though  they  are
        normally associated with the -s option, they are parsed separately.
 
-FILES
-       /etc/termcap   for the base termcap entry to modify.
-
-       ~/.cshrc       user's alias for the command.
-
 ENVIRONMENT
        SHELL          Unless  overridden  by  the -c option, resize determines
                       the user's current shell by
@@ -146,10 +121,30 @@ ENVIRONMENT
                       the  curses  library)  use  those  variables when set to
                       override their screensize.
 
-SEE ALSO
-       use_env(3x)
-       csh(1), stty(1), tset(1)
-       xterm(1)
+FILES
+       /etc/termcap   for the base termcap entry to modify.
+
+       ~/.cshrc       user's alias for the command.
+
+EXAMPLES
+       For resize's output to take effect, resize must either be evaluated  as
+       part  of the command line (usually done with a shell alias or function)
+       or else redirected to a file which can then be read  in.   From  the  C
+       shell (usually known as /bin/csh), the following alias could be defined
+       in the user's .cshrc:
+
+           % alias rs 'set noglob; eval `resize`'
+
+       After resizing the window, the user would type:
+
+           % rs
+
+       Users of versions of the Bourne shell (usually known as  /bin/sh)  that
+       don't  have  command  functions  will  need  to  send  the  output to a
+       temporary file and then read it back in with the "." command:
+
+           $ resize > /tmp/out
+           $ . /tmp/out
 
 AUTHORS
        Mark Vandevoorde (MIT-Athena), Edward Moy (Berkeley)
@@ -157,6 +152,11 @@ AUTHORS
        Copyright (c) 1984, 1985 by X Consortium
        See X(7) for a complete copyright notice.
 
+SEE ALSO
+       use_env(3x)
+       csh(1), stty(1), tset(1)
+       xterm(1)
 
 
-Patch #383                        2023-06-27                         RESIZE(1)
+
+Patch #390                        2024-02-19                         RESIZE(1)
