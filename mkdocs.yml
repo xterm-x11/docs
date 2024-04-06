@@ -28,6 +28,7 @@ nav:
   - Customize:
        - Sample: sample.md
        - Themes: themes.md
+       - Fonts: fonts.md
        - Template: template.md
        - Icon: icon.md
        - Manual window title: manual-window-title.md
@@ -44,7 +45,7 @@ nav:
        - uxterm: manpage-uxterm.md
        - koi8rxterm: manpage-koi8rxterm.md
        - resize: manpage-resize.md
-  - Release notes: release-notes.md
+  - Changelog (release notes): release-notes.md
   - Libraries:
        - Xtoolkit: xtoolkit.md
        - Xcursor: xcursor.md
@@ -53,26 +54,35 @@ nav:
        - Xft: xft.md
   - Quality engineering:
        - VTtest:
-           - About VTtest: vttest-about.md
-           - VTtest manpage: manpage-vttest.md
-           - VTtest release notes: vttest-release-notes.md
+           - Manpage: manpage-vttest.md
+           - Changelog: changelog-vttest.md
+           - About: about-vttest.md
            - vttest.tar.gz: vttest.tar.gz.md
            - VTtest archives: vttest-archives.md
        - Luit:
-           - About Luit: luit-about.md
-           - Luit manpage: manpage-luit.md
+           - Manpage: manpage-luit.md
+           - Changelog: changelog-luit.md
+           - About: about-luit.md
            - luit.tar.gz: luit.tar.gz.md
            - Luit archives: luit-archives.md
-#      - tack (ncurses):
-#          - tack manpage: manpage-tack.md
+       - tack (ncurses):
+           - Manpage: manpage-tack.md
+           - Changelog: changelog-tack.md
+           - About: about-tack.md
 #          - download?
-#      - tctest (ncurses):
-#          - tctest manpage: manpage-tctest.md
+       - tctest (ncurses):
+           - Manpage: manpage-tctest.md
+           - Changelog: changelog-tctest.md
+           - About: about-tctest.md
 #          - download?
-#      - ncurses-examples (ncurses):
-#          - ?
-#      - scripts:
-#          - ?
+       - ncurses-examples (ncurses):
+           - About: ncurses-examples-about.md
+#          - download?
+       - Scripts: scripts.md
+#          - download?
+       - Recommended tools: recommended-tools.md
+#          - download?
+#
 theme:
   name: material
   favicon: favicon.png
