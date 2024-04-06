@@ -80,6 +80,7 @@ wget https://invisible-island.net/luit/manpage/luit.txt
 wget https://invisible-island.net/luit/manpage/luit.pdf
 wget https://invisible-island.net/luit/manpage/luit.ps
 wget https://invisible-island.net/luit/luit.html
+wget https://invisible-island.net/luit/luit.log.html
 #
 wget https://invisible-island.net/xterm/manpage/resize.html
 mv resize.html manpage-resize.html
