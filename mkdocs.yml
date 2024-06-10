@@ -34,8 +34,7 @@ nav:
        - Manual window title: manual-window-title.md
        - Static window title: static-window-title.md
        - Scrollbar: scrollbar.md
-       - Internal border: internal-border.md
-       - Window border: window-border.md
+       - Window properties: window-properties.md
   - Control sequences:
        - Getting started with control sequences: getting-started-with-ctlseqs.md
        - Guide: ctlseqs-guide.md
