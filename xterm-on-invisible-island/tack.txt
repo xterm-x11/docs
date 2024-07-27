@@ -1,4 +1,4 @@
-tack(1)                     General Commands Manual                    tack(1)
+tack(1)                          User commands                         tack(1)
 
 
 
@@ -11,8 +11,8 @@ SYNOPSIS
 DESCRIPTION
        The tack program has three purposes:
 
-       (1) to help you build a new terminfo entry describing an unknown termi-
-           nal,
+       (1) to  help  you  build  a  new  terminfo  entry describing an unknown
+           terminal,
 
        (2) to test the correctness of an existing entry, and
 
@@ -27,9 +27,9 @@ DESCRIPTION
    OPTIONS
        -d     Start tack with the debug-file "debug.log" opened.
 
-       -i     Usually tack will send the reset and init strings to the  termi-
-              nal  when the program starts up.  The -i option will inhibit the
-              terminal initialization.
+       -i     Usually tack will  send  the  reset  and  init  strings  to  the
+              terminal when the program starts up.  The -i option will inhibit
+              the terminal initialization.
 
        -l     Start tack with the log-file "tack.log" opened.  This is also  a
               menu item.
@@ -53,10 +53,10 @@ DESCRIPTION
 
 OVERVIEW
        Since  tack  is designed to test terminfo entries it is not possible to
-       rely on the correctness of the terminfo data base.   Because  of  this,
-       the  menuing  system  used with tack is very primitive.  When a menu is
-       printed, it will scroll the entire screen.  To compensate for this ver-
-       bose  menu  system,  tack  permits  menu  selection type ahead.  If you
+       rely on the correctness of the terminfo database.  Because of this, the
+       menuing  system  used  with  tack  is  very  primitive.  When a menu is
+       printed, it will scroll the entire  screen.   To  compensate  for  this
+       verbose  menu  system,  tack permits menu selection type ahead.  If you
        already know what action you would like tack to perform  then  you  can
        enter that value immediately and avoid the menu display.  When in doubt
        the question mark (?) is a good character to type.  A  carriage  return
@@ -70,9 +70,9 @@ OVERVIEW
        proceeding.  (home) and (clear) are also critical  to  the  success  of
        subsequent  tests.  The values of (cr) (ind) (cub1) and (ht) may effect
        the tests if they are defined incorrectly.  If they are undefined  tack
-       will set them to reasonable defaults.  The last two entries on the dis-
-       play are the enquire and acknowledge strings.  These strings are  taken
-       from the user strings (u9) and (u8).
+       will  set  them  to  reasonable  defaults.  The last two entries on the
+       display are the enquire and acknowledge  strings.   These  strings  are
+       taken from the user strings (u9) and (u8).
 
        By  now  you  must  be wondering why the terminfo names are enclosed in
        parenthesis.  This has no profound meaning other  than  it  makes  them
@@ -82,9 +82,9 @@ OVERVIEW
 
 CREATING NEW ENTRIES
        Tack has a number of tools that are designed to help gather information
-       about the terminal.  Although these functions are not dependent on ter-
-       minal  type,  you may wish to execute tack with options -it.  This will
-       turn off initialization and default the standard entries.
+       about the terminal.  Although these  functions  are  not  dependent  on
+       terminal  type,  you  may  wish to execute tack with options -it.  This
+       will turn off initialization and default the standard entries.
 
        These tools may be reached from the main menu by selecting the  "tools"
        entry.
@@ -94,38 +94,38 @@ CREATING NEW ENTRIES
        but  are sent as control characters.  This allows you to test an escape
        sequence and see what it actually does.  You may also elect  to  enable
        hex  output  on echo tool this will echo the characters in hexadecimal.
-       Once the test is running you may enter the "lines"  or  "columns"  key-
-       words  which  will  display a pattern that will help you determine your
+       Once the test is  running  you  may  enter  the  "lines"  or  "columns"
+       keywords which will display a pattern that will help you determine your
        screen size.  A complete list of keywords will be  displayed  when  the
        test starts.  Type "help" to redisplay the list of available commands.
 
-       Reply  tool:  This tool acts much like the echo tool, but control char-
-       acters that are sent from the terminal more than one character after  a
-       carriage  return  will be expanded to the up arrow format.  For example
-       on a standard ANSI terminal you may type:
+       Reply  tool:   This  tool  acts  much  like  the echo tool, but control
+       characters that are sent from the  terminal  more  than  one  character
+       after  a  carriage return will be expanded to the up arrow format.  For
+       example on a standard ANSI terminal you may type:
 
-                 CR ESC [ c
+              CR ESC [ c
 
        and the response will be echoed as something like:
 
-                 ^[ [ ? 6 c
+              ^[ [ ? 6 c
 
        ANSI sgr display:  This test assumes you have  an  ANSI  terminal.   It
-       goes  through  attribute  numbers  0 to 79, displaying each in turn and
+       goes  through  attribute  numbers 0 to 119, displaying each in turn and
        using that SGR number to write the text.  This shows you which  of  the
-       SGR  modes are actually implemented by the terminal.  Note: some termi-
-       nals (such as Tektronix color) use the private use characters  to  aug-
-       ment  the  functionality of the SGR command.  These private use charac-
-       ters may be interjected into the escape sequence by typing the  charac-
-       ter ( <, =, >, ? ) after the original display has been shown.
+       SGR  modes  are  actually  implemented  by  the  terminal.   Note: some
+       terminals (such as Tektronix color) use the private use  characters  to
+       augment  the  functionality  of  the  SGR  command.   These private use
+       characters may be interjected into the escape sequence  by  typing  the
+       character ( <, =, >, ? ) after the original display has been shown.
 
        ANSI  status  reports:   This  test  queries  the  terminal in standard
        ANSI/VT-100 fashion.  The results of this test may help determine  what
        options are supported by your terminal.
 
        ANSI  character  sets:  This test displays the character sets available
-       on a ANSI/VT-100 style terminal.  Character sets on a real VT-100  ter-
-       minal  are  usually  defined with smacs=\E(0 and rmacs=\E(B.  The first
+       on an ANSI/VT-100 style terminal.  Character  sets  on  a  real  VT-100
+       terminal are usually defined with smacs=\E(0 and rmacs=\E(B.  The first
        character after the escape defines the font bank.  The second character
        defines  the  character  set.   This test allows you to view any of the
        possible combinations.  Private use character sets are defined  by  the
@@ -145,16 +145,16 @@ VERIFYING AN EXISTING ENTRY
 
        If the test fails then you have the option of dynamically changing  the
        terminfo  entry  and  re-running the test.  This is done with the "edit
-       terminfo" menu item.  The edit submenu allows you to change the offend-
-       ing  terminfo  entry  and  immediately retest the capability.  The edit
-       menu lets you do other things with the terminfo, such as;  display  the
-       entire  terminfo entry, display which caps have been tested and display
-       which caps cannot be tested.  This menu also allows you  to  write  the
-       newly modified terminfo to disc.  If you have made any modifications to
-       the terminfo tack will ask you if you want to save  the  file  to  disc
-       before  it  exits.  The filename will be the same as the terminal name.
-       After the program exits you can run the tic(1M)  compiler  on  the  new
-       terminfo to install it in the terminfo data base.
+       terminfo" menu item.   The  edit  submenu  allows  you  to  change  the
+       offending  terminfo  entry  and immediately retest the capability.  The
+       edit menu lets you do other things with the terminfo, such as;  display
+       the  entire  terminfo  entry,  display  which caps have been tested and
+       display which caps cannot be tested.  This  menu  also  allows  you  to
+       write  the  newly  modified  terminfo  to  disc.   If you have made any
+       modifications to the terminfo tack will ask you if you want to save the
+       file  to  disc  before  it exits.  The filename will be the same as the
+       terminal name.  After  the  program  exits  you  can  run  the  tic(1M)
+       compiler on the new terminfo to install it in the terminfo database.
 
 CORRECTING PAD TIMINGS
    Theory of Overruns and Padding
@@ -165,30 +165,30 @@ CORRECTING PAD TIMINGS
        or a write to the lowest, right-hand-most cell of the screen).
 
        If  the computer continues to send characters to the terminal while one
-       of these time-consuming operations is going on, the screen may be  gar-
-       bled.   Since  the  length  of  a  character  transmission  time varies
+       of these time-consuming operations is  going  on,  the  screen  may  be
+       garbled.   Since  the  length  of  a character transmission time varies
        inversely with transmission speed in cps,  entries  which  function  at
        lower speeds may break at higher speeds.
 
-       Similar  problems  result if the host machine is simply sending charac-
-       ters at a sustained rate  faster  than  the  terminal  can  buffer  and
+       Similar   problems  result  if  the  host  machine  is  simply  sending
+       characters at a sustained rate faster than the terminal can buffer  and
        process  them.   In  either case, when the terminal cannot process them
        and cannot tell the host to stop soon enough, it will just  drop  them.
        The  dropped  characters  could be text, escape sequences or the escape
        character itself, causing some really strange-looking  displays.   This
        kind of glitch is called an overrun.
 
-       In  terminfo entries, you can attach a pad time to each string capabil-
-       ity that is a number of milliseconds to delay after sending  it.   This
-       will give the terminal time to catch up and avoid overruns.
+       In  terminfo  entries,  you  can  attach  a  pad  time  to  each string
+       capability that is a number of milliseconds to delay after sending  it.
+       This will give the terminal time to catch up and avoid overruns.
 
        If  you  are  running  a software terminal emulator, or you are on an X
-       pseudo-tty, or your terminal is on an RS-232C line which correctly han-
-       dles  RTS/CTS  hardware flow control, then pads are not strictly neces-
-       sary.  However, some display packages (such as ncurses(3X)) use the pad
-       counts  to  calculate  the  fastest way to implement certain functions.
-       For example: scrolling the screen may be faster than deleting  the  top
-       line.
+       pseudo-tty, or your terminal is on  an  RS-232C  line  which  correctly
+       handles  RTS/CTS  hardware  flow  control,  then  pads are not strictly
+       necessary.  However, some display packages (such  as  ncurses(3X))  use
+       the  pad  counts  to  calculate  the  fastest  way to implement certain
+       functions.  For example:  scrolling  the  screen  may  be  faster  than
+       deleting the top line.
 
        One  common  way  to  avoid overruns is with XON/XOFF handshaking.  But
        even this handshake may have problems at high baud rates.   This  is  a
@@ -206,8 +206,8 @@ CORRECTING PAD TIMINGS
        worse.
 
        (RTS/CTS handshaking does not have this problem because the  UARTs  are
-       signal-connected and the "stop flow" is done at the lowest level, with-
-       out software intervention).
+       signal-connected  and  the  "stop  flow"  is  done at the lowest level,
+       without software intervention).
 
    Timing your terminal
        In order to get accurate timings from your terminal tack needs to  know
@@ -220,11 +220,11 @@ CORRECTING PAD TIMINGS
        handshake  with  the  escape  sequence  that  requests  "primary device
        attributes".
 
-          ESC [ c
+              ESC [ c
 
        The terminal will respond with a sequence like:
 
-          ESC [ ? 1 ; 0 c
+              ESC [ ? 1 ; 0 c
 
        Tack assumes that (u9) is the enquire sequence and  that  (u8)  is  the
        acknowledge  string.   A  VT-100  style  terminal could set u9=\E[c and
@@ -244,7 +244,7 @@ CORRECTING PAD TIMINGS
        Tack will test this sequence before running any of the pad tests or the
        function key tests.  Tack will ask you the following:
 
-           Hit lower case g to start testing...
+              Hit lower case g to start testing...
 
        After it sends this message it will send the enquire string.   It  will
        then read characters from the terminal until it sees the letter g.
@@ -260,9 +260,9 @@ CORRECTING PAD TIMINGS
 
        The key to determining pad times is to find out the effective baud rate
        of the terminal.  The effective baud  rate  determines  the  number  of
-       characters per second that the terminal can accept without either hand-
-       shaking or losing data.  This rate is frequently less than the  nominal
-       cps rate on the RS-232 line.
+       characters  per  second  that  the  terminal  can accept without either
+       handshaking or losing data.  This rate  is  frequently  less  than  the
+       nominal cps rate on the RS-232 line.
 
        Tack uses the effective baud rate to judge the duration of the test and
        how much a particular escape sequence will perturb the terminal.
@@ -272,8 +272,8 @@ CORRECTING PAD TIMINGS
        The other is the pad multiplier,  which  is  used  if  the  pad  prefix
        includes  "*".   In  curses use, it is often the first parameter of the
        capability (if there is one).  For a capability like (dch) or (il) this
-       will  be  the  number of character positions or lines affected, respec-
-       tively.
+       will   be   the  number  of  character  positions  or  lines  affected,
+       respectively.
 
        Tack will run the pad tests and display the results  to  the  terminal.
        On capabilities that have multipliers tack will not tell you if the pad
@@ -287,13 +287,6 @@ CORRECTING PAD TIMINGS
        the  results  (a  heavily loaded system will not stress the terminal as
        much, possibly leading to pad timings that are too short).
 
-NOTE
-       The tests done at the beginning of the program are assumed to  be  cor-
-       rect  later  in  the  code.  In particular, tack displays the number of
-       lines and columns indicated in the terminfo entry as part of  its  ini-
-       tial  output.   If  these values are wrong a large number of tests will
-       fail or give incorrect results.
-
 FILES
        tack.log    If logging is enabled then all characters  written  to  the
                    terminal  will also be written to the log file.  This gives
@@ -304,14 +297,17 @@ FILES
                    the new terminfo to a file.  The file will  have  the  same
                    name as the terminal name.
 
-SEE ALSO
-       terminfo(5),  ncurses(3X),  tic(1M), infocmp(1M).  You should also have
-       the documentation supplied by the terminal manufacturer.
+NOTES
+       The  tests  done  at  the  beginning  of  the program are assumed to be
+       correct later in the code.  In particular, tack displays the number  of
+       lines  and  columns  indicated  in  the  terminfo  entry as part of its
+       initial output.  If these values are wrong a large number of tests will
+       fail or give incorrect results.
 
 BUGS
        If the screen size is incorrect, many of the tests will fail.
 
-AUTHOR
+AUTHORS
        Concept, design, and original implementation by Daniel Weaver
        <dan.weaver@znyx.com>.
 
@@ -322,6 +318,10 @@ AUTHOR
        internal functions, and to allow tack to work with other
        implementations of curses and terminfo than ncurses.
 
+SEE ALSO
+       infocmp(1M), tic(1M), ncurses(3X), terminfo(5).  You should also have
+       the documentation supplied by the terminal manufacturer.
 
 
-                                                                       tack(1)
+
+terminfo action checker           2024-04-30                           tack(1)

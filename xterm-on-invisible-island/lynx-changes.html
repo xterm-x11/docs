@@ -26,10 +26,52 @@
   "/current/CHANGES.html">CHANGES</a>
   <hr>
   <pre>
--- $LynxId: CHANGES,v 1.1159 2024/01/15 21:41:51 tom Exp $
+-- $LynxId: CHANGES,v 1.1198 2024/05/31 22:09:16 tom Exp $
 ===============================================================================
 Changes since Lynx 2.8 release
 ===============================================================================
+
+<a name="v2.9.2" href="#index-v2.9.2" id=
+"v2.9.2">2024-05-31 (2.9.2)</a>
+* modify makefile.in install-help to only remove files, leaving existing
+  directories and symbolic links -TD
+* in POSIX environments, check paths for external programs to ensure that they
+  are executable, non-empty files -TD
+* adapt special case of gzip decompression in <a href=
+"#v2.8.9dev.12">2.8.9dev.12</a> to brotli, to handle
+  downloads from websites which support "br" (report by Rajeev V Pillai) -TD
+* updated configure macro CF_ANSI_CC_C, to reset flags on test-failure, to
+  keep options from accumulating. 
+* build-fix for NetBSD and Solaris system curses libraries, removing an ifdef
+  added in <a href=
+"#v2.9.0dev.11">2.9.0dev.11</a> (report by Nelson Beebe) -TD
+
+<a name="v2.9.1" href="#index-v2.9.1" id=
+"v2.9.1">2024-04-15 (2.9.1)</a>
+* add samples/mhtml-tool, from
+    https://github.com/ThomasDickey/mhtml-tool
+  which can use Lynx to display an "mhtml" file, e.g., foo.mht by
+    mhtml-tool -e lynx foo.mht
+* add --with-libintl-prefix configure option (from patch for tin by Urs
+  JanBen) -TD
+* improve bookmark file-updates, allowing for users to add HTML markup
+  (report by TG) -TD
+* remove obsolete option --with-included-gettext -TD
+* override $BUILD_CPPFLAGS and $BUILD_LIBS when not cross-compiling, to help
+  build Lynx with PDCurses -TD
+* re-order configure check for _XOPEN_SOURCE, etc., to reduce compiler warnings
+  with gcc 14 -TD
+* add configure check for ssp library, needed in some MinGW configurations -TD
+* fixes for saving a UTF-8 bookmark title -KH
+  + correct comparison of Windows codepage values when setting
+    DisplayCharsetMatchLocale, to handle UTF-8
+  + reset the internal state of UCTransToUni() before using it for bookmark
+    title check.
+* update/cleanup test-packages -TD
+* correct logic in HTMLGen.c where XMP was not treated as a preformatted
+  style, causing NNTP headers to be formatted (report by Marco Moock) -TD
+* fix special case of main status line on a page without links, broken by fix
+  for UBSAN/ASAN issue -TG
 
 <a name="v2.9.0" href="#index-v2.9.0" id=
 "v2.9.0">2024-01-15 (2.9.0)</a>
@@ -10745,6 +10787,10 @@ recently, FreeBSD 4.1, NetBSD 1.5 and OpenBSD 2.8 (curses/ncurses).
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="CHANGES.html">(top)</a></li>
+      <li><a name="index-v2.9.2" href="#v2.9.2" id=
+      "index-v2.9.2">2024-05-31 (2.9.2)</a></li>
+      <li><a name="index-v2.9.1" href="#v2.9.1" id=
+      "index-v2.9.1">2024-04-15 (2.9.1)</a></li>
       <li><a name="index-v2.9.0" href="#v2.9.0" id=
       "index-v2.9.0">2024-01-15 (2.9.0)</a></li>
       <li><a name="index-v2.9.0dev.12" href="#v2.9.0dev.12" id=

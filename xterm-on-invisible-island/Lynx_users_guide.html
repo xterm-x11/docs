@@ -1,9 +1,9 @@
-<!-- $LynxId: Lynx_users_guide.html,v 1.157 2023/01/03 00:11:31 Jens.Schleusener Exp $ -->
+<!-- $LynxId: Lynx_users_guide.html,v 1.163 2024/05/31 22:09:16 tom Exp $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
 <meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.6.0">
-<title>Lynx Users Guide v2.8.9</title>
+<title>Lynx Users Guide v2.9.2</title>
 <link rev="made" href="mailto:lynx-dev@nongnu.org">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="description" content="This is the user's guide to Lynx, giving detailed information on how to use the program, and how to change its configuration using the options menu.">
@@ -40,7 +40,7 @@
 </li>
 </ul>
 </div>
-<h1 class="no-header">Lynx Users Guide v2.8.9</h1>
+<h1 class="no-header">Lynx Users Guide v2.9.2</h1>
 <p>Lynx is a fully-featured <em>World Wide Web</em> (<em>WWW</em>) client for users running cursor-addressable, character-cell display devices (e.g., vt100 terminals, vt100 emulators running on PCs or Macs, or any other character-cell display). It will display <em>Hypertext Markup Language</em> (<em>HTML</em>) documents containing links to files on the local system, as well as files on remote systems running <em>http</em>, <em>gopher</em>, <em>ftp</em>, <em>wais</em>, <em>nntp</em>, <em>finger</em>, or <em>cso</em>/<em>ph</em>/<em>qi</em> servers, and services accessible via logins to <em>telnet</em>, <em>tn3270</em> or <em>rlogin</em> accounts (see <a href="lynx_url_support.html">URL Schemes Supported by Lynx</a>). <a href="#Hist">Current</a> versions of Lynx run on Unix, VMS, Windows3.x/9x/NT and later, 386DOS and OS/2 EMX.</p>
 <p>Lynx can be used to access information on the <em>WWW</em>, or to build information systems intended primarily for local access. For example, Lynx has been used to build several <em>Campus Wide Information Systems</em> (<em>CWIS</em>). In addition, Lynx can be used to build systems isolated within a single LAN.</p>
 <h2 id="TOC"><a name="Contents" id="Contents">Table of Contents</a></h2>
@@ -267,7 +267,7 @@
 <p id="explain-form_based_options">The form-based menu shown below is an HTML file generated at runtime, in which the user fills in choices as in any ordinary HTML form.</p>
 <pre>
 
-                    <a href="#item-form_based_options" name="example-form_based_options" id="example-form_based_options">Options Menu (Lynx Version 2.9.0dev.7)</a>
+                    <a href="#item-form_based_options" name="example-form_based_options" id="example-form_based_options">Options Menu (Lynx Version 2.9.2)</a>
 
     Accept Changes - Reset Changes - Left Arrow cancels changes - HELP!
 
@@ -324,7 +324,7 @@
   Preferred document language      : <a href="#optinfo-preferred_doc_language">en_______________________________</a>
   HTTP protocol (!)                : <a href="#optinfo-http_protocol">[HTTP 1.0]</a>
   Send User-Agent header (!)       : <a href="#optinfo-send_user_agent">[X]</a>
-  User-Agent header (!)            : <a href="#optinfo-user_agent">Lynx/2.8.9rel.1 libwww-FM/2.14 SSL-MM/1.4.</a>
+  User-Agent header (!)            : <a href="#optinfo-user_agent">Lynx/2.9.2 libwww-FM/2.14 SSL-MM/1.4.</a>
 
   Listing and Accessing Files
   Use Passive FTP (!)              : <a href="#optinfo-use_passive_ftp">[ON_]</a>
@@ -349,7 +349,7 @@
 <p id="explain-key_based_options">The key-based menu depends on key-strokes to identify options which the user wants to change. It is compiled into Lynx and is accessed by setting FORMS_OPTIONS to TRUE in <code>lynx.cfg</code>.</p>
 <pre>
 
-             <a href="#item-key_based_options" name="example-key_based_options" id="example-key_based_options">Options Menu (Lynx Version 2.9.0dev.7)</a>
+             <a href="#item-key_based_options" name="example-key_based_options" id="example-key_based_options">Options Menu (Lynx Version 2.9.2)</a>
 
      <a href="#optinfo-editor">(E)</a>ditor                     : emacs
      <a href="#optinfo-x_display">(D)</a>ISPLAY variable           : aixtest.cc.ukans.edu:0.0
@@ -700,7 +700,7 @@ help for more information.</p>
 </dd>
 <dt><a name="optinfo-user_agent" id="optinfo-user_agent">User-Agent header</a></dt>
 <dd>
-<p>The header string which Lynx sends to HTTP servers to indicate the User-Agent is displayed here. Changes may be disallowed via the <em>-restrictions</em> switch. Otherwise, the header can be changed temporarily to a string such as <em>L_y_n_x/2.8.9</em> for access to sites which discriminate against Lynx based on checks for the presence of "Lynx" in the header. If the User-Agent header has been changed, it can be restored to the built-in default value by deleting the modified string in the Options Menu. Whenever the User-Agent header is changed, the current document is reloaded, with the no-cache flags set, on exit from the Options Menu. Changes of the header are not saved in the RC file.</p>
+<p>The header string which Lynx sends to HTTP servers to indicate the User-Agent is displayed here. Changes may be disallowed via the <em>-restrictions</em> switch. Otherwise, the header can be changed temporarily to a string such as <em>L_y_n_x/2.9.2</em> for access to sites which discriminate against Lynx based on checks for the presence of "Lynx" in the header. If the User-Agent header has been changed, it can be restored to the built-in default value by deleting the modified string in the Options Menu. Whenever the User-Agent header is changed, the current document is reloaded, with the no-cache flags set, on exit from the Options Menu. Changes of the header are not saved in the RC file.</p>
 </dd>
 <dd>
 <p><em id="noteUA">NOTE:</em> Some sites may regard misrepresenting the browser as fraudulent deception, or as gaining unauthorized access, if it is used to circumvent blocking that was intentionally put in place. Some browser manufacturers may find the transmission of their product's name objectionable. If you change the User-Agent string, it is your responsibility. The Options Menu issues a reminder whenever the header is changed to one which does not include "Lynx" or "L_y_n_x".</p>
@@ -2062,7 +2062,7 @@ lynx -source ./ &gt;foo.html
 <p>This early version of Lynx was also augmented to support hypertext links to programs running on remote systems. It included the ability to open a Telnet connection, as well as the ability to start programs via rexec, inetd, or by direct socket connects. These capabilities were included to allow users to access databases or custom program interfaces.</p>
 <p>A subsequent version of Lynx incorporated the World Wide Web libraries to allow access to the full list of WWW servers, along with the option to build hypertext documents in HTML, rather than the native Lynx format. HTML has become far more widely used, and the native format has been phased out. With the addition of the WWW libraries, Lynx became a fully-featured WWW client, limited only by the display capabilities offered in the curses environment.</p>
 <p>Lynx was designed by Lou Montulli, Charles Rezac and Michael Grobe of Academic Computing Services at The University of Kansas. Lynx was implemented by Lou Montulli and maintained by Garrett Arch Blythe and Craig Lavender.</p>
-<p><em>Foteos Macrides</em> and members of the <a href="lynx-dev.html">lynx-dev</a> list have developed and supported Lynx since release of v2.3 in May 1994.<br>
+<p>Members of the <a href="lynx-dev.html">lynx-dev</a> list have developed and supported Lynx since release of v2.3 in May 1994.<br>
 The Lynx2-3FM code set was released as v2.4 in June 1995.<br>
 The Lynx2-4FM code set was released as v2.5 in May 1996.<br>
 The Lynx2-5FM code set was released as v2.6 in September 1996.<br>
@@ -2078,8 +2078,8 @@ The 2.8.4 development set was released as v2.8.5 in February 2004.<br>
 The 2.8.5 development set was released as v2.8.6 in October 2006.<br>
 The 2.8.6 development set was released as v2.8.7 in July 2009.<br>
 The 2.8.7 development set was released as v2.8.8 in February 2014.<br>
-The 2.8.8 development set was released as v2.8.9 in July 2018.<br></p>
-<p>Since early 1997, the Lynx code has expanded into autoconfigure and PC versions. The branching of the Lynx source base from a single source into two sources (FM/Foteos Macrides and ac/autoconfigure) should be considered a healthy synergism among groups of computer professionals acting in their spare time out of a common goal.</p>
+The 2.8.8 development set was released as v2.8.9 in July 2018.<br>
+The 2.8.9 development set was released as v2.9.0 in January 2024.<br></p>
 <p>Lynx has incorporated code from a variety of sources along the way. The earliest versions of Lynx included code from Earl Fogel of Computing Services at the University of Saskatchewan, who implemented HYPERREZ in the Unix environment. Those versions also incorporated libraries from the Unix Gopher clients developed at the University of Minnesota, and the later versions of Lynx rely on the WWW client library code developed by Tim Berners-Lee (and others) and the WWW community.</p>
 <p>Contributors have generally been acknowledged in the CHANGES file. Earlier CHANGES file can be found in the docs/ subdirectory of this distribution.</p>
 <p>Information on obtaining the most current version of Lynx is available at <a href="https://lynx.invisible-island.net/current/index.html">the current distribution page</a>.</p>

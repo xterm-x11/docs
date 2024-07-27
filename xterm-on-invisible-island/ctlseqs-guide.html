@@ -32,7 +32,7 @@
                              <i>Thomas Dickey</i>
                       XFree86 Project (1996-2006)
                     invisible-island.net (2006-2024)
-               updated for XTerm Patch #390 (2024/02/19)
+               updated for XTerm Patch #392 (2024/05/25)
 
 </pre>
 <h2><a name="h2-Definitions" id="h2-Definitions">Definitions</a></h2>
@@ -424,7 +424,8 @@ C1 controls, ordered by the final character(s).
 
 <a name="h4-Device-Control-functions:DCS-Ps!-u-Pt-ST.EB9">DCS <i>Ps</i>! u <i>Pt</i> ST</a>
           Assigning User-Preferred Supplemental Sets (DECAUPSS), VT320,
-          VT510.  <i>XTerm</i> ignores this in UTF-8 mode.
+          VT510.  <i>XTerm</i> ignores this in UTF-8 mode, and uses the
+          <b><a href="/xterm/manpage/xterm.html#VT100-Widget-Resources:preferLatin1">preferLatin1</a></b> resource to choose the default setting.
           VT320 provides these:
             DCS 0 ! u % 5 ST  &#8658;&nbsp; DEC Supplemental Graphic
             DCS 1 ! u A ST    &#8658;&nbsp; ISO Latin-1 supplemental
@@ -1312,7 +1313,7 @@ C1 controls, ordered by the final character(s).
           and VT400 &amp; up (LK01) respectively.
 
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Ps-n:Ps-=-5-5.1ED3"><i>Ps</i> = 5 5</a>  &#8658;&nbsp; Report Locator status.  The response is CSI ? 5
-          3 n  Locator available, if compiled-in, or CSI ? 5 0 n  No
+          0 n  Locator available, if compiled-in, or CSI ? 5 3 n  No
           Locator, if not.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Ps-n:Ps-=-5-6.1ED4"><i>Ps</i> = 5 6</a>  &#8658;&nbsp; Report Locator type.  The response is CSI ? 5 7
           ; 1 n  Mouse, if compiled-in, or CSI ? 5 7 ; 0 n  Cannot
@@ -1599,7 +1600,7 @@ C1 controls, ordered by the final character(s).
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-dq-v.1CC8">CSI " v</a>   Request Displayed Extent (DECRQDE), VT340, VT420.
           Response is
-            CSI <i>Ph</i>; <i>Pw</i>; <i>Pc</i>; <i>Pr</i>; <i>Pp</i> " v
+            CSI <i>Ph</i>; <i>Pw</i>; <i>Pc</i>; <i>Pr</i>; <i>Pp</i> " w
           where
             <i>Ph</i> is the number of lines of the current page
             <i>Pw</i> is the number of columns of the current page
@@ -3533,44 +3534,44 @@ and less-detailed manual pages.
         be used in termcap for <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/vi.html">vi(1)</a></b>, for example, to turn off saving of
         lines, but restore whatever the original state was on exit.
 
-    while the SCOSC/SCORC  pair  was  added  in  1995  by  XFree86  (and
+    while  the  SCOSC/SCORC  pair  was  added  in  1995  by XFree86 (and
     documented long afterwards).
 
-    The  SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use these
-    controls (they used the VT100-compatible SC/RC  pair).   SCOSC/SCORC
-    were  an artifact of DOS 2.00 (January 1983), by Microsoft and later
+    The SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use  these
+    controls  (they  used the VT100-compatible SC/RC pair).  SCOSC/SCORC
+    were an artifact of DOS 2.00 (January 1983), by Microsoft and  later
     supported by SCO and other vendors.
 
-    The SCOSC/SCORC pair is considered a <i>private mode</i> because the  final
+    The  SCOSC/SCORC pair is considered a <i>private mode</i> because the final
     characters (s  and u ) fall in the range from "`" to "~" (octal 0140
-    to octal 0176).  Other <i>private</i> control sequences can be  constructed
+    to  octal 0176).  Other <i>private</i> control sequences can be constructed
     by using octets 074 to 077 (characters "&lt;", "=", "&gt;", or "?") at the
     beginning  of  the  parameter  string.   The  XTSAVE  and  XTRESTORE
     controls use "?") in this manner.
 
     Because  the  XTSAVE  and  XTRESTORE  controls  are  private,  other
-    terminals may behave differently.  For example, DEC  (a  contributor
-    to  the  early <i>xterm</i> as well as a manufacturer of terminals) used an
-    incompatible private control in one of its terminals more than  five
+    terminals  may  behave differently.  For example, DEC (a contributor
+    to the early <i>xterm</i> as well as a manufacturer of terminals)  used  an
+    incompatible  private control in one of its terminals more than five
     years later (for the VT420 PCTerm, announced in February 1992).
 
-    In  that  model  of  the  VT420,  CSI ? <i>Pm</i>; <i>Pc</i> r selects the <i>PC TERM</i>
-    emulation mode.  When this mode is enabled, the keyboard sends  <i>scan</i>
-    <i>codes</i>  rather than characters (analogous to X keyboard events).  The
-    first parameter of this private control enables or disables <i>PC  TERM</i>
+    In that model of the VT420, CSI ? <i>Pm</i>;  <i>Pc</i>  r  selects  the  <i>PC  TERM</i>
+    emulation  mode.  When this mode is enabled, the keyboard sends <i>scan</i>
+    <i>codes</i> rather than characters (analogous to X keyboard events).   The
+    first  parameter of this private control enables or disables <i>PC TERM</i>
     mode, while the second selects a character set.  An ambiguity arises
     if an application omits the second parameter.  In that special case,
-    it  cannot  be  distinguished from XTRESTORE.  DEC did not take this
+    it cannot be distinguished from XTRESTORE.  DEC did  not  take  this
     into account when designing the feature.
 
-    If there were potential users, <i>xterm</i> could  accommodate  this  by  a
-    resource  setting.   In  retrospect (thirty years later), there have
-    been no uses of <i>PC TERM</i>, while the XTRESTORE  feature  is  still  in
+    If  there  were  potential  users, <i>xterm</i> could accommodate this by a
+    resource setting.  In retrospect (thirty years  later),  there  have
+    been  no  uses  of  <i>PC TERM</i>, while the XTRESTORE feature is still in
     use.
 
 <b>o</b>   The <i>aixterm</i> manual page gives the format of the control sequence for
-    foreground and background colors 8-15, but  does  not  specify  what
-    those  colors  are.  That is implied by the description's mention of
+    foreground  and  background  colors  8-15, but does not specify what
+    those colors are.  That is implied by the description's  mention  of
     <i>HFT</i>:
 
         The aixterm command provides a standard terminal type for
@@ -3580,14 +3581,14 @@ and less-detailed manual pages.
         the -v flag.
 
     Unlike <i>xterm</i>, there are no resource names for the 16 colors, leaving
-    the  reader  to  assume that the mapping is hard-coded.  The control
-    sequences for colors 8-15 are not specified by ECMA-48,  but  rather
-    (as  done  in  other instances by <i>xterm</i>) chosen to not conflict with
+    the reader to assume that the mapping is  hard-coded.   The  control
+    sequences  for  colors 8-15 are not specified by ECMA-48, but rather
+    (as done in other instances by <i>xterm</i>) chosen to  not  conflict  with
     current or future standards.
 </pre>
 <div class="nav">
 <ul>
-<li><a href="ctlseqs.html" class="nav-top">(top)</a><br></li>
+<li><a href="ctlseqs.html" class="nav-top">(top)</a></li>
 <li><a href="ctlseqs-contents.html" class="nav-top">(outline)</a><br></li>
 <li><a href="#h2-Definitions">Definitions</a>
 <ul>
