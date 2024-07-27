@@ -1,3 +1,32 @@
+2024-04-29  Thomas E. Dickey  <dickey@invisible-island.net>
+
+	* tctest.1: workaround for groff mis-hyphenating
+
+	* package/tctest.spec: compromise between Mageia and Fedora
+
+	* package/tctest.spec:
+	rpmlint, and remove the "strip" command which now confuses Fedora's rpmbuild
+
+	* tctest.1: style/formatting fixes
+
+	* package/debian/compat, package/debian/copyright, COPYING, VERSION,
+	  package/debian/changelog, package/tctest.spec:
+	bump
+
+2024-01-07  Thomas E. Dickey  <dickey@invisible-island.net>
+
+	* configure: regen
+
+	* aclocal.m4: resync with my-autoconf, for compiler warning fixes
+
+2023-12-27  Thomas E. Dickey  <dickey@invisible-island.net>
+
+	* config.sub: 2023-12-27
+
+2023-12-02  Thomas E. Dickey  <dickey@invisible-island.net>
+
+	* config.guess: 2023-12-02
+
 2023-01-30  Thomas E. Dickey  <dickey@invisible-island.net>
 
 	* makefile.in, testing/run_test.sh: shellcheck-warnings

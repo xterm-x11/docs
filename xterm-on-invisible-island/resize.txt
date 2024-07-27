@@ -159,4 +159,4 @@ SEE ALSO
 
 
 
-Patch #390                        2024-02-19                         RESIZE(1)
+Patch #393                        2024-07-11                         RESIZE(1)
