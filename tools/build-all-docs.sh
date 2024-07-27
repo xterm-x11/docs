@@ -1,7 +1,10 @@
-# List prerequisites
-# 1. Update local mks docs.
-# 2. Update local material theme for mks docs.
-# 3. The scipts require Bash.
+# Prerequisites
+#   Download the docs repo: https://github.com/xterm-x11/docs
+#   Download the website repo https://github.com/xterm-x11/xterm-x11.github.io
+#   The docs repo and the website repo must be at the same directory level so that the script can change directories correctly
+#   Update the local mks docs.
+#   Update the local material theme for mks docs.
+#   The scipts require Bash.
 
 git switch main
 git pull
