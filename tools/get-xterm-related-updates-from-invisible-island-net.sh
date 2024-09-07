@@ -3,7 +3,7 @@
 
 set -e
 
-git checkout -b $(date -I)
+git checkout -b downstreaming_$(date -I)
 
 cd ../xterm-on-invisible-island
 
@@ -172,10 +172,10 @@ git commit -m "downstreaming at $(date -Iminutes)"
 
 git log -1 --oneline
 
-git push -u origin $(date -I)
+git push -u origin downstreaming_$(date -I)
 
 git switch main
 
-git branch -D $(date -I)
+git branch -D downstreaming_$(date -I)
 
-echo "https://github.com/xterm-x11/docs/pull/new/$(date -I)"
+echo "https://github.com/xterm-x11/docs/pull/new/downstreaming_$(date -I)"

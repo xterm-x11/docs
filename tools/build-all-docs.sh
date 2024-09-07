@@ -37,7 +37,8 @@ cd tools
 ./downstream-manpage-vttest.sh
 ./downstream-manpage-xterm.sh
 ./downstream-release-notes.sh
-./get-xterm-related-updates-from-invisible-island-net.sh
+
+cd ..
 
 git add .
 
