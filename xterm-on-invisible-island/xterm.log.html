@@ -30,7 +30,7 @@
  * sale, use or other dealings in this Software without prior written        *
  * authorization.                                                            *
  *****************************************************************************
-  $XTermId: xterm.log.html,v 1.2635 2024/07/11 23:37:57 tom Exp $
+  $XTermId: xterm.log.html,v 1.2643 2024/09/02 20:09:06 tom Exp $
   -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
@@ -75,6 +75,7 @@
   <div class="nav">
     <ul>
       <li class="nav-top"><a href="xterm.log.html">(top)</a></li>
+      <li><a href="#xterm_394">Patch #394 - 2024/09/02</a></li>
       <li><a href="#xterm_393">Patch #393 - 2024/07/11</a></li>
       <li><a href="#xterm_392">Patch #392 - 2024/05/22</a></li>
       <li><a href="#xterm_391">Patch #391 - 2024/05/12</a></li>
@@ -681,6 +682,24 @@
       <li><a href="#xterm_01">Patch #1 - 1996/1/6</a></li>
     </ul>
   </div>
+  <h2><a name="xterm_394" id="xterm_394">Patch #394 -
+  2024/09/02</a></h2>
+  <ul>
+    <li>add <tt>-nomap</tt> option (request by Tavis Ormandy).</li>
+    <li>improve checks for rectangle operations, per DEC 070.</li>
+    <li>improve check for missing characters in bitmap fonts, for a
+    case where the font is marked complete but its range does not
+    include non-Latin1 codes (prompted by discussion with Craig
+    Leres).</li>
+    <li>correct upper-limit in check for missing characters, from
+    <a href="#xterm_393">patch #393</a> changes (report/patch by
+    Matthew Martin).</li>
+    <li>fix for <tt>-report-fonts</tt> option when the font's first
+    character position is nonzero (prompted by discussion with
+    Craig Leres).</li>
+    <li>add null-pointer check for a Heisenbug (Debian <a href=
+    "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1078255">#1078255</a>).</li>
+  </ul>
   <h2><a name="xterm_393" id="xterm_393">Patch #393 -
   2024/07/11</a></h2>
   <ul>

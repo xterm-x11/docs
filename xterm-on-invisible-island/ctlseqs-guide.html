@@ -32,7 +32,7 @@
                              <i>Thomas Dickey</i>
                       XFree86 Project (1996-2006)
                     invisible-island.net (2006-2024)
-               updated for XTerm Patch #392 (2024/05/25)
+               updated for XTerm Patch #394 (2024/09/02)
 
 </pre>
 <h2><a name="h2-Definitions" id="h2-Definitions">Definitions</a></h2>
@@ -101,6 +101,25 @@ designed:
 
 <b>o</b>   Some controls (such as OSC ) introduce a string mode, which is ended
     on a ST  (string terminator).
+
+    Section 9 of ECMA-48, like DEC STD 070, chapter 3, goes into detail
+    to explain that when processing 7-bit controls, the eighth bit of
+    each byte is ignored.  This applies to the content of APC, DCS, OSC,
+    and PM strings, as well as to the terminating bytes such as the two-
+    byte string terminator.  Quoting from the latter, 3.5.4.5 <i>GR Graphic</i>
+    <i>Characters within Control Strings</i>:
+
+        GR (8-bit) graphic characters in APC, OSC, and PM control
+        strings will be treated as their 7-bit equivalent (the eighth
+        bit will be ignored).
+
+        GR (8-bit) graphic characters are permitted within Device
+        Control Strings, and the graphic character's interpretation will
+        be dependent on the internal control string format.  When they
+        occur in the introducer sequence to a Device Control String, the
+        eighth bit will be ignored, and they will be treated as their
+        7-bit equivalent.  (Note that this is the same way 8-bit graphic
+        characters are handled within control sequences.)
 
     ECMA-48 describes only correct behavior, telling what types of
     characters are expected at each stage of the control sequences.  It
@@ -1448,7 +1467,11 @@ C1 controls, ordered by the final character(s).
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pt;Pl;Pb;Pr;Pm-$-r.20DD">CSI <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> ; <i>Pm</i> $ r</a>
           Change Attributes in Rectangular Area (DECCARA), VT400 and up.
             <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> denotes the rectangle.
-            <i>Pm</i> denotes the SGR attributes to change: 0, 1, 4, 5, 7.
+            <i>Pm</i> denotes the SGR attributes to change: 0 , 1 , 4 , 5 , 7 ,
+          8 .  Setting SGR 0  resets modes 1 , 4 , 5 , 7 .  Those modes
+          can be individually reset with SGR 2 2 , 2 4 , 2 5  and 2 7 .
+          Setting SGR 8  is an <i>xterm</i> extension; it may be reset with SGR
+          2 8 .  See DECSACE.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-s.1BC3">CSI s</a>     Save cursor, available only when DECLRMM is disabled (SCOSC,
           also ANSI.SYS).
@@ -1585,7 +1608,9 @@ C1 controls, ordered by the final character(s).
           Reverse Attributes in Rectangular Area (DECRARA), VT400 and
           up.
             <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> denotes the rectangle.
-            <i>Pm</i> denotes the attributes to reverse, i.e.,  1, 4, 5, 7.
+            <i>Pm</i> denotes the attributes to reverse, i.e.,  0, 1, 4, 5, 7,
+          8.  Reversing SGR 0 reverses modes 1, 4, 5, 7.  Reversing SGR
+          8 is an <i>xterm</i> extension.  See DECSACE.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-u.1BC5">CSI u</a>     Restore cursor (SCORC, also ANSI.SYS).
 
@@ -1658,6 +1683,18 @@ C1 controls, ordered by the final character(s).
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-*-x:Ps-=-0.1E61"><i>Ps</i> = 0</a>  &#8658;&nbsp; from start to end position, wrapped.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-*-x:Ps-=-1.1E62"><i>Ps</i> = 1</a>  &#8658;&nbsp; from start to end position, wrapped.
             <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-*-x:Ps-=-2.1E63"><i>Ps</i> = 2</a>  &#8658;&nbsp; rectangle (exact).
+          Modes 0  and 1  are the <i>stream</i> modes of the DECCARA and
+          DECRARA controls.  There are several aspects to <i>stream</i> versus
+          <i>rectangle</i> modes:
+          1. In both <i>stream</i> and <i>rectangle</i> modes, the row- and column-
+          positions are affected by Origin Mode.
+          2. In <i>rectangle</i> mode, cells outside the row- and column-
+          positions are unaffected.  In <i>stream</i> mode, the row- and
+          column-positions are the starting and ending cells, with
+          wrapping which ignores Origin Mode.
+          3. In <i>stream</i> mode, those controls affect only cells where a
+          character was drawn.  In <i>rectangle</i> mode, cells where no
+          character was drawn are first filled in with a space.
 
 <a name="h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pc;Pt;Pl;Pb;Pr-$-x.20D9">CSI <i>Pc</i> ; <i>Pt</i> ; <i>Pl</i> ; <i>Pb</i> ; <i>Pr</i> $ x</a>
           Fill Rectangular Area (DECFRA), VT420 and up.
@@ -3534,44 +3571,44 @@ and less-detailed manual pages.
         be used in termcap for <b><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/vi.html">vi(1)</a></b>, for example, to turn off saving of
         lines, but restore whatever the original state was on exit.
 
-    while  the  SCOSC/SCORC  pair  was  added  in  1995  by XFree86 (and
+    while the SCOSC/SCORC  pair  was  added  in  1995  by  XFree86  (and
     documented long afterwards).
 
-    The SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use  these
-    controls  (they  used the VT100-compatible SC/RC pair).  SCOSC/SCORC
-    were an artifact of DOS 2.00 (January 1983), by Microsoft and  later
+    The  SCO  <i>ANSI</i>  console  terminal  descriptions  did  not  use these
+    controls (they used the VT100-compatible SC/RC  pair).   SCOSC/SCORC
+    were  an artifact of DOS 2.00 (January 1983), by Microsoft and later
     supported by SCO and other vendors.
 
-    The  SCOSC/SCORC pair is considered a <i>private mode</i> because the final
+    The SCOSC/SCORC pair is considered a <i>private mode</i> because the  final
     characters (s  and u ) fall in the range from "`" to "~" (octal 0140
-    to  octal 0176).  Other <i>private</i> control sequences can be constructed
+    to octal 0176).  Other <i>private</i> control sequences can be  constructed
     by using octets 074 to 077 (characters "&lt;", "=", "&gt;", or "?") at the
     beginning  of  the  parameter  string.   The  XTSAVE  and  XTRESTORE
     controls use "?") in this manner.
 
     Because  the  XTSAVE  and  XTRESTORE  controls  are  private,  other
-    terminals  may  behave differently.  For example, DEC (a contributor
-    to the early <i>xterm</i> as well as a manufacturer of terminals)  used  an
-    incompatible  private control in one of its terminals more than five
+    terminals may behave differently.  For example, DEC  (a  contributor
+    to  the  early <i>xterm</i> as well as a manufacturer of terminals) used an
+    incompatible private control in one of its terminals more than  five
     years later (for the VT420 PCTerm, announced in February 1992).
 
-    In that model of the VT420, CSI ? <i>Pm</i>;  <i>Pc</i>  r  selects  the  <i>PC  TERM</i>
-    emulation  mode.  When this mode is enabled, the keyboard sends <i>scan</i>
-    <i>codes</i> rather than characters (analogous to X keyboard events).   The
-    first  parameter of this private control enables or disables <i>PC TERM</i>
+    In  that  model  of  the  VT420,  CSI ? <i>Pm</i>; <i>Pc</i> r selects the <i>PC TERM</i>
+    emulation mode.  When this mode is enabled, the keyboard sends  <i>scan</i>
+    <i>codes</i>  rather than characters (analogous to X keyboard events).  The
+    first parameter of this private control enables or disables <i>PC  TERM</i>
     mode, while the second selects a character set.  An ambiguity arises
     if an application omits the second parameter.  In that special case,
-    it cannot be distinguished from XTRESTORE.  DEC did  not  take  this
+    it  cannot  be  distinguished from XTRESTORE.  DEC did not take this
     into account when designing the feature.
 
-    If  there  were  potential  users, <i>xterm</i> could accommodate this by a
-    resource setting.  In retrospect (thirty years  later),  there  have
-    been  no  uses  of  <i>PC TERM</i>, while the XTRESTORE feature is still in
+    If there were potential users, <i>xterm</i> could  accommodate  this  by  a
+    resource  setting.   In  retrospect (thirty years later), there have
+    been no uses of <i>PC TERM</i>, while the XTRESTORE  feature  is  still  in
     use.
 
 <b>o</b>   The <i>aixterm</i> manual page gives the format of the control sequence for
-    foreground  and  background  colors  8-15, but does not specify what
-    those colors are.  That is implied by the description's  mention  of
+    foreground and background colors 8-15, but  does  not  specify  what
+    those  colors  are.  That is implied by the description's mention of
     <i>HFT</i>:
 
         The aixterm command provides a standard terminal type for
@@ -3581,9 +3618,9 @@ and less-detailed manual pages.
         the -v flag.
 
     Unlike <i>xterm</i>, there are no resource names for the 16 colors, leaving
-    the reader to assume that the mapping is  hard-coded.   The  control
-    sequences  for  colors 8-15 are not specified by ECMA-48, but rather
-    (as done in other instances by <i>xterm</i>) chosen to  not  conflict  with
+    the  reader  to  assume that the mapping is hard-coded.  The control
+    sequences for colors 8-15 are not specified by ECMA-48,  but  rather
+    (as  done  in  other instances by <i>xterm</i>) chosen to not conflict with
     current or future standards.
 </pre>
 <div class="nav">
