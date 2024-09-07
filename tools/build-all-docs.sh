@@ -56,6 +56,22 @@ echo "https://github.com/xterm-x11/docs/pull/new/website_build_$(date -I)"
 
 <<comment
 
+create a publish-docs.sh script file
+add a comment line: prerequisite is both repos are locally cloned at the same directory level
+
+go to the xterm-x11.github.io repo
+create a timestamped publication branch for the xterm-x11.github.io repo
+go back to this repo
+pull main of this repo to get the changes from the last merged PR above
+copy the docs/site dir into the xterm-x11.github.io dir
+go to the xterm-x11.github.io repo
+commit the changes to the xterm-x11.github.io repo with the commit message "Website update on YYYY-MM-DD"
+create a PR for  the xterm-x11.github.io repo
+
+comment
+
+<<comment
+
 ./downstream-manpage-koi8rterm.sh && \
 ./downstream-manpage-luit.sh && \
 ./downstream-manpage-resize.sh && \
