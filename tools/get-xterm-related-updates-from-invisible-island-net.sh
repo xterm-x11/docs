@@ -48,25 +48,27 @@ wget https://invisible-island.net/vttest/manpage/vttest.pdf
 wget https://invisible-island.net/vttest/manpage/vttest.ps
 wget https://invisible-island.net/vttest/vttest.html
 #
-wget https://invisible-island.net/ncurses/tack.html
 wget https://invisible-island.net/ncurses/tack/CHANGES.html
-mv CHANGES.html ncurses-changes.html
+mv CHANGES.html tack-changes.html
 wget https://invisible-island.net/ncurses/tack/CHANGES
-mv CHANGES ncurses-changes
-wget https://invisible-island.net/ncurses/tack/tack.html # manpage?
+mv CHANGES tack-changes
+wget https://invisible-island.net/ncurses/tack/tack.html
+mv tack.html manpage-tack.html
 wget https://invisible-island.net/ncurses/tack/tack.txt
 wget https://invisible-island.net/ncurses/tack/tack.pdf
 wget https://invisible-island.net/ncurses/tack/tack.ps
+wget https://invisible-island.net/ncurses/tack.html
 #
-wget https://invisible-island.net/ncurses/tctest.html
 wget https://invisible-island.net/ncurses/tctest/CHANGES.html
-mv CHANGES.html ncurses-changes.html
+mv CHANGES.html tctest-changes.html
 wget https://invisible-island.net/ncurses/tctest/CHANGES
-mv CHANGES ncurses-changes
-wget https://invisible-island.net/ncurses/tctest/tctest.html # manpage?
+mv CHANGES tctest-changes
+wget https://invisible-island.net/ncurses/tctest/tctest.html
+mv tctest.html manpage-tctest.html
 wget https://invisible-island.net/ncurses/tctest/tctest.txt
 wget https://invisible-island.net/ncurses/tctest/tctest.pdf
 wget https://invisible-island.net/ncurses/tctest/tctest.ps
+wget https://invisible-island.net/ncurses/tctest.html
 #
 wget https://invisible-island.net/ncurses/ncurses-examples.html
 #
