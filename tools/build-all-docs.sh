@@ -36,7 +36,12 @@ cd tools
 ./downstream-manpage-uxterm.sh
 ./downstream-manpage-vttest.sh
 ./downstream-manpage-xterm.sh
-./downstream-release-notes.sh
+
+./downstream-changelog-for-luit.sh
+./downstream-changelog-for-tack.sh
+./downstream-changelog-for-tctest.sh
+./downstream-changelog-for-vttest.sh
+./downstream-changelog-for-xterm.sh
 
 cd ..
 
