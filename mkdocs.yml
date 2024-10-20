@@ -8,7 +8,8 @@ copyright: >
   No cookies are served on this website.
 nav:
   - Home: index.md
-  - Story: story.md
+  - Changelog (release notes): release-notes.md
+  - History: history.md
   - Install:
        - Package: package.md
        - xterm.tar.gz: xterm.tar.gz.md
@@ -36,16 +37,15 @@ nav:
        - Static window title: static-window-title.md
        - Scrollbar: scrollbar.md
        - Window properties: window-properties.md
-  - Control sequences:
-       - Getting started with control sequences: getting-started-with-ctlseqs.md
-       - Guide: ctlseqs-guide.md
-       - List: ctlseqs-list.md
   - Manpage:
        - xterm: manpage-xterm.md
        - uxterm: manpage-uxterm.md
        - koi8rxterm: manpage-koi8rxterm.md
        - resize: manpage-resize.md
-  - Changelog (release notes): release-notes.md
+  - Control sequences:
+       - Getting started with control sequences: getting-started-with-ctlseqs.md
+       - Guide: ctlseqs-guide.md
+       - List: ctlseqs-list.md
   - Libraries:
        - Xtoolkit: xtoolkit.md
        - Xcursor: xcursor.md
