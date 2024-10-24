@@ -48,10 +48,10 @@ nav:
        - List: ctlseqs-list.md
   - Libraries:
        - Xtoolkit: xtoolkit.md
-       - Xcursor: xcursor.md
+       - Xcursor: manpage-xcursor.md
+       - Xft: manpage-xft.md
        - NCURSES: ncurses.md
 #          - ?
-       - Xft: xft.md
   - Quality engineering:
        - VTtest:
            - Manpage: manpage-vttest.md

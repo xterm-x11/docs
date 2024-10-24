@@ -1,4 +1,4 @@
-# xterm manpage
+# `xterm` manpage
 
 downstreamed content
 

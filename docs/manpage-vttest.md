@@ -1,4 +1,4 @@
-# VTtest manpage
+# `vttest` manpage
 
 downstreamed content
 

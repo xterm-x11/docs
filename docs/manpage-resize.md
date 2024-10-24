@@ -1,4 +1,4 @@
-# resize manpage
+# `resize` manpage
 
 downstreamed content
 

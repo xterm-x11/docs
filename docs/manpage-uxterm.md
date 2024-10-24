@@ -1,4 +1,4 @@
-# uxterm manpage
+# `uxterm` manpage
 
 downstreamed content
 

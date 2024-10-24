@@ -1,4 +1,4 @@
-# Luit manpage
+# `luit` manpage
 
 downstreamed content
 
