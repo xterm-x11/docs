@@ -72,9 +72,9 @@ wget https://invisible-island.net/ncurses/tctest.html
 #
 wget https://invisible-island.net/ncurses/ncurses-examples.html
 #
-wget https://invisible-island.net/xterm/xft/xft.html # manpage?
+wget https://invisible-island.net/xterm/xft/xft.html # manpage
 #
-wget https://invisible-island.net/xterm/xcursor/xcursor.html # manpage?
+wget https://invisible-island.net/xterm/xcursor/xcursor.html # manpage
 #
 wget https://invisible-island.net/luit/manpage/luit.html # check all links
 mv luit.html manpage-luit.html
